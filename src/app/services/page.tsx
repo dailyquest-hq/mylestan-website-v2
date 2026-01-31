@@ -147,7 +147,7 @@ function ServiceSection({ id, label, title, description, image, layout, buttonTe
   return (
     <section id={id} className="py-20 md:py-32 px-5 border-b border-gray-100 last:border-0">
       <div className={cn(
-        "max-w-[1600px] mx-auto flex flex-col gap-12 lg:gap-24 items-center",
+        "max-w-[1600px] mx-auto flex flex-col gap-12 lg:gap-24 items-start",
         isRight ? "lg:flex-row-reverse" : "lg:flex-row"
       )}>
         
