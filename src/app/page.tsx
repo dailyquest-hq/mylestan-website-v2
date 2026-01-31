@@ -58,7 +58,7 @@ export default function Homepage() {
 
           {/* Hero Image */}
           <div className="w-full relative mt-12 h-[500px] md:h-[700px] xl:h-[800px]">
-             <img src={imgMediaBg.src} alt="Myles Tan" className="w-full h-full object-cover" />
+             <img src={imgMediaBg.src} alt="Myles Tan" className="w-full h-full object-cover object-top" />
           </div>
 
         </div>
