@@ -6,11 +6,11 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, Check } from "lucide-react";
 
 // Assets
-import imgSocial1 from "figma:asset/d0934957009cfd03eb06d63d25a8976b37965681.png";
-import imgSocial2 from "figma:asset/d72ebac6f1b8c46df9e9709b6ed9aee6ae235822.png";
-import imgSocial3 from "figma:asset/1f193e0016cf4f0a417249bad529f1b793ba72e8.png";
-import imgSocial4 from "figma:asset/a2b57061ef1fc4bd06444663d7a9380524d86d73.png";
-import imgSocial5 from "figma:asset/28a4f614d987694196ce41b965605d10f4a1cf87.png";
+import imgSocial1 from "@/assets/d0934957009cfd03eb06d63d25a8976b37965681.png";
+import imgSocial2 from "@/assets/d72ebac6f1b8c46df9e9709b6ed9aee6ae235822.png";
+import imgSocial3 from "@/assets/1f193e0016cf4f0a417249bad529f1b793ba72e8.png";
+import imgSocial4 from "@/assets/a2b57061ef1fc4bd06444663d7a9380524d86d73.png";
+import imgSocial5 from "@/assets/28a4f614d987694196ce41b965605d10f4a1cf87.png";
 
 export default function ContactPage() {
   return (
@@ -94,7 +94,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full">
                {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial5].map((img, idx) => (
                   <div key={idx} className="aspect-square relative overflow-hidden bg-gray-200 group">
-                     <img src={img} alt={`Social ${idx}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                     <img src={img.src} alt={`Social ${idx}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <Instagram className="text-white" size={32} />
                      </div>

@@ -128,7 +128,7 @@ export default function FAQPage() {
             <p className="font-poppins text-white text-base md:text-lg max-w-md">
                Didn’t find the answer you were looking for? Reach out and we’ll be happy to help.
             </p>
-            <Link to="/contact">
+            <Link href="/contact">
                <Button className="border-2 border-white bg-transparent hover:bg-white hover:text-[#ed5128] text-white h-12 px-8 text-base font-bold rounded-none uppercase mt-4">
                   CONTACT US
                </Button>

@@ -11,20 +11,19 @@ import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 
 // Assets
-import imgTicker1 from "figma:asset/f78360e4be7e9a1661cfa0c498def3203380ef51.png";
-import imgTicker2 from "figma:asset/56973181793d0559b0124604344bd6ba5c4d241e.png";
-import imgTicker3 from "figma:asset/f87f649b3b2f23aa77df960c560df6bb0216f4a5.png";
-import imgTicker4 from "figma:asset/ff0ad59b66b4aca8a3cf065d2b0d597d335772cf.png";
-// imgTicker5 seems to be another one or repetition? Using the first 4 for the row.
-import imgTimelineCard from "figma:asset/9cd8da70bc103b52b37ed5fd3e7136829a3c6e01.png";
-import imgStory from "figma:asset/b253e82081540176b3d882f6bb3f15d69992b182.png";
+import imgTicker1 from "@/assets/f78360e4be7e9a1661cfa0c498def3203380ef51.png";
+import imgTicker2 from "@/assets/56973181793d0559b0124604344bd6ba5c4d241e.png";
+import imgTicker3 from "@/assets/f87f649b3b2f23aa77df960c560df6bb0216f4a5.png";
+import imgTicker4 from "@/assets/ff0ad59b66b4aca8a3cf065d2b0d597d335772cf.png";
+import imgTimelineCard from "@/assets/9cd8da70bc103b52b37ed5fd3e7136829a3c6e01.png";
+import imgStory from "@/assets/b253e82081540176b3d882f6bb3f15d69992b182.png";
 
 // Social Grid Images
-import imgSocial1 from "figma:asset/d0934957009cfd03eb06d63d25a8976b37965681.png";
-import imgSocial2 from "figma:asset/d72ebac6f1b8c46df9e9709b6ed9aee6ae235822.png";
-import imgSocial3 from "figma:asset/1f193e0016cf4f0a417249bad529f1b793ba72e8.png";
-import imgSocial4 from "figma:asset/a2b57061ef1fc4bd06444663d7a9380524d86d73.png";
-import imgSocial5 from "figma:asset/28a4f614d987694196ce41b965605d10f4a1cf87.png";
+import imgSocial1 from "@/assets/d0934957009cfd03eb06d63d25a8976b37965681.png";
+import imgSocial2 from "@/assets/d72ebac6f1b8c46df9e9709b6ed9aee6ae235822.png";
+import imgSocial3 from "@/assets/1f193e0016cf4f0a417249bad529f1b793ba72e8.png";
+import imgSocial4 from "@/assets/a2b57061ef1fc4bd06444663d7a9380524d86d73.png";
+import imgSocial5 from "@/assets/28a4f614d987694196ce41b965605d10f4a1cf87.png";
 
 export default function AboutPage() {
   return (
@@ -62,7 +61,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                {[imgTicker1, imgTicker2, imgTicker3, imgTicker4].map((img, idx) => (
                   <div key={idx} className="h-[300px] md:h-[370px] w-full relative overflow-hidden bg-gray-100">
-                     <img src={img} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover" />
+                     <img src={img.src} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover" />
                   </div>
                ))}
             </div>
@@ -99,7 +98,7 @@ export default function AboutPage() {
                          {i === 0 && (
                             <div className="absolute top-[80px] left-0 md:left-0 w-[280px] md:w-[320px] bg-white rounded-xl shadow-xl border border-gray-100 p-2 text-left mt-8">
                                <div className="h-[160px] w-full rounded-lg overflow-hidden mb-4 bg-gray-200">
-                                  <img src={imgTimelineCard} alt="2025" className="w-full h-full object-cover" />
+                                  <img src={imgTimelineCard.src} alt="2025" className="w-full h-full object-cover" />
                                </div>
                                <p className="font-inter text-sm md:text-base text-[#575756] px-2 pb-2">
                                   Continuing mission to equip believers worldwide through media, events, and one-on-one coaching.
@@ -118,7 +117,7 @@ export default function AboutPage() {
          <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
             {/* Image */}
             <div className="w-full lg:w-[45%] h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm">
-               <img src={imgStory} alt="Myles Story" className="w-full h-full object-cover" />
+               <img src={imgStory.src} alt="Myles Story" className="w-full h-full object-cover" />
             </div>
 
             {/* Text */}
@@ -166,7 +165,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
                {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial5].map((img, idx) => (
                   <div key={idx} className="aspect-square relative overflow-hidden bg-gray-100 group">
-                     <img src={img} alt={`Social ${idx}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                     <img src={img.src} alt={`Social ${idx}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                      {/* Overlay on hover */}
                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <Instagram className="text-white" size={32} />
@@ -186,7 +185,7 @@ export default function AboutPage() {
                   Invite Myles to speak at your event, church, or conference — and inspire others with faith-driven insights on life and finance.
                </p>
             </div>
-            <Link to="/contact">
+            <Link href="/contact">
                <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-14 px-8 text-lg font-bold rounded-none uppercase">
                   BOOK A SPEAKING ENGAGEMENT
                </Button>

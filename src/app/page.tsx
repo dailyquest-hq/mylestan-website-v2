@@ -8,28 +8,18 @@ import { Check, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Assets
-import imgHero from "figma:asset/b8f78dd8dc270e5f9737537d99a3a5e1cf6ee83a.png";
-import imgAboutLarge from "figma:asset/f8a15c9bbe2cd8cb14e753e8e4a59ff2fbafe0ef.png";
-import imgAboutSmall1 from "figma:asset/1b7b9ed06e53fa11ed934b127bbe0f87cc647900.png";
-// Reusing small1 or finding another asset if available, the import list showed two GalleryImage1 usages in Frame16, 
-// but let's check if there's a third image. 
-// In imports/Homepage-3-523.tsx:
-// import imgGalleryImage from "...ef.png"; (Large)
-// import imgGalleryImage1 from "...00.png"; (Small 1)
-// The Frame16 uses GalleryImage1 twice? 
-// No, looking at lines 4-7 of the import file:
-// imgThumbnailImage1 is d6dbe12...
-// Let's use that for the second small image in About just in case, or reuse if intended.
-// Actually, I'll use d6dbe12... as a placeholder for the second small image to vary it.
-import imgAboutSmall2 from "figma:asset/d6dbe12a4a1ae670adbb682f9f3bb7e083e7f65e.png"; 
+import imgHero from "@/assets/b8f78dd8dc270e5f9737537d99a3a5e1cf6ee83a.png";
+import imgAboutLarge from "@/assets/f8a15c9bbe2cd8cb14e753e8e4a59ff2fbafe0ef.png";
+import imgAboutSmall1 from "@/assets/1b7b9ed06e53fa11ed934b127bbe0f87cc647900.png";
+import imgAboutSmall2 from "@/assets/d6dbe12a4a1ae670adbb682f9f3bb7e083e7f65e.png";
 
 // Blog Images
-import imgBlog1 from "figma:asset/c1e57017c54c3f6bc788abd25e0ed91bbe87351e.png";
-import imgBlog2 from "figma:asset/d6dbe12a4a1ae670adbb682f9f3bb7e083e7f65e.png";
-import imgBlog3 from "figma:asset/7d78fafec50ff790a2dda5404c27187528d40c17.png";
+import imgBlog1 from "@/assets/c1e57017c54c3f6bc788abd25e0ed91bbe87351e.png";
+import imgBlog2 from "@/assets/d6dbe12a4a1ae670adbb682f9f3bb7e083e7f65e.png";
+import imgBlog3 from "@/assets/7d78fafec50ff790a2dda5404c27187528d40c17.png";
 
 // Media Background
-import imgMediaBg from "figma:asset/6795e162202e3c0307963e5e15999946d0dee112.png";
+import imgMediaBg from "@/assets/6795e162202e3c0307963e5e15999946d0dee112.png";
 
 export default function Homepage() {
   return (
@@ -54,12 +44,12 @@ export default function Homepage() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.
               </p>
               <div className="flex gap-4">
-                <Link to="/about">
+                <Link href="/about">
                   <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide">
                     ABOUT ME
                   </Button>
                 </Link>
-                <Link to="/contact">
+                <Link href="/contact">
                   <Button variant="outline" className="border-[#ed5128] text-[#ed5128] hover:bg-[#ed5128] hover:text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide">
                     WORK WITH ME
                   </Button>
@@ -70,7 +60,7 @@ export default function Homepage() {
 
           {/* Hero Image */}
           <div className="w-full relative mt-12 h-[500px] md:h-[700px] xl:h-[800px]">
-             <img src={imgHero} alt="Myles Tan" className="w-full h-full object-cover" />
+             <img src={imgHero.src} alt="Myles Tan" className="w-full h-full object-cover" />
           </div>
 
         </div>
@@ -96,14 +86,14 @@ export default function Homepage() {
           {/* Images Grid */}
           <div className="w-full flex flex-col md:flex-row gap-6">
             <div className="md:w-[60%] h-[500px] md:h-[772px] relative overflow-hidden">
-               <img src={imgAboutLarge} alt="Myles Speaking" className="w-full h-full object-cover" />
+               <img src={imgAboutLarge.src} alt="Myles Speaking" className="w-full h-full object-cover" />
             </div>
             <div className="md:w-[40%] flex flex-col gap-6">
                <div className="h-[240px] md:h-[372px] relative overflow-hidden">
-                  <img src={imgAboutSmall1} alt="Audience" className="w-full h-full object-cover" />
+                  <img src={imgAboutSmall1.src} alt="Audience" className="w-full h-full object-cover" />
                </div>
                <div className="h-[240px] md:h-[372px] relative overflow-hidden">
-                  <img src={imgAboutSmall2} alt="Workshop" className="w-full h-full object-cover" />
+                  <img src={imgAboutSmall2.src} alt="Workshop" className="w-full h-full object-cover" />
                </div>
             </div>
           </div>
@@ -203,7 +193,7 @@ export default function Homepage() {
                    Key lessons and reflections from the events I host and join — distilled into practical takeaways for your journey.
                  </p>
                </div>
-               <Link to="/blogs">
+               <Link href="/blogs">
                  <Button variant="outline" className="border-[#ed5128] text-[#ed5128] hover:bg-[#ed5128] hover:text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide">
                     SHOW ALL
                  </Button>
@@ -213,20 +203,20 @@ export default function Homepage() {
 
           {/* Blogs Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-             <BlogCard 
-               image={imgBlog1}
+             <BlogCard
+               image={imgBlog1.src}
                category="EVENTS & RECAPS"
                title="Faith & Business Summit 2025"
                desc="My top 3 lessons on merging Kingdom values with practical strategies."
              />
-             <BlogCard 
-               image={imgBlog2}
+             <BlogCard
+               image={imgBlog2.src}
                category="EVENTS & RECAPS"
                title="Crypto & Stewardship Webinar"
                desc="Breaking down how believers can navigate digital investments responsibly."
              />
-             <BlogCard 
-               image={imgBlog3}
+             <BlogCard
+               image={imgBlog3.src}
                category="BLOGS & INSIGHTS"
                title="Why Kingdom Entrepreneurs Think Differently About Wealth"
                desc=""
@@ -240,7 +230,7 @@ export default function Homepage() {
       {/* Media Speaking */}
       <section className="relative w-full h-[600px] md:h-[800px] overflow-hidden">
          <div className="absolute inset-0">
-           <img src={imgMediaBg} alt="Media Background" className="w-full h-full object-cover" />
+           <img src={imgMediaBg.src} alt="Media Background" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-[#18140e]/40" />
          </div>
          
@@ -257,7 +247,7 @@ export default function Homepage() {
                   <p className="font-poppins text-[#9f9f9f] text-base leading-relaxed">
                     Myles Tan has been featured across conferences, panels, podcasts, and media platforms — delivering insights on faith, finance, entrepreneurship, and purposeful living. From local gatherings to international stages, each engagement is driven by the mission to inspire, equip, and empower people to live out their calling with wisdom and faith.
                   </p>
-                  <Link to="/media-speaking">
+                  <Link href="/media-speaking">
                     <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide w-fit">
                       WATCH AND LISTEN
                     </Button>

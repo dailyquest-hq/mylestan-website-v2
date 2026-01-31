@@ -7,9 +7,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 // Assets
-import imgBlog1 from "figma:asset/c1e57017c54c3f6bc788abd25e0ed91bbe87351e.png";
-import imgBlog2 from "figma:asset/d6dbe12a4a1ae670adbb682f9f3bb7e083e7f65e.png";
-import imgBlog3 from "figma:asset/7d78fafec50ff790a2dda5404c27187528d40c17.png";
+import imgBlog1 from "@/assets/c1e57017c54c3f6bc788abd25e0ed91bbe87351e.png";
+import imgBlog2 from "@/assets/d6dbe12a4a1ae670adbb682f9f3bb7e083e7f65e.png";
+import imgBlog3 from "@/assets/7d78fafec50ff790a2dda5404c27187528d40c17.png";
 
 // Placeholder images for additional content
 const imgCrypto = "https://images.unsplash.com/photo-1639825752750-5061ded5503b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcnlwdG8lMjB0cmFkaW5nJTIwY2hhcnR8ZW58MXx8fHwxNzY5ODUwNDYyfDA&ixlib=rb-4.1.0&q=80&w=1080";
@@ -37,7 +37,7 @@ export default function BlogsPage() {
             
             <div className="flex flex-col lg:flex-row gap-12 group cursor-pointer">
                <div className="lg:w-2/3 h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm bg-gray-100">
-                  <img src={imgBlog1} alt="Faith & Business Summit 2025" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={imgBlog1.src} alt="Faith & Business Summit 2025" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                </div>
                <div className="lg:w-1/3 flex flex-col justify-center gap-6">
                   <div className="flex items-center gap-4">

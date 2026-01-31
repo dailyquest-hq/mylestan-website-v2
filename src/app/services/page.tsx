@@ -8,16 +8,16 @@ import { cn } from "@/lib/utils";
 import { TrendingUp, ShieldCheck, Heart, ThumbsUp, Wallet, PieChart, Users, Star, Mic, MessageCircle, Home } from "lucide-react";
 
 // Assets
-import imgServicePlaceholder from "figma:asset/b253e82081540176b3d882f6bb3f15d69992b182.png";
+import imgServicePlaceholder from "@/assets/b253e82081540176b3d882f6bb3f15d69992b182.png";
 
 // Reusing some assets from other pages if available for variety, otherwise fallback to placeholder
 // Ideally we would have distinct images for each service as shown in design
 const serviceImages = {
-  crypto: imgServicePlaceholder,
-  financial: imgServicePlaceholder,
-  coaching: imgServicePlaceholder,
-  realEstate: imgServicePlaceholder,
-  speaking: imgServicePlaceholder,
+  crypto: imgServicePlaceholder.src,
+  financial: imgServicePlaceholder.src,
+  coaching: imgServicePlaceholder.src,
+  realEstate: imgServicePlaceholder.src,
+  speaking: imgServicePlaceholder.src,
 };
 
 export default function ServicesPage() {
@@ -128,7 +128,7 @@ export default function ServicesPage() {
                   Whether you’re seeking financial guidance, entrepreneurial coaching, or a speaker for your next event — these services are designed to equip and empower you.
                </p>
             </div>
-            <Link to="/contact">
+            <Link href="/contact">
                <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-14 px-8 text-lg font-bold rounded-none uppercase shrink-0">
                   Contact Myles
                </Button>

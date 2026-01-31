@@ -47,7 +47,7 @@ export function Footer() {
               <h4 className="font-darker font-bold text-xl">Quick Links</h4>
               <div className="flex flex-col gap-2 font-inter text-[#9f9f9f]">
                 {quickLinks.map(link => (
-                  <Link key={link.name} to={link.href} className="hover:text-primary-orange transition-colors">
+                  <Link key={link.name} href={link.href} className="hover:text-primary-orange transition-colors">
                     {link.name}
                   </Link>
                 ))}
@@ -59,7 +59,7 @@ export function Footer() {
               <h4 className="font-darker font-bold text-xl">Need Help?</h4>
               <div className="flex flex-col gap-2 font-inter text-[#9f9f9f]">
                 {helpLinks.map(link => (
-                  <Link key={link.name} to={link.href} className="hover:text-primary-orange transition-colors">
+                  <Link key={link.name} href={link.href} className="hover:text-primary-orange transition-colors">
                     {link.name}
                   </Link>
                 ))}
@@ -71,7 +71,7 @@ export function Footer() {
               <h4 className="font-darker font-bold text-xl">Follow Us</h4>
               <div className="flex gap-3">
                 {[Facebook, Instagram, Linkedin, Twitter].map((Icon, i) => (
-                  <Link key={i} to="#" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
+                  <Link key={i} href="#" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
                     <Icon size={18} />
                   </Link>
                 ))}

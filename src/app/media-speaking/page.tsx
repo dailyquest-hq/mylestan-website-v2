@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Play, Calendar, MapPin, CheckCircle, ArrowRight } from "lucide-react";
 
 // Assets
-import imgMediaBg from "figma:asset/6795e162202e3c0307963e5e15999946d0dee112.png";
-import imgSpeaker from "figma:asset/f8a15c9bbe2cd8cb14e753e8e4a59ff2fbafe0ef.png"; // Reusing about image for speaker shot
+import imgMediaBg from "@/assets/6795e162202e3c0307963e5e15999946d0dee112.png";
+import imgSpeaker from "@/assets/f8a15c9bbe2cd8cb14e753e8e4a59ff2fbafe0ef.png"; // Reusing about image for speaker shot
 
 // Placeholders for video thumbnails
 const thumb1 = "https://images.unsplash.com/photo-1597154498045-00e8fe2bfd1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb2RjYXN0JTIwbWljcm9waG9uZSUyMGludGVydmlld3xlbnwxfHx8fDE3Njk4NTA0NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080";
@@ -32,7 +32,7 @@ export default function MediaSpeakingPage() {
       {/* Featured Video / Reel */}
       <section className="relative w-full h-[600px] bg-black group overflow-hidden">
          <div className="absolute inset-0 opacity-60">
-            <img src={imgMediaBg} alt="Speaking Background" className="w-full h-full object-cover" />
+            <img src={imgMediaBg.src} alt="Speaking Background" className="w-full h-full object-cover" />
          </div>
          <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-5 text-center">
             <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center cursor-pointer hover:bg-[#ed5128] hover:border-[#ed5128] transition-all duration-300 group-hover:scale-110">
@@ -89,7 +89,7 @@ export default function MediaSpeakingPage() {
             
             <div className="w-full lg:w-1/2 h-[500px] relative">
                <div className="absolute inset-0 bg-black rounded-sm translate-x-4 translate-y-4"></div>
-               <img src={imgSpeaker} alt="Myles Speaking" className="absolute inset-0 w-full h-full object-cover rounded-sm border border-gray-200" />
+               <img src={imgSpeaker.src} alt="Myles Speaking" className="absolute inset-0 w-full h-full object-cover rounded-sm border border-gray-200" />
             </div>
 
             <div className="w-full lg:w-1/2 flex flex-col gap-8">
@@ -153,7 +153,7 @@ export default function MediaSpeakingPage() {
             <p className="font-poppins text-white/90 text-lg max-w-2xl">
                Whether it's a church service, corporate conference, or youth seminar, Myles brings a message of hope, wisdom, and empowerment.
             </p>
-            <Link to="/contact">
+            <Link href="/contact">
                <Button className="bg-white text-[#ed5128] hover:bg-gray-100 h-14 px-10 text-lg font-bold rounded-none uppercase mt-4">
                   BOOK NOW
                </Button>
