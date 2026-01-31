@@ -69,7 +69,7 @@ export default function Homepage() {
           
           {/* Text Block */}
           <div className="flex flex-col gap-8 max-w-4xl mr-auto">
-            <SectionLabel color="black">about</SectionLabel>
+            <SectionLabel color="orange">about</SectionLabel>
             <div className="font-darker font-semibold text-3xl md:text-[32px] leading-tight space-y-8">
               <p>
                 I'm Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people integrate faith and finance in a way that produces peace, clarity, and impact. I believe wealth isn't the goal, but stewardship for the glory of God is. When you're blessed, you're blessed to be a blessing for others.
@@ -104,7 +104,7 @@ export default function Homepage() {
       {/* Past Achievements */}
       <section className="bg-white text-black pb-24 px-5">
         <div className="max-w-[1600px] mx-auto">
-           <SectionLabel className="mb-12 opacity-80" color="black">past achievements</SectionLabel>
+           <SectionLabel className="mb-12 opacity-80" color="orange">past achievements</SectionLabel>
            
            <div className="flex flex-col">
               {[
