@@ -25,7 +25,7 @@ export default function ServicesPage() {
     <main className="bg-white min-h-screen w-full overflow-x-hidden">
 
       {/* Hero Section */}
-      <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
+      <section className="bg-[#0f100a] text-white pt-40 pb-32 md:pt-60 md:pb-40 px-5 text-center">
          <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
             <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">Services</h1>
             <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px]">
