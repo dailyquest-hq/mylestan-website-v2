@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Play, Calendar, MapPin, CheckCircle, ArrowRight } from "lucide-react";
 
 // Assets
-import imgMediaBg from "@/assets/home/media-bg.png";
-import imgSpeaker from "@/assets/home/about-large.png"; // Reusing about image for speaker shot
+import imgMediaBg from "@/assets/home/media-bg.jpg";
+import imgSpeaker from "@/assets/home/about-large.jpg"; // Reusing about image for speaker shot
 
 // Placeholders for video thumbnails
 const thumb1 = "https://images.unsplash.com/photo-1597154498045-00e8fe2bfd1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb2RjYXN0JTIwbWljcm9waG9uZSUyMGludGVydmlld3xlbnwxfHx8fDE3Njk4NTA0NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080";

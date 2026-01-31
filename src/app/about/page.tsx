@@ -11,19 +11,19 @@ import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 
 // Assets
-import imgTicker1 from "@/assets/about/ticker-1.png";
-import imgTicker2 from "@/assets/about/ticker-2.png";
-import imgTicker3 from "@/assets/about/ticker-3.png";
-import imgTicker4 from "@/assets/about/ticker-4.png";
-import imgTimelineCard from "@/assets/about/timeline-card.png";
-import imgStory from "@/assets/about/story.png";
+import imgTicker1 from "@/assets/about/ticker-1.jpg";
+import imgTicker2 from "@/assets/about/ticker-2.jpg";
+import imgTicker3 from "@/assets/about/ticker-3.jpg";
+import imgTicker4 from "@/assets/about/ticker-4.jpg";
+import imgTimelineCard from "@/assets/about/timeline-card.jpg";
+import imgStory from "@/assets/about/story.jpg";
 
 // Social Grid Images
-import imgSocial1 from "@/assets/shared/social-1.png";
-import imgSocial2 from "@/assets/shared/social-2.png";
-import imgSocial3 from "@/assets/shared/social-3.png";
-import imgSocial4 from "@/assets/shared/social-4.png";
-import imgSocial5 from "@/assets/shared/social-5.png";
+import imgSocial1 from "@/assets/shared/social-1.jpg";
+import imgSocial2 from "@/assets/shared/social-2.jpg";
+import imgSocial3 from "@/assets/shared/social-3.jpg";
+import imgSocial4 from "@/assets/shared/social-4.jpg";
+import imgSocial5 from "@/assets/shared/social-5.jpg";
 
 export default function AboutPage() {
   return (
@@ -32,9 +32,9 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
          <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
-            <h1 className="font-darker font-semibold text-[80px] md:text-[100px] leading-none">About Us</h1>
+            <h1 className="font-darker font-semibold text-[80px] md:text-[100px] leading-none">About Myles Tan</h1>
             <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px]">
-               Discover the story of Myles Tan — a journey of blending professional expertise with biblical principles to empower people worldwide.
+               Myles Yeo Tan wants to start a faith-driven movement committed to glorifying God through excellence, wisdom, and stewardship. Where faith meets finance, and purpose drives impact.
             </p>
          </div>
       </section>
@@ -46,13 +46,16 @@ export default function AboutPage() {
                <SectionLabel color="black" className="shrink-0 min-w-[200px]">about myles tan</SectionLabel>
                <div className="flex flex-col gap-8 font-inter text-lg text-[#282828] leading-relaxed max-w-3xl">
                   <p>
-                     Myles Tan is a speaker, mentor, and entrepreneur passionate about integrating faith with finance to empower people in both life and business. His career journey spans multiple fields — from crypto and trading to financial planning, real estate, and Christian entrepreneurship.
+                     I'm Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people live with clarity, conviction, and purpose. I operate at the intersection of faith, finance, and leadership, equipping individuals to steward their influence, resources, and calling with wisdom, discipline, and obedience to God.
                   </p>
                   <p>
-                     Grounded in biblical principles, Myles has built a reputation for guiding individuals and communities to steward resources wisely while living with purpose. Beyond business, he has committed himself to ministry, teaching and speaking at conferences, panels, and workshops to inspire growth, transformation, and Kingdom impact.
+                     My journey has taken me through business, investing, crypto, trading, and real estate—environments filled with opportunity, pressure, and constant noise. Along the way, I learned that success without direction leads to emptiness, and faith without action leads to stagnation. True transformation happens when biblical truth, disciplined execution, and Spirit-led discernment work together.
                   </p>
                   <p>
-                     Myles’ story is one of alignment between calling and career. What began as a pursuit of success in business has grown into a mission to help others discover abundance that is not just financial, but also spiritual and relational.
+                     Today, my work is shaped by a commitment to seek God's voice in decision-making, learning to recognize prophetic insight, exercise spiritual discernment, and act with courage in the marketplace. I believe God still gives wisdom for timing, direction, and restraint. I believe that spirit-led decisions, when anchored in Scripture and tested by sound counsel, produce peace, clarity, and lasting impact.
+                  </p>
+                  <p>
+                     What drives me forward is simple: to see people grounded in Christ, confident in their decisions, and courageous in their calling—building lives and legacies that honor God and advance His Kingdom.
                   </p>
                </div>
             </div>

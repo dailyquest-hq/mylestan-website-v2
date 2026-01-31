@@ -6,11 +6,11 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, Check } from "lucide-react";
 
 // Assets
-import imgSocial1 from "@/assets/shared/social-1.png";
-import imgSocial2 from "@/assets/shared/social-2.png";
-import imgSocial3 from "@/assets/shared/social-3.png";
-import imgSocial4 from "@/assets/shared/social-4.png";
-import imgSocial5 from "@/assets/shared/social-5.png";
+import imgSocial1 from "@/assets/shared/social-1.jpg";
+import imgSocial2 from "@/assets/shared/social-2.jpg";
+import imgSocial3 from "@/assets/shared/social-3.jpg";
+import imgSocial4 from "@/assets/shared/social-4.jpg";
+import imgSocial5 from "@/assets/shared/social-5.jpg";
 
 export default function ContactPage() {
   return (

@@ -7,9 +7,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 // Assets
-import imgBlog1 from "@/assets/home/blog-1.png";
-import imgBlog2 from "@/assets/home/blog-2.png";
-import imgBlog3 from "@/assets/home/blog-3.png";
+import imgBlog1 from "@/assets/home/blog-1.jpg";
+import imgBlog2 from "@/assets/home/blog-2.jpg";
+import imgBlog3 from "@/assets/home/blog-3.jpg";
 
 // Placeholder images for additional content
 const imgCrypto = "https://images.unsplash.com/photo-1639825752750-5061ded5503b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcnlwdG8lMjB0cmFkaW5nJTIwY2hhcnR8ZW58MXx8fHwxNzY5ODUwNDYyfDA&ixlib=rb-4.1.0&q=80&w=1080";
