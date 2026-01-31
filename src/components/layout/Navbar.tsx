@@ -23,7 +23,7 @@ export function Navbar() {
   return (
     <>
       <nav className="absolute top-0 left-0 right-0 z-[9999] flex justify-between items-center px-5 md:px-8 py-6 md:py-8 max-w-[1600px] mx-auto w-full text-white pointer-events-auto">
-        <Link href="/" className="font-darker font-semibold text-2xl md:text-3xl lg:text-4xl leading-tight max-w-[60%] lg:max-w-none !cursor-pointer">
+        <Link href="/" style={{ cursor: 'pointer' }} className="font-darker font-semibold text-2xl md:text-3xl lg:text-4xl leading-tight max-w-[60%] lg:max-w-none">
           Welcome to Myles Yeo Tan
         </Link>
 
@@ -33,8 +33,9 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
+              style={{ cursor: 'pointer' }}
               className={cn(
-                "hover:text-primary-orange transition-colors duration-200 capitalize !cursor-pointer",
+                "hover:text-primary-orange transition-colors duration-200 capitalize",
                 pathname === link.href && "text-primary-orange"
               )}
             >
@@ -66,8 +67,9 @@ export function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
+              style={{ cursor: 'pointer' }}
               className={cn(
-                "font-darker font-semibold text-3xl md:text-4xl hover:text-primary-orange transition-colors capitalize !cursor-pointer",
+                "font-darker font-semibold text-3xl md:text-4xl hover:text-primary-orange transition-colors capitalize",
                 pathname === link.href && "text-primary-orange"
               )}
             >
