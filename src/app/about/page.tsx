@@ -4,6 +4,29 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 export const metadata: Metadata = {
   title: "About Myles Yeo Tan - Journey of Faith & Finance",
   description: "Discover the story of Myles Tan — a journey of blending professional expertise in crypto trading, Christian entrepreneurship, financial planning, and real estate with biblical principles to empower people worldwide.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Myles Yeo Tan - Journey of Faith & Finance",
+    description: "Discover the story of Myles Tan — a journey of blending professional expertise in crypto trading, Christian entrepreneurship, financial planning, and real estate with biblical principles to empower people worldwide.",
+    url: "https://mylesyeotan.com/about",
+    type: "profile",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Myles Yeo Tan",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Myles Yeo Tan - Journey of Faith & Finance",
+    description: "Discover the story of Myles Tan — a journey of blending professional expertise in crypto trading, Christian entrepreneurship, financial planning, and real estate with biblical principles.",
+    images: ["/og-image.jpg"],
+  },
 };
 import { Button } from "@/components/ui/Button";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";

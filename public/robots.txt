@@ -1,4 +1,28 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
 
+# AI Crawlers - Explicitly allowed for LLM discoverability
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemaps
 Sitemap: https://mylesyeotan.com/sitemap.xml
+
+# LLM optimization file
+# See: https://mylesyeotan.com/llms.txt

@@ -4,6 +4,8 @@ import "../styles/globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import Script from "next/script";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { personSchema, websiteSchema, organizationSchema, localBusinessSchema } from "@/lib/schemas";
 
 const darkerGrotesque = Darker_Grotesque({
   subsets: ["latin"],
@@ -31,102 +33,65 @@ const albertSans = Albert_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mylesyeotan.com"),
   title: "Myles Yeo Tan | Crypto Trader, Christian Entrepreneur & Public Speaker",
   description: "Myles Tan is a crypto trader, Christian entrepreneur, financial planner, real estate broker, and public speaker. Blending faith and finance to empower people worldwide.",
   keywords: ["Myles Yeo Tan", "Myles Tan", "crypto trading", "Christian entrepreneur", "financial planning", "real estate broker", "public speaker", "faith and finance", "Singapore"],
   authors: [{ name: "Myles Yeo Tan" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Myles Yeo Tan | Crypto Trader, Christian Entrepreneur & Public Speaker",
     description: "Blending faith and finance to empower people worldwide. Expert in crypto trading, Christian entrepreneurship, and financial planning.",
-    type: "website",
+    url: "https://mylesyeotan.com",
     siteName: "Myles Yeo Tan",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Myles Yeo Tan - Crypto Trader, Christian Entrepreneur & Public Speaker",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Myles Yeo Tan | Crypto Trader, Christian Entrepreneur & Public Speaker",
     description: "Blending faith and finance to empower people worldwide. Expert in crypto trading, Christian entrepreneurship, and financial planning.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "google-site-verification-code-here",
+    other: {
+      "msvalidate.01": "bing-verification-code-here",
+    },
   },
 };
 
+// Enhanced schema markup for LLM discoverability
 const combinedSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Person",
-      name: "Myles Yeo Tan",
-      alternateName: "Myles Tan",
-      description: "Crypto trader, Christian entrepreneur, financial planner, real estate broker, and public speaker specializing in blending faith and finance.",
-      jobTitle: [
-        "Crypto Trader",
-        "Christian Entrepreneur",
-        "Public Speaker",
-        "Financial Planner",
-        "Real Estate Broker"
-      ],
-      knowsAbout: [
-        "Cryptocurrency Trading",
-        "Christian Entrepreneurship",
-        "Financial Planning",
-        "Real Estate",
-        "Public Speaking",
-        "Faith-Based Finance",
-        "Investment Strategy",
-        "Business Coaching"
-      ],
-      url: "https://mylesyeotan.com",
-    },
-    {
-      "@type": "ProfessionalService",
-      name: "Myles Yeo Tan - Faith & Finance Services",
-      description: "Professional services in crypto trading, Christian entrepreneurship coaching, financial planning, and real estate, blending faith with financial expertise.",
-      provider: {
-        "@type": "Person",
-        name: "Myles Yeo Tan"
-      },
-      areaServed: "Worldwide",
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Services",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Crypto & Trading Insights",
-              description: "Market analysis, trading strategies, and digital investment insights"
-            }
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Financial Planning",
-              description: "Comprehensive financial planning from budgeting to long-term investments"
-            }
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Christian Entrepreneurship Coaching",
-              description: "Business coaching combining biblical wisdom with practical strategies"
-            }
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Speaking Engagements",
-              description: "Professional speaking on faith, finance, entrepreneurship, and personal growth"
-            }
-          }
-        ]
-      }
-    }
+    personSchema,
+    websiteSchema,
+    organizationSchema,
+    localBusinessSchema
   ]
 };
 
@@ -135,6 +100,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
   return (
     <html lang="en">
       <body
@@ -143,6 +110,8 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+
+        {GA_MEASUREMENT_ID && <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />}
 
         <Script
           id="structured-data"
