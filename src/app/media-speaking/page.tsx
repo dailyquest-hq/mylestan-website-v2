@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import Link from "next/link";
-import { Play, Calendar, MapPin, CheckCircle, ArrowRight } from "lucide-react";
+import { Play, Calendar, MapPin, CheckCircle } from "lucide-react";
 
 // Assets
 import imgMediaBg from "@/assets/home/media-bg.jpg";
@@ -111,12 +111,6 @@ export default function MediaSpeakingPage() {
                   <TopicItem title="Faith, Family, and Financial Freedom" />
                   <TopicItem title="The Entrepreneur’s Calling" />
                </ul>
-
-               <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                  <a href="/media-kit.pdf" className="flex items-center gap-2 font-albert font-bold text-[#ed5128] uppercase text-sm tracking-wide border-b-2 border-[#ed5128] pb-1 w-fit hover:text-[#d9401b] hover:border-[#d9401b] transition-colors">
-                     Download Media Kit <ArrowRight size={16} />
-                  </a>
-               </div>
             </div>
 
          </div>
