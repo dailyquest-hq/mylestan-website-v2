@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { ArrowRight } from "lucide-react";
 
 // Assets
 import imgHero from "@/assets/home/hero.png";
@@ -70,7 +69,7 @@ export default function Homepage() {
           
           {/* Text Block */}
           <div className="flex flex-col gap-8 max-w-4xl mr-auto">
-            <SectionLabel color="orange">about</SectionLabel>
+            <SectionLabel color="black">about</SectionLabel>
             <div className="font-darker font-semibold text-3xl md:text-[32px] leading-tight space-y-8">
               <p>
                 I'm Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people integrate faith and finance in a way that produces peace, clarity, and impact. I believe wealth isn't the goal, but stewardship for the glory of God is. When you're blessed, you're blessed to be a blessing for others.
@@ -105,7 +104,7 @@ export default function Homepage() {
       {/* Past Achievements */}
       <section className="bg-white text-black pb-24 px-5">
         <div className="max-w-[1600px] mx-auto">
-           <SectionLabel className="mb-12 opacity-80" color="orange">past achievements</SectionLabel>
+           <SectionLabel className="mb-12 opacity-80" color="black">past achievements</SectionLabel>
            
            <div className="flex flex-col">
               {[
@@ -164,11 +163,6 @@ export default function Homepage() {
                 <div key={i} className="bg-white p-8 md:p-10 flex flex-col gap-6 text-[#282828] min-h-[400px]">
                    <h3 className="font-darker font-semibold text-3xl leading-none">{service.title}</h3>
                    <p className="font-inter text-[#3c3c3c] text-base leading-relaxed">{service.desc}</p>
-                   <div className="mt-auto pt-4">
-                      <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center">
-                        <ArrowRight size={18} className="text-[#ed5128]" />
-                      </div>
-                   </div>
                 </div>
               ))}
            </div>
