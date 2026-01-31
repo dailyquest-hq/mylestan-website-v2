@@ -58,7 +58,7 @@ export default function Homepage() {
 
           {/* Hero Image */}
           <div className="w-full relative mt-12 h-[500px] md:h-[700px] xl:h-[800px]">
-             <img src={imgHero.src} alt="Myles Tan" className="w-full h-full object-cover" />
+             <img src={imgMediaBg.src} alt="Myles Tan" className="w-full h-full object-cover" />
           </div>
 
         </div>
@@ -232,7 +232,7 @@ export default function Homepage() {
       {/* Media Speaking */}
       <section className="relative w-full h-[600px] md:h-[800px] overflow-hidden">
          <div className="absolute inset-0">
-           <img src={imgMediaBg.src} alt="Media Background" className="w-full h-full object-cover" />
+           <img src={imgHero.src} alt="Media Background" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-[#18140e]/40" />
          </div>
          
