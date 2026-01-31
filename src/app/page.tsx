@@ -9,17 +9,17 @@ import { cn } from "@/lib/utils";
 
 // Assets
 import imgHero from "@/assets/home/hero.png";
-import imgAboutLarge from "@/assets/home/about-large.png";
-import imgAboutSmall1 from "@/assets/home/about-small-1.png";
-import imgAboutSmall2 from "@/assets/home/about-small-2.png";
+import imgAboutLarge from "@/assets/home/about-large.jpg";
+import imgAboutSmall1 from "@/assets/home/about-small-1.jpg";
+import imgAboutSmall2 from "@/assets/home/about-small-2.jpg";
 
 // Blog Images
-import imgBlog1 from "@/assets/home/blog-1.png";
-import imgBlog2 from "@/assets/home/blog-2.png";
-import imgBlog3 from "@/assets/home/blog-3.png";
+import imgBlog1 from "@/assets/home/blog-1.jpg";
+import imgBlog2 from "@/assets/home/blog-2.jpg";
+import imgBlog3 from "@/assets/home/blog-3.jpg";
 
 // Media Background
-import imgMediaBg from "@/assets/home/media-bg.png";
+import imgMediaBg from "@/assets/home/media-bg.jpg";
 
 export default function Homepage() {
   return (
@@ -34,24 +34,24 @@ export default function Homepage() {
             <h1 className="font-darker font-semibold text-[12vw] sm:text-[13vw] md:text-[14vw] lg:text-[15vw] xl:text-[280px] leading-[0.8] tracking-tight text-center break-words max-w-full px-4">
               Myles Yeo Tan
             </h1>
-            <p className="font-darker font-semibold text-xl md:text-2xl mt-8 md:mt-12 text-right w-full max-w-4xl ml-auto xl:mr-20">
-              Crypto Trader | Christian Entrepreneur | Public Speaker | Financial Planner | Real Estate Broker
+            <p className="font-darker font-semibold text-xl md:text-2xl mt-8 md:mt-12 text-center w-full max-w-4xl mx-auto">
+              Faith that grounds. Wisdom that compounds.
             </p>
-            
+
             {/* Description & Buttons */}
-            <div className="flex flex-col items-center gap-8 mt-16 max-w-lg mx-auto">
-              <p className="font-inter text-base text-center text-white/90">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.
+            <div className="flex flex-col items-center gap-8 mt-16 max-w-2xl mx-auto">
+              <p className="font-inter text-base text-center text-white/90 leading-relaxed">
+                I'm Myles Yeo Tan—a speaker, mentor, and entrepreneur helping people grow spiritually and financially. With experience in crypto, trading, financial planning, and real estate, I teach practical stewardship anchored in Scripture and real-world strategy.
               </p>
               <div className="flex gap-4">
-                <Link href="/about">
+                <Link href="/services">
                   <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide">
-                    ABOUT ME
+                    Explore Services
                   </Button>
                 </Link>
-                <Link href="/contact">
+                <Link href="/media-speaking">
                   <Button variant="outline" className="border-[#ed5128] text-[#ed5128] hover:bg-[#ed5128] hover:text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide">
-                    WORK WITH ME
+                    Watch Messages
                   </Button>
                 </Link>
               </div>
