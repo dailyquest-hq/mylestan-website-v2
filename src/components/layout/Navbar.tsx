@@ -14,8 +14,8 @@ export function Navbar() {
     { name: "home", href: "/" },
     { name: "about", href: "/about" },
     { name: "services", href: "/services" },
-    // { name: "blogs", href: "/blogs" },
-    // { name: "media speaking", href: "/media-speaking" },
+    { name: "blogs", href: "/blogs" },
+    { name: "media speaking", href: "/media-speaking" },
     { name: "faqs", href: "/faqs" },
     { name: "contact us", href: "/contact" },
   ];

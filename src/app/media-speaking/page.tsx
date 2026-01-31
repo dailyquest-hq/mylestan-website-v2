@@ -7,12 +7,12 @@ import { Play, Calendar, MapPin, CheckCircle, ArrowRight } from "lucide-react";
 
 // Assets
 import imgMediaBg from "@/assets/home/media-bg.jpg";
-import imgSpeaker from "@/assets/home/about-large.jpg"; // Reusing about image for speaker shot
+import imgSpeaker from "@/assets/home/about-large.jpg";
 
-// Placeholders for video thumbnails
-const thumb1 = "https://images.unsplash.com/photo-1597154498045-00e8fe2bfd1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb2RjYXN0JTIwbWljcm9waG9uZSUyMGludGVydmlld3xlbnwxfHx8fDE3Njk4NTA0NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080";
-const thumb2 = "https://images.unsplash.com/photo-1762968269894-1d7e1ce8894e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25mZXJlbmNlJTIwc3BlYWtlciUyMHN0YWdlfGVufDF8fHx8MTc2OTg1MDQ2Mnww&ixlib=rb-4.1.0&q=80&w=1080";
-const thumb3 = "https://images.unsplash.com/photo-1622674869894-ee2314939662?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHdvcmtzaG9wJTIwbWVldGluZ3xlbnwxfHx8fDE3Njk4NTA0NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080"; // Using workshop fallback
+// Media appearances
+import imgBNC from "@/assets/media-speaking/BNC.jpg";
+import imgZFT from "@/assets/media-speaking/zft-coo.jpg";
+import imgFrancisKong from "@/assets/media-speaking/francis-kong.jpg";
 
 export default function MediaSpeakingPage() {
   return (
@@ -60,23 +60,23 @@ export default function MediaSpeakingPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-               <VideoCard 
-                  image={thumb1}
-                  title="Faith in the Marketplace Podcast"
-                  type="PODCAST INTERVIEW"
-                  duration="45 min"
-               />
-               <VideoCard 
-                  image={thumb2}
-                  title="Keynote: Stewardship in the Digital Age"
-                  type="CONFERENCE TALK"
-                  duration="1 hr 15 min"
-               />
-               <VideoCard 
-                  image={thumb3}
-                  title="Panel: The Future of Christian Entrepreneurship"
-                  type="PANEL DISCUSSION"
+               <VideoCard
+                  image={imgBNC.src}
+                  title="Bilyonaryo News Channel - Market Analysis"
+                  type="MEDIA INTERVIEW"
                   duration="30 min"
+               />
+               <VideoCard
+                  image={imgZFT.src}
+                  title="ZFT Trading Republic - New COO Announcement"
+                  type="CORPORATE FEATURE"
+                  duration="15 min"
+               />
+               <VideoCard
+                  image={imgFrancisKong.src}
+                  title="Speaking Engagement with Francis Kong"
+                  type="CONFERENCE TALK"
+                  duration="45 min"
                />
             </div>
          </div>
@@ -123,23 +123,23 @@ export default function MediaSpeakingPage() {
             <SectionLabel color="black" className="mb-12">upcoming schedule</SectionLabel>
             
             <div className="flex flex-col border-t border-gray-200">
-               <EventRow 
-                  date="APR 15-17, 2025"
-                  title="Global Faith Summit"
+               <EventRow
+                  date="FEB 2025"
+                  title="ZFT Trading Republic Leadership Forum"
+                  location="Manila, Philippines"
+                  role="Chief Operating Officer"
+               />
+               <EventRow
+                  date="MAR 2025"
+                  title="Bilyonaryo Market Insights Series"
+                  location="Virtual Broadcast"
+                  role="Market Analyst"
+               />
+               <EventRow
+                  date="APR 2025"
+                  title="Faith & Finance Leadership Summit"
                   location="Singapore"
                   role="Keynote Speaker"
-               />
-               <EventRow 
-                  date="MAY 05, 2025"
-                  title="Kingdom Business Workshop"
-                  location="Jakarta, Indonesia"
-                  role="Workshop Lead"
-               />
-               <EventRow 
-                  date="JUN 20, 2025"
-                  title="Future of Finance Conference"
-                  location="Virtual"
-                  role="Panelist"
                />
             </div>
          </div>
