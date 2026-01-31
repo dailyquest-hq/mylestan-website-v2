@@ -14,9 +14,8 @@ export function Footer() {
   ];
 
   const helpLinks = [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
     { name: "Contact Us", href: "/contact" },
+    { name: "FAQs", href: "/faqs" },
   ];
 
   return (
