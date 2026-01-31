@@ -156,11 +156,18 @@ export default function AboutPage() {
                
                {/* Social Icons */}
                <div className="flex gap-4 mt-4">
-                  {[Facebook, Instagram, Linkedin, Twitter, Youtube].map((Icon, i) => (
-                     <div key={i} className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors cursor-pointer">
-                        <Icon size={24} strokeWidth={1.5} />
-                     </div>
-                  ))}
+                  <Link href="https://www.facebook.com/mylestanministries" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors">
+                     <Facebook size={24} strokeWidth={1.5} />
+                  </Link>
+                  <Link href="https://www.instagram.com/mylestan" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors">
+                     <Instagram size={24} strokeWidth={1.5} />
+                  </Link>
+                  <Link href="https://www.linkedin.com/in/myles-yeo-tan/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors">
+                     <Linkedin size={24} strokeWidth={1.5} />
+                  </Link>
+                  <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors">
+                     <Youtube size={24} strokeWidth={1.5} />
+                  </Link>
                </div>
             </div>
 

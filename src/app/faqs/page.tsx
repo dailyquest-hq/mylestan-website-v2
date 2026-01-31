@@ -52,66 +52,66 @@ export default function FAQPage() {
 
             {/* FAQ Groups */}
             <div className="w-full flex flex-col gap-12">
-               <FAQGroup 
+               <FAQGroup
                  title="Services & Coaching"
                  items={[
                    {
-                     q: "What kind of services?",
-                     a: "We offer a range of services including Crypto & Trading Insights, Financial Planning, and Christian Entrepreneurship Coaching. Each service is designed to bridge professional expertise with biblical principles."
+                     q: "What kind of services do you offer?",
+                     a: "Myles Yeo Tan offers services across crypto & trading insights, financial planning, Christian entrepreneurship coaching, and speaking engagements. Each service is designed to bring clarity, wisdom, and disciplined execution—both spiritually and practically. You can explore all services in detail on the Services page."
                    },
                    {
                      q: "Do you work with individuals or groups?",
-                     a: "Yes, Myles works with both individuals for one-on-one financial planning and coaching, as well as groups through workshops, seminars, and speaking engagements."
+                     a: "Yes—services are available for both individuals and groups, depending on the engagement. Myles Yeo Tan can coach both individuals and groups."
                    },
                    {
                      q: "How do I book a coaching session?",
-                     a: "You can book a session directly through our Services page or by contacting us via the form below to schedule a consultation."
+                     a: "You can book a coaching or planning session directly through the Services page. Once booked, you'll receive instructions on preparation and next steps. Availability is limited to ensure quality and focus for each client."
                    }
                  ]}
                />
 
-               <FAQGroup 
+               <FAQGroup
                  title="Speaking Engagements"
                  items={[
                    {
                      q: "What topics does Myles usually speak on?",
-                     a: "Myles speaks on Faith & Finance, Kingdom Entrepreneurship, Stewardship, and Purposeful Living, tailoring his message to the specific needs of the audience."
+                     a: "Myles Yeo Tan speaks on faith-driven leadership, financial stewardship, entrepreneurship, market wisdom, and purpose-led living. His talks blend biblical truth, real-world experience, and practical application. Each message is tailored to the audience and setting."
                    },
                    {
                      q: "How do I invite Myles to speak at my event?",
-                     a: "Please fill out the booking form on the Speaking Engagements page or the Contact page with details about your event, date, and audience."
+                     a: "To invite Myles Yeo Tan to speak, simply fill out the request form on the Speaking Engagements page or Contact page. Please include event details, audience type, and preferred dates. A member of the team will follow up to discuss alignment and logistics."
                    },
                    {
                      q: "Are speaking engagements available internationally?",
-                     a: "Yes, Myles travels internationally for speaking engagements. Please reach out well in advance to coordinate schedules and travel arrangements."
+                     a: "Yes, international speaking engagements are available, subject to scheduling and logistics. Virtual engagements are also offered for global audiences. You can indicate your location and format preference in the booking form."
                    }
                  ]}
                />
 
-               <FAQGroup 
+               <FAQGroup
                  title="Events & Media"
                  items={[
                    {
                      q: "Where can I find updates on upcoming events?",
-                     a: "Upcoming events are listed on our Homepage and social media channels. Subscribe to our newsletter to get the latest updates delivered to your inbox."
+                     a: "Updates on upcoming talks, seminars, and events are shared through social media channels including Facebook, Instagram, and YouTube."
                    },
                    {
                      q: "Has Myles been featured in media or podcasts?",
-                     a: "Yes, Myles has appeared on various podcasts and media outlets discussing faith, crypto, and business. Check our Media section for recent features."
+                     a: "Yes, Myles Yeo Tan has been featured on media platforms and invited to speak on finance, markets, and faith-based leadership, including appearances on Bilyonaryo News Channel, ZFT Trading Republic, and various financial publications."
                    }
                  ]}
                />
 
-               <FAQGroup 
+               <FAQGroup
                  title="General Questions"
                  items={[
                    {
                      q: "How can I stay connected with Myles?",
-                     a: "Follow us on Instagram, Facebook, and LinkedIn for daily insights. You can also join our email list for exclusive content and updates."
+                     a: "You can stay connected to Myles Yeo Tan by following him on social media (Facebook, Instagram, YouTube, LinkedIn) for insights, teachings, and updates. This is where new content, events, and resources are announced first."
                    },
                    {
                      q: "Do you offer free resources?",
-                     a: "Yes! We regularly publish blogs, market updates, and devotionals. Check out the Blogs section for free educational content."
+                     a: "Yes. Myles Yeo Tan offers free resources such as insights, teachings, and educational content that are shared periodically through social media and the website. The goal is to equip people generously, before any paid engagement."
                    }
                  ]}
                />

@@ -70,11 +70,18 @@ export function Footer() {
             <div className="flex flex-col gap-4">
               <h4 className="font-darker font-bold text-xl">Follow Us</h4>
               <div className="flex gap-3">
-                {[Facebook, Instagram, Linkedin, Twitter].map((Icon, i) => (
-                  <Link key={i} href="#" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
-                    <Icon size={18} />
-                  </Link>
-                ))}
+                <Link href="https://www.facebook.com/mylestanministries" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
+                  <Facebook size={18} />
+                </Link>
+                <Link href="https://www.instagram.com/mylestan" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
+                  <Instagram size={18} />
+                </Link>
+                <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
+                  <Youtube size={18} />
+                </Link>
+                <Link href="https://www.linkedin.com/in/myles-yeo-tan/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
+                  <Linkedin size={18} />
+                </Link>
               </div>
             </div>
           </div>
