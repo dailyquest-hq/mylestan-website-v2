@@ -56,9 +56,11 @@ export default function MediaSpeakingPage() {
                      Recent Features & Interviews
                   </h2>
                </div>
-               <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white rounded-none uppercase">
-                  VIEW ALL ON YOUTUBE
-               </Button>
+               <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white rounded-none uppercase">
+                     VIEW ALL ON YOUTUBE
+                  </Button>
+               </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
