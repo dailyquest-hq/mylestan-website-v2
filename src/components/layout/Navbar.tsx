@@ -28,7 +28,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-6 font-medium text-sm">
+        <div className="hidden lg:flex items-center gap-6 font-medium text-sm" style={{ cursor: 'default' }}>
           {links.map((link) => (
             <Link
               key={link.name}
