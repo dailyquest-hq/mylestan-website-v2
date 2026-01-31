@@ -31,7 +31,7 @@ export default function MediaSpeakingPage() {
       {/* Featured Video / Reel */}
       <section className="relative w-full h-[600px] bg-black group overflow-hidden">
          <div className="absolute inset-0 opacity-60">
-            <img src={imgMediaBg.src} alt="Speaking Background" className="w-full h-full object-cover" />
+            <img src={imgMediaBg.src} alt="Speaking Background" className="w-full h-full object-cover object-top" />
          </div>
          <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-5 text-center">
             <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center cursor-pointer hover:bg-[#ed5128] hover:border-[#ed5128] transition-all duration-300 group-hover:scale-110">
