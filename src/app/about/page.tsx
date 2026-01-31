@@ -1,4 +1,3 @@
-import React from "react";
 import type { Metadata } from "next";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
@@ -7,7 +6,7 @@ export const metadata: Metadata = {
   description: "Discover the story of Myles Tan — a journey of blending professional expertise in crypto trading, Christian entrepreneurship, financial planning, and real estate with biblical principles to empower people worldwide.",
 };
 import { Button } from "@/components/ui/Button";
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import Link from "next/link";
 
 // Assets

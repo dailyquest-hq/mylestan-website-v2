@@ -1,9 +1,7 @@
 "use client";
 
-import React from "react";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 // Assets
@@ -75,43 +73,43 @@ export default function BlogsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-               <BlogCard 
-                  image={imgBlog2}
+               <BlogCard
+                  image={imgBlog2.src}
                   category="EVENTS & RECAPS"
                   date="Feb 28, 2025"
                   title="Crypto & Stewardship Webinar Recap"
                   excerpt="Breaking down how believers can navigate digital investments responsibly and avoid common pitfalls."
                />
-               <BlogCard 
-                  image={imgBlog3}
+               <BlogCard
+                  image={imgBlog3.src}
                   category="BLOGS & INSIGHTS"
                   date="Feb 10, 2025"
                   title="Why Kingdom Entrepreneurs Think Differently About Wealth"
                   excerpt="Wealth isn't just about accumulation—it's about distribution. Here's how to shift your mindset."
                />
-               <BlogCard 
+               <BlogCard
                   image={imgCrypto}
                   category="FINANCE"
                   date="Jan 24, 2025"
                   title="Understanding Market Cycles: A Faith-Based Perspective"
                   excerpt="Patience is a virtue, especially in trading. Learning to wait on the right opportunities."
                />
-               <BlogCard 
+               <BlogCard
                   image={imgFaith}
                   category="FAITH"
                   date="Jan 15, 2025"
                   title="3 Daily Habits for Spiritual Growth in a Busy World"
                   excerpt="Practical ways to keep God at the center of your schedule, even when business is booming."
                />
-               <BlogCard 
+               <BlogCard
                   image={imgFinance}
                   category="FINANCE"
                   date="Jan 05, 2025"
                   title="Financial Planning 101: Starting the Year Strong"
                   excerpt="The foundational steps every family needs to take to secure their financial future this year."
                />
-               <BlogCard 
-                  image={imgBlog1} // Reusing for layout fill
+               <BlogCard
+                  image={imgBlog1.src}
                   category="ENTREPRENEURSHIP"
                   date="Dec 20, 2024"
                   title="The Power of Mentorship in Business"
