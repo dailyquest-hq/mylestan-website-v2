@@ -48,9 +48,6 @@ export default function BlogsPage() {
                   <p className="font-inter text-[#575756] text-lg leading-relaxed">
                      A deep dive into my top 3 takeaways from this year's summit, exploring how entrepreneurs can build sustainable businesses without compromising their faith.
                   </p>
-                  <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white rounded-none w-fit mt-4">
-                     READ FULL ARTICLE
-                  </Button>
                </div>
             </div>
          </div>
@@ -116,12 +113,6 @@ export default function BlogsPage() {
                   excerpt="Why you need a Paul, a Barnabas, and a Timothy in your professional life."
                />
             </div>
-
-            <div className="flex justify-center mt-20">
-               <Button className="border-2 border-[#ed5128] text-[#ed5128] bg-transparent hover:bg-[#ed5128] hover:text-white h-12 px-8 text-base font-bold rounded-none uppercase">
-                  LOAD MORE ARTICLES
-               </Button>
-            </div>
          </div>
       </section>
 
@@ -139,7 +130,7 @@ export default function BlogsPage() {
                   placeholder="Enter your email" 
                   className="flex-1 bg-white/10 border border-white/20 text-white placeholder-white/50 px-6 py-4 font-inter focus:outline-none focus:border-[#ed5128]"
                />
-               <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-auto py-4 px-10 text-base font-bold rounded-none uppercase">
+               <Button onClick={() => alert('Newsletter subscription coming soon!')} className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-auto py-4 px-10 text-base font-bold rounded-none uppercase">
                   SUBSCRIBE
                </Button>
             </div>

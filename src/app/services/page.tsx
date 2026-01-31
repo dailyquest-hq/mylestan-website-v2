@@ -180,9 +180,11 @@ function ServiceSection({ id, label, title, description, image, layout, buttonTe
              ))}
            </div>
 
-           <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-12 px-8 text-base font-bold rounded-none uppercase mt-4">
-             {buttonText}
-           </Button>
+           <Link href="/contact">
+             <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-12 px-8 text-base font-bold rounded-none uppercase mt-4">
+               {buttonText}
+             </Button>
+           </Link>
         </div>
 
         {/* Image */}

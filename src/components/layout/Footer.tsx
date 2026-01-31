@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
@@ -36,7 +38,7 @@ export function Footer() {
                 placeholder="Enter your email" 
                 className="flex-1 bg-white/10 border border-white/20 px-4 py-3 text-white placeholder:text-[#bbc6c6] focus:outline-none focus:border-primary-orange transition-colors"
               />
-              <Button className="h-auto">SUBSCRIBE</Button>
+              <Button onClick={() => alert('Newsletter subscription coming soon!')} className="h-auto">SUBSCRIBE</Button>
             </div>
           </div>
 

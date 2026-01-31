@@ -167,9 +167,11 @@ export default function Homepage() {
               ))}
            </div>
 
-           <Button className="border-2 border-white bg-transparent hover:bg-white hover:text-[#ed5128] text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide mt-8">
-             LET'S CONNECT
-           </Button>
+           <Link href="/contact">
+             <Button className="border-2 border-white bg-transparent hover:bg-white hover:text-[#ed5128] text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide mt-8">
+               LET'S CONNECT
+             </Button>
+           </Link>
         </div>
       </section>
 
@@ -268,9 +270,11 @@ function BlogCard({ image, category, title, desc, isBlog = false }: { image: str
          {desc && <p className="font-inter text-[#9f9f9f] text-base mt-2">{desc}</p>}
        </div>
        <div className="mt-auto pt-2">
-         <Button variant="outline" className="border-[#ed5128] text-[#ed5128] hover:bg-[#ed5128] hover:text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide w-full md:w-auto">
-           {isBlog ? "READ FULL BLOG" : "READ FULL RECAP"}
-         </Button>
+         <Link href="/blogs">
+           <Button variant="outline" className="border-[#ed5128] text-[#ed5128] hover:bg-[#ed5128] hover:text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide w-full md:w-auto">
+             {isBlog ? "READ FULL BLOG" : "READ FULL RECAP"}
+           </Button>
+         </Link>
        </div>
     </div>
   )
