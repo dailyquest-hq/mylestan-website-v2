@@ -8,18 +8,18 @@ import { Check, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Assets
-import imgHero from "@/assets/b8f78dd8dc270e5f9737537d99a3a5e1cf6ee83a.png";
-import imgAboutLarge from "@/assets/f8a15c9bbe2cd8cb14e753e8e4a59ff2fbafe0ef.png";
-import imgAboutSmall1 from "@/assets/1b7b9ed06e53fa11ed934b127bbe0f87cc647900.png";
-import imgAboutSmall2 from "@/assets/d6dbe12a4a1ae670adbb682f9f3bb7e083e7f65e.png";
+import imgHero from "@/assets/home/hero.png";
+import imgAboutLarge from "@/assets/home/about-large.png";
+import imgAboutSmall1 from "@/assets/home/about-small-1.png";
+import imgAboutSmall2 from "@/assets/home/about-small-2.png";
 
 // Blog Images
-import imgBlog1 from "@/assets/c1e57017c54c3f6bc788abd25e0ed91bbe87351e.png";
-import imgBlog2 from "@/assets/d6dbe12a4a1ae670adbb682f9f3bb7e083e7f65e.png";
-import imgBlog3 from "@/assets/7d78fafec50ff790a2dda5404c27187528d40c17.png";
+import imgBlog1 from "@/assets/home/blog-1.png";
+import imgBlog2 from "@/assets/home/blog-2.png";
+import imgBlog3 from "@/assets/home/blog-3.png";
 
 // Media Background
-import imgMediaBg from "@/assets/6795e162202e3c0307963e5e15999946d0dee112.png";
+import imgMediaBg from "@/assets/home/media-bg.png";
 
 export default function Homepage() {
   return (

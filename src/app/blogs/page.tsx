@@ -7,9 +7,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 // Assets
-import imgBlog1 from "@/assets/c1e57017c54c3f6bc788abd25e0ed91bbe87351e.png";
-import imgBlog2 from "@/assets/d6dbe12a4a1ae670adbb682f9f3bb7e083e7f65e.png";
-import imgBlog3 from "@/assets/7d78fafec50ff790a2dda5404c27187528d40c17.png";
+import imgBlog1 from "@/assets/home/blog-1.png";
+import imgBlog2 from "@/assets/home/blog-2.png";
+import imgBlog3 from "@/assets/home/blog-3.png";
 
 // Placeholder images for additional content
 const imgCrypto = "https://images.unsplash.com/photo-1639825752750-5061ded5503b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcnlwdG8lMjB0cmFkaW5nJTIwY2hhcnR8ZW58MXx8fHwxNzY5ODUwNDYyfDA&ixlib=rb-4.1.0&q=80&w=1080";

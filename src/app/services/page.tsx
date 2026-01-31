@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { TrendingUp, ShieldCheck, Heart, ThumbsUp, Wallet, PieChart, Users, Star, Mic, MessageCircle, Home } from "lucide-react";
 
 // Assets
-import imgServicePlaceholder from "@/assets/b253e82081540176b3d882f6bb3f15d69992b182.png";
+import imgServicePlaceholder from "@/assets/services/placeholder.png";
 
 // Reusing some assets from other pages if available for variety, otherwise fallback to placeholder
 // Ideally we would have distinct images for each service as shown in design

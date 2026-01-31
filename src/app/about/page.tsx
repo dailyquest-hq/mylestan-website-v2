@@ -11,19 +11,19 @@ import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 
 // Assets
-import imgTicker1 from "@/assets/f78360e4be7e9a1661cfa0c498def3203380ef51.png";
-import imgTicker2 from "@/assets/56973181793d0559b0124604344bd6ba5c4d241e.png";
-import imgTicker3 from "@/assets/f87f649b3b2f23aa77df960c560df6bb0216f4a5.png";
-import imgTicker4 from "@/assets/ff0ad59b66b4aca8a3cf065d2b0d597d335772cf.png";
-import imgTimelineCard from "@/assets/9cd8da70bc103b52b37ed5fd3e7136829a3c6e01.png";
-import imgStory from "@/assets/b253e82081540176b3d882f6bb3f15d69992b182.png";
+import imgTicker1 from "@/assets/about/ticker-1.png";
+import imgTicker2 from "@/assets/about/ticker-2.png";
+import imgTicker3 from "@/assets/about/ticker-3.png";
+import imgTicker4 from "@/assets/about/ticker-4.png";
+import imgTimelineCard from "@/assets/about/timeline-card.png";
+import imgStory from "@/assets/about/story.png";
 
 // Social Grid Images
-import imgSocial1 from "@/assets/d0934957009cfd03eb06d63d25a8976b37965681.png";
-import imgSocial2 from "@/assets/d72ebac6f1b8c46df9e9709b6ed9aee6ae235822.png";
-import imgSocial3 from "@/assets/1f193e0016cf4f0a417249bad529f1b793ba72e8.png";
-import imgSocial4 from "@/assets/a2b57061ef1fc4bd06444663d7a9380524d86d73.png";
-import imgSocial5 from "@/assets/28a4f614d987694196ce41b965605d10f4a1cf87.png";
+import imgSocial1 from "@/assets/shared/social-1.png";
+import imgSocial2 from "@/assets/shared/social-2.png";
+import imgSocial3 from "@/assets/shared/social-3.png";
+import imgSocial4 from "@/assets/shared/social-4.png";
+import imgSocial5 from "@/assets/shared/social-5.png";
 
 export default function AboutPage() {
   return (
