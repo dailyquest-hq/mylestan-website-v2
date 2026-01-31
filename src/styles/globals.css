@@ -27,3 +27,8 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
+/* Force pointer cursor on all links */
+a, a * {
+  cursor: pointer !important;
+}
