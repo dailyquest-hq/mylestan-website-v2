@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
