@@ -153,7 +153,7 @@ export default function MediaSpeakingPage() {
             <p className="font-poppins text-white/90 text-lg max-w-2xl">
                Whether it's a church service, corporate conference, or youth seminar, Myles brings a message of hope, wisdom, and empowerment.
             </p>
-            <Link href="/contact">
+            <Link href="/contact" className="cursor-pointer">
                <Button className="bg-white text-[#ed5128] hover:bg-gray-100 h-14 px-10 text-lg font-bold rounded-none uppercase mt-4">
                   BOOK NOW
                </Button>
@@ -200,7 +200,7 @@ function TopicItem({ title }: { title: string }) {
 
 function EventRow({ date, title, location, role }: { date: string, title: string, location: string, role: string }) {
    return (
-      <div className="flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-200 gap-4 hover:bg-gray-50 transition-colors px-4">
+      <div className="flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-200 gap-4 hover:bg-gray-50 transition-colors px-4 cursor-pointer">
          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-12 flex-1">
             <span className="font-albert font-bold text-[#ed5128] w-40 shrink-0">{date}</span>
             <span className="font-darker font-semibold text-3xl text-black">{title}</span>

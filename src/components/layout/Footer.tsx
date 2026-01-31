@@ -47,7 +47,7 @@ export function Footer() {
               <h4 className="font-darker font-bold text-xl">Quick Links</h4>
               <div className="flex flex-col gap-2 font-inter text-[#9f9f9f]">
                 {quickLinks.map(link => (
-                  <Link key={link.name} href={link.href} className="hover:text-primary-orange transition-colors">
+                  <Link key={link.name} href={link.href} className="hover:text-primary-orange transition-colors cursor-pointer">
                     {link.name}
                   </Link>
                 ))}
@@ -59,7 +59,7 @@ export function Footer() {
               <h4 className="font-darker font-bold text-xl">Need Help?</h4>
               <div className="flex flex-col gap-2 font-inter text-[#9f9f9f]">
                 {helpLinks.map(link => (
-                  <Link key={link.name} href={link.href} className="hover:text-primary-orange transition-colors">
+                  <Link key={link.name} href={link.href} className="hover:text-primary-orange transition-colors cursor-pointer">
                     {link.name}
                   </Link>
                 ))}
@@ -70,16 +70,16 @@ export function Footer() {
             <div className="flex flex-col gap-4">
               <h4 className="font-darker font-bold text-xl">Follow Us</h4>
               <div className="flex gap-3">
-                <Link href="https://www.facebook.com/mylestanministries" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
+                <Link href="https://www.facebook.com/mylestanministries" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors cursor-pointer">
                   <Facebook size={18} />
                 </Link>
-                <Link href="https://www.instagram.com/mylestan" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
+                <Link href="https://www.instagram.com/mylestan" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors cursor-pointer">
                   <Instagram size={18} />
                 </Link>
-                <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
+                <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors cursor-pointer">
                   <Youtube size={18} />
                 </Link>
-                <Link href="https://www.linkedin.com/in/myles-yeo-tan/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors">
+                <Link href="https://www.linkedin.com/in/myles-yeo-tan/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-primary-orange hover:border-primary-orange transition-colors cursor-pointer">
                   <Linkedin size={18} />
                 </Link>
               </div>

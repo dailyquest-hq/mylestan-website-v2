@@ -112,7 +112,7 @@ export default function ServicesPage() {
                   Whether you’re seeking financial guidance, entrepreneurial coaching, or a speaker for your next event — these services are designed to equip and empower you.
                </p>
             </div>
-            <Link href="/contact">
+            <Link href="/contact" className="cursor-pointer">
                <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-14 px-8 text-lg font-bold rounded-none uppercase shrink-0">
                   Contact Myles
                </Button>

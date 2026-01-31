@@ -113,7 +113,7 @@ export default function FAQPage() {
             <p className="font-poppins text-white text-base md:text-lg max-w-md">
                Didn’t find the answer you were looking for? Reach out and we’ll be happy to help.
             </p>
-            <Link href="/contact">
+            <Link href="/contact" className="cursor-pointer">
                <Button className="border-2 border-white bg-transparent hover:bg-white hover:text-[#ed5128] text-white h-12 px-8 text-base font-bold rounded-none uppercase mt-4">
                   CONTACT US
                </Button>
@@ -143,9 +143,9 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
 
   return (
     <div className="bg-[#f0f0f0] rounded-[4px] overflow-hidden">
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between px-6 py-4 text-left transition-colors hover:bg-gray-200/50"
+        className="w-full flex items-center justify-between px-6 py-4 text-left transition-colors hover:bg-gray-200/50 cursor-pointer"
       >
         <span className="font-inter font-normal text-[#282828] text-base">{question}</span>
         <div className="shrink-0 ml-4 text-[#282828]">
