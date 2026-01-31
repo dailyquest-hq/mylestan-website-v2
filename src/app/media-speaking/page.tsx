@@ -29,20 +29,22 @@ export default function MediaSpeakingPage() {
       </section>
 
       {/* Featured Video / Reel */}
-      <section className="relative w-full h-[600px] bg-black group overflow-hidden">
-         <div className="absolute inset-0 opacity-60">
-            <img src={imgMediaBg.src} alt="Speaking Background" className="w-full h-full object-cover object-top" />
-         </div>
-         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-5 text-center">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center cursor-pointer hover:bg-[#ed5128] hover:border-[#ed5128] transition-all duration-300 group-hover:scale-110">
-               <Play size={32} className="fill-white text-white ml-1" />
+      <Link href="https://www.youtube.com/watch?v=nZJeBBMlAjM" target="_blank" rel="noopener noreferrer">
+         <section className="relative w-full h-[600px] bg-black group overflow-hidden">
+            <div className="absolute inset-0 opacity-60">
+               <img src={imgMediaBg.src} alt="Speaking Background" className="w-full h-full object-cover object-top" />
             </div>
-            <h2 className="font-darker font-semibold text-4xl md:text-6xl text-white mt-8">Watch 2024 Highlight Reel</h2>
-            <p className="font-inter text-white/80 text-lg mt-4 max-w-xl">
-               A compilation of key moments from the "Kingdom Impact" tour across Southeast Asia.
-            </p>
-         </div>
-      </section>
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-5 text-center">
+               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center cursor-pointer hover:bg-[#ed5128] hover:border-[#ed5128] transition-all duration-300 group-hover:scale-110">
+                  <Play size={32} className="fill-white text-white ml-1" />
+               </div>
+               <h2 className="font-darker font-semibold text-4xl md:text-6xl text-white mt-8">Watch 2024 Highlight Reel</h2>
+               <p className="font-inter text-white/80 text-lg mt-4 max-w-xl">
+                  A compilation of key moments from the "Kingdom Impact" tour across Southeast Asia.
+               </p>
+            </div>
+         </section>
+      </Link>
 
       {/* Recent Engagements */}
       <section className="py-20 md:py-32 px-5 bg-white">
@@ -65,18 +67,21 @@ export default function MediaSpeakingPage() {
                   title="Bilyonaryo News Channel - Market Analysis"
                   type="MEDIA INTERVIEW"
                   duration="30 min"
+                  url="https://www.youtube.com/watch?v=nZJeBBMlAjM"
                />
                <VideoCard
                   image={imgZFT.src}
                   title="ZFT Trading Republic - New COO Announcement"
                   type="CORPORATE FEATURE"
                   duration="15 min"
+                  url="https://www.youtube.com/watch?v=GYb1q8tm36s&list=PL033hJEN0tRt2wQyz8KxKEu5xWhCKrDuI"
                />
                <VideoCard
                   image={imgFrancisKong.src}
                   title="Speaking Engagement with Francis Kong"
                   type="CONFERENCE TALK"
                   duration="45 min"
+                  url="https://staphilippines.org/pathways-to-success-of-myles-y-tan-cta/"
                />
             </div>
          </div>
@@ -164,9 +169,9 @@ export default function MediaSpeakingPage() {
   );
 }
 
-function VideoCard({ image, title, type, duration }: { image: string, title: string, type: string, duration: string }) {
+function VideoCard({ image, title, type, duration, url }: { image: string, title: string, type: string, duration: string, url: string }) {
    return (
-      <div className="flex flex-col gap-4 group cursor-pointer">
+      <Link href={url} target="_blank" rel="noopener noreferrer" className="flex flex-col gap-4 group cursor-pointer">
          <div className="relative w-full h-[240px] overflow-hidden bg-gray-900 rounded-sm">
             <img src={image} alt={title} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
             <div className="absolute inset-0 flex items-center justify-center">
@@ -182,7 +187,7 @@ function VideoCard({ image, title, type, duration }: { image: string, title: str
             <span className="font-albert font-bold text-xs text-[#ed5128] tracking-wider uppercase">{type}</span>
             <h3 className="font-darker font-semibold text-2xl leading-none text-black group-hover:text-[#ed5128] transition-colors">{title}</h3>
          </div>
-      </div>
+      </Link>
    )
 }
 
