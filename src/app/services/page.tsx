@@ -104,7 +104,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Bottom CTA */}
-      <section className="bg-black py-20 px-5 border-t border-white/10">
+      <section className="bg-black py-24 px-5 border-t border-white/10">
          <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
             <div className="text-left max-w-3xl">
                <h2 className="font-darker font-semibold text-4xl md:text-[64px] leading-none text-white mb-6">Take the Next Step Today</h2>
