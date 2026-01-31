@@ -8,16 +8,16 @@ import { cn } from "@/lib/utils";
 import { TrendingUp, ShieldCheck, Heart, ThumbsUp, Wallet, PieChart, Users, Star, Mic, MessageCircle, Home } from "lucide-react";
 
 // Assets
-import imgServicePlaceholder from "@/assets/services/placeholder.png";
+import imgCrypto from "@/assets/services/crypto-trading.jpg";
+import imgFinancial from "@/assets/services/financial-planning.jpg";
+import imgCoaching from "@/assets/services/entrepreneurship.jpg";
+import imgSpeaking from "@/assets/services/speaking.jpg";
 
-// Reusing some assets from other pages if available for variety, otherwise fallback to placeholder
-// Ideally we would have distinct images for each service as shown in design
 const serviceImages = {
-  crypto: imgServicePlaceholder.src,
-  financial: imgServicePlaceholder.src,
-  coaching: imgServicePlaceholder.src,
-  realEstate: imgServicePlaceholder.src,
-  speaking: imgServicePlaceholder.src,
+  crypto: imgCrypto.src,
+  financial: imgFinancial.src,
+  coaching: imgCoaching.src,
+  speaking: imgSpeaking.src,
 };
 
 export default function ServicesPage() {
@@ -37,83 +37,67 @@ export default function ServicesPage() {
       {/* Service Sections */}
       <div className="flex flex-col">
         
-        {/* Crypto & Trading */}
-        <ServiceSection 
+        {/* Crypto, Stocks & Commodities Trading Analysis */}
+        <ServiceSection
           id="crypto"
-          label="Crypto & Trading Insights"
-          title="Navigate the digital economy with clarity."
-          description="Stay ahead in crypto and trading with market insights, strategies, and educational resources rooted in both financial wisdom and biblical stewardship."
+          label="Crypto, Stocks & Commodities Trading Analysis"
+          title="Wisdom over hype. Discipline over emotion."
+          description="Myles Yeo Tan will provide clear, disciplined insights into the markets, grounded in wisdom and risk awareness. The goal is to help you make informed, strategic decisions in volatile markets while avoiding financial losses due to market hype and speculation. \"The plans of the diligent lead surely to abundance.\" — Proverbs 21:5"
           image={serviceImages.crypto}
           layout="left"
-          buttonText="Get Trading Insights"
+          buttonText="LET'S CHART!"
           bullets={[
-            { icon: TrendingUp, text: "Market trend analysis and practical trading guidance", color: "orange" },
-            { icon: ShieldCheck, text: "Risk management strategies for long-term success", color: "orange" },
-            { icon: Heart, text: "Insights on aligning investments with Kingdom values", color: "orange" }
+            { icon: TrendingUp, text: "Market cycle and technical analysis", color: "orange" },
+            { icon: ShieldCheck, text: "Risk management & trade psychology coaching", color: "orange" },
+            { icon: Heart, text: "Educational breakdowns of charts and setups", color: "orange" }
           ]}
         />
 
-        {/* Financial Planning */}
-        <ServiceSection 
+        {/* Financial Planning and Literacy */}
+        <ServiceSection
           id="financial"
-          label="Financial Planning"
-          title="Build a foundation that lasts."
-          description="From budgeting to long-term investing, financial planning helps ensure stability and growth for individuals, families, and businesses."
+          label="Financial Planning and Literacy"
+          title="Steward well. Build intentionally."
+          description="Myles Yeo Tan will give a values-aligned financial planning experience focused on clarity, order, and long-term growth. We design financial systems that support your life calling—so you get to manage your money and money doesn't manage you. \"Suppose one of you wants to build a tower. Won't you first sit down and estimate the cost?\" — Luke 14:28"
           image={serviceImages.financial}
           layout="right"
-          buttonText="Start Planning Today"
+          buttonText="BOOK A SESSION"
           bullets={[
-            { icon: ThumbsUp, text: "Personalised strategies tailored to your goals", color: "green" },
-            { icon: Wallet, text: "Budgeting, saving, and debt management guidance", color: "green" },
-            { icon: PieChart, text: "Long-term wealth creation with purpose-driven principles", color: "green" }
+            { icon: Wallet, text: "Budgeting and cash-flow optimization", color: "green" },
+            { icon: PieChart, text: "Goal-based financial roadmapping", color: "green" },
+            { icon: ThumbsUp, text: "Values-aligned investment guidance", color: "green" }
           ]}
         />
 
         {/* Christian Entrepreneurship Coaching */}
-        <ServiceSection 
+        <ServiceSection
           id="coaching"
           label="Christian Entrepreneurship Coaching"
-          title="Grow a business anchored in faith."
-          description="Entrepreneurship isn’t just about profit — it’s about purpose. Coaching empowers business leaders to integrate biblical wisdom with practical strategies."
+          title="Build businesses that honor God."
+          description="Myles Yeo Tan will coach and equip entrepreneurs to lead with conviction, integrity, and excellence—combining biblical wisdom with practical execution. Ideal for founders who desire Spirit-led decisions and measurable results. \"Commit your work to the Lord, and your plans will be established.\" — Proverbs 16:3"
           image={serviceImages.coaching}
           layout="left"
-          buttonText="Book a Coaching Session"
+          buttonText="GET COACHED TODAY"
           bullets={[
-            { icon: Users, text: "One-on-one coaching for business owners and startups", color: "peach" },
-            { icon: Star, text: "Guidance on Kingdom leadership and ethical practices", color: "peach" },
-            { icon: TrendingUp, text: "Strategies for sustainable growth aligned with faith values", color: "peach" }
-          ]}
-        />
-
-        {/* Real Estate Brokerage */}
-        <ServiceSection 
-          id="real-estate"
-          label="Real Estate Brokerage"
-          title="Invest with wisdom, create lasting value."
-          description="Real estate remains one of the strongest wealth-building tools. Brokerage services connect clients with opportunities that are financially sound and ethically grounded."
-          image={serviceImages.realEstate}
-          layout="right"
-          buttonText="Explore Real Estate Opportunities"
-          bullets={[
-            { icon: Home, text: "Buy, sell, or invest in properties with confidence", color: "orange" },
-            { icon: PieChart, text: "Market expertise and tailored investment strategies", color: "orange" },
-            { icon: Heart, text: "Support throughout the process with integrity and care", color: "orange" }
+            { icon: Star, text: "Faith-based business strategy & decision-making", color: "peach" },
+            { icon: Users, text: "Mentorship for founders and leaders", color: "peach" },
+            { icon: TrendingUp, text: "Clarity on calling, vision, and execution", color: "peach" }
           ]}
         />
 
         {/* Speaking Engagements */}
-        <ServiceSection 
+        <ServiceSection
           id="speaking"
           label="Speaking Engagements"
-          title="Inspiring audiences, transforming lives."
-          description="From churches and conferences to business summits, Myles brings messages that bridge faith and finance, leaving audiences both encouraged and equipped."
+          title="Truth spoken. Lives sharpened."
+          description="Let Myles Yeo Tan give high-impact speaking engagements that challenge audiences to think clearly, lead courageously, and steward resources wisely. Messages are grounded in Scripture, real-world experience, and practical application. Any topic is ok! \"Plans fail for lack of counsel, but with many advisers they succeed.\" — Proverbs 20:18"
           image={serviceImages.speaking}
-          layout="left"
-          buttonText="Book Myles to Speak"
+          layout="right"
+          buttonText="Book Me to Speak!"
           bullets={[
-            { icon: Mic, text: "Keynote speaking on faith, finance, and entrepreneurship", color: "orange" },
-            { icon: Users, text: "Workshops and seminars for ministries or organisations", color: "orange" },
-            { icon: MessageCircle, text: "Tailored topics for community, church, or business events", color: "orange" }
+            { icon: Mic, text: "Keynotes, seminars, and panel talks", color: "orange" },
+            { icon: Users, text: "Faith, finance, leadership, and purpose-driven themes", color: "orange" },
+            { icon: MessageCircle, text: "Tailored messages for your audience", color: "orange" }
           ]}
         />
 

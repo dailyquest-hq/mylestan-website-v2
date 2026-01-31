@@ -75,10 +75,13 @@ export default function Homepage() {
             <SectionLabel color="orange">about</SectionLabel>
             <div className="font-darker font-semibold text-3xl md:text-[32px] leading-tight space-y-8">
               <p>
-                Myles Tan is a speaker, mentor, and entrepreneur passionate about blending faith and finance to empower people in every area of life. With experience spanning crypto, trading, financial planning, real estate, and Christian entrepreneurship, he guides individuals to steward their resources wisely while keeping Christ at the centre.
+                I'm Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people integrate faith and finance in a way that produces peace, clarity, and impact. I believe wealth isn't the goal, but stewardship for the glory of God is. When you're blessed, you're blessed to be a blessing for others.
               </p>
               <p>
-                Beyond business, Myles is deeply devoted to ministry — teaching, coaching, and speaking in ways that inspire growth, purpose, and transformation. His mission is simple: to help people live abundantly in both faith and finance.
+                My background spans crypto and trading, financial planning, real estate, and entrepreneurship, giving me a practical perspective on how people can build long-term stability in a fast-changing world. I've seen how fear, hype, and pressure destroy decision-making, so my work focuses on replacing noise with principles, and speculation with strategy.
+              </p>
+              <p>
+                Beyond business, I'm deeply devoted to teaching and preaching the word of God. I love helping people encounter Jesus, grow in purpose, and live with conviction. I believe my calling as a kingdom entrepreneur is to marketplace ministers and stay rooted in Christ.
               </p>
             </div>
           </div>
@@ -108,14 +111,15 @@ export default function Homepage() {
            
            <div className="flex flex-col">
               {[
-                { year: "2010", text: "Founded the ministry with a mission to teach and demonstrate God’s Word through both online and in-person gatherings." },
-                { year: "2011", text: "Launched a YouTube channel and reached the first 10,000 subscribers within the year." },
-                { year: "2012", text: "Expanded digital ministry during the pandemic, livestreaming weekly Bible studies, prayer nights, and deliverance sessions." },
-                { year: "2013", text: "Introduced the Prophetic H.E.D.G.E. program, empowering hundreds of believers through healing, deliverance, and evangelism." },
-                { year: "2014", text: "Partnered with local and international churches to conduct training and outreach events." },
-                { year: "2015", text: "Surpassed 1 million video views and built an active global community engaging with teachings weekly." },
-                { year: "2024", text: "Launched official website and prayer resources, making materials available to a wider audience." },
-                { year: "2024", text: "Continuing to grow in reach, expanding mentoring, discipleship, and global evangelism initiatives." }
+                { year: "2020", text: "Founded Myles Tan Ministries, reaching 1,000 followers in first year." },
+                { year: "2021", text: "Launched the MTM YouTube channel that impacted 5,000 individuals. Invited to speak at multiple churches, where messages delivered led to numerous decisions for Christ." },
+                { year: "2021", text: "By the grace of God, converted a ₱12,000 NFT purchase into ₱6,000,000, delivering nearly 50,000% ROI through early positioning and disciplined exit strategy." },
+                { year: "2022", text: "Accumulated Bitcoin below $20,000 and exited above $100,000, delivering over 400% ROI through cycle awareness and risk-controlled execution." },
+                { year: "2023", text: "Entered the gold market at $2,000 and precisely timed a breakout that delivered over 100% upside—well ahead of mainstream consensus." },
+                { year: "2024", text: "Invited to speak on faith and finances at the ZFT Trading Republic YouTube channel. Entered the silver market at $30 and timed a breakout delivering over 100% upside." },
+                { year: "2025", text: "Became a certified Registered Financial Planner (RFP) and Certified Technical Analyst (CTA). Appointed Chief Operating Officer of ZFT Trading Republic." },
+                { year: "2025", text: "Invited to speak on Bilyonaryo News Channel, sharing insights on the Philippine stock market, investor sentiment, and navigating volatility with conviction." },
+                { year: "2026", text: "Expanding investment portfolio to include U.S. equities and Philippine luxury art scene, equipping others to grow wealth through timeless, biblical principles." }
               ].map((item, index) => (
                 <div key={index} className="flex flex-col md:flex-row items-baseline border-t border-black/10 py-10 gap-8 md:gap-24 group hover:bg-gray-50 transition-colors px-4">
                   <span className="font-darker font-semibold text-5xl md:text-[48px] leading-[0.9] text-[#282828] w-32 shrink-0">{item.year}</span>
@@ -205,21 +209,21 @@ export default function Homepage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
              <BlogCard
                image={imgBlog1.src}
-               category="EVENTS & RECAPS"
-               title="Faith & Business Summit 2025"
-               desc="My top 3 lessons on merging Kingdom values with practical strategies."
+               category="BLOGS & INSIGHTS"
+               title="Faith-Driven Investing in 2025: Conviction Over Chaos"
+               desc="A practical guide to staying grounded when headlines are loud—how to think in principles, not panic."
              />
              <BlogCard
                image={imgBlog2.src}
-               category="EVENTS & RECAPS"
-               title="Crypto & Stewardship Webinar"
-               desc="Breaking down how believers can navigate digital investments responsibly."
+               category="BLOGS & INSIGHTS"
+               title="Navigating Crypto as a Christian: Risk, Wisdom, and Self-Control"
+               desc="Crypto moves fast—so your values have to move deeper. A framework for discipline, risk management, and stewardship."
              />
              <BlogCard
                image={imgBlog3.src}
                category="BLOGS & INSIGHTS"
-               title="Why Kingdom Entrepreneurs Think Differently About Wealth"
-               desc=""
+               title="Building Your Kingdom Business: Strategy That Honors God"
+               desc="How to grow a business without compromising integrity—systems, leadership, and purpose-driven execution."
                isBlog
              />
           </div>
