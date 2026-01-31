@@ -19,7 +19,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
          <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
-            <h1 className="font-darker font-semibold text-[80px] md:text-[100px] leading-none">Let’s Connect</h1>
+            <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">Let's Connect</h1>
             <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px]">
                Whether you’re interested in coaching, speaking engagements, or simply reaching out — we’d love to hear from you.
             </p>
@@ -39,21 +39,21 @@ export default function ContactPage() {
              </p>
            </div>
 
-           <form className="w-full flex flex-col gap-4">
-             <input 
-               type="text" 
-               placeholder="Name" 
-               className="w-full bg-[#f0f0f0] px-6 py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange"
+           <form className="w-full flex flex-col gap-3 sm:gap-4">
+             <input
+               type="text"
+               placeholder="Name"
+               className="w-full bg-[#f0f0f0] px-4 sm:px-6 py-3 sm:py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange"
              />
-             <input 
-               type="email" 
-               placeholder="Email" 
-               className="w-full bg-[#f0f0f0] px-6 py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange"
+             <input
+               type="email"
+               placeholder="Email"
+               className="w-full bg-[#f0f0f0] px-4 sm:px-6 py-3 sm:py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange"
              />
-             <textarea 
-               placeholder="Message" 
+             <textarea
+               placeholder="Message"
                rows={5}
-               className="w-full bg-[#f0f0f0] px-6 py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange resize-none"
+               className="w-full bg-[#f0f0f0] px-4 sm:px-6 py-3 sm:py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange resize-none"
              />
              
              <div className="flex justify-center mt-6">

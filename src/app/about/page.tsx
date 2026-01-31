@@ -31,7 +31,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
          <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
-            <h1 className="font-darker font-semibold text-[80px] md:text-[100px] leading-none">About Myles Tan</h1>
+            <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">About Myles Tan</h1>
             <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px]">
                Myles Yeo Tan wants to start a faith-driven movement committed to glorifying God through excellence, wisdom, and stewardship. Where faith meets finance, and purpose drives impact.
             </p>
@@ -60,9 +60,9 @@ export default function AboutPage() {
             </div>
 
             {/* Image Ticker/Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
                {[imgTicker1, imgTicker2, imgTicker3, imgTicker4].map((img, idx) => (
-                  <div key={idx} className="h-[300px] md:h-[370px] w-full relative overflow-hidden bg-gray-100">
+                  <div key={idx} className="h-[200px] sm:h-[250px] md:h-[300px] lg:h-[370px] w-full relative overflow-hidden bg-gray-100">
                      <img src={img.src} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover" />
                   </div>
                ))}
@@ -118,7 +118,7 @@ export default function AboutPage() {
       <section className="bg-[#ed5128] text-white py-20 md:py-32 px-5">
          <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
             {/* Image */}
-            <div className="w-full lg:w-[45%] h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm">
+            <div className="w-full lg:w-[45%] h-[300px] sm:h-[350px] md:h-[450px] lg:h-[600px] relative overflow-hidden rounded-sm">
                <img src={imgStory.src} alt="Myles Story" className="w-full h-full object-cover" />
             </div>
 

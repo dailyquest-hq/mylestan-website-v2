@@ -21,7 +21,7 @@ export default function BlogsPage() {
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
          <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
-            <h1 className="font-darker font-semibold text-[80px] md:text-[100px] leading-none">Blogs & Insights</h1>
+            <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">Blogs & Insights</h1>
             <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px]">
                Key lessons, event recaps, and reflections on faith, finance, and purposeful living.
             </p>

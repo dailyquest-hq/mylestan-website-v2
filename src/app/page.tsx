@@ -28,7 +28,7 @@ export default function Homepage() {
           
           {/* Hero Content Wrapper */}
           <div className="flex flex-col items-center text-center w-full overflow-hidden">
-            <h1 className="font-darker font-semibold text-[12vw] sm:text-[13vw] md:text-[14vw] lg:text-[15vw] xl:text-[280px] leading-[0.8] tracking-tight text-center break-words max-w-full px-4">
+            <h1 className="font-darker font-semibold text-[48px] sm:text-[60px] md:text-[80px] lg:text-[120px] xl:text-[280px] leading-[0.8] tracking-tight text-center break-words max-w-full px-4">
               Myles Yeo Tan
             </h1>
             <p className="font-darker font-semibold text-xl md:text-2xl mt-8 md:mt-12 text-center w-full max-w-4xl mx-auto">
@@ -56,7 +56,7 @@ export default function Homepage() {
           </div>
 
           {/* Hero Image */}
-          <div className="w-full relative mt-12 h-[500px] md:h-[700px] xl:h-[800px]">
+          <div className="w-full relative mt-12 h-[350px] sm:h-[450px] md:h-[700px] xl:h-[800px]">
              <img src={imgMediaBg.src} alt="Myles Tan" className="w-full h-full object-cover object-top" />
           </div>
 
@@ -160,9 +160,9 @@ export default function Homepage() {
                   desc: "Book Myles Tan for conferences, seminars, and special events. Topics include faith, finance, entrepreneurship, and personal growth—delivered with passion and purpose."
                 }
               ].map((service, i) => (
-                <div key={i} className="bg-white p-8 md:p-10 flex flex-col gap-6 text-[#282828] min-h-[400px]">
-                   <h3 className="font-darker font-semibold text-3xl leading-none">{service.title}</h3>
-                   <p className="font-inter text-[#3c3c3c] text-base leading-relaxed">{service.desc}</p>
+                <div key={i} className="bg-white p-6 sm:p-8 md:p-10 flex flex-col gap-4 sm:gap-6 text-[#282828] min-h-[300px] sm:min-h-[350px] md:min-h-[400px]">
+                   <h3 className="font-darker font-semibold text-2xl sm:text-3xl leading-none">{service.title}</h3>
+                   <p className="font-inter text-[#3c3c3c] text-sm sm:text-base leading-relaxed">{service.desc}</p>
                 </div>
               ))}
            </div>
