@@ -1,113 +1,83 @@
-# Generate Next.js Component
+# Myles Yeo Tan - Official Website
 
-This is a **Vite + React** application exported from Figma. The original Figma design is available at https://www.figma.com/design/NBMsYN1jB2oMXa1rbTriC5/Generate-Next.js-Component.
+Professional website for Myles Yeo Tan - Crypto Trader, Christian Entrepreneur, Financial Planner, Real Estate Broker, and Public Speaker.
 
-**Note:** Despite the name, this is **not a Next.js project**. It's a Vite-based React application using React Router for navigation.
+## 🚀 Tech Stack
 
-## Tech Stack
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui + Radix UI
+- **Icons:** Lucide React
+- **Fonts:** Google Fonts (Darker Grotesque, Inter, Poppins, Albert Sans)
+- **Language:** TypeScript
 
-- **React 18** - UI library
-- **Vite** - Build tool and dev server
-- **React Router** - Client-side routing
-- **Tailwind CSS** - Styling
-- **shadcn/ui** - UI component library
-- **Radix UI** - Accessible component primitives
-- **TypeScript** - Type safety
+## 📦 Installation
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ and npm installed
-
-### Installation
-
-1. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Start the development server:
+## 🛠️ Development
+
 ```bash
 npm run dev
 ```
 
-The application will open automatically at `http://localhost:3000`
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Available Scripts
-
-- `npm run dev` - Start the development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview the production build locally
-
-## Project Structure
-
-```
-src/
-├── app/              # Page components (using Next.js-style naming)
-│   ├── page.tsx      # Homepage
-│   ├── about/
-│   ├── services/
-│   ├── contact/
-│   ├── blogs/
-│   ├── media-speaking/
-│   └── faqs/
-├── components/       # Reusable components
-│   ├── ui/          # shadcn/ui components
-│   ├── layout/      # Layout components (Navbar, Footer)
-│   └── figma/       # Figma-specific components
-├── assets/          # Images and static assets
-├── lib/             # Utility functions
-└── styles/          # Global styles
-```
-
-## Routes
-
-- `/` - Homepage
-- `/about` - About page
-- `/services` - Services page
-- `/contact` - Contact page
-- `/blogs` - Blog listing
-- `/media-speaking` - Media & Speaking page
-- `/faqs` - FAQs page
-
-## Development Notes
-
-- The project uses Vite aliases configured in `vite.config.ts`
-- `@/` alias points to the `src/` directory
-- Figma assets are imported using `figma:asset/` prefix (configured in vite.config.ts)
-- The `"use client"` directives in some files are remnants from the Figma export and can be ignored (they have no effect in Vite)
-
-## Building for Production
+## 🏗️ Build
 
 ```bash
 npm run build
+npm start
 ```
 
-The built files will be in the `build/` directory.
+## 📁 Project Structure
 
-To preview the production build:
+```
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   │   ├── layout.tsx    # Root layout with Navbar/Footer
+│   │   ├── page.tsx      # Homepage
+│   │   ├── about/        # About page
+│   │   ├── services/     # Services page
+│   │   ├── contact/      # Contact page
+│   │   └── faqs/         # FAQs page
+│   ├── components/       # React components
+│   │   ├── layout/       # Layout components (Navbar, Footer)
+│   │   └── ui/           # shadcn/ui components
+│   ├── assets/           # Images and static assets
+│   ├── lib/              # Utility functions
+│   └── styles/           # Global styles
+├── public/               # Public assets
+│   ├── sitemap.xml
+│   └── robots.txt
+└── next.config.mjs       # Next.js configuration
+```
 
+## 🔍 SEO Features
+
+- ✅ Server-Side Rendering (SSR)
+- ✅ Structured Data (JSON-LD) for Person & Professional Services
+- ✅ Open Graph tags for social sharing
+- ✅ Twitter Card optimization
+- ✅ Comprehensive metadata on all pages
+- ✅ Sitemap and robots.txt
+- ✅ AI-discoverable (ChatGPT, Claude, Perplexity)
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
 ```bash
-npm run preview
+vercel --prod
 ```
 
-## Troubleshooting
+### Other Platforms
+- Build Command: `npm run build`
+- Output Directory: `.next`
+- Install Command: `npm install`
+- Development Command: `npm run dev`
 
-If you encounter any issues:
+## 📄 License
 
-1. Delete `node_modules` and reinstall:
-   ```bash
-   rm -rf node_modules package-lock.json
-   npm install
-   ```
-
-2. Clear Vite cache:
-   ```bash
-   rm -rf node_modules/.vite
-   ```
-
-3. Ensure you're using Node.js 18 or higher:
-   ```bash
-   node --version
-   ```
+© 2025 Myles Yeo Tan. All rights reserved.
