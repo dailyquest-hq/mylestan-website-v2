@@ -233,9 +233,9 @@ export default function Homepage() {
       <section className="relative w-full h-[600px] md:h-[800px] overflow-hidden">
          <div className="absolute inset-0">
            <img src={imgHero.src} alt="Media Background" className="w-full h-full object-cover" />
-           <div className="absolute inset-0 bg-[#18140e]/40" />
+           <div className="absolute inset-0 bg-black/60" />
          </div>
-         
+
          <div className="relative z-10 max-w-[1600px] mx-auto h-full px-5 py-24 flex flex-col justify-center">
             <div className="max-w-2xl flex flex-col justify-between h-full max-h-[570px]">
                <div className="flex flex-col gap-6">
@@ -246,7 +246,7 @@ export default function Homepage() {
                </div>
 
                <div className="flex flex-col gap-8">
-                  <p className="font-poppins text-[#9f9f9f] text-base leading-relaxed">
+                  <p className="font-poppins text-white text-base md:text-lg leading-relaxed">
                     Myles Tan has been featured across conferences, panels, podcasts, and media platforms — delivering insights on faith, finance, entrepreneurship, and purposeful living. From local gatherings to international stages, each engagement is driven by the mission to inspire, equip, and empower people to live out their calling with wisdom and faith.
                   </p>
                   <Link href="/media-speaking">
