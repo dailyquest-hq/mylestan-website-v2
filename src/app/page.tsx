@@ -1,9 +1,7 @@
 "use client";
 
 import React from "react";
-import { Link } from "react-router-dom";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Check, ArrowRight } from "lucide-react";
@@ -36,7 +34,6 @@ import imgMediaBg from "figma:asset/6795e162202e3c0307963e5e15999946d0dee112.png
 export default function Homepage() {
   return (
     <main className="bg-[#0f100a] min-h-screen text-white w-full overflow-x-hidden">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="relative w-full pt-32 pb-20 flex flex-col items-center">
@@ -269,8 +266,6 @@ export default function Homepage() {
             </div>
          </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

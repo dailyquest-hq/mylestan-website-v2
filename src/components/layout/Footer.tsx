@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 

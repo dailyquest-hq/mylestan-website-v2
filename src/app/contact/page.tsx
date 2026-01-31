@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, Check } from "lucide-react";
@@ -17,7 +15,6 @@ import imgSocial5 from "figma:asset/28a4f614d987694196ce41b965605d10f4a1cf87.png
 export default function ContactPage() {
   return (
     <main className="bg-white min-h-screen w-full overflow-x-hidden">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
@@ -108,7 +105,6 @@ export default function ContactPage() {
          </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

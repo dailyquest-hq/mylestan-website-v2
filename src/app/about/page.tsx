@@ -1,12 +1,14 @@
-"use client";
-
 import React from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import type { Metadata } from "next";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+
+export const metadata: Metadata = {
+  title: "About Myles Yeo Tan - Journey of Faith & Finance",
+  description: "Discover the story of Myles Tan — a journey of blending professional expertise in crypto trading, Christian entrepreneurship, financial planning, and real estate with biblical principles to empower people worldwide.",
+};
 import { Button } from "@/components/ui/Button";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 // Assets
 import imgTicker1 from "figma:asset/f78360e4be7e9a1661cfa0c498def3203380ef51.png";
@@ -27,7 +29,6 @@ import imgSocial5 from "figma:asset/28a4f614d987694196ce41b965605d10f4a1cf87.png
 export default function AboutPage() {
   return (
     <main className="bg-white min-h-screen w-full overflow-x-hidden">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
@@ -193,7 +194,6 @@ export default function AboutPage() {
          </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

@@ -1,20 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const links = [
     { name: "home", href: "/" },
     { name: "about", href: "/about" },
     { name: "services", href: "/services" },
-    { name: "blogs", href: "/blogs" },
-    { name: "media speaking", href: "/media-speaking" },
+    // { name: "blogs", href: "/blogs" },
+    // { name: "media speaking", href: "/media-speaking" },
     { name: "faqs", href: "/faqs" },
     { name: "contact us", href: "/contact" },
   ];

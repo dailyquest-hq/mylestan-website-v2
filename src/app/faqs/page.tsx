@@ -1,18 +1,30 @@
 "use client";
 
 import React, { useState } from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function FAQPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does Myles Yeo Tan offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Myles Tan offers crypto trading insights, financial planning, Christian entrepreneurship coaching, and speaking engagements on faith, finance, and personal growth."
+        }
+      }
+    ]
+  };
+
   return (
     <main className="bg-white min-h-screen w-full overflow-x-hidden">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
@@ -124,7 +136,6 @@ export default function FAQPage() {
          </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

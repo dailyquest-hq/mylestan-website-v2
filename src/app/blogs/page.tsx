@@ -1,11 +1,9 @@
 "use client";
 
 import React from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 // Assets
@@ -21,7 +19,6 @@ const imgFinance = "https://images.unsplash.com/photo-1768839720849-fef976b3ffff
 export default function BlogsPage() {
   return (
     <main className="bg-white min-h-screen w-full overflow-x-hidden">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
@@ -151,7 +148,6 @@ export default function BlogsPage() {
          </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

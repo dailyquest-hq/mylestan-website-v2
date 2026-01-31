@@ -8,6 +8,8 @@ pnpm-lock.yaml
 dist/
 build/
 .vite/
+.next/
+out/
 
 # Environment variables
 .env

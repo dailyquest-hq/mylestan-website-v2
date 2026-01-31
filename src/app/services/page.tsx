@@ -1,11 +1,9 @@
 "use client";
 
 import React from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { TrendingUp, ShieldCheck, Heart, ThumbsUp, Wallet, PieChart, Users, Star, Mic, MessageCircle, Home } from "lucide-react";
 
@@ -25,7 +23,6 @@ const serviceImages = {
 export default function ServicesPage() {
   return (
     <main className="bg-white min-h-screen w-full overflow-x-hidden">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
@@ -139,7 +136,6 @@ export default function ServicesPage() {
          </div>
       </section>
 
-      <Footer />
     </main>
   );
 }
