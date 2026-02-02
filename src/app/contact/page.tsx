@@ -10,7 +10,7 @@ import imgSocial1 from "@/assets/shared/social-1.jpg";
 import imgSocial2 from "@/assets/shared/social-2.jpg";
 import imgSocial3 from "@/assets/shared/social-3.jpg";
 import imgSocial4 from "@/assets/shared/social-4.jpg";
-import imgSocial5 from "@/assets/shared/social-5.jpg";
+import imgSocial6 from "@/assets/shared/social-6.jpg";
 
 export default function ContactPage() {
   return (
@@ -57,7 +57,7 @@ export default function ContactPage() {
              />
              
              <div className="flex justify-center mt-6">
-               <Button onClick={() => alert('Thank you for your interest! Please email us directly at contact@mylestan.com for inquiries.')} className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-12 px-12 text-base font-bold rounded-none uppercase">
+               <Button onClick={() => alert('Thank you for your interest! Please email us directly at michaelpaulquimson@gmail.com for inquiries.')} className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-12 px-12 text-base font-bold rounded-none uppercase">
                  SEND MESSAGE
                </Button>
              </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
 
             {/* Instagram Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full">
-               {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial5].map((img, idx) => (
+               {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial6].map((img, idx) => (
                   <div key={idx} className="aspect-square relative overflow-hidden bg-gray-200 group">
                      <img src={img.src} alt={`Social ${idx}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

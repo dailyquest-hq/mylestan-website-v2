@@ -90,7 +90,7 @@ export function Footer() {
 
         {/* Big Name */}
         <div className="w-full overflow-hidden px-4">
-          <h1 className="font-darker font-semibold text-[10vw] sm:text-[11vw] md:text-[12vw] lg:text-[13vw] xl:text-[280px] leading-none text-center tracking-tighter text-white break-words max-w-full">
+          <h1 className="font-darker font-semibold text-xl text-center text-white">
             Myles Yeo Tan
           </h1>
         </div>

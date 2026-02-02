@@ -12,7 +12,7 @@ import imgSpeaker from "@/assets/home/about-large.jpg";
 // Media appearances
 import imgBNC from "@/assets/media-speaking/BNC.jpg";
 import imgZFT from "@/assets/media-speaking/zft-coo.jpg";
-import imgFrancisKong from "@/assets/media-speaking/francis-kong.jpg";
+import imgSTAConference from "@/assets/media-speaking/sta-conference.jpg";
 
 export default function MediaSpeakingPage() {
   return (
@@ -70,20 +70,31 @@ export default function MediaSpeakingPage() {
                   type="MEDIA INTERVIEW"
                   duration="30 min"
                   url="https://www.youtube.com/watch?v=nZJeBBMlAjM"
+                  description="In-depth market analysis covering crypto trends, trading strategies, and financial insights for Filipino investors."
                />
                <VideoCard
                   image={imgZFT.src}
                   title="ZFT Trading Republic - New COO Announcement"
                   type="CORPORATE FEATURE"
                   duration="15 min"
-                  url="https://www.youtube.com/watch?v=GYb1q8tm36s&list=PL033hJEN0tRt2wQyz8KxKEu5xWhCKrDuI"
+                  url="https://www.youtube.com/watch?v=GYb1q8tm36s"
+                  description="Official announcement of Myles' appointment as Chief Operating Officer of ZFT Trading Republic."
                />
                <VideoCard
-                  image={imgFrancisKong.src}
-                  title="Speaking Engagement with Francis Kong"
+                  image={imgZFT.src}
+                  title="ZFT Kingdom Playlist - Trading Republic Series"
+                  type="EDUCATIONAL SERIES"
+                  duration="Playlist"
+                  url="https://www.youtube.com/watch?v=GYb1q8tm36s&list=PL033hJEN0tRt2wQyz8KxKEu5xWhCKrDuI"
+                  description="Complete educational series covering trading fundamentals, market analysis techniques, and kingdom principles in finance."
+               />
+               <VideoCard
+                  image={imgSTAConference.src}
+                  title="STA Pathways to Success: Myles Y. Tan"
                   type="CONFERENCE TALK"
                   duration="45 min"
                   url="https://staphilippines.org/pathways-to-success-of-myles-y-tan-cta/"
+                  description="Keynote talk on achieving success through technical analysis, faith-driven principles, and disciplined trading."
                />
             </div>
          </div>
@@ -118,29 +129,64 @@ export default function MediaSpeakingPage() {
          </div>
       </section>
 
-      {/* Upcoming Events */}
+      {/* Speaking History */}
       <section className="py-20 md:py-32 px-5 bg-white">
          <div className="max-w-[1600px] mx-auto">
-            <SectionLabel color="black" className="mb-12">upcoming schedule</SectionLabel>
-            
+            <SectionLabel color="black" className="mb-12">speaking history</SectionLabel>
+
             <div className="flex flex-col border-t border-gray-200">
                <EventRow
-                  date="FEB 2025"
-                  title="ZFT Trading Republic Leadership Forum"
+                  date="OCT 2020"
+                  title="Invited to be Guest Speaker at Revelation City Church"
+                  location="Manila, Philippines"
+                  role="Guest Speaker"
+                  url="https://www.youtube.com/watch?v=74K1HXLi53I"
+               />
+               <EventRow
+                  date="NOV 2020"
+                  title="Reinvited to be Guest Speaker at Revelation City Church"
+                  location="Manila, Philippines"
+                  role="Guest Speaker"
+                  url="https://www.youtube.com/watch?v=Wh8kTarTS6A"
+               />
+               <EventRow
+                  date="FEB 2021"
+                  title="Invited to be Regular Speaker at Revelation City Church"
+                  location="Manila, Philippines"
+                  role="Regular Speaker"
+                  url="https://www.youtube.com/watch?v=L7Xa2_V1_u4"
+               />
+               <EventRow
+                  date="MARCH 2024"
+                  title="Invited to be an Airdrop Resource Speaker by ZFT"
+                  location="Manila, Philippines"
+                  role="Resource Speaker"
+                  url="https://www.facebook.com/photo?fbid=846900120783203&set=a.465969958876223"
+               />
+               <EventRow
+                  date="MARCH 2025"
+                  title="Appeared as Regular Speaker on The Trading Republic's YouTube"
+                  location="Virtual Broadcast"
+                  role="Regular Speaker"
+               />
+               <EventRow
+                  date="JUNE 2025"
+                  title="Appointed as ZFT Trading Republic COO"
                   location="Manila, Philippines"
                   role="Chief Operating Officer"
                />
                <EventRow
-                  date="MAR 2025"
-                  title="Bilyonaryo Market Insights Series"
-                  location="Virtual Broadcast"
-                  role="Market Analyst"
+                  date="OCT 2025"
+                  title="Faith for Financial Future Talk"
+                  location="Manila, Philippines"
+                  role="Speaker"
                />
                <EventRow
-                  date="APR 2025"
-                  title="Faith & Finance Leadership Summit"
-                  location="Singapore"
-                  role="Keynote Speaker"
+                  date="NOV 2025"
+                  title="Bilyonaryo News Interview"
+                  location="Virtual Broadcast"
+                  role="Market Analyst"
+                  url="https://www.youtube.com/watch?v=nZJeBBMlAjM"
                />
             </div>
          </div>
@@ -165,7 +211,7 @@ export default function MediaSpeakingPage() {
   );
 }
 
-function VideoCard({ image, title, type, duration, url }: { image: string, title: string, type: string, duration: string, url: string }) {
+function VideoCard({ image, title, type, duration, url, description }: { image: string, title: string, type: string, duration: string, url: string, description?: string }) {
    return (
       <Link href={url} target="_blank" rel="noopener noreferrer" className="flex flex-col gap-4 group cursor-pointer">
          <div className="relative w-full h-[240px] overflow-hidden bg-gray-900 rounded-sm">
@@ -179,9 +225,12 @@ function VideoCard({ image, title, type, duration, url }: { image: string, title
                {duration}
             </div>
          </div>
-         <div className="flex flex-col gap-1">
+         <div className="flex flex-col gap-2">
             <span className="font-albert font-bold text-xs text-[#ed5128] tracking-wider uppercase">{type}</span>
             <h3 className="font-darker font-semibold text-2xl leading-none text-black group-hover:text-[#ed5128] transition-colors">{title}</h3>
+            {description && (
+               <p className="font-inter text-[#575756] text-sm leading-relaxed">{description}</p>
+            )}
          </div>
       </Link>
    )
@@ -198,8 +247,8 @@ function TopicItem({ title }: { title: string }) {
    )
 }
 
-function EventRow({ date, title, location, role }: { date: string, title: string, location: string, role: string }) {
-   return (
+function EventRow({ date, title, location, role, url }: { date: string, title: string, location: string, role: string, url?: string }) {
+   const content = (
       <div className="flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-200 gap-4 hover:bg-gray-50 transition-colors px-4 cursor-pointer">
          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-12 flex-1">
             <span className="font-albert font-bold text-[#ed5128] w-40 shrink-0">{date}</span>
@@ -215,4 +264,14 @@ function EventRow({ date, title, location, role }: { date: string, title: string
          </div>
       </div>
    )
+
+   if (url) {
+      return (
+         <Link href={url} target="_blank" rel="noopener noreferrer">
+            {content}
+         </Link>
+      )
+   }
+
+   return content
 }
