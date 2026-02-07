@@ -91,7 +91,7 @@ export function Footer() {
         {/* Big Name */}
         <div className="w-full overflow-hidden px-4">
           <h1 className="font-darker font-semibold text-xl text-center text-white">
-            Myles Yeo Tan
+            Myles Yeo Tan - 1 Corinthians 10:31 So, whether you eat or drink, or whatever you do, do all to the glory of God
           </h1>
         </div>
 
