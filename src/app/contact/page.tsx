@@ -57,7 +57,7 @@ export default function ContactPage() {
              />
              
              <div className="flex justify-center mt-6">
-               <Button onClick={() => alert('Thank you for your interest! Please email us directly at michaelpaulquimson@gmail.com for inquiries.')} className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-12 px-12 text-base font-bold rounded-none uppercase">
+               <Button onClick={() => alert('Thank you for your interest! Please email us directly at mylestan@gmail.com for inquiries.')} className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-12 px-12 text-base font-bold rounded-none uppercase">
                  SEND MESSAGE
                </Button>
              </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { InteractiveTimeline } from "@/components/about/InteractiveTimeline";
 
 export const metadata: Metadata = {
   title: "About Myles Yeo Tan - Journey of Faith & Finance",
@@ -37,7 +38,6 @@ import imgTicker1 from "@/assets/about/ticker-1.jpg";
 import imgTicker2 from "@/assets/about/ticker-2.jpg";
 import imgTicker3 from "@/assets/about/ticker-3.jpg";
 import imgTicker4 from "@/assets/about/ticker-4.jpg";
-import imgTimelineCard from "@/assets/about/timeline-card.jpg";
 import imgStory from "@/assets/about/story.jpg";
 
 // Social Grid Images
@@ -45,7 +45,7 @@ import imgSocial1 from "@/assets/shared/social-1.jpg";
 import imgSocial2 from "@/assets/shared/social-2.jpg";
 import imgSocial3 from "@/assets/shared/social-3.jpg";
 import imgSocial4 from "@/assets/shared/social-4.jpg";
-import imgSocial5 from "@/assets/shared/social-5.jpg";
+import imgSocial6 from "@/assets/shared/social-6.jpg";
 
 export default function AboutPage() {
   return (
@@ -55,28 +55,24 @@ export default function AboutPage() {
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
          <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
             <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">About Myles Tan</h1>
-            <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px]">
-               Myles Yeo Tan wants to start a faith-driven movement committed to glorifying God through excellence, wisdom, and stewardship. Where faith meets finance, and purpose drives impact.
-            </p>
          </div>
       </section>
 
       {/* Intro Content Section */}
       <section className="bg-white text-[#282828] py-20 md:py-32 px-5">
          <div className="max-w-[1600px] mx-auto">
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-32 items-start mb-20">
-               <SectionLabel color="black" className="shrink-0 min-w-[200px]">about myles tan</SectionLabel>
-               <div className="flex flex-col gap-8 font-inter text-lg text-[#282828] leading-relaxed max-w-3xl">
-                  <p>
+            <div className="flex flex-col items-center mb-20">
+               <div className="flex flex-col gap-8 font-inter text-lg text-[#282828] leading-relaxed max-w-3xl w-full">
+                  <p className="text-justify">
                      I'm Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people live with clarity, conviction, and purpose. I operate at the intersection of faith, finance, and leadership, equipping individuals to steward their influence, resources, and calling with wisdom, discipline, and obedience to God.
                   </p>
-                  <p>
+                  <p className="text-justify">
                      My journey has taken me through business, investing, crypto, trading, and real estate—environments filled with opportunity, pressure, and constant noise. Along the way, I learned that success without direction leads to emptiness, and faith without action leads to stagnation. True transformation happens when biblical truth, disciplined execution, and Spirit-led discernment work together.
                   </p>
-                  <p>
+                  <p className="text-justify">
                      Today, my work is shaped by a commitment to seek God's voice in decision-making, learning to recognize prophetic insight, exercise spiritual discernment, and act with courage in the marketplace. I believe God still gives wisdom for timing, direction, and restraint. I believe that spirit-led decisions, when anchored in Scripture and tested by sound counsel, produce peace, clarity, and lasting impact.
                   </p>
-                  <p>
+                  <p className="text-justify">
                      What drives me forward is simple: to see people grounded in Christ, confident in their decisions, and courageous in their calling—building lives and legacies that honor God and advance His Kingdom.
                   </p>
                </div>
@@ -94,48 +90,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="bg-white text-[#282828] py-20 md:py-32 px-5 overflow-hidden">
-         <div className="max-w-[1600px] mx-auto flex flex-col items-center text-center">
-             <SectionLabel color="black" className="mb-6">key achievements</SectionLabel>
-             <h2 className="font-darker font-semibold text-5xl md:text-[64px] leading-none mb-4">Building Impact, Year by Year</h2>
-             <p className="font-poppins text-base md:text-[18px] text-[#282828] max-w-2xl mb-24">
-                From career beginnings in finance to global recognition, here’s the journey of growth, influence, and purpose.
-             </p>
-
-             {/* Timeline Visual */}
-             <div className="relative w-full max-w-[1400px] mx-auto min-h-[500px]">
-                {/* Horizontal Line */}
-                <div className="absolute top-[50px] left-0 right-0 h-px bg-[#8f887c] w-full" />
-                
-                {/* Years Row */}
-                <div className="flex justify-between relative z-10 w-full px-4 md:px-12">
-                   {["2025", "2024", "2023", "2022", "2021"].map((year, i) => (
-                      <div key={year} className="flex flex-col items-center relative group">
-                         {/* Year Text */}
-                         <span className={`font-darker font-semibold text-3xl md:text-[40px] mb-8 bg-white px-4 z-20 ${i === 0 ? 'text-[#ed5128]' : 'text-[#282828]'}`}>
-                            {year}
-                         </span>
-                         
-                         {/* Dot */}
-                         <div className={`w-4 h-4 rounded-full z-20 ${i === 0 ? 'bg-[#ed5128] shadow-[0_0_0_4px_rgba(237,81,40,0.2)]' : 'bg-[#8f887c]'}`} />
-
-                         {/* Active Card (Only for 2025 based on design) */}
-                         {i === 0 && (
-                            <div className="absolute top-[80px] left-0 md:left-0 w-[280px] md:w-[320px] bg-white rounded-xl shadow-xl border border-gray-100 p-2 text-left mt-8">
-                               <div className="h-[160px] w-full rounded-lg overflow-hidden mb-4 bg-gray-200">
-                                  <img src={imgTimelineCard.src} alt="2025" className="w-full h-full object-cover" />
-                               </div>
-                               <p className="font-inter text-sm md:text-base text-[#575756] px-2 pb-2">
-                                  Continuing mission to equip believers worldwide through media, events, and one-on-one coaching.
-                               </p>
-                            </div>
-                         )}
-                      </div>
-                   ))}
-                </div>
-             </div>
-         </div>
-      </section>
+      <InteractiveTimeline />
 
       {/* Story Section */}
       <section className="bg-[#ed5128] text-white py-20 md:py-32 px-5">
@@ -152,13 +107,13 @@ export default function AboutPage() {
                   A glimpse into the life experiences and values that shaped Myles Tan’s journey of faith, finance, and purpose.
                </h2>
                <div className="font-poppins text-base md:text-lg space-y-6 opacity-90">
-                  <p>
+                  <p className="text-justify">
                      Beyond the roles of entrepreneur, mentor, and speaker, Myles Tan is a husband, friend, and lifelong learner who values relationships as much as results. His journey has been shaped by faith, perseverance, and a deep desire to help others discover purpose in both life and work.
                   </p>
-                  <p>
-                     Myles’ personal story is rooted in transformation — from pursuing success in business to embracing a calling that integrates biblical principles with professional expertise. He believes true abundance is found not only in financial stability, but also in spiritual growth, family, and community.
+                  <p className="text-justify">
+                     Myles' personal story is rooted in transformation — from pursuing success in business to embracing a calling that integrates biblical principles with professional expertise. He believes true abundance is found not only in financial stability, but also in spiritual growth, family, and community.
                   </p>
-                  <p>
+                  <p className="text-justify">
                      When not teaching, coaching, or speaking, Myles enjoys spending time with loved ones, exploring new ideas, and investing in experiences that bring lasting impact.
                   </p>
                </div>
@@ -195,7 +150,7 @@ export default function AboutPage() {
 
             {/* Instagram Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
-               {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial5].map((img, idx) => (
+               {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial6].map((img, idx) => (
                   <div key={idx} className="aspect-square relative overflow-hidden bg-gray-100 group">
                      <img src={img.src} alt={`Social ${idx}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                      {/* Overlay on hover */}
@@ -228,3 +183,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

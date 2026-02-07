@@ -41,7 +41,7 @@ export default function ServicesPage() {
           id="crypto"
           label="Crypto, Stocks & Commodities Trading Analysis"
           title="Wisdom over hype. Discipline over emotion."
-          description={`Myles Yeo Tan will provide clear, disciplined insights into the markets, grounded in wisdom and risk awareness. The goal is to help you make informed, strategic decisions in volatile markets while avoiding financial losses due to market hype and speculation. "The plans of the diligent lead surely to abundance." — Proverbs 21:5`}
+          description={`Myles Yeo Tan will provide clear, disciplined insights into the markets, grounded in wisdom and risk awareness. The goal is to help you make informed, strategic decisions in volatile markets while avoiding financial losses due to market hype and speculation.\n\n"The plans of the diligent lead surely to abundance." — Proverbs 21:5`}
           image={serviceImages.crypto}
           layout="left"
           buttonText="LET'S CHART!"
@@ -57,7 +57,7 @@ export default function ServicesPage() {
           id="financial"
           label="Financial Planning and Literacy"
           title="Steward well. Build intentionally."
-          description={`Myles Yeo Tan will give a values-aligned financial planning experience focused on clarity, order, and long-term growth. We design financial systems that support your life calling—so you get to manage your money and money doesn't manage you. "Suppose one of you wants to build a tower. Won't you first sit down and estimate the cost?" — Luke 14:28`}
+          description={`Myles Yeo Tan will give a values-aligned financial planning experience focused on clarity, order, and long-term growth. We design financial systems that support your life calling—so you get to manage your money and money doesn't manage you.\n\n"Suppose one of you wants to build a tower. Won't you first sit down and estimate the cost?" — Luke 14:28`}
           image={serviceImages.financial}
           layout="right"
           buttonText="BOOK A SESSION"
@@ -73,7 +73,7 @@ export default function ServicesPage() {
           id="coaching"
           label="Christian Entrepreneurship Coaching"
           title="Build businesses that honor God."
-          description={`Myles Yeo Tan will coach and equip entrepreneurs to lead with conviction, integrity, and excellence—combining biblical wisdom with practical execution. Ideal for founders who desire Spirit-led decisions and measurable results. "Commit your work to the Lord, and your plans will be established." — Proverbs 16:3`}
+          description={`Myles Yeo Tan will coach and equip entrepreneurs to lead with conviction, integrity, and excellence—combining biblical wisdom with practical execution. Ideal for founders who desire Spirit-led decisions and measurable results.\n\n"Commit your work to the Lord, and your plans will be established." — Proverbs 16:3`}
           image={serviceImages.coaching}
           layout="left"
           buttonText="GET COACHED TODAY"
@@ -89,7 +89,7 @@ export default function ServicesPage() {
           id="speaking"
           label="Speaking Engagements"
           title="Truth spoken. Lives sharpened."
-          description={`Let Myles Yeo Tan give high-impact speaking engagements that challenge audiences to think clearly, lead courageously, and steward resources wisely. Messages are grounded in Scripture, real-world experience, and practical application. Any topic is ok! "Plans fail for lack of counsel, but with many advisers they succeed." — Proverbs 20:18`}
+          description={`Let Myles Yeo Tan give high-impact speaking engagements that challenge audiences to think clearly, lead courageously, and steward resources wisely. Messages are grounded in Scripture, real-world experience, and practical application. Any topic is ok!\n\n"Plans fail for lack of counsel, but with many advisers they succeed." — Proverbs 20:18`}
           image={serviceImages.speaking}
           layout="right"
           buttonText="Book Me to Speak!"
@@ -158,7 +158,7 @@ function ServiceSection({ id, label, title, description, image, layout, buttonTe
              <h2 className="font-darker font-semibold text-5xl md:text-[48px] leading-[0.9] text-black max-w-xl">
                {title}
              </h2>
-             <p className="font-poppins text-[#282828] text-base md:text-lg leading-relaxed max-w-xl">
+             <p className="font-poppins text-[#282828] text-base md:text-lg leading-relaxed max-w-xl text-justify whitespace-pre-line">
                {description}
              </p>
            </div>
