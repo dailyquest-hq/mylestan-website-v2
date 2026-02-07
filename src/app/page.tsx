@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
 
 // Assets
 import imgHero from "@/assets/home/hero.png";
@@ -19,6 +21,8 @@ import imgBlog3 from "@/assets/home/blog-3.jpg";
 import imgMediaBg from "@/assets/home/media-bg.jpg";
 
 export default function Homepage() {
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+
   return (
     <main className="bg-[#0f100a] min-h-screen text-white w-full overflow-x-hidden">
 
@@ -206,12 +210,14 @@ export default function Homepage() {
                category="BLOGS & INSIGHTS"
                title="Faith-Driven Investing in 2025: Conviction Over Chaos"
                desc="A practical guide to staying grounded when headlines are loud—how to think in principles, not panic."
+               onImageClick={setPreviewImage}
              />
              <BlogCard
                image={imgBlog2.src}
                category="BLOGS & INSIGHTS"
                title="Navigating Crypto as a Christian: Risk, Wisdom, and Self-Control"
                desc="Crypto moves fast—so your values have to move deeper. A framework for discipline, risk management, and stewardship."
+               onImageClick={setPreviewImage}
              />
              <BlogCard
                image={imgBlog3.src}
@@ -219,6 +225,7 @@ export default function Homepage() {
                title="Building Your Kingdom Business: Strategy That Honors God"
                desc="How to grow a business without compromising integrity—systems, leadership, and purpose-driven execution."
                isBlog
+               onImageClick={setPreviewImage}
              />
           </div>
 
@@ -254,15 +261,33 @@ export default function Homepage() {
             </div>
          </div>
       </section>
+
+      {/* Image Preview Modal */}
+      <ImagePreviewModal
+        imageUrl={previewImage}
+        onClose={() => setPreviewImage(null)}
+      />
     </main>
   );
 }
 
-function BlogCard({ image, category, title, desc, isBlog = false }: { image: string, category: string, title: string, desc: string, isBlog?: boolean }) {
+function BlogCard({ image, category, title, desc, isBlog = false, onImageClick }: { image: string, category: string, title: string, desc: string, isBlog?: boolean, onImageClick?: (image: string) => void }) {
   return (
-    <div className="flex flex-col gap-6 group cursor-pointer">
-       <div className="w-full h-[300px] md:h-[345px] relative overflow-hidden bg-gray-800">
+    <div className="flex flex-col gap-6 group">
+       <div
+         className="w-full h-[300px] md:h-[345px] relative overflow-hidden bg-gray-800 cursor-pointer"
+         onClick={(e) => {
+           e.preventDefault();
+           e.stopPropagation();
+           onImageClick?.(image);
+         }}
+       >
          <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+           <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
+             Click to preview
+           </span>
+         </div>
        </div>
        <div className="flex flex-col gap-2">
          <span className="font-inter font-medium text-sm tracking-wider uppercase text-white/80">{category}</span>

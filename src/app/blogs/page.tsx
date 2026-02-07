@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
 import { ArrowRight } from "lucide-react";
 
 // Assets
@@ -15,6 +17,8 @@ const imgFaith = "https://images.unsplash.com/photo-1622674869899-9d92d60be95c?c
 const imgFinance = "https://images.unsplash.com/photo-1768839720849-fef976b3ffff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBwbGFubmluZyUyMHdyaXRpbmd8ZW58MXx8fHwxNzY5ODUwNDYyfDA&ixlib=rb-4.1.0&q=80&w=1080";
 
 export default function BlogsPage() {
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+
   return (
     <main className="bg-white min-h-screen w-full overflow-x-hidden">
 
@@ -33,9 +37,21 @@ export default function BlogsPage() {
          <div className="max-w-[1600px] mx-auto">
             <SectionLabel color="black" className="mb-12">featured post</SectionLabel>
             
-            <div className="flex flex-col lg:flex-row gap-12 group cursor-pointer">
-               <div className="lg:w-2/3 h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm bg-gray-100">
+            <div className="flex flex-col lg:flex-row gap-12 group">
+               <div
+                 className="lg:w-2/3 h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm bg-gray-100 cursor-pointer"
+                 onClick={(e) => {
+                   e.preventDefault();
+                   e.stopPropagation();
+                   setPreviewImage(imgBlog1.src);
+                 }}
+               >
                   <img src={imgBlog1.src} alt="Faith & Business Summit 2025" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                    <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
+                      Click to preview
+                    </span>
+                  </div>
                </div>
                <div className="lg:w-1/3 flex flex-col justify-center gap-6">
                   <div className="flex items-center gap-4">
@@ -76,6 +92,7 @@ export default function BlogsPage() {
                   date="Feb 28, 2025"
                   title="Crypto & Stewardship Webinar Recap"
                   excerpt="Breaking down how believers can navigate digital investments responsibly and avoid common pitfalls."
+                  onImageClick={setPreviewImage}
                />
                <BlogCard
                   image={imgBlog3.src}
@@ -83,6 +100,7 @@ export default function BlogsPage() {
                   date="Feb 10, 2025"
                   title="Why Kingdom Entrepreneurs Think Differently About Wealth"
                   excerpt="Wealth isn't just about accumulation—it's about distribution. Here's how to shift your mindset."
+                  onImageClick={setPreviewImage}
                />
                <BlogCard
                   image={imgCrypto}
@@ -90,6 +108,7 @@ export default function BlogsPage() {
                   date="Jan 24, 2025"
                   title="Understanding Market Cycles: A Faith-Based Perspective"
                   excerpt="Patience is a virtue, especially in trading. Learning to wait on the right opportunities."
+                  onImageClick={setPreviewImage}
                />
                <BlogCard
                   image={imgFaith}
@@ -97,6 +116,7 @@ export default function BlogsPage() {
                   date="Jan 15, 2025"
                   title="3 Daily Habits for Spiritual Growth in a Busy World"
                   excerpt="Practical ways to keep God at the center of your schedule, even when business is booming."
+                  onImageClick={setPreviewImage}
                />
                <BlogCard
                   image={imgFinance}
@@ -104,6 +124,7 @@ export default function BlogsPage() {
                   date="Jan 05, 2025"
                   title="Financial Planning 101: Starting the Year Strong"
                   excerpt="The foundational steps every family needs to take to secure their financial future this year."
+                  onImageClick={setPreviewImage}
                />
                <BlogCard
                   image={imgBlog1.src}
@@ -111,6 +132,7 @@ export default function BlogsPage() {
                   date="Dec 20, 2024"
                   title="The Power of Mentorship in Business"
                   excerpt="Why you need a Paul, a Barnabas, and a Timothy in your professional life."
+                  onImageClick={setPreviewImage}
                />
             </div>
          </div>
@@ -137,15 +159,33 @@ export default function BlogsPage() {
          </div>
       </section>
 
+      {/* Image Preview Modal */}
+      <ImagePreviewModal
+        imageUrl={previewImage}
+        onClose={() => setPreviewImage(null)}
+      />
+
     </main>
   );
 }
 
-function BlogCard({ image, category, date, title, excerpt }: { image: string, category: string, date: string, title: string, excerpt: string }) {
+function BlogCard({ image, category, date, title, excerpt, onImageClick }: { image: string, category: string, date: string, title: string, excerpt: string, onImageClick?: (image: string) => void }) {
    return (
-      <div className="flex flex-col gap-6 group cursor-pointer">
-         <div className="w-full h-[300px] relative overflow-hidden bg-gray-200">
+      <div className="flex flex-col gap-6 group">
+         <div
+           className="w-full h-[300px] relative overflow-hidden bg-gray-200 cursor-pointer"
+           onClick={(e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             onImageClick?.(image);
+           }}
+         >
             <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+              <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
+                Click to preview
+              </span>
+            </div>
          </div>
          <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between">

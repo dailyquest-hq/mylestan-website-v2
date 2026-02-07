@@ -2,14 +2,25 @@
 
 import { useState } from "react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
 import Link from "next/link";
 import imgTimelineCard from "@/assets/about/timeline-card.jpg";
+import imgFaithFinancial from "@/assets/about/faith-financial-future.png";
+import imgZftCoo from "@/assets/about/zft-coo.jpg";
+import imgTradingRepublic from "@/assets/about/trading-republic-speaker.jpg";
+import imgAirdropSpeaker from "@/assets/about/airdrop-speaker.jpg";
+import imgBilyonaryo from "@/assets/media-speaking/BNC.jpg";
+import imgRfpCertificate from "@/assets/about/rfp-certificate.jpg";
+import imgCtaCertificate from "@/assets/about/cta-certificate.jpg";
+import imgSpiritOfWisdom from "@/assets/about/spirit-of-wisdom.jpg";
+import imgNftTestimony from "@/assets/about/nft-testimony.jpg";
 
 interface TimelineEvent {
   date: string;
   title: string;
   description: string;
   url?: string;
+  image?: string;
 }
 
 interface YearData {
@@ -22,29 +33,49 @@ interface YearData {
 const timelineData: YearData[] = [
   {
     year: "2025",
-    image: imgTimelineCard.src,
-    summary: "Continuing mission to equip believers worldwide through media, events, and one-on-one coaching.",
     events: [
+      {
+        date: "2025",
+        title: "Continuing Mission to Equip Believers Worldwide",
+        description: "Continuing mission to equip believers worldwide through media, events, and one-on-one coaching.",
+        image: imgTimelineCard.src
+      },
       {
         date: "NOVEMBER",
         title: "Bilyonaryo News Interview",
         description: "Featured interview discussing market analysis and financial insights.",
-        url: "https://www.youtube.com/watch?v=nZJeBBMlAjM"
+        url: "https://www.youtube.com/watch?v=nZJeBBMlAjM",
+        image: imgBilyonaryo.src
+      },
+      {
+        date: "AUGUST",
+        title: "Became a Certified Technical Analyst",
+        description: "Achieved professional certification as a Certified Technical Analyst (CTA) from the Society of Technical Analysts, demonstrating expertise in technical analysis and market forecasting.",
+        image: imgCtaCertificate.src
       },
       {
         date: "OCTOBER",
         title: "Faith for Financial Future Talk",
-        description: "Speaking engagement on integrating faith principles with financial planning."
+        description: "Speaking engagement on integrating faith principles with financial planning.",
+        image: imgFaithFinancial.src
+      },
+      {
+        date: "OCTOBER",
+        title: "Certified as a Registered Financial Planner of the Philippines",
+        description: "Achieved professional certification as a Registered Financial Planner (RFP), demonstrating expertise in financial planning and advisory services.",
+        image: imgRfpCertificate.src
       },
       {
         date: "JUNE",
         title: "Appointed as ZFT Trading Republic COO",
-        description: "Assumed leadership role as Chief Operating Officer at ZFT Trading Republic."
+        description: "Assumed leadership role as Chief Operating Officer at ZFT Trading Republic.",
+        image: imgZftCoo.src
       },
       {
         date: "MARCH",
         title: "Appeared as Regular Speaker on The Trading Republic's YouTube",
-        description: "Regular speaker sharing trading insights and market analysis."
+        description: "Regular speaker sharing trading insights and market analysis.",
+        image: imgTradingRepublic.src
       }
     ]
   },
@@ -55,7 +86,8 @@ const timelineData: YearData[] = [
         date: "MARCH",
         title: "Invited to be an Airdrop Resource Speaker by ZFT",
         description: "Resource speaker on cryptocurrency airdrops and blockchain technology.",
-        url: "https://www.facebook.com/photo?fbid=846900120783203&set=a.465969958876223"
+        url: "https://www.facebook.com/photo?fbid=846900120783203&set=a.465969958876223",
+        image: imgAirdropSpeaker.src
       }
     ]
   },
@@ -73,8 +105,16 @@ const timelineData: YearData[] = [
       {
         date: "FEBRUARY",
         title: "Invited to be Regular Speaker at Revelation City Church",
-        description: "Began regular speaking ministry at Revelation City Church.",
-        url: "https://www.youtube.com/watch?v=L7Xa2_V1_u4"
+        description: "Delivered powerful message on 'Spirit of Wisdom' - teaching on thinking, asking, and providing with wisdom and guidance.",
+        url: "https://www.youtube.com/watch?v=L7Xa2_V1_u4",
+        image: imgSpiritOfWisdom.src
+      },
+      {
+        date: "2021",
+        title: "Shared Christian Testimony on NFT Success Story",
+        description: "Featured in international interview sharing faith-driven testimony about God's guidance in achieving $100,000 through NFT trading strategy.",
+        url: "https://www.youtube.com/watch?v=GuLyPgKqIqg&t=39s",
+        image: imgNftTestimony.src
       }
     ]
   },
@@ -99,6 +139,7 @@ const timelineData: YearData[] = [
 
 export function InteractiveTimeline() {
   const [selectedYear, setSelectedYear] = useState("2025");
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   const selectedData = timelineData.find(d => d.year === selectedYear);
 
@@ -112,7 +153,7 @@ export function InteractiveTimeline() {
         </p>
 
         {/* Timeline Visual */}
-        <div className="relative w-full max-w-[800px] mx-auto min-h-[400px]">
+        <div className="relative w-full max-w-[800px] mx-auto">
           {/* Years Row */}
           <div className="flex gap-8 md:gap-16 justify-center relative">
             {timelineData.map((yearData, i) => (
@@ -152,21 +193,48 @@ export function InteractiveTimeline() {
 
         {/* Events List */}
         {selectedData && selectedData.events.length > 0 && (
-          <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+          <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             {selectedData.events.map((event, idx) => (
-              <TimelineEvent key={idx} {...event} />
+              <TimelineEvent key={idx} {...event} onImageClick={setPreviewImage} />
             ))}
           </div>
         )}
+
+        {/* Image Preview Modal */}
+        <ImagePreviewModal
+          imageUrl={previewImage}
+          onClose={() => setPreviewImage(null)}
+        />
       </div>
     </section>
   );
 }
 
-function TimelineEvent({ date, title, description, url }: TimelineEvent) {
+function TimelineEvent({ date, title, description, url, image, onImageClick }: TimelineEvent & { onImageClick?: (image: string) => void }) {
   const content = (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
-      <div className="p-6 md:p-8">
+    <div className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow group">
+      {image && (
+        <div
+          className="h-[200px] w-full overflow-hidden bg-gray-200 cursor-pointer relative"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            onImageClick?.(image);
+          }}
+        >
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+            <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
+              Click to preview
+            </span>
+          </div>
+        </div>
+      )}
+      <div className={`p-6 md:p-8 ${url ? 'cursor-pointer' : ''}`}>
         <span className="font-albert font-bold text-[#ed5128] text-sm tracking-wider uppercase mb-3 block">
           {date}
         </span>
