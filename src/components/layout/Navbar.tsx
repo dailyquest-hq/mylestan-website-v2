@@ -16,6 +16,7 @@ export function Navbar() {
     { name: "services", href: "/services" },
     { name: "blogs", href: "/blogs" },
     { name: "media speaking", href: "/media-speaking" },
+    { name: "jci manila", href: "/jci-manila" },
     { name: "faqs", href: "/faqs" },
     { name: "contact us", href: "/contact" },
   ];
