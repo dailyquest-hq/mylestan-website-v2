@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { Trophy, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Myles Yeo Tan JCI Manila | JCI Philippines Member & Leader",
@@ -75,13 +76,13 @@ const awards = [
     year: "2019",
     event: "JCIP Area Conference",
     award: "1st Place Public Speaking Champion",
-    icon: "🏆",
+    Icon: Trophy,
   },
   {
     year: "2019",
     event: "JCIP National Convention",
     award: "1st Runner-Up Public Speaking Champion",
-    icon: "🥈",
+    Icon: Award,
   },
 ];
 
@@ -234,7 +235,7 @@ export default function JCIPage() {
                     key={award.event}
                     className="flex items-start gap-5 bg-[#f7f7f5] p-6"
                   >
-                    <span className="text-4xl">{award.icon}</span>
+                    <award.Icon size={40} className="text-[#ed5128] shrink-0 mt-1" strokeWidth={1.5} />
                     <div>
                       <div className="text-[#ed5128] text-sm font-inter font-semibold tracking-wider uppercase mb-1">
                         {award.year} · {award.event}
