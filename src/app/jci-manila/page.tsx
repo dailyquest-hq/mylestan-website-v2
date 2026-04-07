@@ -113,11 +113,11 @@ export default function JCIPage() {
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
         <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
-          <SectionLabel color="orange">JCI Manila · JCI Philippines</SectionLabel>
+          <SectionLabel color="white">JCI Manila · JCI Philippines</SectionLabel>
           <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">
             Myles Yeo Tan<br />& JCI Manila
           </h1>
-          <p className="font-inter text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
+          <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px] leading-relaxed">
             A record of leadership, service, and community impact within JCI Manila and JCI Philippines — built over more than a decade of consistent contribution to the movement.
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function JCIPage() {
             {/* Left: Copy */}
             <div className="w-full lg:w-[60%] flex flex-col gap-6">
               <SectionLabel color="orange">JCI Manila Leadership Journey</SectionLabel>
-              <h2 className="font-darker font-semibold text-4xl md:text-[60px] leading-[0.95]">
+              <h2 className="font-darker font-semibold text-4xl md:text-[60px] leading-[0.9]">
                 A Decade of Service Inside JCI Manila
               </h2>
               <div className="font-inter text-lg text-[#282828] leading-relaxed space-y-5">
@@ -184,11 +184,11 @@ export default function JCIPage() {
       <section className="bg-[#0f100a] text-white py-20 md:py-32 px-5">
         <div className="max-w-[1600px] mx-auto">
           <div className="flex flex-col items-center text-center gap-6 mb-16">
-            <SectionLabel color="orange">ONTO Projects &amp; Chapter Roles</SectionLabel>
-            <h2 className="font-darker font-semibold text-4xl md:text-[60px] leading-[0.95]">
+            <SectionLabel color="white">ONTO Projects &amp; Chapter Roles</SectionLabel>
+            <h2 className="font-darker font-semibold text-4xl md:text-[60px] leading-[0.9]">
               Projects That Shaped the Chapter
             </h2>
-            <p className="font-inter text-white/60 text-lg max-w-2xl leading-relaxed">
+            <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-2xl leading-relaxed">
               From environmental service to training programs, Myles Yeo Tan's JCI Manila
               contributions span the full breadth of what it means to build a chapter.
             </p>
@@ -219,7 +219,7 @@ export default function JCIPage() {
             {/* Awards */}
             <div className="w-full lg:w-1/2 flex flex-col gap-6">
               <SectionLabel color="orange">Public Speaking Achievements</SectionLabel>
-              <h2 className="font-darker font-semibold text-4xl md:text-[56px] leading-[0.95]">
+              <h2 className="font-darker font-semibold text-4xl md:text-[56px] leading-[0.9]">
                 A Voice That Wins Recognition
               </h2>
               <p className="font-inter text-lg text-[#282828] leading-relaxed">
@@ -249,7 +249,7 @@ export default function JCIPage() {
             {/* Training Roles */}
             <div className="w-full lg:w-1/2 flex flex-col gap-6">
               <SectionLabel color="orange">Training &amp; Development</SectionLabel>
-              <h2 className="font-darker font-semibold text-4xl md:text-[56px] leading-[0.95]">
+              <h2 className="font-darker font-semibold text-4xl md:text-[56px] leading-[0.9]">
                 Building Members, Building Leaders
               </h2>
               <p className="font-inter text-lg text-[#282828] leading-relaxed">
@@ -278,7 +278,7 @@ export default function JCIPage() {
             {/* Left: Heading */}
             <div className="w-full lg:w-[40%] flex flex-col gap-6">
               <SectionLabel color="white">Key Achievements</SectionLabel>
-              <h2 className="font-darker font-semibold text-4xl md:text-[56px] leading-[0.95]">
+              <h2 className="font-darker font-semibold text-4xl md:text-[56px] leading-[0.9]">
                 Myles Yeo Tan — JCI Manila Achievements Highlights
               </h2>
               <p className="font-inter text-white/80 text-lg leading-relaxed">
@@ -309,7 +309,7 @@ export default function JCIPage() {
         <div className="max-w-[1600px] mx-auto">
           <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-8">
             <SectionLabel color="orange">Why This Record Matters</SectionLabel>
-            <h2 className="font-darker font-semibold text-4xl md:text-[60px] leading-[0.95]">
+            <h2 className="font-darker font-semibold text-4xl md:text-[60px] leading-[0.9]">
               Service, Brotherhood, and a Legacy Built Inside JCI Manila
             </h2>
             <div className="flex flex-col gap-5 text-left font-inter text-lg text-[#282828] leading-relaxed">
