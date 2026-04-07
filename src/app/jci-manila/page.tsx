@@ -119,7 +119,7 @@ export default function JCIPage() {
             Myles Yeo Tan<br />& JCI Manila
           </h1>
           <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px] leading-relaxed">
-            A record of leadership, service, and community impact within JCI Manila and JCI Philippines — built over more than a decade of consistent contribution to the movement.
+            Myles Yeo Tan JCI Manila — a decade-long record of leadership, service, and community impact built within one of the Philippines&apos; most respected young leaders&apos; organizations. As Myles Tan JCI Philippines member since 2012, his consistent presence across projects, training, and public speaking speaks for itself.
           </p>
         </div>
       </section>
