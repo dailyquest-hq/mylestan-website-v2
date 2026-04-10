@@ -170,7 +170,7 @@ export default function JCIPage() {
                   key={label}
                   className="bg-[#0f100a] text-white p-8 flex flex-col justify-center"
                 >
-                  <div className="font-darker font-bold text-5xl text-[#ed5128] mb-2 leading-none">
+                  <div className="font-darker font-bold text-5xl text-[#ed5128] mb-2 leading-none whitespace-nowrap">
                     {value}
                   </div>
                   <div className="font-inter text-sm text-white/60 leading-snug">{label}</div>
