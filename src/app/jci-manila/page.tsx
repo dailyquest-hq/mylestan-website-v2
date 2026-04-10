@@ -49,13 +49,13 @@ const projects = [
     title: "Sea of Life",
     category: "Environmental Initiative",
     description:
-      "One of the most distinctive entries in his JCI record is his involvement with Sea of Life — an environmentally relevant initiative connected to marine and underwater impact. As a PADI scuba diver, Myles brought personal passion and environmental awareness into service by helping champion projects involving the planting of artificial domes underwater. In a country like the Philippines, where marine ecosystems matter deeply, this project stands out as a meaningful expression of civic responsibility and JCI values.",
+      "Another defining contribution of Myles Yeo Tan in JCI Manila is his involvement in Sea of Life, an environmentally relevant initiative connected to marine and underwater impact. As a PADI scuba diver, Myles brought both personal passion and environmental awareness into service by helping champion projects involving the planting of artificial domes underwater. This gave his JCI work a unique edge: combining leadership, sustainability, and hands-on action. In a country like the Philippines, where marine ecosystems matter deeply, this kind of project stands out as a meaningful expression of both civic responsibility and JCI values.",
   },
   {
     title: "ONTO Projects",
     category: "Cross-Chapter Leadership",
     description:
-      "Myles served as a key figure in multiple ONTO initiatives that helped deepen ties with sister chapters — including ONTO Cebu, ONTO Davao, ONTO CDO, ONTO Legazpi, and later international chapter-linking efforts such as ONTO Malaga, ONTO Antigua, and ONTO Abidjan. These were more than social travel experiences: they strengthened brotherhood, improved collaboration, and opened doors for future partnerships and joint projects across JCI Manila and JCI Philippines.",
+      "One of the most distinctive areas of Myles Tan's service in JCI Manila is his work on ONTO, a series of memorable and relationship-driven trips that helped deepen ties with sister chapters. These ONTO initiatives were more than social travel experiences. They helped strengthen brotherhood, improve collaboration, and open doors for future partnerships, joint projects, and recognition opportunities for the chapter. Through ONTO Cebu, ONTO Davao, ONTO CDO, ONTO Legazpi, and later international chapter-linking efforts such as ONTO Malaga, ONTO Antigua and ONTO Abidjan, Myles Yeo Tan helped create meaningful connections that supported the wider mission of JCI Manila and JCI Philippines.",
   },
   {
     title: "Commissioner for Training",
@@ -137,23 +137,10 @@ export default function JCIPage() {
               </h2>
               <div className="font-inter text-lg text-[#282828] leading-relaxed space-y-5">
                 <p className="text-justify">
-                  Myles Yeo Tan has been a member of JCI Manila — part of JCI Philippines — since 2012.
-                  What began as membership in one of the Philippines' most respected young leaders'
-                  organizations grew into a long-term record of active participation, initiative, and
-                  chapter leadership that has continued to define his identity as a leader and servant
-                  in the community.
+                  Myles Yeo Tan is a long-serving JCI Manila member whose leadership journey in JCI Philippines reflects years of active service, project chairmanship, training involvement, public speaking excellence, and chapter-building initiatives. As a member who joined the JCI movement in the Philippines in 2012, Myles has built a reputation not only as a business leader, but also as a committed Jaycee who has contributed meaningfully to the growth, brotherhood, and project culture of JCI Manila.
                 </p>
                 <p className="text-justify">
-                  His JCI Manila journey is not a story built on a single role or a single term. It is
-                  a story built on consistent presence — showing up for projects, volunteering for
-                  responsibilities, accepting appointments, and contributing to both the culture and
-                  the mission of the chapter over more than a decade.
-                </p>
-                <p className="text-justify">
-                  In JCI Manila, contribution is measured not only by titles held, but by the
-                  consistency of presence, service, and chapter support over time. By that measure,
-                  the record of Myles Yeo Tan stands as a testament to what sustained engagement
-                  looks like — and the kind of impact it leaves on people and institutions alike.
+                  Throughout his years in JCI Manila, Myles Yeo Tan has taken on a wide range of leadership and project roles that demonstrate versatility, initiative, and long-term commitment. His body of work includes major involvement in ONTO projects, Sea of Life initiatives, training programs, seminars, public speaking, and chapter-to-chapter relationship building. These roles reflect the spirit of JCI Philippines leadership: developing young leaders who create positive change in their communities while building strong organizations and lasting networks.
                 </p>
               </div>
             </div>
@@ -224,10 +211,7 @@ export default function JCIPage() {
                 A Voice That Wins Recognition
               </h2>
               <p className="font-inter text-lg text-[#282828] leading-relaxed">
-                His excellence in communication is reflected in landmark public speaking achievements
-                within JCI Philippines. These honors reinforce the image of Myles Yeo Tan as a
-                strong communicator, persuasive leader, and active contributor to the culture of
-                excellence within JCI Manila.
+                His excellence in communication is also reflected in his public speaking achievements. Among the strongest accomplishments in his JCI record are his recognition as JCIP Area Conference 1st Place Public Speaking Champion in 2019 and JCIP National Convention 1st Runner-Up Public Speaking Champion in 2019. These honors reinforce the image of Myles Yeo Tan as a strong communicator, a persuasive leader, and an active contributor to the culture of excellence within JCI Manila and the broader JCI Philippines community.
               </p>
               <div className="flex flex-col gap-5 mt-4">
                 {awards.map((award) => (
@@ -254,9 +238,7 @@ export default function JCIPage() {
                 Building Members, Building Leaders
               </h2>
               <p className="font-inter text-lg text-[#282828] leading-relaxed">
-                Beyond the stage, Myles invested in the development of others. His role as
-                Commissioner for Training and his chairmanship of multiple programs reflect a
-                belief that the strength of a chapter lies in the quality of its people.
+                Beyond projects, Myles Tan also made his mark in the area of training and leadership development, which sits at the heart of the JCI Manila and JCI Philippines experience. He served in roles such as Commissioner for Training, led AVANTE training, chaired a Series of Seminars, and became involved in Metro Area Public Speaking. These contributions show that his impact was not limited to organizing events — he also invested in helping fellow members grow in confidence, communication, and leadership capacity.
               </p>
               <ul className="flex flex-col gap-4 mt-4">
                 {trainingRoles.map((role) => (
@@ -283,10 +265,7 @@ export default function JCIPage() {
                 Myles Yeo Tan — JCI Manila Achievements Highlights
               </h2>
               <p className="font-inter text-white/80 text-lg leading-relaxed">
-                What makes his story compelling is that his achievements are not limited to one lane.
-                He has been involved in community-oriented projects, environmental initiatives,
-                training programs, public speaking, chapter bonding, and cross-chapter relationship
-                building — the kind of breadth that shapes chapter culture over the long run.
+                What makes the story of Myles Yeo Tan and JCI Manila compelling is that his achievements are not limited to one lane. He has been involved in community-oriented projects, environmental initiatives, training programs, public speaking, chapter bonding, and cross-chapter relationship building. That breadth makes him an example of the kind of member who helps shape chapter culture over the long run. In the context of JCI Philippines, this kind of service is valuable because it builds both people and institutions.
               </p>
             </div>
 
@@ -314,6 +293,9 @@ export default function JCIPage() {
               Service, Brotherhood, and a Legacy Built Inside JCI Manila
             </h2>
             <div className="flex flex-col gap-5 text-left font-inter text-lg text-[#282828] leading-relaxed">
+              <p className="text-justify">
+                Over the years, Myles has also represented the chapter through active participation in major conferences and conventions. His JCI record reflects involvement in the JCI Philippines National Convention, JCI Area Conference, ASPAC, and World Congress-related participation, underscoring a long-term commitment to the movement and a consistent presence in the organization's most important platforms. This kind of sustained engagement matters in JCI Manila, where contribution is measured not only by titles held, but by the consistency of presence, service, and chapter support over time.
+              </p>
               <p className="text-justify">
                 Today, the achievements of Myles Yeo Tan in JCI Manila form an important part of
                 his broader leadership story. Known as a business executive, entrepreneur, and
