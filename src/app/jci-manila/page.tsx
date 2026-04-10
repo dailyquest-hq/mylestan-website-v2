@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/Button";
 import { Trophy, Award } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Myles Yeo Tan JCI Manila | JCI Philippines Member & Leader",
+  title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Service in the Philippines",
   description:
-    "Explore the JCI Manila achievements of Myles Yeo Tan — a long-time JCI Philippines member, public speaking champion, ONTO project leader, and Commissioner for Training since 2012.",
+    "Discover the JCI Manila achievements of Myles Yeo Tan, a long-time JCI member, leader, trainer, and project chairman in the Philippines known for ONTO, Sea of Life, public speaking, and community-building initiatives.",
   keywords: [
     "Myles Yeo Tan JCI Manila",
     "Myles Tan JCI Philippines",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     canonical: "/jci-manila",
   },
   openGraph: {
-    title: "Myles Yeo Tan JCI Manila | JCI Philippines Member & Leader",
+    title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Service in the Philippines",
     description:
       "A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
     url: "https://mylesyeotan.com/jci-manila",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Myles Yeo Tan JCI Manila | JCI Philippines Member & Leader",
+    title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Service in the Philippines",
     description:
       "A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
     images: ["/og-image.jpg"],
@@ -49,13 +49,13 @@ const projects = [
     title: "Sea of Life",
     category: "Environmental Initiative",
     description:
-      "One of the most distinctive entries in his JCI record is his involvement with Sea of Life — an initiative focused on environmental impact, ocean awareness, and underwater conservation. This project reflects the values of civic responsibility and environmental stewardship that are central to the JCI mission.",
+      "One of the most distinctive entries in his JCI record is his involvement with Sea of Life — an environmentally relevant initiative connected to marine and underwater impact. As a PADI scuba diver, Myles brought personal passion and environmental awareness into service by helping champion projects involving the planting of artificial domes underwater. In a country like the Philippines, where marine ecosystems matter deeply, this project stands out as a meaningful expression of civic responsibility and JCI values.",
   },
   {
     title: "ONTO Projects",
     category: "Cross-Chapter Leadership",
     description:
-      "Myles served as a key figure in multiple ONTO (Official No-Title Organizer) initiatives, strengthening relationships between JCI Manila and sister chapters across JCI Philippines. These projects reinforced the bonds of brotherhood and collaboration that define the JCI movement.",
+      "Myles served as a key figure in multiple ONTO initiatives that helped deepen ties with sister chapters — including ONTO Cebu, ONTO Davao, ONTO CDO, ONTO Legazpi, and later international chapter-linking efforts such as ONTO Malaga, ONTO Antigua, and ONTO Abidjan. These were more than social travel experiences: they strengthened brotherhood, improved collaboration, and opened doors for future partnerships and joint projects across JCI Manila and JCI Philippines.",
   },
   {
     title: "Commissioner for Training",
@@ -115,8 +115,8 @@ export default function JCIPage() {
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
         <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
           <SectionLabel color="white">JCI Manila · JCI Philippines</SectionLabel>
-          <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">
-            Myles Yeo Tan<br />& JCI Manila
+          <h1 className="font-darker font-semibold text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px] leading-[0.95]">
+            Myles Yeo Tan: JCI Manila Achievements, Leadership, and Service in the Philippines
           </h1>
           <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px] leading-relaxed">
             Myles Yeo Tan JCI Manila — a decade-long record of leadership, service, and community impact built within one of the Philippines&apos; most respected young leaders&apos; organizations. As Myles Tan JCI Philippines member since 2012, his consistent presence across projects, training, and public speaking speaks for itself.
