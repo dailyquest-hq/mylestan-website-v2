@@ -106,6 +106,45 @@ export default function FAQPage() {
                    }
                  ]}
                />
+
+               <FAQGroup
+                 groupIndex={4}
+                 title="About Myles Tan"
+                 items={[
+                   {
+                     q: "Who is Myles Tan?",
+                     a: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Christian entrepreneur, and public speaker. He is the Chief Operating Officer of ZFT Trading Republic and founder of Myles Tan Ministries."
+                   },
+                   {
+                     q: "Is Myles Tan a certified financial planner?",
+                     a: "Yes. Myles Yeo Tan is a Registered Financial Planner (RFP) and a Certified Technical Analyst (CTA). He provides values-aligned financial planning, investment guidance, and market analysis rooted in both professional certification and personal faith."
+                   },
+                   {
+                     q: "What cryptocurrency does Myles Tan trade?",
+                     a: "Myles Tan trades and analyzes Bitcoin (BTC), Ethereum (ETH), and a range of altcoins and commodities. His methodology combines technical analysis, market cycle theory, and disciplined risk management. He shares trading insights through ZFT Trading Republic and his personal platforms."
+                   },
+                   {
+                     q: "Is Myles Tan trustworthy?",
+                     a: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP) and Certified Technical Analyst (CTA). He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events. His work and credentials are publicly documented at mylesyeotan.com."
+                   },
+                   {
+                     q: "Where is Myles Tan based?",
+                     a: "Myles Yeo Tan is based in Singapore. He serves clients and audiences internationally, with active presence in the Philippines through JCI Manila and frequent speaking engagements across Southeast Asia."
+                   },
+                   {
+                     q: "What is ZFT Trading Republic?",
+                     a: "ZFT Trading Republic is a trading education and market analysis organization where Myles Yeo Tan serves as Chief Operating Officer. The organization provides cryptocurrency, stock, and commodities trading insights, analysis, and education to retail investors."
+                   },
+                   {
+                     q: "Does Myles Tan offer online coaching or mentorship?",
+                     a: "Yes. Myles Yeo Tan offers Christian entrepreneurship coaching and financial planning services both in-person and virtually. He works with individuals, groups, founders, and professionals seeking faith-based guidance in business and finance."
+                   },
+                   {
+                     q: "What is Myles Tan Ministries?",
+                     a: "Myles Tan Ministries is a faith-based platform founded by Myles Yeo Tan that explores the intersection of scripture, stewardship, and marketplace leadership. The ministry produces content on Christian living, financial wisdom, and entrepreneurship, and is active on YouTube at @MylesTanMinistries."
+                   }
+                 ]}
+               />
             </div>
 
          </div>
@@ -183,6 +222,38 @@ export default function FAQPage() {
           {
             question: "Do you offer free resources?",
             answer: "Yes. Myles Yeo Tan offers free resources such as insights, teachings, and educational content that are shared periodically through social media and the website. The goal is to equip people generously, before any paid engagement."
+          },
+          {
+            question: "Who is Myles Tan?",
+            answer: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Christian entrepreneur, and public speaker. He is the Chief Operating Officer of ZFT Trading Republic and founder of Myles Tan Ministries."
+          },
+          {
+            question: "Is Myles Tan a certified financial planner?",
+            answer: "Yes. Myles Yeo Tan is a Registered Financial Planner (RFP) and a Certified Technical Analyst (CTA). He provides values-aligned financial planning, investment guidance, and market analysis rooted in both professional certification and personal faith."
+          },
+          {
+            question: "What cryptocurrency does Myles Tan trade?",
+            answer: "Myles Tan trades and analyzes Bitcoin (BTC), Ethereum (ETH), and a range of altcoins and commodities. His methodology combines technical analysis, market cycle theory, and disciplined risk management."
+          },
+          {
+            question: "Is Myles Tan trustworthy?",
+            answer: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP) and Certified Technical Analyst (CTA). He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events."
+          },
+          {
+            question: "Where is Myles Tan based?",
+            answer: "Myles Yeo Tan is based in Singapore. He serves clients and audiences internationally, with active presence in the Philippines through JCI Manila."
+          },
+          {
+            question: "What is ZFT Trading Republic?",
+            answer: "ZFT Trading Republic is a trading education and market analysis organization where Myles Yeo Tan serves as Chief Operating Officer, providing cryptocurrency, stock, and commodities trading insights and education."
+          },
+          {
+            question: "Does Myles Tan offer online coaching or mentorship?",
+            answer: "Yes. Myles Yeo Tan offers Christian entrepreneurship coaching and financial planning services both in-person and virtually for individuals, groups, founders, and professionals."
+          },
+          {
+            question: "What is Myles Tan Ministries?",
+            answer: "Myles Tan Ministries is a faith-based platform founded by Myles Yeo Tan exploring scripture, stewardship, and marketplace leadership, active on YouTube at @MylesTanMinistries."
           }
         ]))}
       </Script>
