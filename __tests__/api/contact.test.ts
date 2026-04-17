@@ -1,15 +1,15 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
-jest.mock('nodemailer', () => ({
-  createTransport: jest.fn(() => ({
-    sendMail: jest.fn().mockResolvedValue({ messageId: 'test-id' }),
+jest.mock('resend', () => ({
+  Resend: jest.fn().mockImplementation(() => ({
+    emails: {
+      send: jest.fn().mockResolvedValue({ data: { id: 'test-id' }, error: null }),
+    },
   })),
 }));
 
-// Helper to get the current sendMail mock from the already-created transporter
-function getSendMailMock() {
-  const mockedCreateTransport = (nodemailer.createTransport as jest.Mock);
-  return mockedCreateTransport.mock.results[0].value.sendMail as jest.Mock;
+function getResendInstance() {
+  return (Resend as jest.Mock).mock.results[0]?.value;
 }
 
 function makeRequest(body: object) {
@@ -21,7 +21,6 @@ function makeRequest(body: object) {
 }
 
 describe('POST /api/contact', () => {
-  // Import after mock is set up
   let POST: (req: Request) => Promise<Response>;
 
   beforeAll(async () => {
@@ -29,8 +28,7 @@ describe('POST /api/contact', () => {
   });
 
   beforeEach(() => {
-    getSendMailMock().mockClear();
-    getSendMailMock().mockResolvedValue({ messageId: 'test-id' });
+    jest.clearAllMocks();
   });
 
   it('returns 200 on valid submission', async () => {
@@ -59,10 +57,41 @@ describe('POST /api/contact', () => {
     expect(res.status).toBe(400);
   });
 
-  it('returns 500 when nodemailer throws', async () => {
-    getSendMailMock().mockRejectedValueOnce(new Error('SMTP error'));
+  it('returns 400 for invalid email format', async () => {
+    const req = makeRequest({ name: 'John', email: 'not-an-email', message: 'Hello' });
+    const res = await POST(req);
+    expect(res.status).toBe(400);
+  });
+
+  it('returns 400 when name exceeds 100 characters', async () => {
+    const req = makeRequest({ name: 'a'.repeat(101), email: 'john@example.com', message: 'Hello' });
+    const res = await POST(req);
+    expect(res.status).toBe(400);
+  });
+
+  it('returns 400 when message exceeds 10000 characters', async () => {
+    const req = makeRequest({ name: 'John', email: 'john@example.com', message: 'a'.repeat(10001) });
+    const res = await POST(req);
+    expect(res.status).toBe(400);
+  });
+
+  it('returns 500 when Resend throws', async () => {
+    (Resend as jest.Mock).mockImplementationOnce(() => ({
+      emails: { send: jest.fn().mockRejectedValue(new Error('API error')) },
+    }));
     const req = makeRequest({ name: 'John', email: 'john@example.com', message: 'Hello' });
     const res = await POST(req);
     expect(res.status).toBe(500);
+  });
+
+  it('does not expose error details in response', async () => {
+    (Resend as jest.Mock).mockImplementationOnce(() => ({
+      emails: { send: jest.fn().mockResolvedValue({ data: null, error: { message: 'internal secret' } }) },
+    }));
+    const req = makeRequest({ name: 'John', email: 'john@example.com', message: 'Hello' });
+    const res = await POST(req);
+    expect(res.status).toBe(500);
+    const json = await res.json();
+    expect(JSON.stringify(json)).not.toContain('internal secret');
   });
 });
