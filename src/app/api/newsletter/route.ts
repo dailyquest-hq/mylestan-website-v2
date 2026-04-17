@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     if (!email) return NextResponse.json({ error: 'Missing email' }, { status: 400 });
     const { error } = await resend.emails.send({
       from: 'Myles Tan Website <onboarding@resend.dev>',
-      to: 'michaelpaulquimson@gmail.com',
+      to: 'mylestan@gmail.com',
       subject: `New newsletter subscriber: ${email}`,
       text: `New subscriber signed up: ${email}`,
     });
