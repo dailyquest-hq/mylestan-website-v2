@@ -1,5 +1,6 @@
 "use client";
 
+import Image, { StaticImageData } from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
@@ -13,15 +14,15 @@ import imgCoaching from "@/assets/services/entrepreneurship.jpg";
 import imgSpeaking from "@/assets/services/speaking.jpg";
 
 const serviceImages = {
-  crypto: imgCrypto.src,
-  financial: imgFinancial.src,
-  coaching: imgCoaching.src,
-  speaking: imgSpeaking.src,
+  crypto: imgCrypto,
+  financial: imgFinancial,
+  coaching: imgCoaching,
+  speaking: imgSpeaking,
 };
 
 export default function ServicesPage() {
   return (
-    <main className="bg-white min-h-screen w-full overflow-x-hidden">
+    <main id="main-content" className="bg-white min-h-dvh w-full overflow-x-hidden">
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-32 md:pt-60 md:pb-40 px-5 text-center">
@@ -134,7 +135,7 @@ interface ServiceSectionProps {
   label: string;
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   layout: "left" | "right";
   buttonText: string;
   bullets: ServiceBullet[];
@@ -167,9 +168,9 @@ function ServiceSection({ id, label, title, description, image, layout, buttonTe
              {bullets.map((bullet, i) => (
                <div key={i} className="flex gap-4 items-center">
                  <div className={cn(
-                   "w-8 h-8 flex items-center justify-center shrink-0",
+                   "w-11 h-11 flex items-center justify-center shrink-0",
                    bullet.color === "orange" && "text-[#ed5128]",
-                   bullet.color === "green" && "text-[#2d9739]",
+                   bullet.color === "green" && "text-[#ed5128]",
                    bullet.color === "peach" && "text-[#ed5128]"
                  )}>
                    <bullet.icon size={28} strokeWidth={2} />
@@ -188,7 +189,7 @@ function ServiceSection({ id, label, title, description, image, layout, buttonTe
 
         {/* Image */}
         <div className="flex-1 w-full h-[400px] md:h-[500px] lg:h-[600px] relative overflow-hidden rounded-sm bg-gray-100">
-           <img src={image} alt={title} className="w-full h-full object-cover object-center" />
+           <Image src={image} alt={title} fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 50vw" />
         </div>
 
       </div>

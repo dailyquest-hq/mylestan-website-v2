@@ -6,8 +6,6 @@
   --font-darker: var(--font-darker-grotesque);
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);
-  --font-albert: var(--font-albert-sans);
-
   --color-primary-orange: #ed5128;
   --color-dark-bg: #0f100a;
   --color-dark-card: #1a1a1a;
@@ -28,7 +26,3 @@ body {
   overflow-x: hidden;
 }
 
-/* Force pointer cursor on all links */
-a, a * {
-  cursor: pointer !important;
-}

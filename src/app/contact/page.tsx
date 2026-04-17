@@ -1,9 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, CheckCircle } from "lucide-react";
 
 // Assets
 import imgSocial1 from "@/assets/shared/social-1.jpg";
@@ -13,8 +14,12 @@ import imgSocial4 from "@/assets/shared/social-4.jpg";
 import imgSocial6 from "@/assets/shared/social-6.jpg";
 
 export default function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   return (
-    <main className="bg-white min-h-screen w-full overflow-x-hidden">
+    <main id="main-content" className="bg-white min-h-dvh w-full overflow-x-hidden">
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
@@ -39,29 +44,84 @@ export default function ContactPage() {
              </p>
            </div>
 
-           <form className="w-full flex flex-col gap-3 sm:gap-4">
-             <input
-               type="text"
-               placeholder="Name"
-               className="w-full bg-[#f0f0f0] px-4 sm:px-6 py-3 sm:py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange"
-             />
-             <input
-               type="email"
-               placeholder="Email"
-               className="w-full bg-[#f0f0f0] px-4 sm:px-6 py-3 sm:py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange"
-             />
-             <textarea
-               placeholder="Message"
-               rows={5}
-               className="w-full bg-[#f0f0f0] px-4 sm:px-6 py-3 sm:py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange resize-none"
-             />
-             
-             <div className="flex justify-center mt-6">
-               <Button onClick={() => alert('Thank you for your interest! Please email us directly at mylestan@gmail.com for inquiries.')} className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-12 px-12 text-base font-bold rounded-none uppercase">
-                 SEND MESSAGE
-               </Button>
+           {submitted ? (
+             <div className="w-full flex flex-col items-center gap-6 py-8">
+               <CheckCircle size={56} className="text-[#ed5128]" strokeWidth={1.5} />
+               <h3 className="font-darker font-semibold text-2xl text-[#282828]">Message Received</h3>
+               <p className="font-inter text-[#282828]/70 text-center max-w-md">
+                 Thank you for reaching out. For a faster response, email directly at{" "}
+                 <a href="mailto:mylestan@gmail.com" className="text-[#ed5128] hover:underline">
+                   mylestan@gmail.com
+                 </a>
+                 .
+               </p>
+               <button
+                 onClick={() => setSubmitted(false)}
+                 className="font-inter text-sm text-[#282828]/50 hover:text-[#282828] underline"
+               >
+                 Send another message
+               </button>
              </div>
-           </form>
+           ) : (
+             <form
+               onSubmit={async (e) => {
+                 e.preventDefault();
+                 setLoading(true);
+                 setError(null);
+                 const form = e.currentTarget;
+                 const name = (form.elements.namedItem('contact-name') as HTMLInputElement).value;
+                 const email = (form.elements.namedItem('contact-email') as HTMLInputElement).value;
+                 const message = (form.elements.namedItem('contact-message') as HTMLTextAreaElement).value;
+                 try {
+                   const res = await fetch('/api/contact', {
+                     method: 'POST',
+                     headers: { 'Content-Type': 'application/json' },
+                     body: JSON.stringify({ name, email, message }),
+                   });
+                   if (!res.ok) throw new Error();
+                   setSubmitted(true);
+                 } catch {
+                   setError('Something went wrong. Please try again or email mylestan@gmail.com directly.');
+                 } finally {
+                   setLoading(false);
+                 }
+               }}
+               className="w-full flex flex-col gap-3 sm:gap-4"
+             >
+               <label htmlFor="contact-name" className="sr-only">Name</label>
+               <input
+                 id="contact-name"
+                 type="text"
+                 placeholder="Name"
+                 required
+                 className="w-full bg-[#f0f0f0] px-4 sm:px-6 py-3 sm:py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange"
+               />
+               <label htmlFor="contact-email" className="sr-only">Email</label>
+               <input
+                 id="contact-email"
+                 type="email"
+                 placeholder="Email"
+                 required
+                 className="w-full bg-[#f0f0f0] px-4 sm:px-6 py-3 sm:py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange"
+               />
+               <label htmlFor="contact-message" className="sr-only">Message</label>
+               <textarea
+                 id="contact-message"
+                 placeholder="Message"
+                 rows={5}
+                 required
+                 className="w-full bg-[#f0f0f0] px-4 sm:px-6 py-3 sm:py-4 placeholder-[#282828] text-[#282828] font-inter text-base focus:outline-none focus:ring-1 focus:ring-primary-orange resize-none"
+               />
+               <div className="flex justify-center mt-6">
+                 <Button type="submit" disabled={loading} className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-12 px-12 text-base font-bold rounded-none uppercase">
+                   {loading ? 'SENDING...' : 'SEND MESSAGE'}
+                 </Button>
+               </div>
+               {error && (
+                 <p className="font-inter text-red-500 text-sm text-center">{error}</p>
+               )}
+             </form>
+           )}
 
         </div>
       </section>
@@ -82,16 +142,16 @@ export default function ContactPage() {
                
                {/* Social Icons */}
                <div className="flex gap-4 mt-2">
-                  <Link href="https://www.facebook.com/mylestanministries" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors cursor-pointer">
+                  <Link href="https://www.facebook.com/mylestanministries" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#ed5128] focus:ring-offset-2">
                      <Facebook size={24} strokeWidth={1.5} />
                   </Link>
-                  <Link href="https://www.instagram.com/mylestan" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors cursor-pointer">
+                  <Link href="https://www.instagram.com/mylestan" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#ed5128] focus:ring-offset-2">
                      <Instagram size={24} strokeWidth={1.5} />
                   </Link>
-                  <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors cursor-pointer">
+                  <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#ed5128] focus:ring-offset-2">
                      <Youtube size={24} strokeWidth={1.5} />
                   </Link>
-                  <Link href="https://www.linkedin.com/in/myles-yeo-tan/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors cursor-pointer">
+                  <Link href="https://www.linkedin.com/in/myles-yeo-tan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#ed5128] focus:ring-offset-2">
                      <Linkedin size={24} strokeWidth={1.5} />
                   </Link>
                </div>
@@ -101,7 +161,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full">
                {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial6].map((img, idx) => (
                   <div key={idx} className="aspect-square relative overflow-hidden bg-gray-200 group">
-                     <img src={img.src} alt={`Social ${idx}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                     <img src={img.src} alt="Myles Tan on Instagram" loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <Instagram className="text-white" size={32} />
                      </div>

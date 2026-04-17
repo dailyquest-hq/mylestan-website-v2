@@ -1,29 +1,35 @@
 declare module '*.jpg' {
-  const content: { src: string };
-  export default content;
-}
-
-declare module '*.png' {
-  const content: { src: string };
+  import type { StaticImageData } from 'next/image';
+  const content: StaticImageData;
   export default content;
 }
 
 declare module '*.jpeg' {
-  const content: { src: string };
+  import type { StaticImageData } from 'next/image';
+  const content: StaticImageData;
+  export default content;
+}
+
+declare module '*.png' {
+  import type { StaticImageData } from 'next/image';
+  const content: StaticImageData;
   export default content;
 }
 
 declare module '*.gif' {
-  const content: { src: string };
+  import type { StaticImageData } from 'next/image';
+  const content: StaticImageData;
   export default content;
 }
 
 declare module '*.webp' {
-  const content: { src: string };
+  import type { StaticImageData } from 'next/image';
+  const content: StaticImageData;
   export default content;
 }
 
 declare module '*.svg' {
-  const content: { src: string };
+  import type { StaticImageData } from 'next/image';
+  const content: StaticImageData;
   export default content;
 }

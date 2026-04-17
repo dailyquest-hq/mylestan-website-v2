@@ -17,6 +17,7 @@ export function Navbar() {
     { name: "blogs", href: "/blogs" },
     { name: "media speaking", href: "/media-speaking" },
     { name: "jci manila", href: "/jci-manila" },
+    { name: "ministries", href: "/myles-tan-ministries" },
     { name: "faqs", href: "/faqs" },
     { name: "contact us", href: "/contact" },
   ];

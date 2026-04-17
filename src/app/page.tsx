@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
@@ -24,7 +25,7 @@ export default function Homepage() {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   return (
-    <main className="bg-[#0f100a] min-h-screen text-white w-full overflow-x-hidden">
+    <main id="main-content" className="bg-[#0f100a] min-h-dvh text-white w-full overflow-x-hidden">
 
       {/* Hero Section */}
       <section className="relative w-full pt-32 pb-20 flex flex-col items-center">
@@ -60,8 +61,8 @@ export default function Homepage() {
           </div>
 
           {/* Hero Image */}
-          <div className="w-full relative mt-12 h-[350px] sm:h-[450px] md:h-[700px] xl:h-[800px]">
-             <img src={imgMediaBg.src} alt="Myles Tan" className="w-full h-full object-cover object-top" />
+          <div className="w-full relative mt-12 h-[350px] sm:h-[450px] md:h-[700px] xl:h-[800px] overflow-hidden">
+             <Image src={imgMediaBg} alt="Myles Tan" fill priority className="object-cover object-top" sizes="100vw" />
           </div>
 
         </div>
@@ -82,7 +83,8 @@ export default function Homepage() {
                 My background spans crypto and trading, financial planning, real estate, and entrepreneurship, giving me a practical perspective on how people can build long-term stability in a fast-changing world. I've seen how fear, hype, and pressure destroy decision-making, so my work focuses on replacing noise with principles, and speculation with strategy.
               </p>
               <p>
-                Beyond business, I'm deeply devoted to teaching and preaching the word of God. I love helping people encounter Jesus, grow in purpose, and live with conviction. I believe my calling as a kingdom entrepreneur is to marketplace ministers and stay rooted in Christ.
+                Beyond business, I'm deeply devoted to teaching and preaching the word of God. I love helping people encounter Jesus, grow in purpose, and live with conviction. I believe my calling as a kingdom entrepreneur is to marketplace ministers and stay rooted in Christ.{" "}
+                <Link href="/myles-tan-ministries" className="text-[#ed5128] hover:underline">Explore Myles Tan Ministries.</Link>
               </p>
             </div>
           </div>
@@ -90,14 +92,14 @@ export default function Homepage() {
           {/* Images Grid */}
           <div className="w-full flex flex-col md:flex-row gap-6">
             <div className="md:w-[60%] h-[500px] md:h-[772px] relative overflow-hidden">
-               <img src={imgAboutLarge.src} alt="Myles Speaking" className="w-full h-full object-cover" />
+               <Image src={imgAboutLarge} alt="Myles Speaking" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
             </div>
             <div className="md:w-[40%] flex flex-col gap-6">
                <div className="h-[240px] md:h-[372px] relative overflow-hidden">
-                  <img src={imgAboutSmall1.src} alt="Audience" className="w-full h-full object-cover" />
+                  <Image src={imgAboutSmall1} alt="Audience" fill className="object-cover" sizes="(max-width: 768px) 100vw, 40vw" />
                </div>
                <div className="h-[240px] md:h-[372px] relative overflow-hidden">
-                  <img src={imgAboutSmall2.src} alt="Workshop" className="w-full h-full object-cover" />
+                  <Image src={imgAboutSmall2} alt="Workshop" fill className="object-cover" sizes="(max-width: 768px) 100vw, 40vw" />
                </div>
             </div>
           </div>
@@ -235,7 +237,7 @@ export default function Homepage() {
       {/* Media Speaking */}
       <section className="relative w-full h-[600px] md:h-[800px] overflow-hidden">
          <div className="absolute inset-0">
-           <img src={imgHero.src} alt="Media Background" className="w-full h-full object-cover" />
+           <Image src={imgHero} alt="Media Background" fill className="object-cover" sizes="100vw" />
            <div className="absolute inset-0 bg-black/60" />
          </div>
 
@@ -274,21 +276,23 @@ export default function Homepage() {
 function BlogCard({ image, category, title, desc, isBlog = false, onImageClick }: { image: string, category: string, title: string, desc: string, isBlog?: boolean, onImageClick?: (image: string) => void }) {
   return (
     <div className="flex flex-col gap-6 group">
-       <div
-         className="w-full h-[300px] md:h-[345px] relative overflow-hidden bg-gray-800 cursor-pointer"
+       <button
+         type="button"
+         aria-label={`Preview image for ${title}`}
+         className="w-full h-[300px] md:h-[345px] relative overflow-hidden bg-gray-800 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#ed5128]"
          onClick={(e) => {
            e.preventDefault();
            e.stopPropagation();
            onImageClick?.(image);
          }}
        >
-         <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+         <Image src={image} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
            <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
              Click to preview
            </span>
          </div>
-       </div>
+       </button>
        <div className="flex flex-col gap-2">
          <span className="font-inter font-medium text-sm tracking-wider uppercase text-white/80">{category}</span>
          <h3 className="font-darker font-semibold text-3xl leading-none text-white">{title}</h3>

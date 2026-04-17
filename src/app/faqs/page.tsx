@@ -11,12 +11,12 @@ import { faqSchema, breadcrumbSchema } from "@/lib/schemas";
 
 export default function FAQPage() {
   return (
-    <main className="bg-white min-h-screen w-full overflow-x-hidden">
+    <main id="main-content" className="bg-white min-h-dvh w-full overflow-x-hidden">
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
          <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
-            <h1 className="font-darker font-semibold text-[36px] sm:text-[48px] md:text-[70px] lg:text-[100px] leading-none">Frequently Asked Questions</h1>
+            <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">Frequently Asked Questions</h1>
             <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px]">
                Explore common questions about services, events, and ways to connect with Myles Tan.
             </p>
@@ -40,6 +40,7 @@ export default function FAQPage() {
             {/* FAQ Groups */}
             <div className="w-full flex flex-col gap-12">
                <FAQGroup
+                 groupIndex={0}
                  title="Services & Coaching"
                  items={[
                    {
@@ -58,6 +59,7 @@ export default function FAQPage() {
                />
 
                <FAQGroup
+                 groupIndex={1}
                  title="Speaking Engagements"
                  items={[
                    {
@@ -76,6 +78,7 @@ export default function FAQPage() {
                />
 
                <FAQGroup
+                 groupIndex={2}
                  title="Events & Media"
                  items={[
                    {
@@ -90,6 +93,7 @@ export default function FAQPage() {
                />
 
                <FAQGroup
+                 groupIndex={3}
                  title="General Questions"
                  items={[
                    {
@@ -187,26 +191,29 @@ export default function FAQPage() {
   );
 }
 
-function FAQGroup({ title, items }: { title: string, items: { q: string, a: string }[] }) {
+function FAQGroup({ title, items, groupIndex }: { title: string, items: { q: string, a: string }[], groupIndex: number }) {
   return (
     <div className="w-full flex flex-col gap-6">
       <h3 className="font-darker font-semibold text-2xl text-black text-center md:text-left">{title}</h3>
       <div className="flex flex-col gap-3">
         {items.map((item, i) => (
-          <FAQItem key={i} question={item.q} answer={item.a} />
+          <FAQItem key={i} index={i} groupIndex={groupIndex} question={item.q} answer={item.a} />
         ))}
       </div>
     </div>
   )
 }
 
-function FAQItem({ question, answer }: { question: string, answer: string }) {
+function FAQItem({ question, answer, index, groupIndex }: { question: string, answer: string, index: number, groupIndex: number }) {
   const [isOpen, setIsOpen] = useState(false);
+  const answerId = `faq-${groupIndex}-${index}`;
 
   return (
     <div className="bg-[#f0f0f0] rounded-[4px] overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-controls={answerId}
         className="w-full flex items-center justify-between px-6 py-4 text-left transition-colors hover:bg-gray-200/50 cursor-pointer"
       >
         <span className="font-inter font-normal text-[#282828] text-base">{question}</span>
@@ -223,7 +230,7 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="px-6 pb-6 pt-0 text-[#575756] font-inter text-base leading-relaxed border-t border-black/5 mt-2">
+            <div id={answerId} className="px-6 pb-6 pt-0 text-[#575756] font-inter text-base leading-relaxed border-t border-black/5 mt-2">
               {answer}
             </div>
           </motion.div>

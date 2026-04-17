@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
 };
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import Link from "next/link";
@@ -49,7 +50,7 @@ import imgSocial6 from "@/assets/shared/social-6.jpg";
 
 export default function AboutPage() {
   return (
-    <main className="bg-white min-h-screen w-full overflow-x-hidden">
+    <main id="main-content" className="bg-white min-h-dvh w-full overflow-x-hidden">
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
@@ -73,7 +74,8 @@ export default function AboutPage() {
                      Today, my work is shaped by a commitment to seek God's voice in decision-making, learning to recognize prophetic insight, exercise spiritual discernment, and act with courage in the marketplace. I believe God still gives wisdom for timing, direction, and restraint. I believe that spirit-led decisions, when anchored in Scripture and tested by sound counsel, produce peace, clarity, and lasting impact.
                   </p>
                   <p className="text-justify">
-                     What drives me forward is simple: to see people grounded in Christ, confident in their decisions, and courageous in their calling—building lives and legacies that honor God and advance His Kingdom.
+                     What drives me forward is simple: to see people grounded in Christ, confident in their decisions, and courageous in their calling—building lives and legacies that honor God and advance His Kingdom.{" "}
+                     <Link href="/myles-tan-ministries" className="text-[#ed5128] hover:underline">Learn more about Myles Tan Ministries.</Link>
                   </p>
                </div>
             </div>
@@ -82,7 +84,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
                {[imgTicker1, imgTicker2, imgTicker3, imgTicker4].map((img, idx) => (
                   <div key={idx} className="h-[200px] sm:h-[250px] md:h-[300px] lg:h-[370px] w-full relative overflow-hidden bg-gray-100">
-                     <img src={img.src} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover" />
+                     <Image src={img} alt="Myles Tan at a speaking or ministry event" fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                   </div>
                ))}
             </div>
@@ -97,7 +99,7 @@ export default function AboutPage() {
          <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
             {/* Image */}
             <div className="w-full lg:w-[45%] h-[300px] sm:h-[350px] md:h-[450px] lg:h-[600px] relative overflow-hidden rounded-sm">
-               <img src={imgStory.src} alt="Myles Story" className="w-full h-full object-cover" />
+               <Image src={imgStory} alt="Myles Story" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
 
             {/* Text */}
@@ -133,16 +135,16 @@ export default function AboutPage() {
                
                {/* Social Icons */}
                <div className="flex gap-4 mt-4">
-                  <Link href="https://www.facebook.com/mylestanministries" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors cursor-pointer">
+                  <Link href="https://www.facebook.com/mylestanministries" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#ed5128] focus:ring-offset-2">
                      <Facebook size={24} strokeWidth={1.5} />
                   </Link>
-                  <Link href="https://www.instagram.com/mylestan" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors cursor-pointer">
+                  <Link href="https://www.instagram.com/mylestan" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#ed5128] focus:ring-offset-2">
                      <Instagram size={24} strokeWidth={1.5} />
                   </Link>
-                  <Link href="https://www.linkedin.com/in/myles-yeo-tan/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors cursor-pointer">
+                  <Link href="https://www.linkedin.com/in/myles-yeo-tan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#ed5128] focus:ring-offset-2">
                      <Linkedin size={24} strokeWidth={1.5} />
                   </Link>
-                  <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors cursor-pointer">
+                  <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-12 h-12 bg-[#ed5128] flex items-center justify-center text-white hover:bg-[#d6411b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#ed5128] focus:ring-offset-2">
                      <Youtube size={24} strokeWidth={1.5} />
                   </Link>
                </div>
@@ -152,7 +154,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
                {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial6].map((img, idx) => (
                   <div key={idx} className="aspect-square relative overflow-hidden bg-gray-100 group">
-                     <img src={img.src} alt={`Social ${idx}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                     <Image src={img} alt="Myles Tan on Instagram" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 50vw, 20vw" />
                      {/* Overlay on hover */}
                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <Instagram className="text-white" size={32} />

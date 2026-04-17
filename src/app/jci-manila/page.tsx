@@ -109,13 +109,13 @@ const achievements = [
 
 export default function JCIPage() {
   return (
-    <main className="bg-white min-h-screen w-full overflow-x-hidden">
+    <main id="main-content" className="bg-white min-h-dvh w-full overflow-x-hidden">
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
         <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
           <SectionLabel color="white">JCI Manila · JCI Philippines</SectionLabel>
-          <h1 className="font-darker font-semibold text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px] leading-[0.95]">
+          <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-[0.95]">
             Myles Yeo Tan: JCI Manila Achievements, Leadership, and Service in the Philippines
           </h1>
           <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px] leading-relaxed">

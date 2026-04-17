@@ -18,9 +18,27 @@ const imgFinance = "https://images.unsplash.com/photo-1768839720849-fef976b3ffff
 
 export default function BlogsPage() {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+  const [subscribing, setSubscribing] = useState(false);
+
+  const handleSubscribe = async () => {
+    const input = document.getElementById('blog-newsletter-email') as HTMLInputElement;
+    if (!input?.value) return;
+    setSubscribing(true);
+    try {
+      await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: input.value }),
+      });
+    } finally {
+      setNewsletterSubmitted(true);
+      setSubscribing(false);
+    }
+  };
 
   return (
-    <main className="bg-white min-h-screen w-full overflow-x-hidden">
+    <main id="main-content" className="bg-white min-h-dvh w-full overflow-x-hidden">
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
@@ -38,24 +56,26 @@ export default function BlogsPage() {
             <SectionLabel color="black" className="mb-12">featured post</SectionLabel>
             
             <div className="flex flex-col lg:flex-row gap-12 group">
-               <div
-                 className="lg:w-2/3 h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm bg-gray-100 cursor-pointer"
+               <button
+                 type="button"
+                 aria-label="Preview featured blog post image"
+                 className="lg:w-2/3 h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm bg-gray-100 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#ed5128]"
                  onClick={(e) => {
                    e.preventDefault();
                    e.stopPropagation();
                    setPreviewImage(imgBlog1.src);
                  }}
                >
-                  <img src={imgBlog1.src} alt="Faith & Business Summit 2025" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={imgBlog1.src} alt="Faith & Business Summit 2025" loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                     <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
                       Click to preview
                     </span>
                   </div>
-               </div>
+               </button>
                <div className="lg:w-1/3 flex flex-col justify-center gap-6">
                   <div className="flex items-center gap-4">
-                     <span className="bg-[#ed5128] text-white px-3 py-1 text-xs font-bold uppercase tracking-wider font-albert">EVENTS & RECAPS</span>
+                     <span className="bg-[#ed5128] text-white px-3 py-1 text-xs font-bold uppercase tracking-wider font-poppins">EVENTS & RECAPS</span>
                      <span className="text-[#9f9f9f] font-inter text-sm">March 15, 2025</span>
                   </div>
                   <h2 className="font-darker font-semibold text-4xl md:text-5xl leading-[0.9] group-hover:text-[#ed5128] transition-colors">
@@ -76,7 +96,7 @@ export default function BlogsPage() {
                <SectionLabel color="black">latest articles</SectionLabel>
                
                {/* Categories Filter (Visual only for now) */}
-               <div className="hidden md:flex gap-8 font-albert font-bold text-sm text-[#9f9f9f] uppercase tracking-wide">
+               <div className="hidden md:flex gap-8 font-poppins font-bold text-sm text-[#9f9f9f] uppercase tracking-wide">
                   <span className="text-[#ed5128] cursor-pointer">All</span>
                   <span className="hover:text-black cursor-pointer transition-colors">Faith</span>
                   <span className="hover:text-black cursor-pointer transition-colors">Finance</span>
@@ -146,16 +166,24 @@ export default function BlogsPage() {
                Get faith-driven insights on finance, entrepreneurship, and purposeful living delivered straight to your inbox.
             </p>
             
-            <div className="flex flex-col sm:flex-row w-full gap-4 mt-4">
-               <input 
-                  type="email" 
-                  placeholder="Enter your email" 
-                  className="flex-1 bg-white/10 border border-white/20 text-white placeholder-white/50 px-6 py-4 font-inter focus:outline-none focus:border-[#ed5128]"
-               />
-               <Button onClick={() => alert('Newsletter subscription coming soon!')} className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-auto py-4 px-10 text-base font-bold rounded-none uppercase">
-                  SUBSCRIBE
-               </Button>
-            </div>
+            {newsletterSubmitted ? (
+               <p className="font-inter text-[#ed5128] text-lg mt-4">
+                 You&apos;re on the list — we&apos;ll be in touch soon.
+               </p>
+            ) : (
+               <div className="flex flex-col sm:flex-row w-full gap-4 mt-4">
+                  <label htmlFor="blog-newsletter-email" className="sr-only">Email address</label>
+                  <input
+                     id="blog-newsletter-email"
+                     type="email"
+                     placeholder="Enter your email"
+                     className="flex-1 bg-white/10 border border-white/20 text-white placeholder-white/50 px-6 py-4 font-inter focus:outline-none focus:border-[#ed5128]"
+                  />
+                  <Button onClick={handleSubscribe} disabled={subscribing} className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-auto py-4 px-10 text-base font-bold rounded-none uppercase">
+                     {subscribing ? 'SUBSCRIBING...' : 'SUBSCRIBE'}
+                  </Button>
+               </div>
+            )}
          </div>
       </section>
 
@@ -172,24 +200,26 @@ export default function BlogsPage() {
 function BlogCard({ image, category, date, title, excerpt, onImageClick }: { image: string, category: string, date: string, title: string, excerpt: string, onImageClick?: (image: string) => void }) {
    return (
       <div className="flex flex-col gap-6 group">
-         <div
-           className="w-full h-[300px] relative overflow-hidden bg-gray-200 cursor-pointer"
+         <button
+           type="button"
+           aria-label={`Preview image for ${title}`}
+           className="w-full h-[300px] relative overflow-hidden bg-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#ed5128]"
            onClick={(e) => {
              e.preventDefault();
              e.stopPropagation();
              onImageClick?.(image);
            }}
          >
-            <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src={image} alt={title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
               <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
                 Click to preview
               </span>
             </div>
-         </div>
+         </button>
          <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between">
-               <span className="font-albert font-bold text-xs tracking-wider text-[#ed5128] uppercase">{category}</span>
+               <span className="font-poppins font-bold text-xs tracking-wider text-[#ed5128] uppercase">{category}</span>
                <span className="font-inter text-xs text-[#9f9f9f]">{date}</span>
             </div>
             <h3 className="font-darker font-semibold text-3xl leading-none text-[#282828] group-hover:text-[#ed5128] transition-colors">
@@ -198,7 +228,7 @@ function BlogCard({ image, category, date, title, excerpt, onImageClick }: { ima
             <p className="font-inter text-[#575756] text-base leading-relaxed line-clamp-3">
                {excerpt}
             </p>
-            <div className="flex items-center gap-2 text-[#282828] font-bold font-albert text-xs tracking-wide uppercase mt-2 group-hover:text-[#ed5128] transition-colors">
+            <div className="flex items-center gap-2 text-[#282828] font-bold font-poppins text-xs tracking-wide uppercase mt-2 group-hover:text-[#ed5128] transition-colors">
                READ MORE <ArrowRight size={16} />
             </div>
          </div>

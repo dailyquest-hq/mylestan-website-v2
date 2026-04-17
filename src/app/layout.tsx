@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Darker_Grotesque, Inter, Poppins, Albert_Sans } from "next/font/google";
+import { Darker_Grotesque, Inter, Poppins } from "next/font/google";
 import "../styles/globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -26,11 +26,6 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const albertSans = Albert_Sans({
-  subsets: ["latin"],
-  variable: "--font-albert-sans",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mylesyeotan.com"),
@@ -105,8 +100,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${darkerGrotesque.variable} ${inter.variable} ${poppins.variable} ${albertSans.variable} antialiased bg-[#0f100a] text-white`}
+        className={`${darkerGrotesque.variable} ${inter.variable} ${poppins.variable} antialiased bg-[#0f100a] text-white`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[99999] focus:bg-[#ed5128] focus:text-white focus:px-4 focus:py-2 focus:font-inter focus:text-sm focus:font-semibold"
+        >
+          Skip to content
+        </a>
         <Navbar />
         {children}
         <Footer />
