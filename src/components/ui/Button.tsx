@@ -7,7 +7,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export function buttonVariants({ variant = "primary", size = "default" }: { variant?: "primary" | "outline" | "white" | "ghost"; size?: "default" | "icon" } = {}) {
-  const baseStyles = "flex items-center justify-center uppercase font-albert font-bold text-sm tracking-wide transition-colors duration-300 cursor-pointer";
+  const baseStyles = "flex items-center justify-center uppercase font-poppins font-bold text-sm tracking-wide transition-colors duration-300 cursor-pointer";
 
   const sizeStyles = {
     default: "h-[48px] px-6 py-2",

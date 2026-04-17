@@ -16,12 +16,14 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Invalid input' }, { status: 400 });
     }
 
+    const safeName = name.replace(/[\r\n]/g, ' ').trim();
+
     const { error } = await resend.emails.send({
       from: 'Myles Tan Website <noreply@mylesyeotan.com>',
       to: 'mylestan@gmail.com',
       replyTo: email,
-      subject: `New message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      subject: `New message from ${safeName}`,
+      text: `Name: ${safeName}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
     if (error) {
       console.error('[contact] resend error:', error);

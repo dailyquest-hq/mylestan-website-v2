@@ -73,9 +73,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "zDFVrJyqQNs4N3NI1HGUTyTFPjSzHBCypVSPiDtXdp8",
-    other: {
-      "msvalidate.01": "bing-verification-code-here",
-    },
+    other: {},
   },
 };
 

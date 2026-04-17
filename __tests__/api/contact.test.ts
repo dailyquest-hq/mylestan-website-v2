@@ -84,6 +84,17 @@ describe('POST /api/contact', () => {
     expect(res.status).toBe(500);
   });
 
+  it('strips newlines from name before sending', async () => {
+    const req = makeRequest({ name: 'John\r\nBcc: evil@x.com', email: 'john@example.com', message: 'Hello' });
+    const res = await POST(req);
+    expect(res.status).toBe(200);
+    const resendInstance = getResendInstance();
+    const callArgs = resendInstance.emails.send.mock.calls[0][0];
+    expect(callArgs.subject).not.toContain('\r');
+    expect(callArgs.subject).not.toContain('\n');
+    expect(callArgs.subject).toContain('John  Bcc: evil@x.com');
+  });
+
   it('does not expose error details in response', async () => {
     (Resend as jest.Mock).mockImplementationOnce(() => ({
       emails: { send: jest.fn().mockResolvedValue({ data: null, error: { message: 'internal secret' } }) },

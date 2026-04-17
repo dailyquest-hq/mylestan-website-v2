@@ -235,7 +235,7 @@ function TimelineEvent({ date, title, description, url, image, onImageClick }: T
         </div>
       )}
       <div className={`p-6 md:p-8 ${url ? 'cursor-pointer' : ''}`}>
-        <span className="font-albert font-bold text-[#ed5128] text-sm tracking-wider uppercase mb-3 block">
+        <span className="font-poppins font-bold text-[#ed5128] text-sm tracking-wider uppercase mb-3 block">
           {date}
         </span>
         <h3 className="font-darker font-semibold text-2xl md:text-3xl text-black mb-3 group-hover:text-[#ed5128] transition-colors">

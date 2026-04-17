@@ -217,7 +217,6 @@ export const localBusinessSchema = {
   "image": "https://mylesyeotan.com/og-image.jpg",
   "description": "Professional cryptocurrency trading analysis, financial planning, Christian entrepreneurship coaching, and speaking services",
   "url": "https://mylesyeotan.com",
-  "telephone": "+65-XXXX-XXXX",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",

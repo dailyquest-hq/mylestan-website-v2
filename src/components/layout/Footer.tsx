@@ -14,13 +14,13 @@ export function Footer() {
     if (!input?.value) return;
     setSubscribing(true);
     try {
-      await fetch('/api/newsletter', {
+      const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: input.value }),
       });
+      if (res.ok) setSubscribed(true);
     } finally {
-      setSubscribed(true);
       setSubscribing(false);
     }
   };

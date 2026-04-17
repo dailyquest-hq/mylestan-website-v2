@@ -26,13 +26,13 @@ export default function BlogsPage() {
     if (!input?.value) return;
     setSubscribing(true);
     try {
-      await fetch('/api/newsletter', {
+      const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: input.value }),
       });
+      if (res.ok) setNewsletterSubmitted(true);
     } finally {
-      setNewsletterSubmitted(true);
       setSubscribing(false);
     }
   };
