@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Myles Yeo Tan",
+  "name_for_model": "myles_yeo_tan",
+  "description_for_human": "Learn about Myles Yeo Tan — Singapore-based crypto trader, Registered Financial Planner, and Christian entrepreneur.",
+  "description_for_model": "Provides structured information about Myles Yeo Tan (also known as Myles Tan), a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Christian entrepreneur, and public speaker. Chief Operating Officer of ZFT Trading Republic and founder of Myles Tan Ministries.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://mylesyeotan.com/api/person"
+  },
+  "logo_url": "https://mylesyeotan.com/og-image.jpg",
+  "contact_email": "https://mylesyeotan.com/contact",
+  "legal_info_url": "https://mylesyeotan.com"
+}
