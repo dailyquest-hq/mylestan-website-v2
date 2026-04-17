@@ -8,13 +8,17 @@ export async function POST(req: Request) {
     if (!name || !email || !message) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
     }
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'Myles Tan Website <noreply@mylesyeotan.com>',
       to: 'mylestan@gmail.com',
       replyTo: email,
       subject: `New message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
+    if (error) {
+      console.error('[contact] resend error:', error);
+      return NextResponse.json({ error: 'Failed to send', detail: error.message }, { status: 500 });
+    }
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error('[contact] send error:', err);
