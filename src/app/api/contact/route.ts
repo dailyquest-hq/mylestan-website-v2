@@ -9,8 +9,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
     }
     const { error } = await resend.emails.send({
-      from: 'Myles Tan Website <onboarding@resend.dev>',
-      to: 'michaelpaulquimson@gmail.com',
+      from: 'Myles Tan Website <noreply@mylesyeotan.com>',
+      to: 'mylestan@gmail.com',
       replyTo: email,
       subject: `New message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
