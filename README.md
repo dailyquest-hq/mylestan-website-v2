@@ -80,4 +80,4 @@ vercel --prod
 
 ## 📄 License
 
-© 2025 Myles Yeo Tan. All rights reserved.
+© 2026 Myles Yeo Tan. All rights reserved.
