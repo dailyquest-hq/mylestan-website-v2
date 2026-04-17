@@ -37,6 +37,7 @@ export function Footer() {
   const helpLinks = [
     { name: "Contact Us", href: "/contact" },
     { name: "FAQs", href: "/faqs" },
+    { name: "Full Bio", href: "/bio" },
   ];
 
   return (

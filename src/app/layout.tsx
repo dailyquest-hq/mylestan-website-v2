@@ -104,6 +104,7 @@ export default function RootLayout({
         <link rel="me" href="https://www.youtube.com/@MylesTanMinistries" />
         <link rel="me" href="https://www.instagram.com/mylestan" />
         <link rel="me" href="https://www.facebook.com/mylestanministries" />
+        <link rel="alternate" type="application/json" href="/api/person" />
       </head>
       <body
         className={`${darkerGrotesque.variable} ${inter.variable} ${poppins.variable} antialiased bg-[#0f100a] text-white`}
