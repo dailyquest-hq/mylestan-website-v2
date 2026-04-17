@@ -177,7 +177,7 @@ export default function JCIPage() {
               Projects That Shaped the Chapter
             </h2>
             <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-2xl leading-relaxed">
-              From environmental service to training programs, Myles Yeo Tan's JCI Manila
+              From environmental service to training programs, Myles Yeo Tan&apos;s JCI Manila
               contributions span the full breadth of what it means to build a chapter.
             </p>
           </div>
@@ -294,7 +294,7 @@ export default function JCIPage() {
             </h2>
             <div className="flex flex-col gap-5 text-left font-inter text-lg text-[#282828] leading-relaxed">
               <p className="text-justify">
-                Over the years, Myles has also represented the chapter through active participation in major conferences and conventions. His JCI record reflects involvement in the JCI Philippines National Convention, JCI Area Conference, ASPAC, and World Congress-related participation, underscoring a long-term commitment to the movement and a consistent presence in the organization's most important platforms. This kind of sustained engagement matters in JCI Manila, where contribution is measured not only by titles held, but by the consistency of presence, service, and chapter support over time.
+                Over the years, Myles has also represented the chapter through active participation in major conferences and conventions. His JCI record reflects involvement in the JCI Philippines National Convention, JCI Area Conference, ASPAC, and World Congress-related participation, underscoring a long-term commitment to the movement and a consistent presence in the organization&apos;s most important platforms. This kind of sustained engagement matters in JCI Manila, where contribution is measured not only by titles held, but by the consistency of presence, service, and chapter support over time.
               </p>
               <p className="text-justify">
                 Today, the achievements of Myles Yeo Tan in JCI Manila form an important part of

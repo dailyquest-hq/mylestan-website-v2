@@ -82,7 +82,7 @@ export default function BlogsPage() {
                      Faith & Business Summit 2025: Merging Kingdom Values with Strategy
                   </h2>
                   <p className="font-inter text-[#575756] text-lg leading-relaxed">
-                     A deep dive into my top 3 takeaways from this year's summit, exploring how entrepreneurs can build sustainable businesses without compromising their faith.
+                     A deep dive into my top 3 takeaways from this year&apos;s summit, exploring how entrepreneurs can build sustainable businesses without compromising their faith.
                   </p>
                </div>
             </div>

@@ -47,6 +47,7 @@ coverage/
 .tmp/
 firebase-debug.log
 .impeccable.md
+*.docx
 
 # OS
 Thumbs.db

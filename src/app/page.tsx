@@ -43,7 +43,7 @@ export default function Homepage() {
             {/* Description & Buttons */}
             <div className="flex flex-col items-center gap-8 mt-16 max-w-2xl mx-auto">
               <p className="font-inter text-base text-center text-white/90 leading-relaxed">
-                I'm Myles Yeo Tan—a speaker, mentor, and entrepreneur helping people grow spiritually and financially. With experience in crypto, trading, financial planning, and real estate, I teach practical stewardship anchored in Scripture and real-world strategy.
+                I&apos;m Myles Yeo Tan—a speaker, mentor, and entrepreneur helping people grow spiritually and financially. With experience in crypto, trading, financial planning, and real estate, I teach practical stewardship anchored in Scripture and real-world strategy.
               </p>
               <div className="flex gap-4">
                 <Link href="/services">
@@ -77,13 +77,13 @@ export default function Homepage() {
             <SectionLabel color="orange">about</SectionLabel>
             <div className="font-darker font-semibold text-3xl md:text-[32px] leading-tight space-y-8">
               <p>
-                I'm Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people integrate faith and finance in a way that produces peace, clarity, and impact. I believe wealth isn't the goal, but stewardship for the glory of God is. When you're blessed, you're blessed to be a blessing for others.
+                I&apos;m Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people integrate faith and finance in a way that produces peace, clarity, and impact. I believe wealth isn&apos;t the goal, but stewardship for the glory of God is. When you&apos;re blessed, you&apos;re blessed to be a blessing for others.
               </p>
               <p>
-                My background spans crypto and trading, financial planning, real estate, and entrepreneurship, giving me a practical perspective on how people can build long-term stability in a fast-changing world. I've seen how fear, hype, and pressure destroy decision-making, so my work focuses on replacing noise with principles, and speculation with strategy.
+                My background spans crypto and trading, financial planning, real estate, and entrepreneurship, giving me a practical perspective on how people can build long-term stability in a fast-changing world. I&apos;ve seen how fear, hype, and pressure destroy decision-making, so my work focuses on replacing noise with principles, and speculation with strategy.
               </p>
               <p>
-                Beyond business, I'm deeply devoted to teaching and preaching the word of God. I love helping people encounter Jesus, grow in purpose, and live with conviction. I believe my calling as a kingdom entrepreneur is to marketplace ministers and stay rooted in Christ.{" "}
+                Beyond business, I&apos;m deeply devoted to teaching and preaching the word of God. I love helping people encounter Jesus, grow in purpose, and live with conviction. I believe my calling as a kingdom entrepreneur is to marketplace ministers and stay rooted in Christ.{" "}
                 <Link href="/myles-tan-ministries" className="text-[#ed5128] hover:underline">Explore Myles Tan Ministries.</Link>
               </p>
             </div>
@@ -175,7 +175,7 @@ export default function Homepage() {
 
            <Link href="/contact">
              <Button className="border-2 border-white bg-transparent hover:bg-white hover:text-[#ed5128] text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide mt-8">
-               LET'S CONNECT
+               LET&apos;S CONNECT
              </Button>
            </Link>
         </div>
@@ -187,7 +187,7 @@ export default function Homepage() {
           
           {/* Header */}
           <div className="flex flex-col gap-6 px-5">
-             <SectionLabel color="white" className="opacity-80">what's happening</SectionLabel>
+             <SectionLabel color="white" className="opacity-80">what&apos;s happening</SectionLabel>
              <div className="flex flex-col md:flex-row justify-between items-end gap-8">
                <div className="max-w-2xl">
                  <h2 className="font-darker font-semibold text-4xl md:text-[48px] leading-[0.9] mb-4">

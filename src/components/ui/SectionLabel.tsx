@@ -14,7 +14,7 @@ export function SectionLabel({ children, color = "orange", className = "" }: Sec
 
   return (
     <div className={`flex items-center gap-2 font-darker font-bold text-xl leading-none whitespace-nowrap opacity-80 ${colorClass} ${className}`}>
-      <span>//</span>
+      <span>{'//'}</span>
       <span>{children}</span>
     </div>
   );

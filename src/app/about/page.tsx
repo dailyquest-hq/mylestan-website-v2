@@ -65,13 +65,13 @@ export default function AboutPage() {
             <div className="flex flex-col items-center mb-20">
                <div className="flex flex-col gap-8 font-inter text-lg text-[#282828] leading-relaxed max-w-3xl w-full">
                   <p className="text-justify">
-                     I'm Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people live with clarity, conviction, and purpose. I operate at the intersection of faith, finance, and leadership, equipping individuals to steward their influence, resources, and calling with wisdom, discipline, and obedience to God.
+                     I&apos;m Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people live with clarity, conviction, and purpose. I operate at the intersection of faith, finance, and leadership, equipping individuals to steward their influence, resources, and calling with wisdom, discipline, and obedience to God.
                   </p>
                   <p className="text-justify">
                      My journey has taken me through business, investing, crypto, trading, and real estate—environments filled with opportunity, pressure, and constant noise. Along the way, I learned that success without direction leads to emptiness, and faith without action leads to stagnation. True transformation happens when biblical truth, disciplined execution, and Spirit-led discernment work together.
                   </p>
                   <p className="text-justify">
-                     Today, my work is shaped by a commitment to seek God's voice in decision-making, learning to recognize prophetic insight, exercise spiritual discernment, and act with courage in the marketplace. I believe God still gives wisdom for timing, direction, and restraint. I believe that spirit-led decisions, when anchored in Scripture and tested by sound counsel, produce peace, clarity, and lasting impact.
+                     Today, my work is shaped by a commitment to seek God&apos;s voice in decision-making, learning to recognize prophetic insight, exercise spiritual discernment, and act with courage in the marketplace. I believe God still gives wisdom for timing, direction, and restraint. I believe that spirit-led decisions, when anchored in Scripture and tested by sound counsel, produce peace, clarity, and lasting impact.
                   </p>
                   <p className="text-justify">
                      What drives me forward is simple: to see people grounded in Christ, confident in their decisions, and courageous in their calling—building lives and legacies that honor God and advance His Kingdom.{" "}
@@ -113,7 +113,7 @@ export default function AboutPage() {
                      Beyond the roles of entrepreneur, mentor, and speaker, Myles Tan is a husband, friend, and lifelong learner who values relationships as much as results. His journey has been shaped by faith, perseverance, and a deep desire to help others discover purpose in both life and work.
                   </p>
                   <p className="text-justify">
-                     Myles' personal story is rooted in transformation — from pursuing success in business to embracing a calling that integrates biblical principles with professional expertise. He believes true abundance is found not only in financial stability, but also in spiritual growth, family, and community.
+                     Myles&apos; personal story is rooted in transformation — from pursuing success in business to embracing a calling that integrates biblical principles with professional expertise. He believes true abundance is found not only in financial stability, but also in spiritual growth, family, and community.
                   </p>
                   <p className="text-justify">
                      When not teaching, coaching, or speaking, Myles enjoys spending time with loved ones, exploring new ideas, and investing in experiences that bring lasting impact.

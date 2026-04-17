@@ -115,9 +115,9 @@ export default function FAQPage() {
       <section className="bg-[#ed5128] py-24 px-5">
          <div className="max-w-[1600px] mx-auto flex flex-col items-center text-center gap-8">
             <SectionLabel color="white" className="opacity-80">Still have questions?</SectionLabel>
-            <h2 className="font-darker font-semibold text-5xl md:text-[48px] leading-[0.9] text-white">Let's Get in Touch</h2>
+            <h2 className="font-darker font-semibold text-5xl md:text-[48px] leading-[0.9] text-white">Let&apos;s Get in Touch</h2>
             <p className="font-poppins text-white text-base md:text-lg max-w-md">
-               Didn't find the answer you were looking for? Reach out and we'll be happy to help.
+               Didn&apos;t find the answer you were looking for? Reach out and we&apos;ll be happy to help.
             </p>
             <Link href="/contact" className="cursor-pointer">
                <Button className="border-2 border-white bg-transparent hover:bg-white hover:text-[#ed5128] text-white h-12 px-8 text-base font-bold rounded-none uppercase mt-4">

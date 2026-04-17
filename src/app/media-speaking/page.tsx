@@ -41,7 +41,7 @@ export default function MediaSpeakingPage() {
                </div>
                <h2 className="font-darker font-semibold text-4xl md:text-6xl text-white mt-8">Watch 2024 Highlight Reel</h2>
                <p className="font-inter text-white/80 text-lg mt-4 max-w-xl">
-                  A compilation of key moments from the "Kingdom Impact" tour across Southeast Asia.
+                  A compilation of key moments from the &quot;Kingdom Impact&quot; tour across Southeast Asia.
                </p>
             </div>
          </section>
@@ -198,7 +198,7 @@ export default function MediaSpeakingPage() {
          <div className="max-w-[1600px] mx-auto flex flex-col items-center text-center gap-8">
             <h2 className="font-darker font-semibold text-5xl md:text-[64px] leading-[0.9]">Invite Myles to Your Next Event</h2>
             <p className="font-poppins text-white/90 text-lg max-w-2xl">
-               Whether it's a church service, corporate conference, or youth seminar, Myles brings a message of hope, wisdom, and empowerment.
+               Whether it&apos;s a church service, corporate conference, or youth seminar, Myles brings a message of hope, wisdom, and empowerment.
             </p>
             <Link href="/contact" className="cursor-pointer">
                <Button className="bg-white text-[#ed5128] hover:bg-gray-100 h-14 px-10 text-lg font-bold rounded-none uppercase mt-4">

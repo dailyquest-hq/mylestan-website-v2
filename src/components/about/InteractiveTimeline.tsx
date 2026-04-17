@@ -149,7 +149,7 @@ export function InteractiveTimeline() {
         <SectionLabel color="black" className="mb-6">key achievements</SectionLabel>
         <h2 className="font-darker font-semibold text-5xl md:text-[64px] leading-none mb-4 text-center">Building Impact, Year by Year</h2>
         <p className="font-poppins text-base md:text-[18px] text-[#282828] max-w-2xl mb-16 text-center">
-          From career beginnings in finance to global recognition, here's the journey of growth, influence, and purpose.
+          From career beginnings in finance to global recognition, here&apos;s the journey of growth, influence, and purpose.
         </p>
 
         {/* Timeline Visual */}
