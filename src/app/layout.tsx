@@ -99,6 +99,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link rel="me" href="https://www.linkedin.com/in/myles-yeo-tan/" />
+        <link rel="me" href="https://www.youtube.com/@MylesTanMinistries" />
+        <link rel="me" href="https://www.instagram.com/mylestan" />
+        <link rel="me" href="https://www.facebook.com/mylestanministries" />
+      </head>
       <body
         className={`${darkerGrotesque.variable} ${inter.variable} ${poppins.variable} antialiased bg-[#0f100a] text-white`}
       >
