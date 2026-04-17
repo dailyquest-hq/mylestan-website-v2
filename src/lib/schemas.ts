@@ -257,3 +257,13 @@ export const localBusinessSchema = {
     }
   ]
 };
+
+export const speakableSchema = (url: string, cssSelectors: string[]) => ({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": url,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": cssSelectors
+  }
+});

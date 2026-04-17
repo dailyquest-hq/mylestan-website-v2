@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { InteractiveTimeline } from "@/components/about/InteractiveTimeline";
+import { speakableSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "About Myles Yeo Tan - Journey of Faith & Finance",
@@ -64,7 +66,7 @@ export default function AboutPage() {
          <div className="max-w-[1600px] mx-auto">
             <div className="flex flex-col items-center mb-20">
                <div className="flex flex-col gap-8 font-inter text-lg text-[#282828] leading-relaxed max-w-3xl w-full">
-                  <p className="text-justify">
+                  <p className="text-justify speakable-bio">
                      I&apos;m Myles Yeo Tan—a speaker, mentor, and entrepreneur passionate about helping people live with clarity, conviction, and purpose. I operate at the intersection of faith, finance, and leadership, equipping individuals to steward their influence, resources, and calling with wisdom, discipline, and obedience to God.
                   </p>
                   <p className="text-justify">
@@ -182,6 +184,13 @@ export default function AboutPage() {
          </div>
       </section>
 
+      <Script
+        id="speakable-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
+        {JSON.stringify(speakableSchema('https://mylesyeotan.com/about', ['.speakable-bio', 'h1']))}
+      </Script>
     </main>
   );
 }

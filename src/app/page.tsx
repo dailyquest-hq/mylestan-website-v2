@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
+import { speakableSchema } from "@/lib/schemas";
 
 // Assets
 import imgHero from "@/assets/home/hero.png";
@@ -42,7 +44,7 @@ export default function Homepage() {
 
             {/* Description & Buttons */}
             <div className="flex flex-col items-center gap-8 mt-16 max-w-2xl mx-auto">
-              <p className="font-inter text-base text-center text-white/90 leading-relaxed">
+              <p className="font-inter text-base text-center text-white/90 leading-relaxed speakable-hero">
                 I&apos;m Myles Yeo Tan—a speaker, mentor, and entrepreneur helping people grow spiritually and financially. With experience in crypto, trading, financial planning, and real estate, I teach practical stewardship anchored in Scripture and real-world strategy.
               </p>
               <div className="flex gap-4">
@@ -269,6 +271,14 @@ export default function Homepage() {
         imageUrl={previewImage}
         onClose={() => setPreviewImage(null)}
       />
+
+      <Script
+        id="speakable-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
+        {JSON.stringify(speakableSchema('https://mylesyeotan.com', ['.speakable-hero', 'h1']))}
+      </Script>
     </main>
   );
 }
