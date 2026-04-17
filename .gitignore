@@ -1,6 +1,5 @@
 # Dependencies
 node_modules/
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
@@ -46,6 +45,8 @@ coverage/
 .cache/
 .temp/
 .tmp/
+firebase-debug.log
+.impeccable.md
 
 # OS
 Thumbs.db
