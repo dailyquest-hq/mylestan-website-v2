@@ -517,11 +517,18 @@ export default function MylesTanMinistriesPage() {
               Reach out for prayer, speaking engagements, or to learn more about healing, prophecy, deliverance, and breakthrough.
             </p>
           </div>
-          <Link href="/contact" className="cursor-pointer">
-            <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-14 px-8 text-lg font-bold rounded-none uppercase">
-              GET IN TOUCH
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white h-14 px-8 text-lg font-bold rounded-none uppercase">
+                WATCH ON YOUTUBE
+              </Button>
+            </Link>
+            <Link href="/contact" className="cursor-pointer">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black h-14 px-8 text-lg font-bold rounded-none uppercase">
+                GET IN TOUCH
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </main>

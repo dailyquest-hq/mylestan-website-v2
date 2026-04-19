@@ -57,11 +57,18 @@ export default function MediaSpeakingPage() {
                      Recent Features & Interviews
                   </h2>
                </div>
-               <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white rounded-none uppercase">
-                     VIEW ALL ON YOUTUBE
-                  </Button>
-               </Link>
+               <div className="flex flex-col sm:flex-row gap-3">
+                  <Link href="https://www.youtube.com/watch?v=GYb1q8tm36s&list=PL033hJEN0tRt2wQyz8KxKEu5xWhCKrDuI" target="_blank" rel="noopener noreferrer">
+                     <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none uppercase">
+                        WATCH MYLES HERE
+                     </Button>
+                  </Link>
+                  <Link href="https://www.youtube.com/@MylesTanMinistries" target="_blank" rel="noopener noreferrer">
+                     <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white rounded-none uppercase">
+                        VIEW ALL ON YOUTUBE
+                     </Button>
+                  </Link>
+               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
