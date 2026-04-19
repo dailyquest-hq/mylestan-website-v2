@@ -45,6 +45,7 @@ coverage/
 .cache/
 .temp/
 .tmp/
+docs/resources/
 firebase-debug.log
 .impeccable.md
 *.docx

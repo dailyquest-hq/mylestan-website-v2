@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { InteractiveTimeline } from "@/components/about/InteractiveTimeline";
+import { SocialGrid } from "@/components/ui/SocialGrid";
 import { speakableSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
@@ -49,6 +50,9 @@ import imgSocial2 from "@/assets/shared/social-2.jpg";
 import imgSocial3 from "@/assets/shared/social-3.jpg";
 import imgSocial4 from "@/assets/shared/social-4.jpg";
 import imgSocial6 from "@/assets/shared/social-6.jpg";
+import imgSocial7 from "@/assets/shared/social-7.jpg";
+import imgSocial8 from "@/assets/shared/social-8.jpg";
+import imgSocial9 from "@/assets/shared/social-9.jpg";
 
 export default function AboutPage() {
   return (
@@ -83,13 +87,17 @@ export default function AboutPage() {
             </div>
 
             {/* Image Ticker/Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-               {[imgTicker1, imgTicker2, imgTicker3, imgTicker4].map((img, idx) => (
-                  <div key={idx} className="h-[200px] sm:h-[250px] md:h-[300px] lg:h-[370px] w-full relative overflow-hidden bg-gray-100">
-                     <Image src={img} alt="Myles Tan at a speaking or ministry event" fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
-                  </div>
-               ))}
-            </div>
+            <SocialGrid
+              columns="grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+              cellClassName="h-[200px] sm:h-[250px] md:h-[300px] lg:h-[370px]"
+              showOverlay={false}
+              items={[
+                { src: imgTicker1, alt: "Myles Tan at a speaking or ministry event" },
+                { src: imgTicker2, alt: "Myles Tan at a speaking or ministry event" },
+                { src: imgTicker3, alt: "Myles Tan at a speaking or ministry event" },
+                { src: imgTicker4, alt: "Myles Tan at a speaking or ministry event" },
+              ]}
+            />
          </div>
       </section>
 
@@ -153,17 +161,18 @@ export default function AboutPage() {
             </div>
 
             {/* Instagram Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
-               {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial6].map((img, idx) => (
-                  <div key={idx} className="aspect-square relative overflow-hidden bg-gray-100 group">
-                     <Image src={img} alt="Myles Tan on Instagram" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 50vw, 20vw" />
-                     {/* Overlay on hover */}
-                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <Instagram className="text-white" size={32} />
-                     </div>
-                  </div>
-               ))}
-            </div>
+            <SocialGrid
+              items={[
+                { src: imgSocial1, alt: "Myles Tan on Instagram" },
+                { src: imgSocial2, alt: "Myles Tan at Bethel Church" },
+                { src: imgSocial3, alt: "Myles Tan at the Colosseum Rome" },
+                { src: imgSocial4, alt: "Myles Tan at Iron Man display" },
+                { src: imgSocial6, alt: "Myles Tan at Steps of Paul tour" },
+                { src: imgSocial7, alt: "Myles Tan outdoors" },
+                { src: imgSocial8, alt: "Myles Tan dining" },
+                { src: imgSocial9, alt: "Myles Tan tactical experience", objectPosition: "top" },
+              ]}
+            />
          </div>
       </section>
 

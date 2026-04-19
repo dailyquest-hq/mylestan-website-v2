@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Trophy, Award } from "lucide-react";
+import imgAreaconTeam from "@/assets/jci/areacon-2019-champion-team.jpg";
+import imgAreaconStage from "@/assets/jci/areacon-2019-stage.jpg";
+import imgNatconAssembly from "@/assets/jci/natcon-2019-general-assembly.jpg";
+import imgNatconStage from "@/assets/jci/natcon-2019-stage.jpg";
 
 export const metadata: Metadata = {
-  title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Service in the Philippines",
+  title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Public Speaking Champion Philippines",
   description:
-    "Discover the JCI Manila achievements of Myles Yeo Tan, a long-time JCI member, leader, trainer, and project chairman in the Philippines known for ONTO, Sea of Life, public speaking, and community-building initiatives.",
+    "Discover the JCI Manila achievements of Myles Yeo Tan — 2019 JCI Area 2 Public Speaking Champion and NATCON 1st Runner-Up. A decade-long record of leadership, training, ONTO projects, Sea of Life, and community-building within JCI Philippines.",
   keywords: [
     "Myles Yeo Tan JCI Manila",
     "Myles Tan JCI Philippines",
@@ -16,14 +21,23 @@ export const metadata: Metadata = {
     "JCI Philippines member achievements",
     "Sea of Life JCI",
     "JCI public speaking champion Philippines",
+    "JCI Area 2 speech contest champion 2019",
+    "JCI AreaCon 2019 public speaking winner",
+    "JCI Philippines National Convention 2019 runner-up",
+    "JCI NATCON 2019 public speaking",
+    "JCI Manila Area 2 Convention speech contest",
+    "Marco Polo Hotel Ortigas speech contest",
+    "Myles Yeotan public speaking champion",
+    "JCI Philippines NATCON Naga City 2019",
+    "71st JCI Philippines National Convention public speaking",
   ],
   alternates: {
     canonical: "/jci-manila",
   },
   openGraph: {
-    title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Service in the Philippines",
+    title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Public Speaking Champion Philippines",
     description:
-      "A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
+      "2019 JCI Area 2 Public Speaking Champion and NATCON 1st Runner-Up. A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
     url: "https://mylesyeotan.com/jci-manila",
     type: "profile",
     images: [
@@ -31,15 +45,15 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Myles Yeo Tan JCI Manila member and leader in JCI Philippines",
+        alt: "Myles Yeo Tan JCI Manila public speaking champion and leader in JCI Philippines",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Service in the Philippines",
+    title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Public Speaking Champion Philippines",
     description:
-      "A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
+      "2019 JCI Area 2 Public Speaking Champion and NATCON 1st Runner-Up. A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
     images: ["/og-image.jpg"],
   },
 };
@@ -195,6 +209,135 @@ export default function JCIPage() {
                 <p className="font-inter text-white/60 leading-relaxed">{project.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AreaCon Championship Story */}
+      <section className="bg-white text-[#282828] py-20 md:py-32 px-5">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+
+            {/* Left: Story */}
+            <div className="w-full lg:w-[55%] flex flex-col gap-6">
+              <SectionLabel color="orange">Area 2 Championship · September 6, 2019</SectionLabel>
+              <h2 className="font-darker font-semibold text-4xl md:text-[56px] leading-[0.9]">
+                How Myles Won the JCI Manila AreaCon 2019 Speech Contest
+              </h2>
+              <div className="font-inter text-lg text-[#282828] leading-relaxed space-y-5">
+                <p>
+                  On September 6, 2019, at the prestigious Marco Polo Hotel in Ortigas Center, Manila, Myles Yeotan stepped onto the stage as JCI Manila&apos;s representative at the JCI Area 2 Convention speech contest — and walked off as champion.
+                </p>
+                <p>
+                  The JCI AreaCon speech contest is not just another speaking competition. It is one of the most competitive intra-organizational public speaking platforms in the Philippines, drawing the sharpest communicators from multiple JCI chapters across the area. Every chapter sends its best. Every contestant has already outperformed their peers at the local level. The bar is extraordinarily high.
+                </p>
+                <p className="font-semibold text-[#ed5128]">Myles cleared it.</p>
+                <p>
+                  Beating out representatives from competing JCI chapters across Area 2, Myles delivered a speech that stood above the rest — earning him first place, the championship title, and — most significantly — the right to represent JCI Manila on the national stage.
+                </p>
+                <p>
+                  Winning the JCI AreaCon isn&apos;t just a trophy. It&apos;s a mandate. As Area 2 Champion, Myles was selected to represent JCI Manila at the JCI Philippines National Convention (NATCON) — the most prestigious gathering of JCI members in the country.
+                </p>
+                <p>
+                  His victory at Marco Polo Ortigas was not just a personal milestone — it was a moment of pride for JCI Manila, for President Luis Angelo Sevilla, and for the entire 2019 Board of Directors who trusted Myles to carry their flag.
+                </p>
+                <blockquote className="border-l-4 border-[#ed5128] pl-6 italic text-[#282828]/70">
+                  &ldquo;Thank you Lord for guiding me in today&apos;s areacon speech contest. All the praise, honor and glory goes to him.&rdquo;
+                  <span className="block mt-2 not-italic font-semibold text-[#282828] text-base">— Myles Yeotan, September 6, 2019</span>
+                </blockquote>
+              </div>
+            </div>
+
+            {/* Right: Photos */}
+            <div className="w-full lg:w-[45%] flex flex-col gap-5">
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <Image
+                  src={imgAreaconTeam}
+                  alt="Myles Yeotan and JCI Manila team holding certificates at the JCI Area 2 Convention AreaCon 2019 speech contest"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                />
+              </div>
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <Image
+                  src={imgAreaconStage}
+                  alt="Stage projection showing Myles Tan JCI Manila Champion at the 2019 AreaCon public speaking contest"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                />
+              </div>
+              <div className="bg-[#0f100a] text-white p-6">
+                <div className="font-inter text-[#ed5128] text-sm font-semibold tracking-wider uppercase mb-2">Result</div>
+                <div className="font-darker font-bold text-3xl mb-1">1st Place Champion</div>
+                <div className="font-inter text-white/60 text-sm">JCI Area 2 Convention · Marco Polo Hotel, Ortigas · September 6, 2019</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NATCON Runner-Up Story */}
+      <section className="bg-[#0f100a] text-white py-20 md:py-32 px-5">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+
+            {/* Left: Photos */}
+            <div className="w-full lg:w-[45%] flex flex-col gap-5">
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <Image
+                  src={imgNatconAssembly}
+                  alt="Myles Yeotan and JCI Manila team at the 71st JCI Philippines National Convention General Assembly in Naga City 2019"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                />
+              </div>
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <Image
+                  src={imgNatconStage}
+                  alt="JCI Manila Everybody Counts banner at the 2019 JCI Philippines National Convention NATCON"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                />
+              </div>
+              <div className="bg-white text-[#282828] p-6">
+                <div className="text-[#ed5128] text-sm font-inter font-semibold tracking-wider uppercase mb-2">Result</div>
+                <div className="font-darker font-bold text-3xl mb-1">1st Runner-Up</div>
+                <div className="font-inter text-[#282828]/60 text-sm">71st JCI Philippines NATCON · Avenue Plaza Hotel, Naga City · October 2019</div>
+              </div>
+            </div>
+
+            {/* Right: Story */}
+            <div className="w-full lg:w-[55%] flex flex-col gap-6">
+              <SectionLabel color="white">National Convention · October 2019</SectionLabel>
+              <h2 className="font-darker font-semibold text-4xl md:text-[56px] leading-[0.9]">
+                From Manila to Naga City: 1st Runner-Up at the JCI Philippines National Convention
+              </h2>
+              <div className="font-inter text-lg text-white/80 leading-relaxed space-y-5">
+                <p>
+                  In October 2019, at the 71st JCI Philippines National Convention held at Avenue Plaza Hotel in Naga City, Camarines Sur, Myles Yeotan stood among the country&apos;s elite public speakers — and finished as 1st Runner-Up in the national public speaking competition.
+                </p>
+                <p>
+                  The national convention brings together champions from every area across the Philippines. It is the ultimate proving ground for JCI public speaking talent. In a country of over 100 million people, finishing 1st Runner-Up at the national level places Myles among the top two public speakers in all of JCI Philippines for 2019.
+                </p>
+                <p>
+                  Myles didn&apos;t arrive in Naga by accident. He had earned his place by winning the JCI Manila Area 2 Convention speech contest — beating out representatives from competing chapters across Metro Manila. He arrived carrying the trust and pride of his chapter, and he delivered.
+                </p>
+                <p>
+                  His preparation included working with <span className="text-white font-semibold">Neb Perez</span>, a two-time Toastmasters Philippines Champion and one of the most accomplished speech coaches in the country — a partnership that gave Myles a structural edge in speech architecture to match his natural charisma and faith-driven discipline.
+                </p>
+                <p>
+                  The national competition was organized by <span className="text-white font-semibold">National Public Speaking Chairwoman Angei Lacson Aurello</span>, whose meticulous coordination ensured the contest ran with the professionalism befitting a national-level event. Myles publicly acknowledged her work after the competition — generous in victory, grateful in recognition.
+                </p>
+                <blockquote className="border-l-4 border-[#ed5128] pl-6 italic text-white/60">
+                  &ldquo;All the praise, glory and honor goes to God.&rdquo;
+                  <span className="block mt-2 not-italic font-semibold text-white text-base">— Myles Yeotan, after placing 1st Runner-Up at NATCON 2019</span>
+                </blockquote>
+              </div>
+            </div>
           </div>
         </div>
       </section>

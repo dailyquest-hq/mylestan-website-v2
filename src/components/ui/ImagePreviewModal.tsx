@@ -8,25 +8,28 @@ interface ImagePreviewModalProps {
 }
 
 export function ImagePreviewModal({ imageUrl, onClose }: ImagePreviewModalProps) {
-  // Prevent body scroll when modal is open
   useEffect(() => {
-    if (imageUrl) {
-      document.body.style.overflow = 'hidden';
-      return () => {
-        document.body.style.overflow = 'unset';
-      };
-    }
-  }, [imageUrl]);
+    if (!imageUrl) return;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [imageUrl, onClose]);
 
   if (!imageUrl) return null;
 
   return (
     <div
-      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 sm:p-6"
+      style={{ position: "fixed", inset: 0, zIndex: 99999 }}
+      className="bg-black/90 flex items-center justify-center p-4 sm:p-6"
       onClick={onClose}
     >
       <button
-        className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white text-3xl sm:text-4xl hover:text-gray-300 transition-colors w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center touch-manipulation"
+        style={{ position: "absolute", top: 16, right: 16 }}
+        className="text-white text-4xl hover:text-gray-300 transition-colors w-12 h-12 flex items-center justify-center"
         onClick={onClose}
         aria-label="Close preview"
       >
@@ -35,7 +38,7 @@ export function ImagePreviewModal({ imageUrl, onClose }: ImagePreviewModalProps)
       <img
         src={imageUrl}
         alt="Preview"
-        className="max-w-full max-h-[85vh] sm:max-h-[90vh] object-contain rounded-lg"
+        className="max-w-full max-h-[90vh] object-contain rounded-lg"
         onClick={(e) => e.stopPropagation()}
       />
     </div>

@@ -7,6 +7,9 @@ import { faqSchema, breadcrumbSchema } from "@/lib/schemas";
 import Script from "next/script";
 import { Heart, Sparkles, Shield, TrendingUp, Moon, BookOpen } from "lucide-react";
 import imgMinistry from "@/assets/about/trading-republic-speaker.jpg";
+import imgBSSM from "@/assets/ministries/bssm-dinner-2023.jpg";
+import imgGGC from "@/assets/ministries/ggc-missionaries-australia.jpg";
+import imgBethel from "@/assets/ministries/bethel-visit.jpg";
 
 export const metadata: Metadata = {
   title: "Myles Tan Ministries | Healing, Prophecy, Deliverance, Jesus, Financial Breakthrough",
@@ -327,6 +330,85 @@ export default function MylesTanMinistriesPage() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* International Connections Section */}
+      <section className="bg-white text-[#282828] py-20 md:py-32 px-5">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="flex flex-col items-center text-center gap-6 mb-16">
+            <SectionLabel color="orange">Ministry in Action</SectionLabel>
+            <h2 className="font-darker font-semibold text-4xl md:text-[60px] leading-[0.9]">
+              Serving the Global Church
+            </h2>
+            <p className="font-poppins text-[#282828]/60 text-base md:text-lg max-w-2xl leading-relaxed">
+              Myles Tan Ministries extends beyond Sunday gatherings — hosting international students, missionaries, and believers from across the world as part of a heart for the global Body of Christ.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+
+            {/* BSSM Dinner */}
+            <div className="lg:col-span-2 flex flex-col gap-4">
+              <div className="relative w-full aspect-[16/10] overflow-hidden">
+                <Image
+                  src={imgBSSM}
+                  alt="Myles Tan hosting a dinner with Bethel School of Supernatural Ministry BSSM students 2023"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                />
+              </div>
+              <div className="bg-[#f7f7f5] p-6">
+                <div className="text-[#ed5128] text-sm font-inter font-semibold tracking-wider uppercase mb-2">2023 · Manila</div>
+                <h3 className="font-darker font-semibold text-2xl mb-2">Hosting BSSM Students</h3>
+                <p className="font-inter text-[#282828]/70 leading-relaxed text-sm">
+                  Myles hosted a dinner for students from Bethel School of Supernatural Ministry (BSSM) — one of the world&apos;s most prominent supernatural ministry training programs — welcoming them into his home and extending fellowship as part of his commitment to the global Body of Christ.
+                </p>
+              </div>
+            </div>
+
+            {/* GGC + Bethel stacked */}
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={imgGGC}
+                    alt="Myles Tan hosting foreign missionaries from GGC College School of Supernatural Ministry of Australia"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="bg-[#f7f7f5] p-6">
+                  <div className="text-[#ed5128] text-sm font-inter font-semibold tracking-wider uppercase mb-2">Australia · Philippines</div>
+                  <h3 className="font-darker font-semibold text-xl mb-2">GGC College Missionaries</h3>
+                  <p className="font-inter text-[#282828]/70 leading-relaxed text-sm">
+                    Hosting foreign missionaries from GGC College — School of Supernatural Ministry of Australia — reflecting a heart for cross-cultural ministry and global partnership.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-4">
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={imgBethel}
+                    alt="Myles Tan visiting Bethel Church in Redding California"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="bg-[#f7f7f5] p-6">
+                  <div className="text-[#ed5128] text-sm font-inter font-semibold tracking-wider uppercase mb-2">Redding, California</div>
+                  <h3 className="font-darker font-semibold text-xl mb-2">Bethel Church Visit</h3>
+                  <p className="font-inter text-[#282828]/70 leading-relaxed text-sm">
+                    A visit to Bethel Church in Redding, California — home of BSSM — representing Myles&apos;s commitment to learning from and connecting with globally recognized ministries.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
