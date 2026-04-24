@@ -22,6 +22,7 @@ import imgPreachersAcademy from "@/assets/about/preachers-academy-certificate.jp
 import imgCsbBibleSchool from "@/assets/about/csb-bible-school-certificate.jpg";
 import imgRzimAcademy from "@/assets/about/rzim-academy-certificate.jpg";
 import imgGraceChristian from "@/assets/about/grace-christian-college-2023.jpg";
+import imgGraceChristianCert from "@/assets/about/grace-christian-college-certificate.jpg";
 
 interface TimelineEvent {
   date: string;
@@ -136,6 +137,12 @@ const timelineData: YearData[] = [
         title: "Resource Speaker at Grace Christian College",
         description: "Spoke as a Resource Speaker for Grace Christian College Senior High School's Accounting, Business, and Management students.",
         image: imgGraceChristian.src
+      },
+      {
+        date: "OCTOBER 10",
+        title: "Received Certificate of Appreciation from Grace Christian College",
+        description: "Recognized by Grace Christian College, Quezon City for serving as a Resource Speaker to the Senior High School's Accounting, Business, and Management students.",
+        image: imgGraceChristianCert.src
       }
     ]
   },
