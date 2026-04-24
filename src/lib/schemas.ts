@@ -45,6 +45,42 @@ export const personSchema = {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Professional Certification",
       "name": "Certified Technical Analyst (CTA)"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Professional Certification",
+      "name": "Lean Six Sigma Yellow Belt"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Professional Certification",
+      "name": "Lean Six Sigma White Belt"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Certificate",
+      "name": "CSB Bible School — Systematic Theology & Practical Theology"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Certificate",
+      "name": "The Preachers' Academy — Hermeneutics, Exegesis, Homiletics"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Certificate",
+      "name": "RZIM Academy — Apologetics Core Module"
+    }
+  ],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "Rotary Club of Manila",
+      "url": "https://www.rotarymanila.org/"
+    },
+    {
+      "@type": "Organization",
+      "name": "JCI (Junior Chamber International) Manila"
     }
   ],
   "hasOccupation": [

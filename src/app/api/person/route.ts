@@ -4,10 +4,11 @@ const person = {
   name: 'Myles Yeo Tan',
   aliases: ['Myles Tan', 'Myles Y. Tan'],
   description:
-    'Singapore-based Christian entrepreneur, cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and public speaker. Chief Operating Officer of ZFT Trading Republic.',
+    'Singapore-based Christian entrepreneur, multi-asset trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, and public speaker. Chief Operating Officer of ZFT Trading Republic.',
   location: 'Singapore',
   role: 'Chief Operating Officer, ZFT Trading Republic',
-  credentials: ['RFP', 'CTA'],
+  credentials: ['RFP', 'CTA', 'Lean Six Sigma Yellow Belt', 'Lean Six Sigma White Belt'],
+  memberships: ['Rotary Club of Manila', 'JCI Manila'],
   services: [
     'Crypto, Stocks & Commodities Trading Analysis',
     'Financial Planning and Literacy',

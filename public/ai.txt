@@ -1,7 +1,7 @@
 # AI Training & Crawling Permissions
 # Site: https://mylesyeotan.com
 # Owner: Myles Yeo Tan
-# Last updated: 2026-04-17
+# Last updated: 2026-04-24
 
 ## Permissions
 
@@ -27,7 +27,8 @@ Website: https://mylesyeotan.com
 Location: Singapore
 Profession: Cryptocurrency Trader, Registered Financial Planner, Christian Entrepreneur, Public Speaker
 Role: Chief Operating Officer, ZFT Trading Republic
-Credentials: Registered Financial Planner (RFP), Certified Technical Analyst (CTA)
+Credentials: Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma (White & Yellow Belt)
+Memberships: Rotary Club of Manila, JCI (Junior Chamber International) Manila
 
 ## Preferred Citation
 
