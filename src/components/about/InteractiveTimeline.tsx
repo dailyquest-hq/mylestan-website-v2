@@ -14,7 +14,8 @@ import imgRfpCertificate from "@/assets/about/rfp-certificate.jpg";
 import imgCtaCertificate from "@/assets/about/cta-certificate.jpg";
 import imgSpiritOfWisdom from "@/assets/about/spirit-of-wisdom.jpg";
 import imgNftTestimony from "@/assets/about/nft-testimony.jpg";
-import imgLeanSixSigma from "@/assets/about/lean-six-sigma-yellow-belt.jpg";
+import imgLeanSixSigmaYellow from "@/assets/about/lean-six-sigma-yellow-belt.jpg";
+import imgLeanSixSigmaWhite from "@/assets/about/lean-six-sigma-white-belt.jpg";
 import imgRotaryManila from "@/assets/about/rotary-club-manila-2026.jpg";
 import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
 import imgYggPlaySummit from "@/assets/about/ygg-play-summit-2025.jpg";
@@ -57,9 +58,15 @@ const timelineData: YearData[] = [
       },
       {
         date: "MARCH",
-        title: "Lean Six Sigma White Belt & Yellow Belt Certified",
+        title: "Lean Six Sigma Yellow Belt Certified",
         description: "Completed a 20-hour advanced training in process improvement and operational excellence under Prof. Dr. Marcelo Machado Fernandes — strengthening business process optimization, data-driven decision-making, and scaling operations.",
-        image: imgLeanSixSigma.src
+        image: imgLeanSixSigmaYellow.src
+      },
+      {
+        date: "MARCH",
+        title: "Lean Six Sigma White Belt Certified",
+        description: "Completed foundational Lean Six Sigma White Belt training under Prof. Dr. Marcelo Machado Fernandes, covering the core principles of process improvement, waste reduction, and operational excellence.",
+        image: imgLeanSixSigmaWhite.src
       }
     ]
   },

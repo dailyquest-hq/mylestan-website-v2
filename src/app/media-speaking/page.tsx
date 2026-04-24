@@ -7,13 +7,13 @@ import Link from "next/link";
 import { Play, Calendar, MapPin, CheckCircle } from "lucide-react";
 
 // Assets
-import imgMediaBg from "@/assets/home/media-bg.jpg";
 import imgSpeaker from "@/assets/home/about-large.jpg";
 
 // Media appearances
 import imgBNC from "@/assets/media-speaking/BNC.jpg";
 import imgZFT from "@/assets/media-speaking/zft-coo.jpg";
 import imgSTAConference from "@/assets/media-speaking/sta-conference.jpg";
+import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
 
 export default function MediaSpeakingPage() {
   return (
@@ -30,22 +30,59 @@ export default function MediaSpeakingPage() {
       </section>
 
       {/* Featured Video / Reel */}
-      <Link href="https://www.youtube.com/watch?v=nZJeBBMlAjM" target="_blank" rel="noopener noreferrer">
-         <section className="relative w-full h-[600px] bg-black group overflow-hidden">
-            <div className="absolute inset-0 opacity-60">
-               <Image src={imgMediaBg} alt="Speaking Background" fill priority className="object-cover object-top" sizes="100vw" />
-            </div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-5 text-center">
-               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center cursor-pointer hover:bg-[#ed5128] hover:border-[#ed5128] transition-all duration-300 group-hover:scale-110">
-                  <Play size={32} className="fill-white text-white ml-1" />
-               </div>
-               <h2 className="font-darker font-semibold text-4xl md:text-6xl text-white mt-8">Watch 2024 Highlight Reel</h2>
-               <p className="font-inter text-white/80 text-lg mt-4 max-w-xl">
+      <section className="bg-black py-20 md:py-24 px-5">
+         <div className="max-w-[1400px] mx-auto flex flex-col items-center gap-10">
+            <div className="text-center">
+               <h2 className="font-darker font-semibold text-4xl md:text-6xl text-white">Watch the 2024 Highlight Reel</h2>
+               <p className="font-inter text-white/80 text-lg mt-4 max-w-xl mx-auto">
                   A compilation of key moments from the &quot;Kingdom Impact&quot; tour across Southeast Asia.
                </p>
             </div>
-         </section>
-      </Link>
+            <div className="relative w-full aspect-video overflow-hidden rounded-sm border border-white/10 shadow-2xl">
+               <iframe
+                  src="https://www.youtube-nocookie.com/embed/nZJeBBMlAjM"
+                  title="Myles Yeo Tan — 2024 Highlight Reel"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+               />
+            </div>
+         </div>
+      </section>
+
+      {/* Upcoming Events */}
+      <section className="bg-[#f5f5f5] py-20 md:py-32 px-5">
+         <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div className="w-full lg:w-1/2 relative aspect-[1200/628] overflow-hidden rounded-sm border border-gray-200 shadow-lg">
+               <Image src={imgCtaWebinar} alt="Crypto, Stocks, or Gold? 2026 market outlook webinar flyer" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+            </div>
+            <div className="w-full lg:w-1/2 flex flex-col gap-6">
+               <SectionLabel color="black">upcoming</SectionLabel>
+               <h2 className="font-darker font-semibold text-5xl md:text-[56px] leading-[0.9] text-black">
+                  Crypto, Stocks, or Gold?
+               </h2>
+               <p className="font-poppins text-[#575756] text-lg">
+                  A 2026 market outlook session for Filipino traders — covering peso vs. dollar trends, crypto, stocks, gold, and global positioning.
+               </p>
+               <div className="flex flex-col gap-3 font-inter text-[#282828] mt-2">
+                  <div className="flex items-center gap-3">
+                     <Calendar size={18} className="text-[#ed5128]" />
+                     <span>April 30, 2026 · 4:00–5:00 PM</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                     <MapPin size={18} className="text-[#ed5128]" />
+                     <span>Live via Zoom</span>
+                  </div>
+               </div>
+               <Link href="/contact" className="mt-4">
+                  <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none uppercase h-12 px-8">
+                     Request Registration
+                  </Button>
+               </Link>
+            </div>
+         </div>
+      </section>
 
       {/* Recent Engagements */}
       <section className="py-20 md:py-32 px-5 bg-white">
