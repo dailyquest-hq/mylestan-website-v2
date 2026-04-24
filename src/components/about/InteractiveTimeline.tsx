@@ -21,6 +21,7 @@ import imgYggPlaySummit from "@/assets/about/ygg-play-summit-2025.jpg";
 import imgPreachersAcademy from "@/assets/about/preachers-academy-certificate.jpg";
 import imgCsbBibleSchool from "@/assets/about/csb-bible-school-certificate.jpg";
 import imgRzimAcademy from "@/assets/about/rzim-academy-certificate.jpg";
+import imgGraceChristian from "@/assets/about/grace-christian-college-2023.jpg";
 
 interface TimelineEvent {
   date: string;
@@ -129,7 +130,14 @@ const timelineData: YearData[] = [
   },
   {
     year: "2023",
-    events: []
+    events: [
+      {
+        date: "OCTOBER 10",
+        title: "Resource Speaker at Grace Christian College",
+        description: "Spoke as a Resource Speaker for Grace Christian College Senior High School's Accounting, Business, and Management students.",
+        image: imgGraceChristian.src
+      }
+    ]
   },
   {
     year: "2022",

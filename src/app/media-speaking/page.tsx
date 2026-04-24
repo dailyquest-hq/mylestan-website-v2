@@ -183,6 +183,12 @@ export default function MediaSpeakingPage() {
                   role="Graduate"
                />
                <EventRow
+                  date="OCT 2023"
+                  title="Resource Speaker at Grace Christian College Senior High School"
+                  location="Manila, Philippines"
+                  role="Resource Speaker"
+               />
+               <EventRow
                   date="MARCH 2024"
                   title="Invited to be an Airdrop Resource Speaker by ZFT"
                   location="Manila, Philippines"
