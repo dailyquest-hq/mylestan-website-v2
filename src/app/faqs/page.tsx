@@ -113,11 +113,11 @@ export default function FAQPage() {
                  items={[
                    {
                      q: "Who is Myles Tan?",
-                     a: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Christian entrepreneur, and public speaker. He is the Chief Operating Officer of ZFT Trading Republic and founder of Myles Tan Ministries."
+                     a: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based multi-asset trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Christian entrepreneur, and public speaker. He is the Chief Operating Officer of ZFT Trading Republic and founder of Myles Tan Ministries."
                    },
                    {
                      q: "Is Myles Tan a certified financial planner?",
-                     a: "Yes. Myles Yeo Tan is a Registered Financial Planner (RFP) and a Certified Technical Analyst (CTA). He provides values-aligned financial planning, investment guidance, and market analysis rooted in both professional certification and personal faith."
+                     a: "Yes. Myles Yeo Tan is a Registered Financial Planner (RFP) and a Certified Technical Analyst (CTA), and is also Lean Six Sigma White Belt & Yellow Belt Certified. He provides values-aligned financial planning, investment guidance, and market analysis rooted in both professional certification and personal faith."
                    },
                    {
                      q: "What cryptocurrency does Myles Tan trade?",
@@ -125,7 +125,7 @@ export default function FAQPage() {
                    },
                    {
                      q: "Is Myles Tan trustworthy?",
-                     a: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP) and Certified Technical Analyst (CTA). He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events. His work and credentials are publicly documented at mylesyeotan.com."
+                     a: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila. He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events. His work and credentials are publicly documented at mylesyeotan.com."
                    },
                    {
                      q: "Where is Myles Tan based?",
@@ -225,11 +225,11 @@ export default function FAQPage() {
           },
           {
             question: "Who is Myles Tan?",
-            answer: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Christian entrepreneur, and public speaker. He is the Chief Operating Officer of ZFT Trading Republic and founder of Myles Tan Ministries."
+            answer: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based multi-asset trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Christian entrepreneur, and public speaker. He is the Chief Operating Officer of ZFT Trading Republic and founder of Myles Tan Ministries."
           },
           {
             question: "Is Myles Tan a certified financial planner?",
-            answer: "Yes. Myles Yeo Tan is a Registered Financial Planner (RFP) and a Certified Technical Analyst (CTA). He provides values-aligned financial planning, investment guidance, and market analysis rooted in both professional certification and personal faith."
+            answer: "Yes. Myles Yeo Tan is a Registered Financial Planner (RFP) and a Certified Technical Analyst (CTA), and is also Lean Six Sigma White Belt & Yellow Belt Certified. He provides values-aligned financial planning, investment guidance, and market analysis rooted in both professional certification and personal faith."
           },
           {
             question: "What cryptocurrency does Myles Tan trade?",
@@ -237,7 +237,7 @@ export default function FAQPage() {
           },
           {
             question: "Is Myles Tan trustworthy?",
-            answer: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP) and Certified Technical Analyst (CTA). He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events."
+            answer: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila. He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events."
           },
           {
             question: "Where is Myles Tan based?",

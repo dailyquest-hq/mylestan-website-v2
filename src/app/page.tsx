@@ -121,6 +121,7 @@ export default function Homepage() {
                 { year: "2021", text: "By the grace of God, converted a ₱12,000 NFT purchase into ₱6,000,000, delivering nearly 50,000% ROI through early positioning and disciplined exit strategy." },
                 { year: "2022", text: "Accumulated Bitcoin below $20,000 and exited above $100,000, delivering over 400% ROI through cycle awareness and risk-controlled execution." },
                 { year: "2023", text: "Entered the gold market at $2,000 and precisely timed a breakout that delivered over 100% upside—well ahead of mainstream consensus." },
+                { year: "2023", text: "Invited as a Resource Speaker for Grace Christian College Senior High School, mentoring Accounting, Business, and Management students and receiving a Certificate of Appreciation." },
                 { year: "2024", text: "Invited to speak on faith and finances at the ZFT Trading Republic YouTube channel. Entered the silver market at $30 and timed a breakout delivering over 100% upside." },
                 { year: "2025", text: "Became a certified Registered Financial Planner (RFP) and Certified Technical Analyst (CTA). Appointed Chief Operating Officer of ZFT Trading Republic." },
                 { year: "2025", text: "Invited to speak on Bilyonaryo News Channel, sharing insights on the Philippine stock market, investor sentiment, and navigating volatility with conviction." },
