@@ -14,6 +14,13 @@ import imgRfpCertificate from "@/assets/about/rfp-certificate.jpg";
 import imgCtaCertificate from "@/assets/about/cta-certificate.jpg";
 import imgSpiritOfWisdom from "@/assets/about/spirit-of-wisdom.jpg";
 import imgNftTestimony from "@/assets/about/nft-testimony.jpg";
+import imgLeanSixSigma from "@/assets/about/lean-six-sigma-yellow-belt.jpg";
+import imgRotaryManila from "@/assets/about/rotary-club-manila-2026.jpg";
+import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
+import imgYggPlaySummit from "@/assets/about/ygg-play-summit-2025.jpg";
+import imgPreachersAcademy from "@/assets/about/preachers-academy-certificate.jpg";
+import imgCsbBibleSchool from "@/assets/about/csb-bible-school-certificate.jpg";
+import imgRzimAcademy from "@/assets/about/rzim-academy-certificate.jpg";
 
 interface TimelineEvent {
   date: string;
@@ -32,6 +39,29 @@ interface YearData {
 
 const timelineData: YearData[] = [
   {
+    year: "2026",
+    events: [
+      {
+        date: "APRIL 30",
+        title: "Speaker at \"Crypto, Stocks, or Gold?\" Webinar",
+        description: "Invited to speak at a 2026 market outlook session on where Filipino traders should position in a Peso vs Dollar world — covering Peso/Dollar trends, crypto, stocks, gold, and global positioning.",
+        image: imgCtaWebinar.src
+      },
+      {
+        date: "APRIL 16",
+        title: "Inducted into Rotary Club of Manila",
+        description: "Officially inducted into the Rotary Club of Manila — the first Rotary club in Asia — at the Manila Polo Club, Makati City, joining a network of business, civic, and community leaders united under \"Service Above Self.\"",
+        image: imgRotaryManila.src
+      },
+      {
+        date: "MARCH",
+        title: "Lean Six Sigma White Belt & Yellow Belt Certified",
+        description: "Completed a 20-hour advanced training in process improvement and operational excellence under Prof. Dr. Marcelo Machado Fernandes — strengthening business process optimization, data-driven decision-making, and scaling operations.",
+        image: imgLeanSixSigma.src
+      }
+    ]
+  },
+  {
     year: "2025",
     events: [
       {
@@ -39,6 +69,12 @@ const timelineData: YearData[] = [
         title: "Continuing Mission to Equip Believers Worldwide",
         description: "Continuing mission to equip believers worldwide through media, events, and one-on-one coaching.",
         image: imgTimelineCard.src
+      },
+      {
+        date: "NOVEMBER",
+        title: "Recognized as Icon of Play at YGG Play Summit 2025",
+        description: "Handpicked as a featured speaker and Key Opinion Leader at the YGG Play Summit 2025 (November 19–22, Manila) — one of Southeast Asia's premier Web3 gaming conferences.",
+        image: imgYggPlaySummit.src
       },
       {
         date: "NOVEMBER",
@@ -103,6 +139,18 @@ const timelineData: YearData[] = [
     year: "2021",
     events: [
       {
+        date: "DECEMBER",
+        title: "Completed Systematic Theology at CSB Bible School",
+        description: "Completed the Systematic Theology and Practical Theology course at CSB Bible School under the leadership of Senior Pastor Hiram G. Pangilinan.",
+        image: imgCsbBibleSchool.src
+      },
+      {
+        date: "APRIL",
+        title: "Completed The Preachers' Academy",
+        description: "Completed The Preachers' Academy under Pastor Stephen R. Prado, covering Hermeneutics, Exegesis vs. Eisegesis, Old Testament Interpretation, and Homiletics.",
+        image: imgPreachersAcademy.src
+      },
+      {
         date: "FEBRUARY",
         title: "Invited to be Regular Speaker at Revelation City Church",
         description: "Delivered powerful message on 'Spirit of Wisdom' - teaching on thinking, asking, and providing with wisdom and guidance.",
@@ -132,13 +180,19 @@ const timelineData: YearData[] = [
         title: "Invited to be Guest Speaker at Revelation City Church",
         description: "First speaking engagement at Revelation City Church.",
         url: "https://www.youtube.com/watch?v=74K1HXLi53I"
+      },
+      {
+        date: "JANUARY",
+        title: "Completed RZIM Academy Apologetics Core Module",
+        description: "Completed the comprehensive Apologetics Core Module at The RZIM Academy.",
+        image: imgRzimAcademy.src
       }
     ]
   }
 ];
 
 export function InteractiveTimeline() {
-  const [selectedYear, setSelectedYear] = useState("2025");
+  const [selectedYear, setSelectedYear] = useState("2026");
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   const selectedData = timelineData.find(d => d.year === selectedYear);

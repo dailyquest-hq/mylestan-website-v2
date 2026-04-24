@@ -144,6 +144,12 @@ export default function MediaSpeakingPage() {
 
             <div className="flex flex-col border-t border-gray-200">
                <EventRow
+                  date="JAN 2020"
+                  title="Completed RZIM Academy Apologetics Core Module"
+                  location="Virtual Program"
+                  role="Graduate"
+               />
+               <EventRow
                   date="OCT 2020"
                   title="Invited to be Guest Speaker at Revelation City Church"
                   location="Manila, Philippines"
@@ -163,6 +169,18 @@ export default function MediaSpeakingPage() {
                   location="Manila, Philippines"
                   role="Regular Speaker"
                   url="https://www.youtube.com/watch?v=L7Xa2_V1_u4"
+               />
+               <EventRow
+                  date="APR 2021"
+                  title="Completed The Preachers' Academy under Pastor Stephen R. Prado"
+                  location="Manila, Philippines"
+                  role="Graduate"
+               />
+               <EventRow
+                  date="DEC 2021"
+                  title="Completed Systematic Theology at CSB Bible School"
+                  location="Quezon City, Philippines"
+                  role="Graduate"
                />
                <EventRow
                   date="MARCH 2024"
@@ -195,6 +213,18 @@ export default function MediaSpeakingPage() {
                   location="Virtual Broadcast"
                   role="Market Analyst"
                   url="https://www.youtube.com/watch?v=nZJeBBMlAjM"
+               />
+               <EventRow
+                  date="NOV 2025"
+                  title="Recognized as Icon of Play at YGG Play Summit 2025"
+                  location="Manila, Philippines"
+                  role="Featured Speaker / KOL"
+               />
+               <EventRow
+                  date="APR 2026"
+                  title="Speaker at “Crypto, Stocks, or Gold?” Webinar"
+                  location="Virtual via Zoom"
+                  role="Speaker"
                />
             </div>
          </div>

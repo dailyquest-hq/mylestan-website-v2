@@ -5,7 +5,7 @@ import { personSchema } from '@/lib/schemas';
 export const metadata: Metadata = {
   title: 'Myles Tan — Full Biography & Profile | Myles Yeo Tan',
   description:
-    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Christian entrepreneur, and public speaker. Chief Operating Officer of ZFT Trading Republic.',
+    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Christian entrepreneur, and public speaker. Chief Operating Officer of ZFT Trading Republic.',
   alternates: { canonical: 'https://mylesyeotan.com/bio' },
   openGraph: {
     title: 'Myles Tan — Full Biography',
@@ -36,10 +36,11 @@ export default function BioPage() {
           Southeast Asia and internationally.
         </p>
         <p className="font-inter text-[#282828] text-base leading-relaxed mb-4">
-          He holds two professional certifications: Registered Financial Planner (RFP) and Certified
-          Technical Analyst (CTA). His approach integrates rigorous financial analysis with
-          faith-based wisdom, helping individuals and businesses make confident, values-aligned
-          financial decisions.
+          He holds multiple professional certifications including Registered Financial Planner (RFP),
+          Certified Technical Analyst (CTA), and Lean Six Sigma White Belt &amp; Yellow Belt. His
+          approach integrates rigorous financial analysis with faith-based wisdom, helping individuals
+          and businesses make confident, values-aligned financial decisions. He is also a member of
+          the Rotary Club of Manila—the first Rotary club in Asia.
         </p>
         <p className="font-inter text-[#282828] text-base leading-relaxed">
           Myles is a sought-after speaker on cryptocurrency trading, financial stewardship, Christian
@@ -54,11 +55,16 @@ export default function BioPage() {
         <ul className="font-inter text-[#282828] text-base leading-relaxed list-disc list-inside space-y-2">
           <li>Registered Financial Planner (RFP)</li>
           <li>Certified Technical Analyst (CTA)</li>
+          <li>Lean Six Sigma White Belt &amp; Yellow Belt Certified (2026)</li>
           <li>Chief Operating Officer — ZFT Trading Republic</li>
           <li>Founder — Myles Tan Ministries</li>
+          <li>Rotary Club of Manila — Member (inducted April 2026)</li>
           <li>JCI Manila Member since 2012; Commissioner for Training; AVANTE Training Chair</li>
           <li>1st Place — JCIP Area Conference Public Speaking (2019)</li>
           <li>1st Runner-Up — JCIP National Convention Public Speaking (2019)</li>
+          <li>CSB Bible School — Systematic Theology &amp; Practical Theology (2021)</li>
+          <li>The Preachers&rsquo; Academy — Hermeneutics, Exegesis, Homiletics (2021)</li>
+          <li>RZIM Academy — Apologetics Core Module (2020)</li>
         </ul>
       </section>
 

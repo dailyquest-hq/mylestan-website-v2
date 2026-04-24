@@ -124,7 +124,8 @@ export default function Homepage() {
                 { year: "2024", text: "Invited to speak on faith and finances at the ZFT Trading Republic YouTube channel. Entered the silver market at $30 and timed a breakout delivering over 100% upside." },
                 { year: "2025", text: "Became a certified Registered Financial Planner (RFP) and Certified Technical Analyst (CTA). Appointed Chief Operating Officer of ZFT Trading Republic." },
                 { year: "2025", text: "Invited to speak on Bilyonaryo News Channel, sharing insights on the Philippine stock market, investor sentiment, and navigating volatility with conviction." },
-                { year: "2026", text: "Expanding investment portfolio to include U.S. equities and Philippine luxury art scene, equipping others to grow wealth through timeless, biblical principles." }
+                { year: "2026", text: "Expanding investment portfolio to include U.S. equities and Philippine luxury art scene, equipping others to grow wealth through timeless, biblical principles." },
+                { year: "2026", text: "Lean Six Sigma White Belt & Yellow Belt Certified. Inducted into the Rotary Club of Manila—the first Rotary club in Asia. Invited to speak at the \"Crypto, Stocks, or Gold?\" 2026 market outlook webinar." }
               ].map((item, index) => (
                 <div key={index} className="flex flex-col md:flex-row items-baseline border-t border-black/10 py-10 gap-8 md:gap-24 group hover:bg-gray-50 transition-colors px-4">
                   <span className="font-darker font-semibold text-5xl md:text-[48px] leading-[0.9] text-[#282828] w-32 shrink-0">{item.year}</span>
