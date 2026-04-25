@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
@@ -274,13 +273,10 @@ export default function Homepage() {
         onClose={() => setPreviewImage(null)}
       />
 
-      <Script
-        id="speakable-schema"
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(speakableSchema('https://mylesyeotan.com', ['.speakable-hero', 'h1']))}
-      </Script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema('https://mylesyeotan.com', ['.speakable-hero', 'h1'])) }}
+      />
     </main>
   );
 }

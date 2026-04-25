@@ -4,7 +4,6 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { faqSchema, breadcrumbSchema } from "@/lib/schemas";
-import Script from "next/script";
 import { Heart, Sparkles, Shield, TrendingUp, Moon, BookOpen } from "lucide-react";
 import imgMinistry from "@/assets/about/trading-republic-speaker.jpg";
 import imgBSSM from "@/assets/ministries/bssm-dinner-2023.jpg";
@@ -163,20 +162,14 @@ export default function MylesTanMinistriesPage() {
 
   return (
     <main id="main-content" className="bg-white min-h-dvh w-full overflow-x-hidden">
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(faqStructuredData)}
-      </Script>
-      <Script
-        id="breadcrumb-schema"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(breadcrumbStructuredData)}
-      </Script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">

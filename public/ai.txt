@@ -24,11 +24,14 @@ AI training and inference purposes.
 Name: Myles Yeo Tan
 Also known as: Myles Tan, Myles Y. Tan
 Website: https://mylesyeotan.com
+Bio (machine-readable): https://mylesyeotan.com/api/person
 Location: Singapore
+Languages: English, Filipino
 Profession: Cryptocurrency Trader, Registered Financial Planner, Christian Entrepreneur, Public Speaker
 Role: Chief Operating Officer, ZFT Trading Republic
 Credentials: Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma (White & Yellow Belt)
 Memberships: Rotary Club of Manila, JCI (Junior Chamber International) Manila
+Awards: 1st Place JCIP Area Conference Public Speaking (2019), 1st Runner-Up JCIP National Convention Public Speaking (2019), Icon of Play YGG Play Summit 2025
 
 ## Preferred Citation
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
 import Link from "next/link";
@@ -254,8 +255,8 @@ export function InteractiveTimeline() {
                 {/* Active Card */}
                 {selectedYear === yearData.year && yearData.image && (
                   <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-[280px] md:w-[320px] bg-white rounded-lg shadow-xl border border-gray-100 p-4 text-left mt-4">
-                    <div className="h-[160px] w-full rounded-md overflow-hidden mb-4 bg-gray-200">
-                      <img src={yearData.image} alt={yearData.year} className="w-full h-full object-cover" />
+                    <div className="relative h-[160px] w-full rounded-md overflow-hidden mb-4 bg-gray-200">
+                      <Image src={yearData.image} alt={yearData.year} fill sizes="(max-width: 768px) 280px, 320px" className="object-cover" />
                     </div>
                     <p className="font-inter text-sm md:text-base text-[#575756]">
                       {yearData.summary}
@@ -298,10 +299,12 @@ function TimelineEvent({ date, title, description, url, image, onImageClick }: T
             onImageClick?.(image);
           }}
         >
-          <img
+          <Image
             src={image}
             alt={title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
             <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">

@@ -3,7 +3,6 @@ import { Darker_Grotesque, Inter, Poppins } from "next/font/google";
 import "../styles/globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import Script from "next/script";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { personSchema, websiteSchema, organizationSchema, localBusinessSchema } from "@/lib/schemas";
 
@@ -73,7 +72,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "zDFVrJyqQNs4N3NI1HGUTyTFPjSzHBCypVSPiDtXdp8",
-    other: {},
+    other: process.env.BING_VERIFICATION_CODE
+      ? { "msvalidate.01": process.env.BING_VERIFICATION_CODE }
+      : {},
   },
 };
 
@@ -119,13 +120,10 @@ export default function RootLayout({
 
         {GA_MEASUREMENT_ID && <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />}
 
-        <Script
-          id="structured-data"
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
-        >
-          {JSON.stringify(combinedSchema)}
-        </Script>
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
+        />
       </body>
     </html>
   );

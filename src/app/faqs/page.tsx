@@ -6,7 +6,6 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import Link from "next/link";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import Script from "next/script";
 import { faqSchema, breadcrumbSchema } from "@/lib/schemas";
 
 export default function FAQPage() {
@@ -166,23 +165,17 @@ export default function FAQPage() {
          </div>
       </section>
 
-      <Script
-        id="breadcrumb-schema"
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(breadcrumbSchema([
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
           { name: "Home", url: "https://mylesyeotan.com/" },
           { name: "FAQs", url: "https://mylesyeotan.com/faqs" }
-        ]))}
-      </Script>
+        ])) }}
+      />
 
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(faqSchema([
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema([
           {
             question: "What kind of services do you offer?",
             answer: "Myles Yeo Tan offers services across crypto & trading insights, financial planning, Christian entrepreneurship coaching, and speaking engagements. Each service is designed to bring clarity, wisdom, and disciplined execution—both spiritually and practically. You can explore all services in detail on the Services page."
@@ -255,8 +248,8 @@ export default function FAQPage() {
             question: "What is Myles Tan Ministries?",
             answer: "Myles Tan Ministries is a faith-based platform founded by Myles Yeo Tan exploring scripture, stewardship, and marketplace leadership, active on YouTube at @MylesTanMinistries."
           }
-        ]))}
-      </Script>
+        ])) }}
+      />
 
     </main>
   );

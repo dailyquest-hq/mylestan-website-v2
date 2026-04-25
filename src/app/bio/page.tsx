@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
-import { personSchema } from '@/lib/schemas';
+import { personSchema, breadcrumbSchema } from '@/lib/schemas';
+
+const breadcrumbStructuredData = breadcrumbSchema([
+  { name: "Home", url: "https://mylesyeotan.com" },
+  { name: "Bio", url: "https://mylesyeotan.com/bio" },
+]);
 
 export const metadata: Metadata = {
   title: 'Myles Tan — Full Biography & Profile | Myles Yeo Tan',
@@ -18,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function BioPage() {
   return (
-    <main className="bg-white min-h-dvh w-full px-6 py-20 max-w-3xl mx-auto">
+    <main id="main-content" className="bg-white min-h-dvh w-full px-6 py-20 max-w-3xl mx-auto">
 
       <h1 className="font-darker font-bold text-4xl md:text-5xl text-black mb-2">
         Myles Yeo Tan
@@ -132,13 +136,14 @@ export default function BioPage() {
         </ul>
       </section>
 
-      <Script
-        id="person-schema-bio"
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(personSchema)}
-      </Script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
     </main>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
@@ -66,7 +67,7 @@ export default function BlogsPage() {
                    setPreviewImage(imgBlog1.src);
                  }}
                >
-                  <img src={imgBlog1.src} alt="Faith & Business Summit 2025" loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src={imgBlog1} alt="Faith & Business Summit 2025" fill sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                     <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
                       Click to preview
@@ -210,7 +211,7 @@ function BlogCard({ image, category, date, title, excerpt, onImageClick }: { ima
              onImageClick?.(image);
            }}
          >
-            <img src={image} alt={title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
               <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
                 Click to preview

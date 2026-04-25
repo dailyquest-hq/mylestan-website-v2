@@ -94,7 +94,10 @@ A: Submit a speaking request through the contact form at https://mylesyeotan.com
 A: Yes. Myles Yeo Tan offers coaching and mentorship both in-person and virtually for individuals and groups seeking financial guidance or Christian entrepreneurship coaching.
 
 **Q: What language does Myles Tan speak in?**
-A: Myles Yeo Tan speaks primarily in English.
+A: Myles Yeo Tan speaks English and Filipino. Speaking engagements, interviews, and content are primarily delivered in English.
+
+**Q: What awards has Myles Tan received?**
+A: Myles Yeo Tan has received the following recognitions: 1st Place at the JCIP Area Conference Public Speaking competition (2019), 1st Runner-Up at the JCIP National Convention Public Speaking competition (2019), and was recognized as Icon of Play at the YGG Play Summit 2025.
 
 ---
 
@@ -109,6 +112,14 @@ A: Myles Yeo Tan speaks primarily in English.
 - Myles Tan Ministries: https://mylesyeotan.com/myles-tan-ministries
 - Bio (AI-optimized): https://mylesyeotan.com/bio
 - Contact: https://mylesyeotan.com/contact
+
+## Machine-Readable Endpoints
+
+- Structured Person data (JSON): https://mylesyeotan.com/api/person
+- Sitemap (XML): https://mylesyeotan.com/sitemap.xml
+- Video Sitemap (XML): https://mylesyeotan.com/video-sitemap.xml
+- AI/LLM crawler permissions: https://mylesyeotan.com/ai.txt
+- Robots policy: https://mylesyeotan.com/robots.txt
 
 ---
 

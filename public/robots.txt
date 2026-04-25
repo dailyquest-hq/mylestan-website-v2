@@ -23,6 +23,7 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://mylesyeotan.com/sitemap.xml
+Sitemap: https://mylesyeotan.com/video-sitemap.xml
 
 # LLM optimization file
 # See: https://mylesyeotan.com/llms.txt

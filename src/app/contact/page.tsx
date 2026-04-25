@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import Link from "next/link";
@@ -161,7 +162,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full">
                {[imgSocial1, imgSocial2, imgSocial3, imgSocial4, imgSocial6].map((img, idx) => (
                   <div key={idx} className="aspect-square relative overflow-hidden bg-gray-200 group">
-                     <img src={img.src} alt="Myles Tan on Instagram" loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                     <Image src={img} alt="Myles Tan on Instagram" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <Instagram className="text-white" size={32} />
                      </div>

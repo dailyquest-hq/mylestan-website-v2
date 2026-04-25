@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
 interface ImagePreviewModalProps {
   imageUrl: string | null;
@@ -35,10 +36,13 @@ export function ImagePreviewModal({ imageUrl, onClose }: ImagePreviewModalProps)
       >
         ×
       </button>
-      <img
+      <Image
         src={imageUrl}
         alt="Preview"
-        className="max-w-full max-h-[90vh] object-contain rounded-lg"
+        width={2000}
+        height={2000}
+        unoptimized
+        className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg"
         onClick={(e) => e.stopPropagation()}
       />
     </div>

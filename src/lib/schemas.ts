@@ -5,10 +5,21 @@ export const personSchema = {
   "@type": "Person",
   "@id": "https://mylesyeotan.com/#person",
   "name": "Myles Yeo Tan",
-  "alternateName": "Myles Tan",
-  "description": "Christian entrepreneur, cryptocurrency trader, certified financial planner, and public speaker specializing in faith-based financial wisdom and market analysis",
+  "givenName": "Myles",
+  "additionalName": "Yeo",
+  "familyName": "Tan",
+  "alternateName": ["Myles Tan", "Myles Y. Tan"],
+  "honorificSuffix": "RFP, CTA",
+  "gender": "Male",
+  "description": "Singapore-based Christian entrepreneur, cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and public speaker. Chief Operating Officer of ZFT Trading Republic.",
   "url": "https://mylesyeotan.com",
+  "mainEntityOfPage": "https://mylesyeotan.com/bio",
   "image": "https://mylesyeotan.com/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Singapore",
+    "addressCountry": "SG"
+  },
   "sameAs": [
     "https://www.linkedin.com/in/myles-yeo-tan/",
     "https://www.youtube.com/@MylesTanMinistries",
@@ -24,16 +35,23 @@ export const personSchema = {
     "Cryptocurrency Trading",
     "Bitcoin",
     "Ethereum",
+    "Altcoins",
     "Technical Analysis",
-    "Financial Planning",
-    "Christian Entrepreneurship",
-    "Public Speaking",
+    "Market Cycle Theory",
     "Market Analysis",
     "Risk Management",
     "Trading Psychology",
     "Blockchain Technology",
     "Investment Strategy",
-    "Biblical Finance"
+    "Financial Planning",
+    "Wealth Stewardship",
+    "Biblical Finance",
+    "Christian Entrepreneurship",
+    "Faith-based Leadership",
+    "Public Speaking",
+    "Christian Theology",
+    "Apologetics",
+    "Prophetic Ministry"
   ],
   "hasCredential": [
     {
@@ -49,27 +67,32 @@ export const personSchema = {
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Professional Certification",
-      "name": "Lean Six Sigma Yellow Belt"
+      "name": "Lean Six Sigma Yellow Belt (2026)",
+      "validFrom": "2026-01-01"
     },
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Professional Certification",
-      "name": "Lean Six Sigma White Belt"
+      "name": "Lean Six Sigma White Belt (2026)",
+      "validFrom": "2026-01-01"
     },
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Certificate",
-      "name": "CSB Bible School — Systematic Theology & Practical Theology"
+      "name": "CSB Bible School — Systematic Theology & Practical Theology (2021)",
+      "validFrom": "2021-12-01"
     },
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Certificate",
-      "name": "The Preachers' Academy — Hermeneutics, Exegesis, Homiletics"
+      "name": "The Preachers' Academy — Hermeneutics, Exegesis, Homiletics (2021)",
+      "validFrom": "2021-04-01"
     },
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Certificate",
-      "name": "RZIM Academy — Apologetics Core Module"
+      "name": "RZIM Academy — Apologetics Core Module (2020)",
+      "validFrom": "2020-01-01"
     }
   ],
   "memberOf": [
@@ -105,11 +128,17 @@ export const personSchema = {
       "description": "Christian entrepreneurship coaching and mentorship"
     }
   ],
-  "knowsLanguage": ["English"],
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "Financial Planning Certification Program"
-  }
+  "award": [
+    "1st Place — JCIP Area Conference Public Speaking (2019)",
+    "1st Runner-Up — JCIP National Convention Public Speaking (2019)",
+    "Icon of Play — YGG Play Summit 2025"
+  ],
+  "knowsLanguage": ["English", "Filipino"],
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "RZIM Academy" },
+    { "@type": "EducationalOrganization", "name": "The Preachers' Academy" },
+    { "@type": "EducationalOrganization", "name": "CSB Bible School" }
+  ]
 };
 
 export const websiteSchema = {
@@ -301,4 +330,58 @@ export const speakableSchema = (url: string, cssSelectors: string[]) => ({
     "@type": "SpeakableSpecification",
     "cssSelector": cssSelectors
   }
+});
+
+export const eventSchema = (event: {
+  name: string;
+  startDate: string;
+  endDate?: string;
+  location: string;
+  isOnline: boolean;
+  url?: string;
+  description?: string;
+  performerRole?: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": event.name,
+  "startDate": event.startDate,
+  "endDate": event.endDate || event.startDate,
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": event.isOnline
+    ? "https://schema.org/OnlineEventAttendanceMode"
+    : "https://schema.org/OfflineEventAttendanceMode",
+  "location": event.isOnline
+    ? {
+        "@type": "VirtualLocation",
+        "url": event.url || "https://mylesyeotan.com/media-speaking",
+      }
+    : {
+        "@type": "Place",
+        "name": event.location,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": event.location,
+        },
+      },
+  "performer": { "@id": "https://mylesyeotan.com/#person" },
+  "organizer": { "@id": "https://mylesyeotan.com/#person" },
+  ...(event.url && { "url": event.url }),
+  ...(event.description && { "description": event.description }),
+});
+
+export const serviceSchema = (service: {
+  name: string;
+  description: string;
+  serviceType: string;
+  url?: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": service.name,
+  "description": service.description,
+  "serviceType": service.serviceType,
+  "provider": { "@id": "https://mylesyeotan.com/#person" },
+  "areaServed": { "@type": "Place", "name": "International" },
+  ...(service.url && { "url": service.url }),
 });

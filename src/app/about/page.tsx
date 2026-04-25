@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { InteractiveTimeline } from "@/components/about/InteractiveTimeline";
 import { SocialGrid } from "@/components/ui/SocialGrid";
-import { speakableSchema } from "@/lib/schemas";
+import { speakableSchema, breadcrumbSchema } from "@/lib/schemas";
+
+const breadcrumbStructuredData = breadcrumbSchema([
+  { name: "Home", url: "https://mylesyeotan.com" },
+  { name: "About", url: "https://mylesyeotan.com/about" },
+]);
 
 export const metadata: Metadata = {
   title: "About Myles Yeo Tan - Journey of Faith & Finance",
@@ -193,13 +197,14 @@ export default function AboutPage() {
          </div>
       </section>
 
-      <Script
-        id="speakable-schema"
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(speakableSchema('https://mylesyeotan.com/about', ['.speakable-bio', 'h1']))}
-      </Script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema('https://mylesyeotan.com/about', ['.speakable-bio', 'h1'])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
     </main>
   );
 }
