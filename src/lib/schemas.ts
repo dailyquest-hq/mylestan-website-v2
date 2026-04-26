@@ -380,6 +380,14 @@ export const eventSchema = (event: {
   "image": event.image || "https://mylesyeotan.com/og-image.jpg",
   "performer": { "@id": "https://mylesyeotan.com/#person" },
   "organizer": { "@id": "https://mylesyeotan.com/#person" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://mylesyeotan.com/contact",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/SoldOut",
+    "validFrom": event.startDate,
+  },
   ...(event.url && { "url": event.url }),
   ...(event.description && { "description": event.description }),
 });
