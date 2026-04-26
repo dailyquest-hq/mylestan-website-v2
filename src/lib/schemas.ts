@@ -259,20 +259,32 @@ export const videoSchema = (video: {
   thumbnailUrl: string;
   uploadDate: string;
   contentUrl: string;
+  embedUrl?: string;
   duration?: string;
-}) => ({
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": video.name,
-  "description": video.description,
-  "thumbnailUrl": video.thumbnailUrl,
-  "uploadDate": video.uploadDate,
-  "contentUrl": video.contentUrl,
-  "duration": video.duration,
-  "publisher": {
-    "@id": "https://mylesyeotan.com/#person"
-  }
-});
+}) => {
+  const embedUrl =
+    video.embedUrl ||
+    (video.contentUrl.includes('youtube.com/watch?v=')
+      ? `https://www.youtube-nocookie.com/embed/${video.contentUrl.split('v=')[1].split('&')[0]}`
+      : undefined);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": video.name,
+    "description": video.description,
+    "thumbnailUrl": video.thumbnailUrl,
+    "uploadDate": video.uploadDate,
+    "contentUrl": video.contentUrl,
+    ...(embedUrl && { "embedUrl": embedUrl }),
+    ...(video.duration && { "duration": video.duration }),
+    "isFamilyFriendly": true,
+    "inLanguage": "en",
+    "publisher": {
+      "@id": "https://mylesyeotan.com/#person"
+    }
+  };
+};
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
