@@ -340,6 +340,7 @@ export const eventSchema = (event: {
   isOnline: boolean;
   url?: string;
   description?: string;
+  image?: string;
   performerRole?: string;
 }) => ({
   "@context": "https://schema.org",
@@ -364,6 +365,7 @@ export const eventSchema = (event: {
           "addressLocality": event.location,
         },
       },
+  "image": event.image || "https://mylesyeotan.com/og-image.jpg",
   "performer": { "@id": "https://mylesyeotan.com/#person" },
   "organizer": { "@id": "https://mylesyeotan.com/#person" },
   ...(event.url && { "url": event.url }),
