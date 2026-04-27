@@ -274,7 +274,9 @@ export const videoSchema = (video: {
     "name": video.name,
     "description": video.description,
     "thumbnailUrl": video.thumbnailUrl,
-    "uploadDate": video.uploadDate,
+    "uploadDate": /^\d{4}-\d{2}-\d{2}$/.test(video.uploadDate)
+      ? `${video.uploadDate}T00:00:00+00:00`
+      : video.uploadDate,
     "contentUrl": video.contentUrl,
     ...(embedUrl && { "embedUrl": embedUrl }),
     ...(video.duration && { "duration": video.duration }),
