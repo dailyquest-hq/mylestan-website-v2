@@ -120,6 +120,16 @@ describe('POST /api/contact', () => {
     expect(autoReplyArgs.text).toContain('Hello there');
   });
 
+  it('returns 400 when the request body is not valid JSON', async () => {
+    const req = new Request('http://localhost/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: 'not-json-at-all',
+    });
+    const res = await POST(req);
+    expect(res.status).toBe(400);
+  });
+
   it('still returns 200 if the auto-reply fails (notification is critical, auto-reply is best-effort)', async () => {
     const send = jest.fn()
       .mockResolvedValueOnce({ data: { id: 'notify-id' }, error: null })

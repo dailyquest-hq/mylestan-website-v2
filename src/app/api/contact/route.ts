@@ -18,8 +18,17 @@ function escapeHtml(s: string): string {
 
 export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
+
+  let body: unknown;
   try {
-    const { name, email, message } = await req.json();
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid input' }, { status: 400 });
+  }
+
+  try {
+    const { name, email, message } =
+      (body as { name?: unknown; email?: unknown; message?: unknown }) ?? {};
 
     if (
       typeof name !== 'string' || name.length < 1 || name.length > 100 ||
