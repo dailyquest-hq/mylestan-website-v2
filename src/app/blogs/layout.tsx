@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { breadcrumbSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Blog & Insights - Crypto Trading, Faith & Finance | Myles Yeo Tan",
@@ -29,23 +28,10 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumb = breadcrumbSchema([
-  { name: "Home", url: "https://mylesyeotan.com" },
-  { name: "Blog & Insights", url: "https://mylesyeotan.com/blogs" },
-]);
-
 export default function BlogsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
-      />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }

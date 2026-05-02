@@ -28,7 +28,7 @@ export function Footer() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Our Services", href: "/services" },
-    { name: "Media Speaking", href: "/media-speaking" },
+    { name: "Press & Awards", href: "/media-speaking" },
     { name: "Blogs", href: "/blogs" },
     { name: "JCI Manila", href: "/jci-manila" },
     { name: "Ministries", href: "/myles-tan-ministries" },

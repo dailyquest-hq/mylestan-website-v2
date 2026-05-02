@@ -46,6 +46,12 @@ const timelineData: YearData[] = [
     year: "2026",
     events: [
       {
+        date: "MAY",
+        title: "Named Filipino World Travelers Affiliate",
+        description: "Officially recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. Having set foot in 69 countries across all 7 continents, Myles brings to FWT the perspective of a purposeful, intentional global explorer.",
+        url: "https://filipinoworldtravelers.com/affiliates/list"
+      },
+      {
         date: "APRIL 30",
         title: "Speaker at \"Crypto, Stocks, or Gold?\" Webinar",
         description: "Invited to speak at a 2026 market outlook session on where Filipino traders should position in a Peso vs Dollar world — covering Peso/Dollar trends, crypto, stocks, gold, and global positioning.",

@@ -2,10 +2,18 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
 import { ArrowRight } from "lucide-react";
+import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
+import { breadcrumbSchema } from "@/lib/schemas";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://mylesyeotan.com" },
+  { name: "Blog & Insights", url: "https://mylesyeotan.com/blogs" },
+]);
 
 // Assets
 import imgBlog1 from "@/assets/home/blog-1.jpg";
@@ -40,6 +48,10 @@ export default function BlogsPage() {
 
   return (
     <main id="main-content" className="bg-white min-h-dvh w-full overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
 
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
@@ -55,38 +67,32 @@ export default function BlogsPage() {
       <section className="py-20 px-5">
          <div className="max-w-[1600px] mx-auto">
             <SectionLabel color="black" className="mb-12">featured post</SectionLabel>
-            
-            <div className="flex flex-col lg:flex-row gap-12 group">
-               <button
-                 type="button"
-                 aria-label="Preview featured blog post image"
-                 className="lg:w-2/3 h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm bg-gray-100 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#ed5128]"
-                 onClick={(e) => {
-                   e.preventDefault();
-                   e.stopPropagation();
-                   setPreviewImage(imgBlog1.src);
-                 }}
-               >
-                  <Image src={imgBlog1} alt="Faith & Business Summit 2025" fill sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-                    <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
-                      Click to preview
+
+            <Link href="/blogs/crypto-stocks-or-gold-5-lessons" className="flex flex-col lg:flex-row gap-12 group cursor-pointer">
+               <div className="lg:w-2/3 h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm bg-gray-100">
+                  <Image src={imgCtaWebinar} alt="Crypto, Stocks, or Gold? — Where Filipino Traders Should Position in a Peso vs Dollar World" fill sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                    <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/60 px-4 py-2 rounded inline-flex items-center gap-2">
+                      Read the post <ArrowRight size={16} />
                     </span>
                   </div>
-               </button>
+               </div>
                <div className="lg:w-1/3 flex flex-col justify-center gap-6">
                   <div className="flex items-center gap-4">
-                     <span className="bg-[#ed5128] text-white px-3 py-1 text-xs font-bold uppercase tracking-wider font-poppins">EVENTS & RECAPS</span>
-                     <span className="text-[#9f9f9f] font-inter text-sm">March 15, 2025</span>
+                     <span className="bg-[#ed5128] text-white px-3 py-1 text-xs font-bold uppercase tracking-wider font-poppins">FINANCE</span>
+                     <span className="text-[#9f9f9f] font-inter text-sm">May 1, 2026</span>
                   </div>
                   <h2 className="font-darker font-semibold text-4xl md:text-5xl leading-[0.9] group-hover:text-[#ed5128] transition-colors">
-                     Faith & Business Summit 2025: Merging Kingdom Values with Strategy
+                     Crypto, Stocks, or Gold? 5 Lessons from a Filipino Investor in a Peso vs Dollar World
                   </h2>
                   <p className="font-inter text-[#575756] text-lg leading-relaxed">
-                     A deep dive into my top 3 takeaways from this year&apos;s summit, exploring how entrepreneurs can build sustainable businesses without compromising their faith.
+                     Two years ago, I made the boldest move of my financial life. Here are the 5 lessons that helped me diversify into gold, silver, and dollar assets before the wave hit — and how you can position yourself for the next cycle.
                   </p>
+                  <div className="flex items-center gap-2 text-[#282828] font-bold font-poppins text-xs tracking-wide uppercase mt-2 group-hover:text-[#ed5128] transition-colors">
+                     READ THE POST <ArrowRight size={16} />
+                  </div>
                </div>
-            </div>
+            </Link>
          </div>
       </section>
 

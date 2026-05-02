@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { personSchema, breadcrumbSchema } from '@/lib/schemas';
+import { breadcrumbSchema } from '@/lib/schemas';
 
 const breadcrumbStructuredData = breadcrumbSchema([
   { name: "Home", url: "https://mylesyeotan.com" },
@@ -9,7 +9,7 @@ const breadcrumbStructuredData = breadcrumbSchema([
 export const metadata: Metadata = {
   title: 'Myles Tan — Full Biography & Profile | Myles Yeo Tan',
   description:
-    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Christian entrepreneur, and public speaker. Chief Operating Officer of ZFT Trading Republic.',
+    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Filipino World Travelers Affiliate (7 continents, 69 countries), Christian entrepreneur, and public speaker. Chief Operating Officer of ZFT Trading Republic.',
   alternates: { canonical: 'https://mylesyeotan.com/bio' },
   openGraph: {
     title: 'Myles Tan — Full Biography',
@@ -44,7 +44,8 @@ export default function BioPage() {
           Certified Technical Analyst (CTA), and Lean Six Sigma White Belt &amp; Yellow Belt. His
           approach integrates rigorous financial analysis with faith-based wisdom, helping individuals
           and businesses make confident, values-aligned financial decisions. He is also a member of
-          the Rotary Club of Manila—the first Rotary club in Asia.
+          the Rotary Club of Manila—the first Rotary club in Asia—and a recognized Affiliate of the
+          Filipino World Travelers (FWT), having explored all 7 continents and 69 countries.
         </p>
         <p className="font-inter text-[#282828] text-base leading-relaxed">
           Myles is a sought-after speaker on cryptocurrency trading, financial stewardship, Christian
@@ -63,6 +64,7 @@ export default function BioPage() {
           <li>Chief Operating Officer — ZFT Trading Republic</li>
           <li>Founder — Myles Tan Ministries</li>
           <li>Rotary Club of Manila — Member (inducted April 2026)</li>
+          <li>Filipino World Travelers (FWT) — Affiliate (May 2026); explored all 7 continents and 69 countries</li>
           <li>JCI Manila Member since 2012; Commissioner for Training; AVANTE Training Chair</li>
           <li>1st Place — JCIP Area Conference Public Speaking (2019)</li>
           <li>1st Runner-Up — JCIP National Convention Public Speaking (2019)</li>
@@ -136,10 +138,6 @@ export default function BioPage() {
         </ul>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}

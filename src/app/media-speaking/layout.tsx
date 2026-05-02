@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { videoSchema, breadcrumbSchema, eventSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Media & Speaking Engagements | Myles Yeo Tan",
-  description: "Explore Myles Tan's media appearances, speaking engagements, and public talks on faith, finance, leadership, and entrepreneurship. Featured on Bilyonaryo News, ZFT Trading Republic, and more.",
+  title: "Myles Tan Media Features, Speaking Engagements & Awards",
+  description: "Press features, speaking engagements, awards, and recognitions for Myles Yeo Tan — covering faith, finance, leadership, and entrepreneurship. Featured on Bilyonaryo News, ZFT Trading Republic, YGG Play Summit, and more.",
   alternates: {
     canonical: "/media-speaking",
   },
   openGraph: {
-    title: "Media & Speaking Engagements | Myles Yeo Tan",
-    description: "Explore Myles Tan's media appearances, speaking engagements, and public talks on faith, finance, leadership, and entrepreneurship.",
+    title: "Myles Tan Media Features, Speaking Engagements & Awards",
+    description: "Press features, speaking engagements, awards, and recognitions for Myles Yeo Tan — covering faith, finance, leadership, and entrepreneurship.",
     url: "https://mylesyeotan.com/media-speaking",
     type: "website",
     images: [
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Myles Yeo Tan Media & Speaking",
+        alt: "Myles Tan Media Features, Speaking Engagements & Awards",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Media & Speaking Engagements | Myles Yeo Tan",
-    description: "Explore media appearances and speaking engagements on faith, finance, and leadership.",
+    title: "Myles Tan Media Features, Speaking Engagements & Awards",
+    description: "Press features, speaking engagements, and awards across faith, finance, and leadership.",
     images: ["/og-image.jpg"],
   },
 };
@@ -133,17 +133,47 @@ const events = [
     description: "Recognized as Icon of Play at YGG Play Summit 2025, featured speaker on Web3, gaming, and finance.",
   }),
   eventSchema({
+    name: "Lean Six Sigma White Belt Certification",
+    startDate: "2026-03-01",
+    location: "Virtual Program",
+    isOnline: true,
+    description: "Completed foundational Lean Six Sigma White Belt training under Prof. Dr. Marcelo Machado Fernandes — covering process improvement, waste reduction, and operational excellence.",
+  }),
+  eventSchema({
+    name: "Lean Six Sigma Yellow Belt Certification",
+    startDate: "2026-03-01",
+    location: "Virtual Program",
+    isOnline: true,
+    description: "Completed advanced 20-hour Lean Six Sigma Yellow Belt training in process improvement, data-driven decision-making, and scaling operations.",
+  }),
+  eventSchema({
+    name: "Inducted into Rotary Club of Manila",
+    startDate: "2026-04-16",
+    location: "Manila Polo Club, Makati City, Philippines",
+    isOnline: false,
+    description: "Officially inducted into the Rotary Club of Manila — the first Rotary club in Asia — joining a network of business, civic, and community leaders united under 'Service Above Self.'",
+  }),
+  eventSchema({
     name: "Speaker at 'Crypto, Stocks, or Gold?' Webinar",
-    startDate: "2026-04-01",
+    startDate: "2026-04-30",
     location: "Virtual via Zoom",
     isOnline: true,
-    description: "Speaker at the 'Crypto, Stocks, or Gold?' webinar discussing asset allocation and investment strategy.",
+    url: "https://www.facebook.com/share/p/1VRYJS5f4Z/",
+    description: "Speaker at the 'Crypto, Stocks, or Gold?' webinar discussing where Filipino traders should position in a peso vs. dollar world — covering peso/dollar trends, crypto, stocks, gold, and global positioning.",
+  }),
+  eventSchema({
+    name: "Named Filipino World Travelers Affiliate",
+    startDate: "2026-05-01",
+    location: "Philippines",
+    isOnline: false,
+    url: "https://filipinoworldtravelers.com/affiliates/list",
+    description: "Recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have visited a minimum of 10 countries. Myles has set foot in 69 countries across all 7 continents.",
   }),
 ];
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://mylesyeotan.com" },
-  { name: "Media & Speaking", url: "https://mylesyeotan.com/media-speaking" },
+  { name: "Press & Awards", url: "https://mylesyeotan.com/media-speaking" },
 ]);
 
 const graph = {

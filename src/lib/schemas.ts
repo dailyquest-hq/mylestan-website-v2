@@ -104,6 +104,12 @@ export const personSchema = {
     {
       "@type": "Organization",
       "name": "JCI (Junior Chamber International) Manila"
+    },
+    {
+      "@type": "Organization",
+      "name": "Filipino World Travelers (FWT)",
+      "url": "https://filipinoworldtravelers.com/affiliates/list",
+      "description": "Affiliate — recognized for global exploration across 7 continents and 69 countries (2026)"
     }
   ],
   "hasOccupation": [
@@ -244,9 +250,7 @@ export const articleSchema = (article: {
   "datePublished": article.datePublished,
   "dateModified": article.dateModified,
   "author": {
-    "@type": "Person",
-    "name": article.author || "Myles Yeo Tan",
-    "url": "https://mylesyeotan.com/about"
+    "@id": "https://mylesyeotan.com/#person"
   },
   "publisher": {
     "@id": "https://mylesyeotan.com/#person"

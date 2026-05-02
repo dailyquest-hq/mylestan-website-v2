@@ -4,7 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import Link from "next/link";
-import { Play, Calendar, MapPin, CheckCircle } from "lucide-react";
+import { Play, Calendar, MapPin, CheckCircle, Globe, ArrowUpRight } from "lucide-react";
 
 // Assets
 import imgSpeaker from "@/assets/home/about-large.jpg";
@@ -22,9 +22,9 @@ export default function MediaSpeakingPage() {
       {/* Hero Section */}
       <section className="bg-[#0f100a] text-white pt-40 pb-24 md:pt-60 md:pb-32 px-5 text-center">
          <div className="max-w-[1600px] mx-auto flex flex-col items-center gap-6">
-            <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">Media & Speaking</h1>
+            <h1 className="font-darker font-semibold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-none">Press &amp; Awards</h1>
             <p className="font-poppins text-[#9f9f9f] text-base md:text-lg max-w-[690px]">
-               Sharing faith, finance, and purpose with audiences worldwide through conferences, podcasts, and events.
+               Media features, speaking engagements, and recognitions across faith, finance, and purposeful leadership.
             </p>
          </div>
       </section>
@@ -51,33 +51,44 @@ export default function MediaSpeakingPage() {
          </div>
       </section>
 
-      {/* Upcoming Events */}
+      {/* Latest Recognition */}
       <section className="bg-[#f5f5f5] py-20 md:py-32 px-5">
-         <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-            <div className="w-full lg:w-1/2 relative aspect-[1200/628] overflow-hidden rounded-sm border border-gray-200 shadow-lg">
-               <Image src={imgCtaWebinar} alt="Crypto, Stocks, or Gold? 2026 market outlook webinar flyer" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
-            </div>
-            <div className="w-full lg:w-1/2 flex flex-col gap-6">
-               <SectionLabel color="black">upcoming</SectionLabel>
-               <h2 className="font-darker font-semibold text-5xl md:text-[56px] leading-[0.9] text-black">
-                  Crypto, Stocks, or Gold?
-               </h2>
-               <p className="font-poppins text-[#575756] text-lg">
-                  A 2026 market outlook session for Filipino traders — covering peso vs. dollar trends, crypto, stocks, gold, and global positioning.
-               </p>
-               <div className="flex flex-col gap-3 font-inter text-[#282828] mt-2">
-                  <div className="flex items-center gap-3">
-                     <Calendar size={18} className="text-[#ed5128]" />
-                     <span>April 30, 2026 · 4:00–5:00 PM</span>
+         <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch">
+            <div className="w-full lg:w-1/2 bg-[#0f100a] text-white p-10 md:p-14 flex flex-col justify-center gap-8 rounded-sm">
+               <div className="grid grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-1">
+                     <span className="font-darker font-semibold text-[64px] md:text-[88px] leading-none text-[#ed5128]">69</span>
+                     <span className="font-poppins text-sm uppercase tracking-wider text-white/70">Countries Visited</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                     <MapPin size={18} className="text-[#ed5128]" />
-                     <span>Live via Zoom</span>
+                  <div className="flex flex-col gap-1">
+                     <span className="font-darker font-semibold text-[64px] md:text-[88px] leading-none text-[#ed5128]">7</span>
+                     <span className="font-poppins text-sm uppercase tracking-wider text-white/70">Continents Explored</span>
                   </div>
                </div>
-               <Link href="/contact" className="mt-4">
-                  <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none uppercase h-12 px-8">
-                     Request Registration
+               <div className="flex items-center gap-3 pt-6 border-t border-white/10">
+                  <Globe size={20} className="text-[#ed5128]" />
+                  <span className="font-poppins text-sm uppercase tracking-wider text-white/80">Filipino World Travelers Affiliate · May 2026</span>
+               </div>
+            </div>
+            <div className="w-full lg:w-1/2 flex flex-col gap-6 justify-center">
+               <SectionLabel color="black">latest recognition</SectionLabel>
+               <h2 className="font-darker font-semibold text-4xl md:text-[48px] leading-[0.95] text-black">
+                  Named FWT Affiliate, Having Explored All 7 Continents and 69 Countries
+               </h2>
+               <p className="font-poppins text-[#575756] text-base md:text-lg leading-relaxed">
+                  Myles Tan has officially joined the ranks of the Filipino World Travelers (FWT) as a recognized Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration, having visited a minimum of 10 countries.
+               </p>
+               <p className="font-poppins text-[#575756] text-base md:text-lg leading-relaxed">
+                  For Myles, that bar is far exceeded. Having set foot in 69 countries across all 7 continents, his travels reflect not just a passion for discovery but a worldview shaped by lived experience across cultures, geographies, and communities — bringing to FWT the perspective of a purposeful, intentional global explorer.
+               </p>
+               <Link
+                  href="https://filipinoworldtravelers.com/affiliates/list"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 self-start"
+               >
+                  <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none uppercase h-12 px-8 inline-flex items-center gap-2">
+                     View FWT Recognition <ArrowUpRight size={16} />
                   </Button>
                </Link>
             </div>
@@ -109,6 +120,14 @@ export default function MediaSpeakingPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <VideoCard
+                  image={imgCtaWebinar}
+                  title="Crypto, Stocks, or Gold? — 2026 Market Outlook Webinar"
+                  type="WEBINAR RECAP"
+                  duration="1 hr"
+                  url="https://www.facebook.com/share/p/1VRYJS5f4Z/"
+                  description="Recap of the April 30, 2026 CTA webinar on where Filipino traders should position in a peso vs. dollar world — covering peso/dollar trends, crypto, stocks, gold, and global positioning."
+               />
                <VideoCard
                   image={imgBNC}
                   title="Bilyonaryo News Channel - Market Analysis"
@@ -264,10 +283,36 @@ export default function MediaSpeakingPage() {
                   role="Featured Speaker / KOL"
                />
                <EventRow
+                  date="MAR 2026"
+                  title="Lean Six Sigma White Belt Certified"
+                  location="Virtual Program"
+                  role="Graduate"
+               />
+               <EventRow
+                  date="MAR 2026"
+                  title="Lean Six Sigma Yellow Belt Certified"
+                  location="Virtual Program"
+                  role="Graduate"
+               />
+               <EventRow
+                  date="APR 2026"
+                  title="Inducted into Rotary Club of Manila"
+                  location="Manila Polo Club, Makati City"
+                  role="Inductee"
+               />
+               <EventRow
                   date="APR 2026"
                   title="Speaker at “Crypto, Stocks, or Gold?” Webinar"
                   location="Virtual via Zoom"
                   role="Speaker"
+                  url="https://www.facebook.com/share/p/1VRYJS5f4Z/"
+               />
+               <EventRow
+                  date="MAY 2026"
+                  title="Named Filipino World Travelers Affiliate"
+                  location="Philippines"
+                  role="Affiliate"
+                  url="https://filipinoworldtravelers.com/affiliates/list"
                />
             </div>
          </div>

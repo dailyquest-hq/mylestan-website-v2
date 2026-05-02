@@ -1,10 +1,19 @@
 import { MetadataRoute } from 'next'
+import { posts } from './blogs/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mylesyeotan.com'
   const currentDate = new Date()
 
+  const blogPostUrls: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blogs/${post.slug}`,
+    lastModified: new Date(post.datePublished),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   return [
+    ...blogPostUrls,
     {
       url: baseUrl,
       lastModified: currentDate,

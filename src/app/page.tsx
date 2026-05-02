@@ -15,9 +15,9 @@ import imgAboutSmall1 from "@/assets/home/about-small-1.jpg";
 import imgAboutSmall2 from "@/assets/home/about-small-2.jpg";
 
 // Blog Images
-import imgBlog1 from "@/assets/home/blog-1.jpg";
 import imgBlog2 from "@/assets/home/blog-2.jpg";
 import imgBlog3 from "@/assets/home/blog-3.jpg";
+import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
 
 // Media Background
 import imgMediaBg from "@/assets/home/media-bg.jpg";
@@ -125,7 +125,8 @@ export default function Homepage() {
                 { year: "2025", text: "Became a certified Registered Financial Planner (RFP) and Certified Technical Analyst (CTA). Appointed Chief Operating Officer of ZFT Trading Republic." },
                 { year: "2025", text: "Invited to speak on Bilyonaryo News Channel, sharing insights on the Philippine stock market, investor sentiment, and navigating volatility with conviction." },
                 { year: "2026", text: "Expanding investment portfolio to include U.S. equities and Philippine luxury art scene, equipping others to grow wealth through timeless, biblical principles." },
-                { year: "2026", text: "Lean Six Sigma White Belt & Yellow Belt Certified. Inducted into the Rotary Club of Manila—the first Rotary club in Asia. Invited to speak at the \"Crypto, Stocks, or Gold?\" 2026 market outlook webinar." }
+                { year: "2026", text: "Lean Six Sigma White Belt & Yellow Belt Certified. Inducted into the Rotary Club of Manila—the first Rotary club in Asia. Invited to speak at the \"Crypto, Stocks, or Gold?\" 2026 market outlook webinar." },
+                { year: "2026", text: "Named Filipino World Travelers (FWT) Affiliate—recognized for global exploration across all 7 continents and 69 countries." }
               ].map((item, index) => (
                 <div key={index} className="flex flex-col md:flex-row items-baseline border-t border-black/10 py-10 gap-8 md:gap-24 group hover:bg-gray-50 transition-colors px-4">
                   <span className="font-darker font-semibold text-5xl md:text-[48px] leading-[0.9] text-[#282828] w-32 shrink-0">{item.year}</span>
@@ -211,11 +212,12 @@ export default function Homepage() {
           {/* Blogs Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
              <BlogCard
-               image={imgBlog1.src}
-               category="BLOGS & INSIGHTS"
-               title="Faith-Driven Investing in 2025: Conviction Over Chaos"
-               desc="A practical guide to staying grounded when headlines are loud—how to think in principles, not panic."
-               onImageClick={setPreviewImage}
+               image={imgCtaWebinar.src}
+               category="FINANCE"
+               title="Crypto, Stocks, or Gold? 5 Lessons in a Peso vs Dollar World"
+               desc="Two years ago I made the boldest move of my financial life — diversifying into gold, silver, and dollar assets. Here are the 5 lessons that helped me position before the wave hit."
+               isBlog
+               href="/blogs/crypto-stocks-or-gold-5-lessons"
              />
              <BlogCard
                image={imgBlog2.src}
@@ -237,17 +239,17 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* Media Speaking */}
+      {/* Press & Awards */}
       <section className="relative w-full h-[600px] md:h-[800px] overflow-hidden">
          <div className="absolute inset-0">
-           <Image src={imgHero} alt="Media Background" fill className="object-cover" sizes="100vw" />
+           <Image src={imgHero} alt="Press and Awards Background" fill className="object-cover" sizes="100vw" />
            <div className="absolute inset-0 bg-black/60" />
          </div>
 
          <div className="relative z-10 max-w-[1600px] mx-auto h-full px-5 py-24 flex flex-col justify-center">
             <div className="max-w-2xl flex flex-col justify-between h-full max-h-[570px]">
                <div className="flex flex-col gap-6">
-                  <SectionLabel color="white" className="opacity-80">media speaking</SectionLabel>
+                  <SectionLabel color="white" className="opacity-80">press &amp; awards</SectionLabel>
                   <h2 className="font-darker font-semibold text-5xl md:text-[48px] leading-[0.9] text-white">
                     Sharing Faith and Finance With a Wider Audience
                   </h2>
@@ -281,33 +283,49 @@ export default function Homepage() {
   );
 }
 
-function BlogCard({ image, category, title, desc, isBlog = false, onImageClick }: { image: string, category: string, title: string, desc: string, isBlog?: boolean, onImageClick?: (image: string) => void }) {
+function BlogCard({ image, category, title, desc, isBlog = false, href, onImageClick }: { image: string, category: string, title: string, desc: string, isBlog?: boolean, href?: string, onImageClick?: (image: string) => void }) {
+  const buttonHref = href || "/blogs";
   return (
     <div className="flex flex-col gap-6 group">
-       <button
-         type="button"
-         aria-label={`Preview image for ${title}`}
-         className="w-full h-[300px] md:h-[345px] relative overflow-hidden bg-gray-800 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#ed5128]"
-         onClick={(e) => {
-           e.preventDefault();
-           e.stopPropagation();
-           onImageClick?.(image);
-         }}
-       >
-         <Image src={image} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
-         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-           <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
-             Click to preview
-           </span>
-         </div>
-       </button>
+       {href ? (
+         <Link
+           href={href}
+           aria-label={`Read ${title}`}
+           className="w-full h-[300px] md:h-[345px] relative overflow-hidden bg-gray-800 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#ed5128] block"
+         >
+           <Image src={image} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+             <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/60 px-4 py-2 rounded">
+               Read the post
+             </span>
+           </div>
+         </Link>
+       ) : (
+         <button
+           type="button"
+           aria-label={`Preview image for ${title}`}
+           className="w-full h-[300px] md:h-[345px] relative overflow-hidden bg-gray-800 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#ed5128]"
+           onClick={(e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             onImageClick?.(image);
+           }}
+         >
+           <Image src={image} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+             <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/50 px-3 py-1 rounded">
+               Click to preview
+             </span>
+           </div>
+         </button>
+       )}
        <div className="flex flex-col gap-2">
          <span className="font-inter font-medium text-sm tracking-wider uppercase text-white/80">{category}</span>
          <h3 className="font-darker font-semibold text-3xl leading-none text-white">{title}</h3>
          {desc && <p className="font-inter text-[#9f9f9f] text-base mt-2">{desc}</p>}
        </div>
        <div className="mt-auto pt-2">
-         <Link href="/blogs">
+         <Link href={buttonHref}>
            <Button variant="outline" className="border-[#ed5128] text-[#ed5128] hover:bg-[#ed5128] hover:text-white rounded-none h-12 px-8 font-bold uppercase tracking-wide w-full md:w-auto">
              {isBlog ? "READ FULL BLOG" : "READ FULL RECAP"}
            </Button>
