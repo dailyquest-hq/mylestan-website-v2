@@ -105,4 +105,41 @@ describe('POST /api/contact', () => {
     const json = await res.json();
     expect(JSON.stringify(json)).not.toContain('internal secret');
   });
+
+  it('sends an auto-reply confirmation email to the submitter', async () => {
+    const req = makeRequest({ name: 'John', email: 'john@example.com', message: 'Hello there' });
+    const res = await POST(req);
+    expect(res.status).toBe(200);
+    const resendInstance = getResendInstance();
+    expect(resendInstance.emails.send).toHaveBeenCalledTimes(2);
+    const autoReplyArgs = resendInstance.emails.send.mock.calls[1][0];
+    expect(autoReplyArgs.to).toBe('john@example.com');
+    expect(autoReplyArgs.subject).toMatch(/thanks for reaching out/i);
+    expect(autoReplyArgs.html).toContain('John');
+    expect(autoReplyArgs.html).toContain('Hello there');
+    expect(autoReplyArgs.text).toContain('Hello there');
+  });
+
+  it('does not use no-reply in the from address', async () => {
+    const req = makeRequest({ name: 'John', email: 'john@example.com', message: 'Hello' });
+    await POST(req);
+    const resendInstance = getResendInstance();
+    const notifyFrom = resendInstance.emails.send.mock.calls[0][0].from;
+    const autoReplyFrom = resendInstance.emails.send.mock.calls[1][0].from;
+    expect(notifyFrom.toLowerCase()).not.toContain('noreply');
+    expect(notifyFrom.toLowerCase()).not.toContain('no-reply');
+    expect(autoReplyFrom.toLowerCase()).not.toContain('noreply');
+    expect(autoReplyFrom.toLowerCase()).not.toContain('no-reply');
+  });
+
+  it('still returns 200 if the auto-reply fails (notification is critical, auto-reply is best-effort)', async () => {
+    const send = jest.fn()
+      .mockResolvedValueOnce({ data: { id: 'notify-id' }, error: null })
+      .mockResolvedValueOnce({ data: null, error: { message: 'auto-reply failed' } });
+    (Resend as jest.Mock).mockImplementationOnce(() => ({ emails: { send } }));
+    const req = makeRequest({ name: 'John', email: 'john@example.com', message: 'Hello' });
+    const res = await POST(req);
+    expect(res.status).toBe(200);
+    expect(send).toHaveBeenCalledTimes(2);
+  });
 });
