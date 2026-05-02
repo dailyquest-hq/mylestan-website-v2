@@ -50,6 +50,8 @@ export async function POST(req: Request) {
 
 Thanks for reaching out — your message has been received and I'll get back to you personally within 1–2 business days.
 
+A heads-up: my reply will come from my personal inbox (mylestan@gmail.com), so please add that address to your contacts (or check your spam folder) so it lands in your inbox.
+
 For your records, here's what you sent:
 
 ${message}
@@ -72,6 +74,7 @@ ${SITE_URL}`;
         <tr><td style="padding:32px;">
           <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">Hi ${safeNameHtml},</p>
           <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">Thanks for getting in touch. Your message has been received and I'll get back to you personally within <strong>1–2 business days</strong>.</p>
+          <p style="margin:0 0 16px;font-size:14px;line-height:1.55;color:#575756;background:#fff8f4;border-left:3px solid #ed5128;padding:10px 14px;">Heads-up: my reply will come from my personal inbox, <strong style="color:#282828;">mylestan@gmail.com</strong>. Please add that address to your contacts (or check spam) so my reply lands in your inbox.</p>
           <p style="margin:24px 0 8px;font-size:13px;color:#9f9f9f;text-transform:uppercase;letter-spacing:0.06em;">Your message</p>
           <div style="border-left:3px solid #ed5128;padding:12px 16px;background:#fafafa;font-size:15px;line-height:1.6;color:#282828;">${messageHtml}</div>
           <p style="margin:24px 0 0;font-size:15px;line-height:1.6;color:#575756;">In the meantime, feel free to explore my recent talks, writing, and work at <a href="${SITE_URL}" style="color:#ed5128;text-decoration:none;">mylesyeotan.com</a>.</p>
