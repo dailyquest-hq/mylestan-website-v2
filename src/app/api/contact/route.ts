@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const FROM_ADDRESS = 'hello@mylesyeotan.com';
+const FROM_ADDRESS = 'noreply@mylesyeotan.com';
 const NOTIFY_TO = 'mylestan@gmail.com';
 const SITE_URL = 'https://mylesyeotan.com';
 

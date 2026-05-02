@@ -120,18 +120,6 @@ describe('POST /api/contact', () => {
     expect(autoReplyArgs.text).toContain('Hello there');
   });
 
-  it('does not use no-reply in the from address', async () => {
-    const req = makeRequest({ name: 'John', email: 'john@example.com', message: 'Hello' });
-    await POST(req);
-    const resendInstance = getResendInstance();
-    const notifyFrom = resendInstance.emails.send.mock.calls[0][0].from;
-    const autoReplyFrom = resendInstance.emails.send.mock.calls[1][0].from;
-    expect(notifyFrom.toLowerCase()).not.toContain('noreply');
-    expect(notifyFrom.toLowerCase()).not.toContain('no-reply');
-    expect(autoReplyFrom.toLowerCase()).not.toContain('noreply');
-    expect(autoReplyFrom.toLowerCase()).not.toContain('no-reply');
-  });
-
   it('still returns 200 if the auto-reply fails (notification is critical, auto-reply is best-effort)', async () => {
     const send = jest.fn()
       .mockResolvedValueOnce({ data: { id: 'notify-id' }, error: null })
