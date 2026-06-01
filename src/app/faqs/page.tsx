@@ -124,7 +124,7 @@ export default function FAQPage() {
                    },
                    {
                      q: "Is Myles Tan trustworthy?",
-                     a: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila. He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events. His work and credentials are publicly documented at mylesyeotan.com."
+                     a: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila, where he served as Project Chairman of the Grand Slam Mission for Clark 2026 and was featured in The Asian Pearl, JCI Manila's official publication. He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events. His work and credentials are publicly documented at mylesyeotan.com."
                    },
                    {
                      q: "Where is Myles Tan based?",
@@ -230,7 +230,7 @@ export default function FAQPage() {
           },
           {
             question: "Is Myles Tan trustworthy?",
-            answer: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila. He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events."
+            answer: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila, where he served as Project Chairman of the Grand Slam Mission for Clark 2026 and was featured in The Asian Pearl, JCI Manila's official publication. He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events."
           },
           {
             question: "Where is Myles Tan based?",

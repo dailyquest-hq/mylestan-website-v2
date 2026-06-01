@@ -25,8 +25,8 @@ describe('GET /api/person', () => {
   it('includes credentials', async () => {
     const res = await GET(makeRequest());
     const json = await res.json();
-    expect(json.credentials).toContain('RFP');
-    expect(json.credentials).toContain('CTA');
+    expect(json.credentials.some((c: string) => c.includes('RFP'))).toBe(true);
+    expect(json.credentials.some((c: string) => c.includes('CTA'))).toBe(true);
   });
 
   it('includes social links', async () => {

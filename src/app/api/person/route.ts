@@ -24,12 +24,13 @@ const person = {
   ],
   memberships: [
     'Rotary Club of Manila (inducted April 2026, first Rotary club in Asia)',
-    'JCI Manila (since 2012; Commissioner for Training; AVANTE Training Chair)',
+    'JCI Manila (since 2012; Commissioner for Training; AVANTE Training Chair; Project Chairman, Grand Slam Mission for Clark 2026)',
   ],
   awards: [
     '1st Place — JCIP Area Conference Public Speaking (2019)',
     '1st Runner-Up — JCIP National Convention Public Speaking (2019)',
     'Icon of Play — YGG Play Summit 2025',
+    'Featured in The Asian Pearl (JCI Manila official publication) as Project Chairman, Grand Slam Mission for Clark 2026',
   ],
   services: [
     'Crypto, Stocks & Commodities Trading Analysis',

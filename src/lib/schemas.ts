@@ -137,7 +137,8 @@ export const personSchema = {
   "award": [
     "1st Place — JCIP Area Conference Public Speaking (2019)",
     "1st Runner-Up — JCIP National Convention Public Speaking (2019)",
-    "Icon of Play — YGG Play Summit 2025"
+    "Icon of Play — YGG Play Summit 2025",
+    "Featured in The Asian Pearl (JCI Manila official publication) as Project Chairman, Grand Slam Mission for Clark 2026"
   ],
   "knowsLanguage": ["English", "Filipino"],
   "alumniOf": [

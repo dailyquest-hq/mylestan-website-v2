@@ -169,6 +169,14 @@ const events = [
     url: "https://filipinoworldtravelers.com/affiliates/list",
     description: "Recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have visited a minimum of 10 countries. Myles has set foot in 69 countries across all 7 continents.",
   }),
+  eventSchema({
+    name: "Featured in The Asian Pearl — Grand Slam Mission for Clark 2026",
+    startDate: "2026-05-01",
+    location: "Philippines / International",
+    isOnline: false,
+    url: "https://theasianpearl.com/project-chairman-myles-tan-and-the-grand-slam-mission-for-clark-2026/",
+    description: "Featured in The Asian Pearl, JCI Manila's official publication, as Project Chairman of the Grand Slam Mission for Clark 2026 — leading a global campaign across three continents (Malaga, Antigua, and Abidjan) to rally international support for the Philippines' JCI World Congress 2026 bid.",
+  }),
 ];
 
 const breadcrumb = breadcrumbSchema([

@@ -314,6 +314,13 @@ export default function MediaSpeakingPage() {
                   role="Affiliate"
                   url="https://filipinoworldtravelers.com/affiliates/list"
                />
+               <EventRow
+                  date="MAY 2026"
+                  title="Featured in The Asian Pearl for Grand Slam Mission for Clark 2026"
+                  location="JCI Manila · International"
+                  role="Project Chairman"
+                  url="https://theasianpearl.com/project-chairman-myles-tan-and-the-grand-slam-mission-for-clark-2026/"
+               />
             </div>
          </div>
       </section>

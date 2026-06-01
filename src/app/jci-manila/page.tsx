@@ -12,7 +12,7 @@ import imgNatconStage from "@/assets/jci/natcon-2019-stage.jpg";
 export const metadata: Metadata = {
   title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Public Speaking Champion Philippines",
   description:
-    "Discover the JCI Manila achievements of Myles Yeo Tan — 2019 JCI Area 2 Public Speaking Champion and NATCON 1st Runner-Up. A decade-long record of leadership, training, ONTO projects, Sea of Life, and community-building within JCI Philippines.",
+    "Discover the JCI Manila achievements of Myles Yeo Tan — 2019 JCI Area 2 Public Speaking Champion, NATCON 1st Runner-Up, and Project Chairman of the Grand Slam Mission for Clark 2026. A decade-long record of leadership, training, ONTO projects, Sea of Life, and community-building within JCI Philippines.",
   keywords: [
     "Myles Yeo Tan JCI Manila",
     "Myles Tan JCI Philippines",
@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     "Myles Yeotan public speaking champion",
     "JCI Philippines NATCON Naga City 2019",
     "71st JCI Philippines National Convention public speaking",
+    "Clark 2026 JCI World Congress Philippines",
+    "Grand Slam Mission Clark 2026",
+    "Myles Tan Clark 2026 Project Chairman",
+    "The Asian Pearl JCI Manila feature",
+    "JCI World Congress 2026 bid Philippines",
   ],
   alternates: {
     canonical: "/jci-manila",
@@ -37,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Public Speaking Champion Philippines",
     description:
-      "2019 JCI Area 2 Public Speaking Champion and NATCON 1st Runner-Up. A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
+      "2019 JCI Area 2 Public Speaking Champion, NATCON 1st Runner-Up, and Project Chairman of the Grand Slam Mission for Clark 2026. A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
     url: "https://mylesyeotan.com/jci-manila",
     type: "profile",
     images: [
@@ -53,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Myles Yeo Tan | JCI Manila Achievements, Leadership, and Public Speaking Champion Philippines",
     description:
-      "2019 JCI Area 2 Public Speaking Champion and NATCON 1st Runner-Up. A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
+      "2019 JCI Area 2 Public Speaking Champion, NATCON 1st Runner-Up, and Project Chairman of the Grand Slam Mission for Clark 2026. A decade-plus record of leadership, service, and community impact within JCI Manila and JCI Philippines.",
     images: ["/og-image.jpg"],
   },
 };
@@ -70,6 +75,13 @@ const projects = [
     category: "Cross-Chapter Leadership",
     description:
       "One of the most distinctive areas of Myles Tan's service in JCI Manila is his work on ONTO, a series of memorable and relationship-driven trips that helped deepen ties with sister chapters. These ONTO initiatives were more than social travel experiences. They helped strengthen brotherhood, improve collaboration, and open doors for future partnerships, joint projects, and recognition opportunities for the chapter. Through ONTO Cebu, ONTO Davao, ONTO CDO, ONTO Legazpi, and later international chapter-linking efforts such as ONTO Malaga, ONTO Antigua and ONTO Abidjan, Myles Yeo Tan helped create meaningful connections that supported the wider mission of JCI Manila and JCI Philippines.",
+  },
+  {
+    title: "Grand Slam Mission for Clark 2026",
+    category: "World Congress Campaign",
+    description:
+      "As Project Chairman, Myles led a global promotional campaign representing the Philippines' bid to host JCI World Congress 2026 in Clark, Pampanga. Traveling across continents — Malaga, Antigua, and Abidjan — the delegation built international relationships and presented Filipino hospitality on the world stage. The mission was featured in The Asian Pearl, JCI Manila's official publication, as a defining example of purposeful, authentic leadership.",
+    url: "https://theasianpearl.com/project-chairman-myles-tan-and-the-grand-slam-mission-for-clark-2026/",
   },
   {
     title: "Commissioner for Training",
@@ -119,6 +131,7 @@ const achievements = [
   "2019 JCIP National Convention — Public Speaking 1st Runner-Up",
   "Consistent participation in major JCI Philippines conferences and conventions",
   "Represented JCI Manila at ASPAC and World Congress-related platforms",
+  "Project Chairman, Grand Slam Mission for Clark 2026 — featured in The Asian Pearl, JCI Manila's official publication",
 ];
 
 export default function JCIPage() {
@@ -197,18 +210,24 @@ export default function JCIPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project) => (
-              <div
-                key={project.title}
-                className="border border-white/10 p-8 hover:border-[#ed5128] transition-colors duration-300"
-              >
-                <div className="text-[#ed5128] text-sm font-inter font-semibold tracking-wider uppercase mb-3">
-                  {project.category}
+            {projects.map((project) => {
+              const inner = (
+                <div className="border border-white/10 p-8 hover:border-[#ed5128] transition-colors duration-300 h-full">
+                  <div className="text-[#ed5128] text-sm font-inter font-semibold tracking-wider uppercase mb-3">
+                    {project.category}
+                  </div>
+                  <h3 className="font-darker font-semibold text-2xl mb-4">{project.title}</h3>
+                  <p className="font-inter text-white/60 leading-relaxed">{project.description}</p>
                 </div>
-                <h3 className="font-darker font-semibold text-2xl mb-4">{project.title}</h3>
-                <p className="font-inter text-white/60 leading-relaxed">{project.description}</p>
-              </div>
-            ))}
+              );
+              return project.url ? (
+                <Link key={project.title} href={project.url} target="_blank" rel="noopener noreferrer" className="block h-full">
+                  {inner}
+                </Link>
+              ) : (
+                <div key={project.title}>{inner}</div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -437,7 +456,7 @@ export default function JCIPage() {
             </h2>
             <div className="flex flex-col gap-5 text-left font-inter text-lg text-[#282828] leading-relaxed">
               <p className="text-justify">
-                Over the years, Myles has also represented the chapter through active participation in major conferences and conventions. His JCI record reflects involvement in the JCI Philippines National Convention, JCI Area Conference, ASPAC, and World Congress-related participation, underscoring a long-term commitment to the movement and a consistent presence in the organization&apos;s most important platforms. This kind of sustained engagement matters in JCI Manila, where contribution is measured not only by titles held, but by the consistency of presence, service, and chapter support over time.
+                Over the years, Myles has also represented the chapter through active participation in major conferences and conventions. His JCI record reflects involvement in the JCI Philippines National Convention, JCI Area Conference, ASPAC, and World Congress platforms — most recently as Project Chairman of the Grand Slam Mission for Clark 2026, a global campaign to bring JCI World Congress to the Philippines. Featured in The Asian Pearl, JCI Manila&apos;s official publication, the mission took Myles and the delegation across three continents to build relationships and rally international support for the Philippines&apos; bid. This kind of sustained engagement matters in JCI Manila, where contribution is measured not only by titles held, but by the consistency of presence, service, and chapter support over time.
               </p>
               <p className="text-justify">
                 Today, the achievements of Myles Yeo Tan in JCI Manila form an important part of

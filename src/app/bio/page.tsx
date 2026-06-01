@@ -65,7 +65,7 @@ export default function BioPage() {
           <li>Founder — Myles Tan Ministries</li>
           <li>Rotary Club of Manila — Member (inducted April 2026)</li>
           <li>Filipino World Travelers (FWT) — Affiliate (May 2026); explored all 7 continents and 69 countries</li>
-          <li>JCI Manila Member since 2012; Commissioner for Training; AVANTE Training Chair</li>
+          <li>JCI Manila Member since 2012; Commissioner for Training; AVANTE Training Chair; Project Chairman, Grand Slam Mission for Clark 2026</li>
           <li>1st Place — JCIP Area Conference Public Speaking (2019)</li>
           <li>1st Runner-Up — JCIP National Convention Public Speaking (2019)</li>
           <li>CSB Bible School — Systematic Theology &amp; Practical Theology (2021)</li>

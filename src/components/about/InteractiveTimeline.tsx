@@ -47,6 +47,12 @@ const timelineData: YearData[] = [
     events: [
       {
         date: "MAY",
+        title: "Featured in The Asian Pearl: Grand Slam Mission for Clark 2026",
+        description: "Featured in The Asian Pearl — JCI Manila's official publication — as Project Chairman of the Grand Slam Mission for Clark 2026. Led a global campaign across three continents (Malaga, Antigua, and Abidjan) to build international relationships and rally support for the Philippines' JCI World Congress 2026 bid.",
+        url: "https://theasianpearl.com/project-chairman-myles-tan-and-the-grand-slam-mission-for-clark-2026/"
+      },
+      {
+        date: "MAY",
         title: "Named Filipino World Travelers Affiliate",
         description: "Officially recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. Having set foot in 69 countries across all 7 continents, Myles brings to FWT the perspective of a purposeful, intentional global explorer.",
         url: "https://filipinoworldtravelers.com/affiliates/list"
