@@ -222,7 +222,7 @@ export default async function BlogPostPage({
 
             {/* CTA */}
             <div className="bg-[#0f100a] text-white p-8 md:p-12 rounded-sm flex flex-col gap-5">
-              <SectionLabel color="white">Upcoming Talk</SectionLabel>
+              <SectionLabel color="white">{post.cta.sectionLabel ?? "Upcoming Talk"}</SectionLabel>
               <h3 className="font-darker font-semibold text-3xl md:text-4xl leading-[1.05]">
                 {post.cta.label}
               </h3>

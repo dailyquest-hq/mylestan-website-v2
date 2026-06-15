@@ -170,6 +170,14 @@ const events = [
     description: "Recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have visited a minimum of 10 countries. Myles has set foot in 69 countries across all 7 continents.",
   }),
   eventSchema({
+    name: "Myles Yeo Tan of JCI Manila Receives the JCI Foundation Pin: A Phil Pugsley Patron Recognized for Faith-Driven Leadership",
+    startDate: "2026-06-15",
+    location: "Philippines",
+    isOnline: false,
+    url: "https://mylesyeotan.com/blogs/jci-foundation-pin-phil-pugsley-patron-2026",
+    description: "Myles Yeo Tan received the JCI Foundation Pin and the Phil Pugsley Patron recognition at age 39 — presented by 2026 JCI World President Alejandra Castillo — as a commitment to sowing into the next generation of leaders ahead of JCI World Congress 2026 in Clark, Pampanga.",
+  }),
+  eventSchema({
     name: "Featured in The Asian Pearl — Grand Slam Mission for Clark 2026",
     startDate: "2026-05-01",
     location: "Philippines / International",

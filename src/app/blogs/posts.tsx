@@ -1,6 +1,7 @@
 import type { StaticImageData } from "next/image";
 import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
 import imgPesoDollar from "@/assets/blogs/peso-dollar-april-2026.jpg";
+import imgJciFoundationPin from "@/assets/blogs/jci-foundation-pin-june-2026.jpg";
 
 export interface Tip {
   number: number;
@@ -33,11 +34,64 @@ export interface Post {
     label: string;
     url: string;
     description: string;
+    /** Section heading above the CTA block. Defaults to "Upcoming Talk" */
+    sectionLabel?: string;
   };
   tags: string[];
 }
 
 export const posts: Post[] = [
+  {
+    slug: "jci-foundation-pin-phil-pugsley-patron-2026",
+    title: "Myles Yeo Tan of JCI Manila Receives the JCI Foundation Pin: A Phil Pugsley Patron Recognized for Faith-Driven Leadership",
+    category: "EVENTS & RECAPS",
+    datePublished: "2026-06-15",
+    excerpt:
+      "At 39, Myles Yeo Tan received the JCI Foundation Pin and the Phil Pugsley Patron recognition — not as a crown, but as a commitment. Here is his reflection on legacy, service, and building toward JCI World Congress 2026 in Clark, Pampanga.",
+    heroImage: imgJciFoundationPin,
+    heroImageAlt:
+      "Myles Yeo Tan receiving the JCI Foundation Pin and Phil Pugsley Patron recognition, flanked by the 2026 JCI World President Alejandra Castillo",
+    originalUrl: "https://www.facebook.com/mylesyeotan",
+    originalSource: "Facebook",
+    originalDate: "June 15, 2026",
+    intro: [
+      "All glory to God alone.",
+      "I am honored to receive the JCI Foundation Pin and the Phil Pugsley Patron recognition that comes with it.",
+      "JCI has given me brothers, mentors, missions, memories, and more airport stories than my sleep schedule can forgive.",
+      "But more than that, JCI has given me meaning and purpose to human life.",
+      "This pin is my way of saying thank you — and my way of sowing into the next generation of leaders.",
+    ],
+    tips: [],
+    closing: [
+      "As an angel investor, I usually invest in companies. Today, I'm investing in citizens.",
+      "Personally, I believe we stand on the shoulders of giants. Every brother who came before us laid a stone. Their ceiling is our floor. Past BODS walked so that future BODS could run.",
+      "\"May pinanggalingan, kaya may patutunguhan.\"",
+      "I am just grateful that, at 39, I could contribute to the chapter one last time by helping the next generation stand even taller.",
+      "As Scripture says: \"And let us not grow weary of doing good, for in due season we will reap, if we do not give up.\" — Galatians 6:9",
+      "As we build toward the JCI World Congress 2026 in Clark, Pampanga — a congress I am proud to champion — this pin arrives as a fitting reminder of why we show up: not for the recognition, but for the mission.",
+      "For the chapter. For the mission. For the future of JCI.",
+    ],
+    cta: {
+      sectionLabel: "JCI World Congress 2026",
+      label: "The Grand Slam Mission for Clark 2026",
+      url: "/jci-manila",
+      description:
+        "Learn about Myles' role as Project Chairman of the Grand Slam Mission — leading the global campaign to bring JCI World Congress 2026 to Clark, Pampanga, Philippines.",
+    },
+    tags: [
+      "#JCIFoundation",
+      "#PhilPugsleyPatron",
+      "#JCI",
+      "#JCIManila",
+      "#JCIPhilippines",
+      "#JCIWorldCongress2026",
+      "#Clark",
+      "#ServiceToHumanity",
+      "#FaithThatGrounds",
+      "#WisdomThatCompounds",
+      "#THELASTDANCE",
+    ],
+  },
   {
     slug: "crypto-stocks-or-gold-5-lessons",
     title: "Crypto, Stocks, or Gold? 5 Lessons from a Filipino Investor in a Peso vs Dollar World",

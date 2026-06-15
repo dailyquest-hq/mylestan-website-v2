@@ -8,6 +8,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ImagePreviewModal } from "@/components/ui/ImagePreviewModal";
 import { ArrowRight } from "lucide-react";
 import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
+import imgJciFoundationPin from "@/assets/blogs/jci-foundation-pin-june-2026.jpg";
 import { breadcrumbSchema } from "@/lib/schemas";
 
 const breadcrumb = breadcrumbSchema([
@@ -68,9 +69,9 @@ export default function BlogsPage() {
          <div className="max-w-[1600px] mx-auto">
             <SectionLabel color="black" className="mb-12">featured post</SectionLabel>
 
-            <Link href="/blogs/crypto-stocks-or-gold-5-lessons" className="flex flex-col lg:flex-row gap-12 group cursor-pointer">
+            <Link href="/blogs/jci-foundation-pin-phil-pugsley-patron-2026" className="flex flex-col lg:flex-row gap-12 group cursor-pointer">
                <div className="lg:w-2/3 h-[400px] lg:h-[600px] relative overflow-hidden rounded-sm bg-gray-100">
-                  <Image src={imgCtaWebinar} alt="Crypto, Stocks, or Gold? — Where Filipino Traders Should Position in a Peso vs Dollar World" fill sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src={imgJciFoundationPin} alt="Myles Yeo Tan receiving the JCI Foundation Pin and Phil Pugsley Patron recognition with 2026 JCI World President Alejandra Castillo" fill sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                     <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm font-semibold bg-black/60 px-4 py-2 rounded inline-flex items-center gap-2">
                       Read the post <ArrowRight size={16} />
@@ -79,14 +80,14 @@ export default function BlogsPage() {
                </div>
                <div className="lg:w-1/3 flex flex-col justify-center gap-6">
                   <div className="flex items-center gap-4">
-                     <span className="bg-[#ed5128] text-white px-3 py-1 text-xs font-bold uppercase tracking-wider font-poppins">FINANCE</span>
-                     <span className="text-[#9f9f9f] font-inter text-sm">May 1, 2026</span>
+                     <span className="bg-[#ed5128] text-white px-3 py-1 text-xs font-bold uppercase tracking-wider font-poppins">EVENTS & RECAPS</span>
+                     <span className="text-[#9f9f9f] font-inter text-sm">June 15, 2026</span>
                   </div>
                   <h2 className="font-darker font-semibold text-4xl md:text-5xl leading-[0.9] group-hover:text-[#ed5128] transition-colors">
-                     Crypto, Stocks, or Gold? 5 Lessons from a Filipino Investor in a Peso vs Dollar World
+                     Myles Yeo Tan of JCI Manila Receives the JCI Foundation Pin: A Phil Pugsley Patron Recognized for Faith-Driven Leadership
                   </h2>
                   <p className="font-inter text-[#575756] text-lg leading-relaxed">
-                     Two years ago, I made the boldest move of my financial life. Here are the 5 lessons that helped me diversify into gold, silver, and dollar assets before the wave hit — and how you can position yourself for the next cycle.
+                     At 39, Myles received the JCI Foundation Pin and the Phil Pugsley Patron recognition — not as a crown, but as a commitment to sowing into the next generation of leaders ahead of JCI World Congress 2026 in Clark, Pampanga.
                   </p>
                   <div className="flex items-center gap-2 text-[#282828] font-bold font-poppins text-xs tracking-wide uppercase mt-2 group-hover:text-[#ed5128] transition-colors">
                      READ THE POST <ArrowRight size={16} />
@@ -113,6 +114,15 @@ export default function BlogsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+               <BlogCard
+                  image={imgCtaWebinar.src}
+                  category="FINANCE"
+                  date="May 1, 2026"
+                  title="Crypto, Stocks, or Gold? 5 Lessons from a Filipino Investor in a Peso vs Dollar World"
+                  excerpt="Two years ago, I made the boldest move of my financial life. Here are the 5 lessons that helped me diversify into gold, silver, and dollar assets before the wave hit."
+                  href="/blogs/crypto-stocks-or-gold-5-lessons"
+                  onImageClick={setPreviewImage}
+               />
                <BlogCard
                   image={imgBlog2.src}
                   category="EVENTS & RECAPS"
@@ -204,7 +214,25 @@ export default function BlogsPage() {
   );
 }
 
-function BlogCard({ image, category, date, title, excerpt, onImageClick }: { image: string, category: string, date: string, title: string, excerpt: string, onImageClick?: (image: string) => void }) {
+function BlogCard({ image, category, date, title, excerpt, href, onImageClick }: { image: string, category: string, date: string, title: string, excerpt: string, href?: string, onImageClick?: (image: string) => void }) {
+   const textBlock = (
+      <div className="flex flex-col gap-3">
+         <div className="flex items-center justify-between">
+            <span className="font-poppins font-bold text-xs tracking-wider text-[#ed5128] uppercase">{category}</span>
+            <span className="font-inter text-xs text-[#9f9f9f]">{date}</span>
+         </div>
+         <h3 className="font-darker font-semibold text-3xl leading-none text-[#282828] group-hover:text-[#ed5128] transition-colors">
+            {title}
+         </h3>
+         <p className="font-inter text-[#575756] text-base leading-relaxed line-clamp-3">
+            {excerpt}
+         </p>
+         <div className="flex items-center gap-2 text-[#282828] font-bold font-poppins text-xs tracking-wide uppercase mt-2 group-hover:text-[#ed5128] transition-colors">
+            READ MORE <ArrowRight size={16} />
+         </div>
+      </div>
+   );
+
    return (
       <div className="flex flex-col gap-6 group">
          <button
@@ -224,21 +252,7 @@ function BlogCard({ image, category, date, title, excerpt, onImageClick }: { ima
               </span>
             </div>
          </button>
-         <div className="flex flex-col gap-3">
-            <div className="flex items-center justify-between">
-               <span className="font-poppins font-bold text-xs tracking-wider text-[#ed5128] uppercase">{category}</span>
-               <span className="font-inter text-xs text-[#9f9f9f]">{date}</span>
-            </div>
-            <h3 className="font-darker font-semibold text-3xl leading-none text-[#282828] group-hover:text-[#ed5128] transition-colors">
-               {title}
-            </h3>
-            <p className="font-inter text-[#575756] text-base leading-relaxed line-clamp-3">
-               {excerpt}
-            </p>
-            <div className="flex items-center gap-2 text-[#282828] font-bold font-poppins text-xs tracking-wide uppercase mt-2 group-hover:text-[#ed5128] transition-colors">
-               READ MORE <ArrowRight size={16} />
-            </div>
-         </div>
+         {href ? <Link href={href}>{textBlock}</Link> : textBlock}
       </div>
    )
 }
