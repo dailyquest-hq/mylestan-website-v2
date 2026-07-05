@@ -14,6 +14,8 @@ import imgBNC from "@/assets/media-speaking/BNC.jpg";
 import imgZFT from "@/assets/media-speaking/zft-coo.jpg";
 import imgSTAConference from "@/assets/media-speaking/sta-conference.jpg";
 import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
+import imgAlphaIntel from "@/assets/media-speaking/alpha-intel-us-stocks-advisor-june-2026.jpg";
+import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
 
 export default function MediaSpeakingPage() {
   return (
@@ -120,6 +122,22 @@ export default function MediaSpeakingPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <VideoCard
+                  image={imgCcfDavaoAngpao}
+                  title="More Than an Angpao: Blessed to Be a Blessing — CCF FilChi Davao"
+                  type="UPCOMING TALK"
+                  duration="JUL 11 · 5:30 PM"
+                  url="https://forms.gle/hVCSvV8eEbU5cwgV6"
+                  description="A special Bible study at the CCF Davao Center on blessing, biblical boundaries, generosity, and faithful stewardship — what Scripture truly teaches about wealth and Kingdom impact. Limited seats — tap to register."
+               />
+               <VideoCard
+                  image={imgAlphaIntel}
+                  title="Welcomed as US Stocks Advisor at Alpha Intel"
+                  type="ANNOUNCEMENT"
+                  duration="JUN 2026"
+                  url="https://www.facebook.com/photo?fbid=122168134622956785&set=a.122094931448956785"
+                  description="Alpha Intel welcomes Myles Tan as its US Stocks Advisor — bringing market analysis, research, and guidance to help the community navigate the US stock market with greater confidence."
+               />
                <VideoCard
                   image={imgCtaWebinar}
                   title="Crypto, Stocks, or Gold? — 2026 Market Outlook Webinar"
@@ -320,6 +338,20 @@ export default function MediaSpeakingPage() {
                   location="JCI Manila · International"
                   role="Project Chairman"
                   url="https://theasianpearl.com/project-chairman-myles-tan-and-the-grand-slam-mission-for-clark-2026/"
+               />
+               <EventRow
+                  date="JUN 2026"
+                  title="Welcomed as US Stocks Advisor at Alpha Intel"
+                  location="Online Community"
+                  role="US Stocks Advisor"
+                  url="https://www.facebook.com/photo?fbid=122168134622956785&set=a.122094931448956785"
+               />
+               <EventRow
+                  date="JUL 2026"
+                  title="Speaker at “More Than an Angpao: Blessed to Be a Blessing”"
+                  location="CCF Davao Center, Davao City"
+                  role="Guest Speaker"
+                  url="https://www.facebook.com/share/p/18M2HAiAgx/"
                />
             </div>
          </div>

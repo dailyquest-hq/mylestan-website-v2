@@ -185,6 +185,22 @@ const events = [
     url: "https://theasianpearl.com/project-chairman-myles-tan-and-the-grand-slam-mission-for-clark-2026/",
     description: "Featured in The Asian Pearl, JCI Manila's official publication, as Project Chairman of the Grand Slam Mission for Clark 2026 — leading a global campaign across three continents (Malaga, Antigua, and Abidjan) to rally international support for the Philippines' JCI World Congress 2026 bid.",
   }),
+  eventSchema({
+    name: "Welcomed as US Stocks Advisor at Alpha Intel",
+    startDate: "2026-06-16",
+    location: "Online Community",
+    isOnline: true,
+    url: "https://www.facebook.com/photo?fbid=122168134622956785&set=a.122094931448956785",
+    description: "Alpha Intel welcomed Myles Tan as its US Stocks Advisor — providing insights, research, and guidance to help the community navigate the US stock market with greater confidence.",
+  }),
+  eventSchema({
+    name: "Speaker at 'More Than an Angpao: Blessed to Be a Blessing' — CCF FilChi Davao",
+    startDate: "2026-07-11T17:30:00+08:00",
+    location: "CCF Davao Center, Davao City, Philippines",
+    isOnline: false,
+    url: "https://www.facebook.com/share/p/18M2HAiAgx/",
+    description: "A special Bible study with CCF FilChi Davao on blessing, biblical boundaries, generosity, and faithful stewardship — Myles shares his personal journey of learning to handle money, opportunities, and influence according to biblical principles.",
+  }),
 ];
 
 const breadcrumb = breadcrumbSchema([

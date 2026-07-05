@@ -19,6 +19,8 @@ import imgLeanSixSigmaYellow from "@/assets/about/lean-six-sigma-yellow-belt.jpg
 import imgLeanSixSigmaWhite from "@/assets/about/lean-six-sigma-white-belt.jpg";
 import imgRotaryManila from "@/assets/about/rotary-club-manila-2026.jpg";
 import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
+import imgAlphaIntel from "@/assets/media-speaking/alpha-intel-us-stocks-advisor-june-2026.jpg";
+import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
 import imgYggPlaySummit from "@/assets/about/ygg-play-summit-2025.jpg";
 import imgPreachersAcademy from "@/assets/about/preachers-academy-certificate.jpg";
 import imgCsbBibleSchool from "@/assets/about/csb-bible-school-certificate.jpg";
@@ -45,6 +47,20 @@ const timelineData: YearData[] = [
   {
     year: "2026",
     events: [
+      {
+        date: "JULY 11",
+        title: "Speaker at \"More Than an Angpao: Blessed to Be a Blessing\" — CCF FilChi Davao",
+        description: "Invited by CCF FilChi Davao to lead a special Bible study on blessing, biblical boundaries, generosity, and faithful stewardship — sharing his personal journey of learning to handle money, opportunities, and influence according to biblical principles. Held at the CCF Davao Center, Davao City.",
+        url: "https://www.facebook.com/share/p/18M2HAiAgx/",
+        image: imgCcfDavaoAngpao.src
+      },
+      {
+        date: "JUNE 16",
+        title: "Welcomed as US Stocks Advisor at Alpha Intel",
+        description: "Joined the Alpha Intel community as its US Stocks Advisor — providing insights, research, and guidance to help members navigate the US stock market with greater confidence.",
+        url: "https://www.facebook.com/photo?fbid=122168134622956785&set=a.122094931448956785",
+        image: imgAlphaIntel.src
+      },
       {
         date: "MAY",
         title: "Featured in The Asian Pearl: Grand Slam Mission for Clark 2026",
