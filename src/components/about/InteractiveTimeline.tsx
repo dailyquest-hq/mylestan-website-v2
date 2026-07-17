@@ -20,6 +20,7 @@ import imgLeanSixSigmaWhite from "@/assets/about/lean-six-sigma-white-belt.jpg";
 import imgRotaryManila from "@/assets/about/rotary-club-manila-2026.jpg";
 import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
 import imgAlphaIntel from "@/assets/media-speaking/alpha-intel-us-stocks-advisor-june-2026.jpg";
+import imgJciFoundationPin from "@/assets/blogs/jci-foundation-pin-june-2026.jpg";
 import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
 import imgYggPlaySummit from "@/assets/about/ygg-play-summit-2025.jpg";
 import imgPreachersAcademy from "@/assets/about/preachers-academy-certificate.jpg";
@@ -60,6 +61,13 @@ const timelineData: YearData[] = [
         description: "Joined the Alpha Intel community as its US Stocks Advisor — providing insights, research, and guidance to help members navigate the US stock market with greater confidence.",
         url: "https://www.facebook.com/photo?fbid=122168134622956785&set=a.122094931448956785",
         image: imgAlphaIntel.src
+      },
+      {
+        date: "JUNE 15",
+        title: "Received the JCI Foundation Pin: A Phil Pugsley Patron",
+        description: "At 39, Myles received the JCI Foundation Pin and the Phil Pugsley Patron recognition — not as a crown, but as a commitment to sowing into the next generation of leaders ahead of JCI World Congress 2026 in Clark, Pampanga.",
+        url: "/blogs/jci-foundation-pin-phil-pugsley-patron-2026",
+        image: imgJciFoundationPin.src
       },
       {
         date: "MAY",
