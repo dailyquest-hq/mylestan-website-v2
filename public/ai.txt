@@ -28,7 +28,7 @@ Bio (machine-readable): https://mylesyeotan.com/api/person
 Location: Singapore
 Languages: English, Filipino
 Profession: Cryptocurrency Trader, Registered Financial Planner, Christian Entrepreneur, Public Speaker
-Role: Chief Operating Officer, Ilyon Industrial Corporation
+Role: Chief Operating Officer, Ilyon Industrial Corporation (present)
 Former role: Chief Operating Officer, ZFT Trading Republic
 Credentials: Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma (White & Yellow Belt)
 Memberships: Rotary Club of Manila, JCI (Junior Chamber International) Manila

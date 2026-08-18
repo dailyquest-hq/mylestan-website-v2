@@ -63,7 +63,7 @@ export default function BioPage() {
           <li>Registered Financial Planner (RFP)</li>
           <li>Certified Technical Analyst (CTA)</li>
           <li>Lean Six Sigma White Belt &amp; Yellow Belt Certified (2026)</li>
-          <li>Chief Operating Officer — Ilyon Industrial Corporation</li>
+          <li>Chief Operating Officer — Ilyon Industrial Corporation (present)</li>
           <li>Former Chief Operating Officer — ZFT Trading Republic</li>
           <li>Founder — Myles Tan Ministries</li>
           <li>Rotary Club of Manila — Member (inducted April 2026)</li>
