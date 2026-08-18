@@ -16,6 +16,7 @@ import imgSTAConference from "@/assets/media-speaking/sta-conference.jpg";
 import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
 import imgAlphaIntel from "@/assets/media-speaking/alpha-intel-us-stocks-advisor-june-2026.jpg";
 import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
+import imgKnowYourMoney from "@/assets/media-speaking/know-yourself-know-your-money-august-2026.jpg";
 
 export default function MediaSpeakingPage() {
   return (
@@ -122,6 +123,14 @@ export default function MediaSpeakingPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <VideoCard
+                  image={imgKnowYourMoney}
+                  title="Know Yourself, Know Your Money — Rotary Club of Manila"
+                  type="UPCOMING TALK"
+                  duration="AUG 29 · 2:00 PM"
+                  url="https://forms.gle/P1V1UYE8hi7QCGZs5"
+                  description="A two-part Rotary Youth & Vocational Service workshop at Zero Ten Park, Makati — Part 1 on DISC personality, leadership, communication and self-awareness; Part 2 on money habits, budgeting, responsible investing, market basics and cryptocurrency. Tap to register."
+               />
                <VideoCard
                   image={imgCcfDavaoAngpao}
                   title="More Than an Angpao: Blessed to Be a Blessing — CCF FilChi Davao"
@@ -352,6 +361,13 @@ export default function MediaSpeakingPage() {
                   location="CCF Davao Center, Davao City"
                   role="Guest Speaker"
                   url="https://www.facebook.com/share/p/18M2HAiAgx/"
+               />
+               <EventRow
+                  date="AUG 2026"
+                  title="Speaker at “Know Yourself, Know Your Money”"
+                  location="Zero Ten Park, Makati City"
+                  role="Resource Speaker"
+                  url="https://www.rivervalleyirregulars.com"
                />
             </div>
          </div>

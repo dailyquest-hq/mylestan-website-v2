@@ -20,6 +20,7 @@ import imgLeanSixSigmaWhite from "@/assets/about/lean-six-sigma-white-belt.jpg";
 import imgRotaryManila from "@/assets/about/rotary-club-manila-2026.jpg";
 import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
 import imgAlphaIntel from "@/assets/media-speaking/alpha-intel-us-stocks-advisor-june-2026.jpg";
+import imgKnowYourMoney from "@/assets/media-speaking/know-yourself-know-your-money-august-2026.jpg";
 import imgJciFoundationPin from "@/assets/blogs/jci-foundation-pin-june-2026.jpg";
 import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
 import imgYggPlaySummit from "@/assets/about/ygg-play-summit-2025.jpg";
@@ -48,6 +49,13 @@ const timelineData: YearData[] = [
   {
     year: "2026",
     events: [
+      {
+        date: "AUGUST 29",
+        title: "Resource Speaker at \"Know Yourself, Know Your Money\" — Rotary Club of Manila",
+        description: "Invited by River Valley Irregulars, the Rotary Club of Manila, and the Rotaract Club of Manila — with Myles Tan Ministries — to lead a two-part Youth & Vocational Service workshop at Zero Ten Park, Makati. Part 1 covers DISC personality, leadership, communication and self-awareness; Part 2 covers money habits, budgeting, responsible investing, market basics and cryptocurrency.",
+        url: "https://www.rivervalleyirregulars.com",
+        image: imgKnowYourMoney.src
+      },
       {
         date: "JULY 11",
         title: "Speaker at \"More Than an Angpao: Blessed to Be a Blessing\" — CCF FilChi Davao",

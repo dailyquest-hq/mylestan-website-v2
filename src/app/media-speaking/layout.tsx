@@ -201,6 +201,14 @@ const events = [
     url: "https://www.facebook.com/share/p/18M2HAiAgx/",
     description: "A special Bible study with CCF FilChi Davao on blessing, biblical boundaries, generosity, and faithful stewardship — Myles shares his personal journey of learning to handle money, opportunities, and influence according to biblical principles.",
   }),
+  eventSchema({
+    name: "Speaker at 'Know Yourself, Know Your Money' — Rotary Club of Manila",
+    startDate: "2026-08-29T14:00:00+08:00",
+    location: "Zero Ten Park, Makati City, Philippines",
+    isOnline: false,
+    url: "https://www.rivervalleyirregulars.com",
+    description: "A Rotary Youth & Vocational Service initiative by River Valley Irregulars, the Rotary Club of Manila, Myles Tan Ministries, and the Rotaract Club of Manila — a two-part workshop on understanding your personality, money habits, and financial future. Part 1 covers DISC personality, leadership, communication, self-awareness, and S.M.A.R.T. goal-setting; Part 2 covers money personality, budgeting, emergency funds, cash flow, generational wealth, responsible investing, market basics, and an introduction to cryptocurrency.",
+  }),
 ];
 
 const breadcrumb = breadcrumbSchema([
