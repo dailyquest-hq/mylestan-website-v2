@@ -11,7 +11,7 @@ export const personSchema = {
   "alternateName": ["Myles Tan", "Myles Y. Tan"],
   "honorificSuffix": "RFP, CTA",
   "gender": "Male",
-  "description": "Singapore-based Christian entrepreneur, cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and public speaker. Chief Operating Officer of ZFT Trading Republic.",
+  "description": "Singapore-based Christian entrepreneur, cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and public speaker. Chief Operating Officer of Ilyon Industrial Corporation and former Chief Operating Officer of ZFT Trading Republic.",
   "url": "https://mylesyeotan.com",
   "mainEntityOfPage": "https://mylesyeotan.com/bio",
   "image": "https://mylesyeotan.com/og-image.jpg",
@@ -29,7 +29,7 @@ export const personSchema = {
   "jobTitle": "Chief Operating Officer, Financial Planner & Public Speaker",
   "worksFor": {
     "@type": "Organization",
-    "name": "ZFT Trading Republic"
+    "name": "Ilyon Industrial Corporation"
   },
   "knowsAbout": [
     "Cryptocurrency Trading",

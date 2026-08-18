@@ -9,7 +9,7 @@ const breadcrumbStructuredData = breadcrumbSchema([
 export const metadata: Metadata = {
   title: 'Myles Tan — Full Biography & Profile | Myles Yeo Tan',
   description:
-    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Filipino World Travelers Affiliate (7 continents, 69 countries), Christian entrepreneur, and public speaker. Chief Operating Officer of ZFT Trading Republic.',
+    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Filipino World Travelers Affiliate (7 continents, 69 countries), Christian entrepreneur, and public speaker. Chief Operating Officer of Ilyon Industrial Corporation and former Chief Operating Officer of ZFT Trading Republic.',
   alternates: { canonical: 'https://mylesyeotan.com/bio' },
   openGraph: {
     title: 'Myles Tan — Full Biography',
@@ -35,8 +35,9 @@ export default function BioPage() {
         <h2 className="font-darker font-semibold text-2xl text-black mb-4">Who is Myles Tan?</h2>
         <p className="font-inter text-[#282828] text-base leading-relaxed mb-4">
           Myles Yeo Tan is a Singapore-based Christian entrepreneur, cryptocurrency trader, certified
-          financial planner, and public speaker. He serves as Chief Operating Officer of ZFT Trading
-          Republic, where he leads market analysis and trading education for retail investors across
+          financial planner, and public speaker. He serves as Chief Operating Officer of Ilyon
+          Industrial Corporation. He previously served as Chief Operating Officer of ZFT Trading
+          Republic, where he led market analysis and trading education for retail investors across
           Southeast Asia and internationally.
         </p>
         <p className="font-inter text-[#282828] text-base leading-relaxed mb-4">
@@ -61,7 +62,8 @@ export default function BioPage() {
           <li>Registered Financial Planner (RFP)</li>
           <li>Certified Technical Analyst (CTA)</li>
           <li>Lean Six Sigma White Belt &amp; Yellow Belt Certified (2026)</li>
-          <li>Chief Operating Officer — ZFT Trading Republic</li>
+          <li>Chief Operating Officer — Ilyon Industrial Corporation</li>
+          <li>Former Chief Operating Officer — ZFT Trading Republic</li>
           <li>Founder — Myles Tan Ministries</li>
           <li>Rotary Club of Manila — Member (inducted April 2026)</li>
           <li>Filipino World Travelers (FWT) — Affiliate (May 2026); explored all 7 continents and 69 countries</li>

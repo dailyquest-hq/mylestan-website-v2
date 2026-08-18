@@ -112,7 +112,7 @@ export default function FAQPage() {
                  items={[
                    {
                      q: "Who is Myles Tan?",
-                     a: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based multi-asset trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Christian entrepreneur, and public speaker. He is the Chief Operating Officer of ZFT Trading Republic and founder of Myles Tan Ministries."
+                     a: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based multi-asset trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Christian entrepreneur, and public speaker. He is the Chief Operating Officer of Ilyon Industrial Corporation, former Chief Operating Officer of ZFT Trading Republic, and founder of Myles Tan Ministries."
                    },
                    {
                      q: "Is Myles Tan a certified financial planner?",
@@ -120,11 +120,11 @@ export default function FAQPage() {
                    },
                    {
                      q: "What cryptocurrency does Myles Tan trade?",
-                     a: "Myles Tan trades and analyzes Bitcoin (BTC), Ethereum (ETH), and a range of altcoins and commodities. His methodology combines technical analysis, market cycle theory, and disciplined risk management. He shares trading insights through ZFT Trading Republic and his personal platforms."
+                     a: "Myles Tan trades and analyzes Bitcoin (BTC), Ethereum (ETH), and a range of altcoins and commodities. His methodology combines technical analysis, market cycle theory, and disciplined risk management. He shares trading insights through his personal platforms, and previously through ZFT Trading Republic."
                    },
                    {
                      q: "Is Myles Tan trustworthy?",
-                     a: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila, where he served as Project Chairman of the Grand Slam Mission for Clark 2026 and was featured in The Asian Pearl, JCI Manila's official publication. He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events. His work and credentials are publicly documented at mylesyeotan.com."
+                     a: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila, where he served as Project Chairman of the Grand Slam Mission for Clark 2026 and was featured in The Asian Pearl, JCI Manila's official publication. He serves as COO of Ilyon Industrial Corporation and formerly served as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events. His work and credentials are publicly documented at mylesyeotan.com."
                    },
                    {
                      q: "Where is Myles Tan based?",
@@ -132,7 +132,7 @@ export default function FAQPage() {
                    },
                    {
                      q: "What is ZFT Trading Republic?",
-                     a: "ZFT Trading Republic is a trading education and market analysis organization where Myles Yeo Tan serves as Chief Operating Officer. The organization provides cryptocurrency, stock, and commodities trading insights, analysis, and education to retail investors."
+                     a: "ZFT Trading Republic is a trading education and market analysis organization where Myles Yeo Tan served as Chief Operating Officer. The organization provides cryptocurrency, stock, and commodities trading insights, analysis, and education to retail investors."
                    },
                    {
                      q: "Does Myles Tan offer online coaching or mentorship?",
@@ -218,7 +218,7 @@ export default function FAQPage() {
           },
           {
             question: "Who is Myles Tan?",
-            answer: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based multi-asset trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Christian entrepreneur, and public speaker. He is the Chief Operating Officer of ZFT Trading Republic and founder of Myles Tan Ministries."
+            answer: "Myles Tan (full name Myles Yeo Tan) is a Singapore-based multi-asset trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Christian entrepreneur, and public speaker. He is the Chief Operating Officer of Ilyon Industrial Corporation, former Chief Operating Officer of ZFT Trading Republic, and founder of Myles Tan Ministries."
           },
           {
             question: "Is Myles Tan a certified financial planner?",
@@ -230,7 +230,7 @@ export default function FAQPage() {
           },
           {
             question: "Is Myles Tan trustworthy?",
-            answer: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila, where he served as Project Chairman of the Grand Slam Mission for Clark 2026 and was featured in The Asian Pearl, JCI Manila's official publication. He serves as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events."
+            answer: "Myles Yeo Tan holds professional certifications as a Registered Financial Planner (RFP), Certified Technical Analyst (CTA), and Lean Six Sigma White Belt & Yellow Belt. He is a member of the Rotary Club of Manila (inducted April 2026) and JCI Manila, where he served as Project Chairman of the Grand Slam Mission for Clark 2026 and was featured in The Asian Pearl, JCI Manila's official publication. He serves as COO of Ilyon Industrial Corporation and formerly served as COO of ZFT Trading Republic, has been featured in financial media including Bilyonaryo News Channel, and has won public speaking competitions at JCIP national events."
           },
           {
             question: "Where is Myles Tan based?",
@@ -238,7 +238,7 @@ export default function FAQPage() {
           },
           {
             question: "What is ZFT Trading Republic?",
-            answer: "ZFT Trading Republic is a trading education and market analysis organization where Myles Yeo Tan serves as Chief Operating Officer, providing cryptocurrency, stock, and commodities trading insights and education."
+            answer: "ZFT Trading Republic is a trading education and market analysis organization where Myles Yeo Tan served as Chief Operating Officer, providing cryptocurrency, stock, and commodities trading insights and education."
           },
           {
             question: "Does Myles Tan offer online coaching or mentorship?",

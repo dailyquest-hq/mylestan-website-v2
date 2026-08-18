@@ -9,10 +9,11 @@ const person = {
   honorificSuffix: 'RFP, CTA',
   gender: 'Male',
   description:
-    'Singapore-based Christian entrepreneur, multi-asset trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, and public speaker. Chief Operating Officer of ZFT Trading Republic.',
+    'Singapore-based Christian entrepreneur, multi-asset trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, and public speaker. Chief Operating Officer of Ilyon Industrial Corporation and former Chief Operating Officer of ZFT Trading Republic.',
   location: 'Singapore',
   languages: ['English', 'Filipino'],
-  role: 'Chief Operating Officer, ZFT Trading Republic',
+  role: 'Chief Operating Officer, Ilyon Industrial Corporation',
+  formerRole: 'Chief Operating Officer, ZFT Trading Republic',
   credentials: [
     'Registered Financial Planner (RFP)',
     'Certified Technical Analyst (CTA)',
