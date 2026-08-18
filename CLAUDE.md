@@ -48,9 +48,35 @@ Conventions that matter:
   (`2026-08-29T14:00:00+08:00`) when the exact start time is known, bare date otherwise.
 - Blog posts, when Myles asks for one, are authored in `src/app/blogs/posts.tsx` (rendered by
   `src/app/blogs/[slug]/page.tsx`, listed by `src/app/blogs/page.tsx`) — see `aa01316`.
-- A **role/title or affiliation change** is a wider batch than a speaking gig — it also touches
-  `src/lib/schemas.ts`, `src/app/api/person/route.ts`, `src/app/page.tsx`, `bio`, and `faqs`.
-  See `4f404c9` for that shape. A one-off talk does NOT need those files.
+- A **role/title or affiliation change** is a wider batch than a speaking gig — see the
+  identity-surface checklist below. A one-off talk does NOT need those files.
+
+## Identity & credential changes — the full surface list
+
+Job title, employer, certification, membership: these appear on **seven** surfaces, four of
+which are invisible to normal browsing and feed Google's knowledge panel and AI crawlers.
+Missing them is the standard failure here (it happened on the 2026-08-19 Ilyon change —
+the first pass caught only three of seven).
+
+| # | File | Why it matters |
+|---|---|---|
+| 1 | `src/lib/schemas.ts` | Person `worksFor` **and** the `description` field just above it — two separate spots, easy to fix one and miss the other |
+| 2 | `src/app/api/person/route.ts` | `description`, `role`, `formerRole`, `organization` |
+| 3 | `src/app/bio/page.tsx` | page `metadata.description`, the intro paragraph, and the Credentials & Roles `<li>` list |
+| 4 | `src/app/faqs/page.tsx` | answers appear **twice** — the visible accordion and the FAQPage schema below it. `replace_all` is usually right |
+| 5 | `public/llms.txt` | the LLM-discoverability file — highest-impact surface for AI search |
+| 6 | `public/ai.txt` | `Role:` / `Former role:` lines |
+| 7 | `public/.well-known/ai-plugin.json` | `description_for_model` (validate JSON after editing) |
+
+**Always finish with this sweep** — it is what catches the stragglers:
+
+```bash
+grep -rn "<old value>" src/ public/ | grep -vi "former\|previously\|served as"
+```
+
+Everything it returns should be a **dated historical record** (a past appointment, a video
+title, a timeline entry). Those must stay — rewriting them falsifies the history. Anything
+phrased in the present tense needs fixing.
 - Curly quotes (`“ ”`) inside JSX string props, escaped `\"` inside the timeline's TS strings.
 
 ## Verify before proposing the commit

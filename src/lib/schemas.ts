@@ -29,7 +29,8 @@ export const personSchema = {
   "jobTitle": "Chief Operating Officer, Financial Planner & Public Speaker",
   "worksFor": {
     "@type": "Organization",
-    "name": "Ilyon Industrial Corporation"
+    "name": "Ilyon Industrial Corporation",
+    "description": "Philippine importer and distribution company supplying industrial raw materials and chemicals to over 200 industrial companies nationwide."
   },
   "knowsAbout": [
     "Cryptocurrency Trading",

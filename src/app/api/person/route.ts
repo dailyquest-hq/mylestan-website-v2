@@ -14,6 +14,11 @@ const person = {
   languages: ['English', 'Filipino'],
   role: 'Chief Operating Officer, Ilyon Industrial Corporation',
   formerRole: 'Chief Operating Officer, ZFT Trading Republic',
+  organization: {
+    name: 'Ilyon Industrial Corporation',
+    description:
+      'Philippine importer and distribution company with over 30 years of expertise, supplying industrial raw materials and chemicals to more than 200 Philippine industrial companies nationwide across construction, paint, cosmetics, soap and detergents, food and beverages, pulp and paper, salts, pharmaceuticals, rubber, and steel.',
+  },
   credentials: [
     'Registered Financial Planner (RFP)',
     'Certified Technical Analyst (CTA)',

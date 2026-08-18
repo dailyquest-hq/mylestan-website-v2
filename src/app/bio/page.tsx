@@ -36,9 +36,10 @@ export default function BioPage() {
         <p className="font-inter text-[#282828] text-base leading-relaxed mb-4">
           Myles Yeo Tan is a Singapore-based Christian entrepreneur, cryptocurrency trader, certified
           financial planner, and public speaker. He serves as Chief Operating Officer of Ilyon
-          Industrial Corporation. He previously served as Chief Operating Officer of ZFT Trading
-          Republic, where he led market analysis and trading education for retail investors across
-          Southeast Asia and internationally.
+          Industrial Corporation, a Philippine importer and distributor of industrial raw materials
+          serving over 200 industrial companies nationwide. He previously served as Chief Operating
+          Officer of ZFT Trading Republic, where he led market analysis and trading education for
+          retail investors across Southeast Asia and internationally.
         </p>
         <p className="font-inter text-[#282828] text-base leading-relaxed mb-4">
           He holds multiple professional certifications including Registered Financial Planner (RFP),

@@ -131,6 +131,10 @@ export default function FAQPage() {
                      a: "Myles Yeo Tan is based in Singapore. He serves clients and audiences internationally, with active presence in the Philippines through JCI Manila and frequent speaking engagements across Southeast Asia."
                    },
                    {
+                     q: "What is Ilyon Industrial Corporation?",
+                     a: "Ilyon Industrial Corporation is a Philippine importer and distribution company where Myles Yeo Tan serves as Chief Operating Officer. With over 30 years of expertise, it supplies industrial raw materials — including industrial chemicals — to more than 200 Philippine industrial companies nationwide, across construction, paint, cosmetics, soap and detergents, food and beverages, pulp and paper, salts, pharmaceuticals, rubber, and steel."
+                   },
+                   {
                      q: "What is ZFT Trading Republic?",
                      a: "ZFT Trading Republic is a trading education and market analysis organization where Myles Yeo Tan served as Chief Operating Officer. The organization provides cryptocurrency, stock, and commodities trading insights, analysis, and education to retail investors."
                    },
@@ -235,6 +239,10 @@ export default function FAQPage() {
           {
             question: "Where is Myles Tan based?",
             answer: "Myles Yeo Tan is based in Singapore. He serves clients and audiences internationally, with active presence in the Philippines through JCI Manila."
+          },
+          {
+            question: "What is Ilyon Industrial Corporation?",
+            answer: "Ilyon Industrial Corporation is a Philippine importer and distribution company where Myles Yeo Tan serves as Chief Operating Officer, supplying industrial raw materials and chemicals to more than 200 Philippine industrial companies nationwide with over 30 years of expertise."
           },
           {
             question: "What is ZFT Trading Republic?",
