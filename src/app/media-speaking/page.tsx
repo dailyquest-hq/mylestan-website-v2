@@ -134,10 +134,10 @@ export default function MediaSpeakingPage() {
                <VideoCard
                   image={imgCcfDavaoAngpao}
                   title="More Than an Angpao: Blessed to Be a Blessing — CCF FilChi Davao"
-                  type="UPCOMING TALK"
+                  type="TALK RECAP"
                   duration="JUL 11 · 5:30 PM"
-                  url="https://forms.gle/hVCSvV8eEbU5cwgV6"
-                  description="A special Bible study at the CCF Davao Center on blessing, biblical boundaries, generosity, and faithful stewardship — what Scripture truly teaches about wealth and Kingdom impact. Limited seats — tap to register."
+                  url="https://www.facebook.com/share/p/18M2HAiAgx/"
+                  description="A special Bible study at the CCF Davao Center on blessing, biblical boundaries, generosity, and faithful stewardship — what Scripture truly teaches about wealth and Kingdom impact."
                />
                <VideoCard
                   image={imgAlphaIntel}
