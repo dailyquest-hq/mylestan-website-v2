@@ -129,7 +129,7 @@ export default function MediaSpeakingPage() {
                   type="UPCOMING TALK"
                   duration="AUG 29 · 2:00 PM"
                   url="https://forms.gle/P1V1UYE8hi7QCGZs5"
-                  description="A two-part Rotary Youth & Vocational Service workshop at Zero Ten Park, Makati — Part 1 on DISC personality, leadership, communication and self-awareness; Part 2 on money habits, budgeting, responsible investing, market basics and cryptocurrency. Tap to register."
+                  description="'Your Voice Matters' workshop — a two-part Rotary Youth & Vocational Service event at Zero Ten Park, Makati — Part 1 on DISC personality, leadership, communication and self-awareness; Part 2 on money habits, budgeting, responsible investing, market basics and cryptocurrency. Tap to register."
                />
                <VideoCard
                   image={imgCcfDavaoAngpao}

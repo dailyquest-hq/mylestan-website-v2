@@ -52,7 +52,7 @@ const timelineData: YearData[] = [
       {
         date: "AUGUST 29",
         title: "Resource Speaker at \"Know Yourself, Know Your Money\" — Rotary Club of Manila",
-        description: "Invited by River Valley Irregulars, the Rotary Club of Manila, and the Rotaract Club of Manila — with Myles Tan Ministries — to lead a two-part Youth & Vocational Service workshop at Zero Ten Park, Makati. Part 1 covers DISC personality, leadership, communication and self-awareness; Part 2 covers money habits, budgeting, responsible investing, market basics and cryptocurrency.",
+        description: "Invited by River Valley Irregulars, the Rotary Club of Manila, and the Rotaract Club of Manila — with Myles Tan Ministries — to lead \"Your Voice Matters,\" a two-part Youth & Vocational Service workshop at Zero Ten Park, Makati. Part 1 covers DISC personality, leadership, communication and self-awareness; Part 2 covers money habits, budgeting, responsible investing, market basics and cryptocurrency.",
         url: "https://www.rivervalleyirregulars.com",
         image: imgKnowYourMoney.src
       },
