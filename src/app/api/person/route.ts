@@ -37,6 +37,7 @@ const person = {
     '1st Runner-Up — JCIP National Convention Public Speaking (2019)',
     'Icon of Play — YGG Play Summit 2025',
     'Featured in The Asian Pearl (JCI Manila official publication) as Project Chairman, Grand Slam Mission for Clark 2026',
+    'Top 12 Winner — 2026 Filipino World Travelers (FWT) Travel Photo Contest',
   ],
   services: [
     'Crypto, Stocks & Commodities Trading Analysis',

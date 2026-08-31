@@ -17,6 +17,7 @@ import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
 import imgAlphaIntel from "@/assets/media-speaking/alpha-intel-us-stocks-advisor-june-2026.jpg";
 import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
 import imgKnowYourMoney from "@/assets/media-speaking/know-yourself-know-your-money-august-2026.jpg";
+import imgFwtPhotoContest from "@/assets/media-speaking/fwt-travel-photo-contest-august-2026.jpg";
 
 export default function MediaSpeakingPage() {
   return (
@@ -70,28 +71,28 @@ export default function MediaSpeakingPage() {
                </div>
                <div className="flex items-center gap-3 pt-6 border-t border-white/10">
                   <Globe size={20} className="text-[#ed5128]" />
-                  <span className="font-poppins text-sm uppercase tracking-wider text-white/80">Filipino World Travelers Affiliate · May 2026</span>
+                  <span className="font-poppins text-sm uppercase tracking-wider text-white/80">FWT Travel Photo Contest 2026 · Top 12 Winner</span>
                </div>
             </div>
             <div className="w-full lg:w-1/2 flex flex-col gap-6 justify-center">
                <SectionLabel color="black">latest recognition</SectionLabel>
                <h2 className="font-darker font-semibold text-4xl md:text-[48px] leading-[0.95] text-black">
-                  Named FWT Affiliate, Having Explored All 7 Continents and 69 Countries
+                  Named Top 12 Winner in the 2026 FWT Travel Photo Contest
                </h2>
                <p className="font-poppins text-[#575756] text-base md:text-lg leading-relaxed">
-                  Myles Tan has officially joined the ranks of the Filipino World Travelers (FWT) as a recognized Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration, having visited a minimum of 10 countries.
+                  Myles Tan has been named one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest, recognized for a photograph taken in Antarctica. The winning image captures a quiet moment: a lone figure in bright orange, seated on weathered rock, looking out over ice floes and snow-capped peaks — a traveler at the edge of the world.
                </p>
                <p className="font-poppins text-[#575756] text-base md:text-lg leading-relaxed">
-                  For Myles, that bar is far exceeded. Having set foot in 69 countries across all 7 continents, his travels reflect not just a passion for discovery but a worldview shaped by lived experience across cultures, geographies, and communities — bringing to FWT the perspective of a purposeful, intentional global explorer.
+                  The recognition adds to a travel record spanning 69 countries across all 7 continents, and follows his May 2026 recognition as an FWT Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. The award reflects more than a single photograph: it marks a body of work built one continent, one country, and one story at a time.
                </p>
                <Link
-                  href="https://filipinoworldtravelers.com/affiliates/list"
+                  href="https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 self-start"
                >
                   <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none uppercase h-12 px-8 inline-flex items-center gap-2">
-                     View FWT Recognition <ArrowUpRight size={16} />
+                     View the 2026 Winners <ArrowUpRight size={16} />
                   </Button>
                </Link>
             </div>
@@ -124,12 +125,20 @@ export default function MediaSpeakingPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                <VideoCard
+                  image={imgFwtPhotoContest}
+                  title="Named Top 12 Winner — 2026 FWT Travel Photo Contest"
+                  type="AWARD"
+                  duration="AUG 2026"
+                  url="https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners"
+                  description="Named one of the Top 12 Winners of the 2026 Filipino World Travelers Travel Photo Contest for a photograph taken in Antarctica — a lone figure in bright orange looking out over ice floes and snow-capped peaks, at the edge of the world."
+               />
+               <VideoCard
                   image={imgKnowYourMoney}
                   title="Know Yourself, Know Your Money — Rotary Club of Manila"
-                  type="UPCOMING TALK"
+                  type="TALK RECAP"
                   duration="AUG 29 · 2:00 PM"
-                  url="https://forms.gle/P1V1UYE8hi7QCGZs5"
-                  description="'Your Voice Matters' workshop — a two-part Rotary Youth & Vocational Service event at Zero Ten Park, Makati — Part 1 on DISC personality, leadership, communication and self-awareness; Part 2 on money habits, budgeting, responsible investing, market basics and cryptocurrency. Tap to register."
+                  url="https://www.rivervalleyirregulars.com"
+                  description="'Your Voice Matters' workshop — a two-part Rotary Youth & Vocational Service event at Zero Ten Park, Makati — Part 1 on DISC personality, leadership, communication and self-awareness; Part 2 on money habits, budgeting, responsible investing, market basics and cryptocurrency."
                />
                <VideoCard
                   image={imgCcfDavaoAngpao}
@@ -368,6 +377,13 @@ export default function MediaSpeakingPage() {
                   location="Zero Ten Park, Makati City"
                   role="Resource Speaker"
                   url="https://www.rivervalleyirregulars.com"
+               />
+               <EventRow
+                  date="AUG 2026"
+                  title="Named Top 12 Winner — 2026 FWT Travel Photo Contest"
+                  location="Global · Filipino World Travelers"
+                  role="Top 12 Winner"
+                  url="https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners"
                />
             </div>
          </div>

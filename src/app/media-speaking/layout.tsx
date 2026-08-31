@@ -209,6 +209,14 @@ const events = [
     url: "https://www.rivervalleyirregulars.com",
     description: "'Your Voice Matters' — a Rotary Youth & Vocational Service initiative by River Valley Irregulars, the Rotary Club of Manila, Myles Tan Ministries, and the Rotaract Club of Manila — a two-part workshop on understanding your personality, money habits, and financial future. Part 1 covers DISC personality, leadership, communication, self-awareness, and S.M.A.R.T. goal-setting; Part 2 covers money personality, budgeting, emergency funds, cash flow, generational wealth, responsible investing, market basics, and an introduction to cryptocurrency.",
   }),
+  eventSchema({
+    name: "Named Top 12 Winner — 2026 FWT Travel Photo Contest",
+    startDate: "2026-08-29",
+    location: "Global · Filipino World Travelers",
+    isOnline: true,
+    url: "https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners",
+    description: "Myles Yeo Tan was named one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest, recognized for a photograph taken in Antarctica — a lone figure in bright orange seated on weathered rock, looking out over ice floes and snow-capped peaks. The recognition adds to a travel record spanning 69 countries across all 7 continents.",
+  }),
 ];
 
 const breadcrumb = breadcrumbSchema([

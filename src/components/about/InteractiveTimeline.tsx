@@ -23,6 +23,7 @@ import imgAlphaIntel from "@/assets/media-speaking/alpha-intel-us-stocks-advisor
 import imgKnowYourMoney from "@/assets/media-speaking/know-yourself-know-your-money-august-2026.jpg";
 import imgJciFoundationPin from "@/assets/blogs/jci-foundation-pin-june-2026.jpg";
 import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
+import imgFwtPhotoContestCert from "@/assets/about/fwt-photo-contest-certificate-august-2026.jpg";
 import imgYggPlaySummit from "@/assets/about/ygg-play-summit-2025.jpg";
 import imgPreachersAcademy from "@/assets/about/preachers-academy-certificate.jpg";
 import imgCsbBibleSchool from "@/assets/about/csb-bible-school-certificate.jpg";
@@ -49,6 +50,13 @@ const timelineData: YearData[] = [
   {
     year: "2026",
     events: [
+      {
+        date: "AUGUST 29",
+        title: "Named Top 12 Winner in the 2026 FWT Travel Photo Contest",
+        description: "Named one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest, recognized for a photograph taken in Antarctica — a lone figure in bright orange, seated on weathered rock, looking out over ice floes and snow-capped peaks. The award adds to a travel record spanning 69 countries across all 7 continents, marking a body of work built one continent, one country, and one story at a time.",
+        url: "https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners",
+        image: imgFwtPhotoContestCert.src
+      },
       {
         date: "AUGUST 29",
         title: "Resource Speaker at \"Know Yourself, Know Your Money\" — Rotary Club of Manila",
