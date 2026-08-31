@@ -9,7 +9,7 @@ const breadcrumbStructuredData = breadcrumbSchema([
 export const metadata: Metadata = {
   title: 'Myles Tan — Full Biography & Profile | Myles Yeo Tan',
   description:
-    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Filipino World Travelers Affiliate (7 continents, 69 countries), Christian entrepreneur, and public speaker. Chief Operating Officer of Ilyon Industrial Corporation and former Chief Operating Officer of ZFT Trading Republic.',
+    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Filipino World Travelers Affiliate and 2026 FWT Travel Photo Contest Top 12 Winner (7 continents, 69 countries), Christian entrepreneur, and public speaker. Chief Operating Officer of Ilyon Industrial Corporation and former Chief Operating Officer of ZFT Trading Republic.',
   alternates: { canonical: 'https://mylesyeotan.com/bio' },
   openGraph: {
     title: 'Myles Tan — Full Biography',
@@ -47,7 +47,9 @@ export default function BioPage() {
           approach integrates rigorous financial analysis with faith-based wisdom, helping individuals
           and businesses make confident, values-aligned financial decisions. He is also a member of
           the Rotary Club of Manila—the first Rotary club in Asia—and a recognized Affiliate of the
-          Filipino World Travelers (FWT), having explored all 7 continents and 69 countries.
+          Filipino World Travelers (FWT), having explored all 7 continents and 69 countries. In
+          August 2026 he was named a Top 12 Winner in the 2026 FWT Travel Photo Contest for a
+          photograph taken in Antarctica.
         </p>
         <p className="font-inter text-[#282828] text-base leading-relaxed">
           Myles is a sought-after speaker on cryptocurrency trading, financial stewardship, Christian

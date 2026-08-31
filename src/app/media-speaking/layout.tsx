@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { videoSchema, breadcrumbSchema, eventSchema } from "@/lib/schemas";
+import imgFwtPhotoContest from "@/assets/media-speaking/fwt-travel-photo-contest-august-2026.jpg";
 
 export const metadata: Metadata = {
   title: "Myles Tan Media Features, Speaking Engagements & Awards",
@@ -209,15 +210,25 @@ const events = [
     url: "https://www.rivervalleyirregulars.com",
     description: "'Your Voice Matters' — a Rotary Youth & Vocational Service initiative by River Valley Irregulars, the Rotary Club of Manila, Myles Tan Ministries, and the Rotaract Club of Manila — a two-part workshop on understanding your personality, money habits, and financial future. Part 1 covers DISC personality, leadership, communication, self-awareness, and S.M.A.R.T. goal-setting; Part 2 covers money personality, budgeting, emergency funds, cash flow, generational wealth, responsible investing, market basics, and an introduction to cryptocurrency.",
   }),
-  eventSchema({
-    name: "Named Top 12 Winner — 2026 FWT Travel Photo Contest",
-    startDate: "2026-08-29",
-    location: "Global · Filipino World Travelers",
-    isOnline: true,
-    url: "https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners",
-    description: "Myles Yeo Tan was named one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest, recognized for a photograph taken in Antarctica — a lone figure in bright orange seated on weathered rock, looking out over ice floes and snow-capped peaks. The recognition adds to a travel record spanning 69 countries across all 7 continents.",
-  }),
 ];
+
+// The 2026 FWT Travel Photo Contest win is an award, not an event — modelling it as an
+// Event would assert an organizer, a performer, and ticket offers that do not exist.
+// Person.award (lib/schemas.ts) carries the recognition; this node describes the work itself.
+const awardedPhotograph = {
+  "@context": "https://schema.org",
+  "@type": "Photograph",
+  "@id": "https://mylesyeotan.com/media-speaking#fwt-2026-antarctica",
+  "name": "Antarctica — Top 12 Winner, 2026 FWT Travel Photo Contest",
+  "creator": { "@id": "https://mylesyeotan.com/#person" },
+  "copyrightHolder": { "@id": "https://mylesyeotan.com/#person" },
+  "award": "Top 12 Winner — 2026 Filipino World Travelers (FWT) Travel Photo Contest",
+  "contentLocation": { "@type": "Place", "name": "Antarctica" },
+  "image": `https://mylesyeotan.com${imgFwtPhotoContest.src}`,
+  "url": "https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners",
+  "description":
+    "The photograph that made Myles Yeo Tan one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest — a lone figure in bright orange seated on weathered rock in Antarctica, looking out over ice floes and snow-capped peaks.",
+};
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://mylesyeotan.com" },
@@ -226,7 +237,7 @@ const breadcrumb = breadcrumbSchema([
 
 const graph = {
   "@context": "https://schema.org",
-  "@graph": [breadcrumb, ...videos, ...events],
+  "@graph": [breadcrumb, ...videos, ...events, awardedPhotograph],
 };
 
 export default function MediaSpeakingLayout({
