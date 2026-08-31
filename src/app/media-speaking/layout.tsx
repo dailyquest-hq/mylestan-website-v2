@@ -134,20 +134,6 @@ const events = [
     description: "Recognized as Icon of Play at YGG Play Summit 2025, featured speaker on Web3, gaming, and finance.",
   }),
   eventSchema({
-    name: "Lean Six Sigma White Belt Certification",
-    startDate: "2026-03-01",
-    location: "Virtual Program",
-    isOnline: true,
-    description: "Completed foundational Lean Six Sigma White Belt training under Prof. Dr. Marcelo Machado Fernandes — covering process improvement, waste reduction, and operational excellence.",
-  }),
-  eventSchema({
-    name: "Lean Six Sigma Yellow Belt Certification",
-    startDate: "2026-03-01",
-    location: "Virtual Program",
-    isOnline: true,
-    description: "Completed advanced 20-hour Lean Six Sigma Yellow Belt training in process improvement, data-driven decision-making, and scaling operations.",
-  }),
-  eventSchema({
     name: "Inducted into Rotary Club of Manila",
     startDate: "2026-04-16",
     location: "Manila Polo Club, Makati City, Philippines",
@@ -169,22 +155,6 @@ const events = [
     isOnline: false,
     url: "https://mylesyeotan.com/blogs/jci-foundation-pin-phil-pugsley-patron-2026",
     description: "Myles Yeo Tan received the JCI Foundation Pin and the Phil Pugsley Patron recognition at age 39 — presented by 2026 JCI World President Alejandra Castillo — as a commitment to sowing into the next generation of leaders ahead of JCI World Congress 2026 in Clark, Pampanga.",
-  }),
-  eventSchema({
-    name: "Featured in The Asian Pearl — Grand Slam Mission for Clark 2026",
-    startDate: "2026-05-01",
-    location: "Philippines / International",
-    isOnline: false,
-    url: "https://theasianpearl.com/project-chairman-myles-tan-and-the-grand-slam-mission-for-clark-2026/",
-    description: "Featured in The Asian Pearl, JCI Manila's official publication, as Project Chairman of the Grand Slam Mission for Clark 2026 — leading a global campaign across three continents (Malaga, Antigua, and Abidjan) to rally international support for the Philippines' JCI World Congress 2026 bid.",
-  }),
-  eventSchema({
-    name: "Welcomed as US Stocks Advisor at Alpha Intel",
-    startDate: "2026-06-16",
-    location: "Online Community",
-    isOnline: true,
-    url: "https://www.facebook.com/photo?fbid=122168134622956785&set=a.122094931448956785",
-    description: "Alpha Intel welcomed Myles Tan as its US Stocks Advisor — providing insights, research, and guidance to help the community navigate the US stock market with greater confidence.",
   }),
   eventSchema({
     name: "Speaker at 'More Than an Angpao: Blessed to Be a Blessing' — CCF FilChi Davao",

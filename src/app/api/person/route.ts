@@ -33,6 +33,9 @@ const person = {
     'RCManila Foundation, Inc. (RCMFI) — Lifetime Member (September 2026)',
     'JCI Manila (since 2012; Commissioner for Training; AVANTE Training Chair; Project Chairman, Grand Slam Mission for Clark 2026)',
   ],
+  affiliations: [
+    'Alpha Intel — US Stocks Advisor (since June 2026)',
+  ],
   awards: [
     '1st Place — JCIP Area Conference Public Speaking (2019)',
     '1st Runner-Up — JCIP National Convention Public Speaking (2019)',

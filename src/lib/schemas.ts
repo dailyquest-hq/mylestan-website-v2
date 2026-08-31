@@ -69,13 +69,13 @@ export const personSchema = {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Professional Certification",
       "name": "Lean Six Sigma Yellow Belt (2026)",
-      "validFrom": "2026-01-01"
+      "validFrom": "2026-03-01"
     },
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Professional Certification",
       "name": "Lean Six Sigma White Belt (2026)",
-      "validFrom": "2026-01-01"
+      "validFrom": "2026-03-01"
     },
     {
       "@type": "EducationalOccupationalCredential",
@@ -117,6 +117,13 @@ export const personSchema = {
       "name": "Filipino World Travelers (FWT)",
       "url": "https://filipinoworldtravelers.com/affiliates/list",
       "description": "Affiliate — recognized for global exploration across 7 continents and 69 countries (May 2026); Top 12 Winner, 2026 FWT Travel Photo Contest (August 2026)"
+    }
+  ],
+  "affiliation": [
+    {
+      "@type": "Organization",
+      "name": "Alpha Intel",
+      "description": "US Stocks Advisor (since June 2026) — providing market analysis, research, and guidance to help the community navigate the US stock market"
     }
   ],
   "hasOccupation": [
