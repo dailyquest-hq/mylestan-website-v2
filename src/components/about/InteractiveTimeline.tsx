@@ -53,7 +53,7 @@ const timelineData: YearData[] = [
       {
         date: "SEPTEMBER 1",
         title: "Joined the RCManila Foundation as a Lifetime Member",
-        description: "Officially joined the RCManila Foundation, Inc. (RCMFI) as a lifetime member. As an extension of the Rotary Club of Manila, RCMFI sustains the club's community programs, humanitarian advocacies, and service initiatives — creating lasting, meaningful impact where it is needed most. For Myles, true leadership and financial stewardship go hand in hand with community building.",
+        description: "Officially joined the RCManila Foundation, Inc. (RCMFI) as a lifetime member. As an extension of the Rotary Club of Manila, RCMFI sustains the club's community programs, humanitarian advocacies, and service initiatives — creating lasting, meaningful impact where it is needed most. For Myles, true leadership and financial stewardship go hand in hand with community building. He looks forward to working alongside fellow members to advance their shared objectives and continue fostering sustainable growth and service above self.",
         url: "https://www.rotarymanila.org/"
       },
       {
