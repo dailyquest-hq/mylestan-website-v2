@@ -128,6 +128,7 @@ export default function Homepage() {
                 { year: "2026", text: "Lean Six Sigma White Belt & Yellow Belt Certified. Inducted into the Rotary Club of Manila—the first Rotary club in Asia. Invited to speak at the \"Crypto, Stocks, or Gold?\" 2026 market outlook webinar." },
                 { year: "2026", text: "Named Filipino World Travelers (FWT) Affiliate—recognized for global exploration across all 7 continents and 69 countries." },
                 { year: "2026", text: "Named a Top 12 Winner in the 2026 Filipino World Travelers Travel Photo Contest for a photograph taken in Antarctica—capping a travel record built one continent, one country, and one story at a time." },
+                { year: "2026", text: "Joined the RCManila Foundation, Inc. (RCMFI) as a lifetime member—supporting the Rotary Club of Manila's community programs, humanitarian advocacies, and service initiatives." },
                 { year: "2026", text: "Featured in The Asian Pearl (JCI Manila's official publication) as Project Chairman of the Grand Slam Mission for Clark 2026—leading a global campaign across three continents to rally international support for the Philippines' JCI World Congress bid." }
               ].map((item, index) => (
                 <div key={index} className="flex flex-col md:flex-row items-baseline border-t border-black/10 py-10 gap-8 md:gap-24 group hover:bg-gray-50 transition-colors px-4">

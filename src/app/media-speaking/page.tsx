@@ -385,6 +385,13 @@ export default function MediaSpeakingPage() {
                   role="Top 12 Winner"
                   url="https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners"
                />
+               <EventRow
+                  date="SEP 2026"
+                  title="Joined the RCManila Foundation as a Lifetime Member"
+                  location="Rotary Club of Manila · Manila, Philippines"
+                  role="Lifetime Member"
+                  url="https://www.rotarymanila.org/"
+               />
             </div>
          </div>
       </section>

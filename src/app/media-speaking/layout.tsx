@@ -163,14 +163,6 @@ const events = [
     description: "Speaker at the 'Crypto, Stocks, or Gold?' webinar discussing where Filipino traders should position in a peso vs. dollar world — covering peso/dollar trends, crypto, stocks, gold, and global positioning.",
   }),
   eventSchema({
-    name: "Named Filipino World Travelers Affiliate",
-    startDate: "2026-05-01",
-    location: "Philippines",
-    isOnline: false,
-    url: "https://filipinoworldtravelers.com/affiliates/list",
-    description: "Recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have visited a minimum of 10 countries. Myles has set foot in 69 countries across all 7 continents.",
-  }),
-  eventSchema({
     name: "Myles Yeo Tan of JCI Manila Receives the JCI Foundation Pin: A Phil Pugsley Patron Recognized for Faith-Driven Leadership",
     startDate: "2026-06-15",
     location: "Philippines",

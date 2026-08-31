@@ -104,6 +104,12 @@ export const personSchema = {
     },
     {
       "@type": "Organization",
+      "name": "RCManila Foundation, Inc. (RCMFI)",
+      "url": "https://www.rotarymanila.org/",
+      "description": "Lifetime Member (September 2026) — the foundation arm of the Rotary Club of Manila, sustaining its community programs, humanitarian advocacies, and service initiatives"
+    },
+    {
+      "@type": "Organization",
       "name": "JCI (Junior Chamber International) Manila"
     },
     {

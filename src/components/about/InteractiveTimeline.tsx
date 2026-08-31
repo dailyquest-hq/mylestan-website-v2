@@ -51,6 +51,12 @@ const timelineData: YearData[] = [
     year: "2026",
     events: [
       {
+        date: "SEPTEMBER 1",
+        title: "Joined the RCManila Foundation as a Lifetime Member",
+        description: "Invited to join the RCManila Foundation, Inc. (RCMFI) as a lifetime member. As an extension of the Rotary Club of Manila, RCMFI sustains the club's community programs, humanitarian advocacies, and service initiatives — creating lasting, meaningful impact where it is needed most. For Myles, true leadership and financial stewardship go hand in hand with community building.",
+        url: "https://www.rotarymanila.org/"
+      },
+      {
         date: "AUGUST 29",
         title: "Named Top 12 Winner in the 2026 FWT Travel Photo Contest",
         description: "Named one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest, recognized for a photograph taken in Antarctica — a lone figure in bright orange, seated on weathered rock, looking out over ice floes and snow-capped peaks. The award adds to a travel record spanning 69 countries across all 7 continents, marking a body of work built one continent, one country, and one story at a time.",
