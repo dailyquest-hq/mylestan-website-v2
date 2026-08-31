@@ -59,7 +59,7 @@ const timelineData: YearData[] = [
       {
         date: "AUGUST 29",
         title: "Named Top 12 Winner in the 2026 FWT Travel Photo Contest",
-        description: "Named one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest, recognized for a photograph taken in Antarctica — a lone figure in bright orange, seated on weathered rock, looking out over ice floes and snow-capped peaks. The award adds to a travel record spanning 69 countries across all 7 continents, marking a body of work built one continent, one country, and one story at a time.",
+        description: "Named one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest, recognized for a photograph taken in Antarctica — a lone figure in bright orange, seated on weathered rock, looking out over ice floes and snow-capped peaks. The award adds to a travel record spanning more than 69 countries across all 7 continents, marking a body of work built one continent, one country, and one story at a time.",
         url: "https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners",
         image: imgFwtPhotoContestCert.src
       },
@@ -100,7 +100,7 @@ const timelineData: YearData[] = [
       {
         date: "MAY",
         title: "Named Filipino World Travelers Affiliate",
-        description: "Officially recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. Having set foot in 69 countries across all 7 continents, Myles brings to FWT the perspective of a purposeful, intentional global explorer.",
+        description: "Officially recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. Having set foot in more than 69 countries across all 7 continents, Myles brings to FWT the perspective of a purposeful, intentional global explorer.",
         url: "https://filipinoworldtravelers.com/affiliates/list"
       },
       {

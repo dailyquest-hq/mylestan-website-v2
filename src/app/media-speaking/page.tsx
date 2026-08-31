@@ -61,7 +61,7 @@ export default function MediaSpeakingPage() {
             <div className="w-full lg:w-1/2 bg-[#0f100a] text-white p-10 md:p-14 flex flex-col justify-center gap-8 rounded-sm">
                <div className="grid grid-cols-2 gap-6">
                   <div className="flex flex-col gap-1">
-                     <span className="font-darker font-semibold text-[64px] md:text-[88px] leading-none text-[#ed5128]">69</span>
+                     <span className="font-darker font-semibold text-[64px] md:text-[88px] leading-none text-[#ed5128]">69+</span>
                      <span className="font-poppins text-sm uppercase tracking-wider text-white/70">Countries Visited</span>
                   </div>
                   <div className="flex flex-col gap-1">
@@ -83,7 +83,7 @@ export default function MediaSpeakingPage() {
                   Myles Tan has been named one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest, recognized for a photograph taken in Antarctica. The winning image captures a quiet moment: a lone figure in bright orange, seated on weathered rock, looking out over ice floes and snow-capped peaks — a traveler at the edge of the world.
                </p>
                <p className="font-poppins text-[#575756] text-base md:text-lg leading-relaxed">
-                  The recognition adds to a travel record spanning 69 countries across all 7 continents, and follows his May 2026 recognition as an FWT Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. The award reflects more than a single photograph: it marks a body of work built one continent, one country, and one story at a time.
+                  The recognition adds to a travel record spanning more than 69 countries across all 7 continents, and follows his May 2026 recognition as an FWT Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. The award reflects more than a single photograph: it marks a body of work built one continent, one country, and one story at a time.
                </p>
                <Link
                   href="https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners"
