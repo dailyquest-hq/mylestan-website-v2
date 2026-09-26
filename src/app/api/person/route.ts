@@ -31,6 +31,7 @@ const person = {
   memberships: [
     'Rotary Club of Manila (inducted April 2026, first Rotary club in Asia)',
     'RCManila Foundation, Inc. (RCMFI) — Lifetime Member (September 2026)',
+    'Filipino World Travelers (FWT) — Member (September 2026; elevated from Affiliate, May 2026)',
     'JCI Manila (since 2012; Commissioner for Training; AVANTE Training Chair; Project Chairman, Grand Slam Mission for Clark 2026)',
   ],
   affiliations: [

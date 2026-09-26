@@ -24,6 +24,7 @@ import imgKnowYourMoney from "@/assets/media-speaking/know-yourself-know-your-mo
 import imgJciFoundationPin from "@/assets/blogs/jci-foundation-pin-june-2026.jpg";
 import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
 import imgFwtPhotoContestCert from "@/assets/about/fwt-photo-contest-certificate-august-2026.jpg";
+import imgFwtMembershipCert from "@/assets/about/fwt-membership-certificate-september-2026.jpg";
 import imgYggPlaySummit from "@/assets/about/ygg-play-summit-2025.jpg";
 import imgPreachersAcademy from "@/assets/about/preachers-academy-certificate.jpg";
 import imgCsbBibleSchool from "@/assets/about/csb-bible-school-certificate.jpg";
@@ -50,6 +51,13 @@ const timelineData: YearData[] = [
   {
     year: "2026",
     events: [
+      {
+        date: "SEPTEMBER",
+        title: "Welcomed as a Member of Filipino World Travelers",
+        description: "Elevated from Affiliate to Member of Filipino World Travelers (FWT), the global community of Filipino travelers committed to using travel as a force for good. FWT membership is by invitation only, extended to Affiliates who have consistently supported the group's mission and remain active world travelers. The recognition builds on his May 2026 Affiliate status and his Top 12 finish in the 2026 FWT Travel Photo Contest, and reflects a travel record spanning more than 69 countries across all 7 continents.",
+        url: "https://www.facebook.com/share/p/1JGrEQWTCw/",
+        image: imgFwtMembershipCert.src
+      },
       {
         date: "SEPTEMBER 1",
         title: "Joined the RCManila Foundation as a Lifetime Member",

@@ -392,6 +392,13 @@ export default function MediaSpeakingPage() {
                   role="Lifetime Member"
                   url="https://www.rotarymanila.org/"
                />
+               <EventRow
+                  date="SEP 2026"
+                  title="Welcomed as a Member of Filipino World Travelers"
+                  location="Global · Filipino World Travelers"
+                  role="Member"
+                  url="https://www.facebook.com/share/p/1JGrEQWTCw/"
+               />
             </div>
          </div>
       </section>
