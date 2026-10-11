@@ -49,7 +49,11 @@ export default function BioPage() {
           the Rotary Club of Manila—the first Rotary club in Asia—and a Member of the Filipino World
           Travelers (FWT), having explored all 7 continents and more than 69 countries. In August 2026
           he was named a Top 12 Winner in the 2026 FWT Travel Photo Contest for a photograph taken in
-          Antarctica, and in September 2026 he was elevated from Affiliate to Member.
+          Antarctica, in September 2026 he was elevated from Affiliate to Member, and in October 2026
+          he became the 100th FWT member. On October 1, 2026, the Rotary Club of Manila named him STAR
+          Rotarian of the Quarter for the first quarter of Rotary Year 2026–2027, recognizing his
+          contributions to The Rotary Foundation as a Major Donor and his work inspiring the club&rsquo;s
+          Rotaract clubs on youth development and financial literacy.
         </p>
         <p className="font-inter text-[#282828] text-base leading-relaxed">
           Myles is a sought-after speaker on cryptocurrency trading, financial stewardship, Christian
@@ -68,12 +72,13 @@ export default function BioPage() {
           <li>Chief Operating Officer — Ilyon Industrial Corporation (present)</li>
           <li>Former Chief Operating Officer — ZFT Trading Republic</li>
           <li>Founder — Myles Tan Ministries</li>
-          <li>Rotary Club of Manila — Member (inducted April 2026)</li>
+          <li>Rotary Club of Manila — Member (inducted April 2026); STAR Rotarian of the Quarter, Q1 Rotary Year 2026–2027 (October 2026)</li>
           <li>RCManila Foundation, Inc. (RCMFI) — Lifetime Member (September 2026)</li>
-          <li>Filipino World Travelers (FWT) — Member (September 2026); Affiliate (May 2026); Top 12 Winner, 2026 FWT Travel Photo Contest (August 2026); explored all 7 continents and more than 69 countries</li>
+          <li>Filipino World Travelers (FWT) — 100th Member (October 2026); Member (September 2026); Affiliate (May 2026); Top 12 Winner, 2026 FWT Travel Photo Contest (August 2026); explored all 7 continents and more than 69 countries</li>
           <li>JCI Manila Member since 2012; Commissioner for Training; AVANTE Training Chair; Project Chairman, Grand Slam Mission for Clark 2026</li>
           <li>1st Place — JCIP Area Conference Public Speaking (2019)</li>
           <li>1st Runner-Up — JCIP National Convention Public Speaking (2019)</li>
+          <li>STAR Rotarian of the Quarter — Rotary Club of Manila (October 2026)</li>
           <li>CSB Bible School — Systematic Theology &amp; Practical Theology (2021)</li>
           <li>The Preachers&rsquo; Academy — Hermeneutics, Exegesis, Homiletics (2021)</li>
           <li>RZIM Academy — Apologetics Core Module (2020)</li>

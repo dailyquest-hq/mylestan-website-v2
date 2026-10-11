@@ -31,7 +31,7 @@ const person = {
   memberships: [
     'Rotary Club of Manila (inducted April 2026, first Rotary club in Asia)',
     'RCManila Foundation, Inc. (RCMFI) — Lifetime Member (September 2026)',
-    'Filipino World Travelers (FWT) — Member (September 2026; elevated from Affiliate, May 2026)',
+    'Filipino World Travelers (FWT) — 100th Member (October 2026); Member since September 2026, elevated from Affiliate (May 2026)',
     'JCI Manila (since 2012; Commissioner for Training; AVANTE Training Chair; Project Chairman, Grand Slam Mission for Clark 2026)',
   ],
   affiliations: [
@@ -43,6 +43,7 @@ const person = {
     'Icon of Play — YGG Play Summit 2025',
     'Featured in The Asian Pearl (JCI Manila official publication) as Project Chairman, Grand Slam Mission for Clark 2026',
     'Top 12 Winner — 2026 Filipino World Travelers (FWT) Travel Photo Contest',
+    'STAR Rotarian of the Quarter — Rotary Club of Manila (Q1 Rotary Year 2026–2027)',
   ],
   services: [
     'Crypto, Stocks & Commodities Trading Analysis',

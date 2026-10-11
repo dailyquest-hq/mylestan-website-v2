@@ -25,6 +25,7 @@ import imgJciFoundationPin from "@/assets/blogs/jci-foundation-pin-june-2026.jpg
 import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
 import imgFwtPhotoContestCert from "@/assets/about/fwt-photo-contest-certificate-august-2026.jpg";
 import imgFwtMembershipCert from "@/assets/about/fwt-membership-certificate-september-2026.jpg";
+import imgStarRotarianCert from "@/assets/about/star-rotarian-of-the-quarter-certificate-october-2026.jpg";
 import imgYggPlaySummit from "@/assets/about/ygg-play-summit-2025.jpg";
 import imgPreachersAcademy from "@/assets/about/preachers-academy-certificate.jpg";
 import imgCsbBibleSchool from "@/assets/about/csb-bible-school-certificate.jpg";
@@ -51,6 +52,19 @@ const timelineData: YearData[] = [
   {
     year: "2026",
     events: [
+      {
+        date: "OCTOBER",
+        title: "Became the 100th Member of Filipino World Travelers",
+        description: "Named the 100th member of Filipino World Travelers (FWT). Based in Manila and travelling solely on a Philippine passport, Myles has visited 70 countries, reached all seven continents in 2017 and circumnavigated the world in 2026. Although he joined as an Affiliate just days after the FWT 3rd Year Anniversary, he has been active throughout: attending the FWT Manila meet-up in May and the virtual meet-up in August, placing among the 12 winners of the 2026 FWT Travel Photo Contest, and preparing to join the FWT delegation at the JCI World Congress in Clark this November. An investor in Lakbay Museum, he has also voiced strong support for the upcoming launch of the FWT Museum.",
+        url: "https://www.facebook.com/share/p/1GvZia72hb/"
+      },
+      {
+        date: "OCTOBER 1",
+        title: "Named STAR Rotarian of the Quarter — Rotary Club of Manila",
+        description: "Received the STAR Rotarian of the Quarter award for the first quarter of Rotary Year 2026–2027 at the club's 13th Weekly Membership Meeting at Fairmont Hotel Makati, recognizing his contributions to The Rotary Foundation, Youth Service and the Area of Focus on Community Economic Development. The citation honors his support of The Rotary Foundation as a Major Donor, which helped lift the club's standing in the Foundation and the district, and his work inspiring the club's chartered Rotaract clubs on youth development and financial literacy. He was also named among the Major Donors acknowledged at the October District Monthly Meeting.",
+        url: "https://www.rotarymanila.org/",
+        image: imgStarRotarianCert.src
+      },
       {
         date: "SEPTEMBER",
         title: "Welcomed as a Member of Filipino World Travelers",

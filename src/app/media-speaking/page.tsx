@@ -399,6 +399,20 @@ export default function MediaSpeakingPage() {
                   role="Member"
                   url="https://www.facebook.com/share/p/1JGrEQWTCw/"
                />
+               <EventRow
+                  date="OCT 2026"
+                  title="Named STAR Rotarian of the Quarter — Rotary Club of Manila"
+                  location="Fairmont Hotel Makati · Makati City"
+                  role="STAR Rotarian of the Quarter"
+                  url="https://www.rotarymanila.org/"
+               />
+               <EventRow
+                  date="OCT 2026"
+                  title="Became the 100th Member of Filipino World Travelers"
+                  location="Global · Filipino World Travelers"
+                  role="100th Member"
+                  url="https://www.facebook.com/share/p/1GvZia72hb/"
+               />
             </div>
          </div>
       </section>

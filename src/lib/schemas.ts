@@ -116,7 +116,7 @@ export const personSchema = {
       "@type": "Organization",
       "name": "Filipino World Travelers (FWT)",
       "url": "https://filipinoworldtravelers.com/",
-      "description": "Member (September 2026), elevated from Affiliate (May 2026) — recognized for global exploration across 7 continents and more than 69 countries; Top 12 Winner, 2026 FWT Travel Photo Contest (August 2026)"
+      "description": "100th Member (October 2026); Member since September 2026, elevated from Affiliate (May 2026) — recognized for global exploration across 7 continents and more than 69 countries; Top 12 Winner, 2026 FWT Travel Photo Contest (August 2026)"
     }
   ],
   "affiliation": [
@@ -153,7 +153,8 @@ export const personSchema = {
     "1st Runner-Up — JCIP National Convention Public Speaking (2019)",
     "Icon of Play — YGG Play Summit 2025",
     "Featured in The Asian Pearl (JCI Manila official publication) as Project Chairman, Grand Slam Mission for Clark 2026",
-    "Top 12 Winner — 2026 Filipino World Travelers (FWT) Travel Photo Contest"
+    "Top 12 Winner — 2026 Filipino World Travelers (FWT) Travel Photo Contest",
+    "STAR Rotarian of the Quarter — Rotary Club of Manila (Q1 Rotary Year 2026–2027)"
   ],
   "knowsLanguage": ["English", "Filipino"],
   "alumniOf": [
