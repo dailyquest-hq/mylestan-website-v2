@@ -119,16 +119,21 @@ export default async function BlogPostPage({
               {post.excerpt}
             </p>
             <div className="font-poppins text-sm text-[#9f9f9f] mt-2">
-              By <span className="text-white font-semibold">Myles Yeo Tan</span> · Originally posted on{" "}
-              <Link
-                href={post.originalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#ed5128] hover:text-white transition-colors inline-flex items-center gap-1"
-              >
-                {post.originalSource} <ArrowUpRight size={14} />
-              </Link>{" "}
-              · {post.originalDate}
+              By <span className="text-white font-semibold">Myles Yeo Tan</span>
+              {post.originalUrl && (
+                <>
+                  {" "}· Originally posted on{" "}
+                  <Link
+                    href={post.originalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#ed5128] hover:text-white transition-colors inline-flex items-center gap-1"
+                  >
+                    {post.originalSource} <ArrowUpRight size={14} />
+                  </Link>{" "}
+                  · {post.originalDate}
+                </>
+              )}
             </div>
           </div>
         </section>
@@ -166,6 +171,20 @@ export default async function BlogPostPage({
                 </p>
               ))}
             </div>
+
+            {/* Sections */}
+            {post.sections?.map((section) => (
+              <section key={section.heading} className="flex flex-col gap-5 border-l-4 border-[#ed5128] pl-6 md:pl-8">
+                <h2 className="font-darker font-semibold text-3xl md:text-4xl leading-[1.05] text-black">
+                  {section.heading}
+                </h2>
+                {section.paragraphs.map((para, i) => (
+                  <p key={i} className="font-inter text-[#282828] text-lg leading-relaxed">
+                    {para}
+                  </p>
+                ))}
+              </section>
+            ))}
 
             {/* Tips */}
             <div className="flex flex-col gap-12">
@@ -231,7 +250,7 @@ export default async function BlogPostPage({
               </p>
               <Link href={post.cta.url} target="_blank" rel="noopener noreferrer" className="self-start">
                 <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none uppercase h-12 px-8">
-                  Register Now
+                  {post.cta.buttonLabel ?? "Register Now"}
                 </Button>
               </Link>
             </div>
@@ -248,18 +267,20 @@ export default async function BlogPostPage({
                   </span>
                 ))}
               </div>
-              <Link
-                href={post.originalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 font-poppins text-sm text-[#282828] hover:text-[#ed5128] transition-colors group"
-              >
-                <Facebook size={18} />
-                <span>
-                  Read the original post on {post.originalSource} ({post.originalDate})
-                </span>
-                <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </Link>
+              {post.originalUrl && (
+                <Link
+                  href={post.originalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 font-poppins text-sm text-[#282828] hover:text-[#ed5128] transition-colors group"
+                >
+                  <Facebook size={18} />
+                  <span>
+                    Read the original post on {post.originalSource} ({post.originalDate})
+                  </span>
+                  <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </Link>
+              )}
             </div>
           </div>
         </article>

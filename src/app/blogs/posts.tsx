@@ -2,6 +2,7 @@ import type { StaticImageData } from "next/image";
 import imgCtaWebinar from "@/assets/media-speaking/cta-webinar-april-2026.jpg";
 import imgPesoDollar from "@/assets/blogs/peso-dollar-april-2026.jpg";
 import imgJciFoundationPin from "@/assets/blogs/jci-foundation-pin-june-2026.jpg";
+import imgStarRotarian from "@/assets/blogs/star-rotarian-of-the-quarter-october-2026.jpg";
 
 export interface Tip {
   number: number;
@@ -22,12 +23,14 @@ export interface Post {
   heroImageAlt: string;
   secondaryImage?: StaticImageData;
   secondaryImageAlt?: string;
-  /** Public URL where the post originally appeared (Facebook, etc.) */
-  originalUrl: string;
-  originalSource: string;
+  /** Public URL where the post originally appeared (Facebook, etc.). Omit when the post has no public original. */
+  originalUrl?: string;
+  originalSource?: string;
   /** Human-readable original publish date e.g. "May 1, 2026" */
-  originalDate: string;
+  originalDate?: string;
   intro: string[];
+  /** Headed sections rendered between the intro and the tips */
+  sections?: { heading: string; paragraphs: string[] }[];
   tips: Tip[];
   closing: string[];
   cta: {
@@ -36,11 +39,75 @@ export interface Post {
     description: string;
     /** Section heading above the CTA block. Defaults to "Upcoming Talk" */
     sectionLabel?: string;
+    /** Button text. Defaults to "Register Now" */
+    buttonLabel?: string;
   };
   tags: string[];
 }
 
 export const posts: Post[] = [
+  {
+    slug: "star-rotarian-of-the-quarter-rotary-club-of-manila-2026",
+    title: "Myles Tan Earns STAR Rotarian of the Quarter Recognition for Early Impact",
+    category: "EVENTS & RECAPS",
+    datePublished: "2026-10-01",
+    excerpt:
+      "Recognized for his generosity, youth advocacy, and commitment to financial literacy, Myles Tan is already making a meaningful contribution to the Rotary Club of Manila.",
+    heroImage: imgStarRotarian,
+    heroImageAlt:
+      "Rotary Club of Manila Certificate of Recognition presented to STAR Rtn. Myles Seymour Y. Tan as STAR Rotarian of the Quarter",
+    intro: [
+      "Recognized for his generosity, youth advocacy, and commitment to financial literacy, Myles Tan is already making a meaningful contribution to the Rotary Club of Manila.",
+      "Early in his journey with the Rotary Club of Manila, Myles Tan has earned recognition for turning his commitment to service into action.",
+      "On October 1, 2026, he received the STAR Rotarian of the Quarter award for the first quarter of Rotary Year 2026–2027, recognizing his contributions to The Rotary Foundation, Youth Service, and Community Economic Development.",
+      "Presented during the club’s 13th Weekly Membership Meeting at Fairmont Hotel Makati, the award highlights the breadth of Tan’s involvement; from supporting Rotary’s humanitarian mission as a Major Donor to inspiring young people through youth development and financial literacy.",
+      "For a relatively new member, the recognition marks a strong beginning: an early demonstration of his willingness to contribute resources, share knowledge, and take an active role in the club’s work.",
+    ],
+    sections: [
+      {
+        heading: "Generosity That Strengthens Service",
+        paragraphs: [
+          "Tan’s award citation specifically recognizes his meaningful contribution to The Rotary Foundation as a Major Donor, acknowledging how his support helped strengthen the club’s standing within the Foundation and the district.",
+          "His contribution also received acknowledgment in the club’s report on the October District Monthly Meeting. Tan was named alongside Immediate Past President Raoul Creencia and Vice President Karlo Castro as Major Donors whose generosity helped make the club’s Foundation Giving recognition possible.",
+          "That acknowledgment places his early contribution within a wider collective achievement, supporting the club’s ability to advance Rotary’s mission and extend its service to communities.",
+        ],
+      },
+      {
+        heading: "Empowering Young People Through Financial Literacy",
+        paragraphs: [
+          "Tan’s recognition extends beyond financial giving. His citation also credits his work in inspiring the club’s chartered Rotaract clubs through youth development and financial literacy.",
+          "Sharing financial knowledge offers a practical way to serve: helping young people approach decisions with greater understanding and build stronger foundations for their future. By bringing this focus into his Rotary involvement, Tan connects his experience with an area of real value to emerging leaders.",
+        ],
+      },
+      {
+        heading: "A Strong Beginning in Rotary",
+        paragraphs: [
+          "The STAR Rotarian of the Quarter award marks an important early milestone for Tan. It recognizes a contribution that combines generosity with education and reflects an active commitment to Rotary’s ideal of “Service Above Self.”",
+        ],
+      },
+    ],
+    tips: [],
+    closing: [
+      "His first months in the club have established a clear direction—showing up, contributing meaningfully, and using his resources and knowledge to help others. With this early recognition, Myles Tan is building a record of service grounded in action and a commitment to lasting impact.",
+    ],
+    cta: {
+      sectionLabel: "Rotary Club of Manila",
+      label: "The first Rotary club in Asia",
+      url: "https://www.rotarymanila.org/",
+      description:
+        "Learn more about the Rotary Club of Manila and the service work behind the STAR Rotarian of the Quarter recognition.",
+      buttonLabel: "Visit Rotary Club of Manila",
+    },
+    tags: [
+      "#RotaryClubOfManila",
+      "#STARRotarian",
+      "#RotaryFoundation",
+      "#ServiceAboveSelf",
+      "#CreateLastingImpact",
+      "#FinancialLiteracy",
+      "#Rotaract",
+    ],
+  },
   {
     slug: "jci-foundation-pin-phil-pugsley-patron-2026",
     title: "Myles Yeo Tan of JCI Manila Receives the JCI Foundation Pin: A Phil Pugsley Patron Recognized for Faith-Driven Leadership",
