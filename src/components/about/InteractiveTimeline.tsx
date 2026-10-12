@@ -68,7 +68,7 @@ const timelineData: YearData[] = [
       {
         date: "SEPTEMBER",
         title: "Welcomed as a Member of Filipino World Travelers",
-        description: "Elevated from Affiliate to Member of Filipino World Travelers (FWT), the global community of Filipino travelers committed to using travel as a force for good. FWT membership is by invitation only, extended to Affiliates who have consistently supported the group's mission and remain active world travelers. The recognition builds on his May 2026 Affiliate status and his Top 12 finish in the 2026 FWT Travel Photo Contest, and reflects a travel record spanning more than 69 countries across all 7 continents.",
+        description: "Elevated from Affiliate to Member of Filipino World Travelers (FWT), the global community of Filipino travelers committed to using travel as a force for good. FWT membership is by invitation only, extended to Affiliates who have consistently supported the group's mission and remain active world travelers. The recognition builds on his April 2026 Affiliate status and his Top 12 finish in the 2026 FWT Travel Photo Contest, and reflects a travel record spanning more than 69 countries across all 7 continents.",
         url: "https://www.facebook.com/share/p/1JGrEQWTCw/",
         image: imgFwtMembershipCert.src
       },
@@ -120,12 +120,6 @@ const timelineData: YearData[] = [
         url: "https://theasianpearl.com/project-chairman-myles-tan-and-the-grand-slam-mission-for-clark-2026/"
       },
       {
-        date: "MAY",
-        title: "Named Filipino World Travelers Affiliate",
-        description: "Officially recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. Having set foot in more than 69 countries across all 7 continents, Myles brings to FWT the perspective of a purposeful, intentional global explorer.",
-        url: "https://filipinoworldtravelers.com/affiliates/list"
-      },
-      {
         date: "APRIL 30",
         title: "Speaker at \"Crypto, Stocks, or Gold?\" Webinar",
         description: "Invited to speak at a 2026 market outlook session on where Filipino traders should position in a Peso vs Dollar world — covering Peso/Dollar trends, crypto, stocks, gold, and global positioning.",
@@ -136,6 +130,12 @@ const timelineData: YearData[] = [
         title: "Inducted into Rotary Club of Manila",
         description: "Officially inducted into the Rotary Club of Manila — the first Rotary club in Asia — at the Manila Polo Club, Makati City, joining a network of business, civic, and community leaders united under \"Service Above Self.\"",
         image: imgRotaryManila.src
+      },
+      {
+        date: "APRIL",
+        title: "Named Filipino World Travelers Affiliate",
+        description: "Officially recognized as a Filipino World Travelers (FWT) Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. Having set foot in more than 69 countries across all 7 continents, Myles brings to FWT the perspective of a purposeful, intentional global explorer.",
+        url: "https://filipinoworldtravelers.com/affiliates/list"
       },
       {
         date: "MARCH",

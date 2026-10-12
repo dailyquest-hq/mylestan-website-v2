@@ -116,7 +116,7 @@ export const personSchema = {
       "@type": "Organization",
       "name": "Filipino World Travelers (FWT)",
       "url": "https://filipinoworldtravelers.com/",
-      "description": "100th Member (October 2026); Member since September 2026, elevated from Affiliate (May 2026) — recognized for global exploration across 7 continents and more than 69 countries; Top 12 Winner, 2026 FWT Travel Photo Contest (August 2026)"
+      "description": "100th Member (October 2026); Member since September 2026, elevated from Affiliate (April 2026) — recognized for global exploration across 7 continents and more than 69 countries; Top 12 Winner, 2026 FWT Travel Photo Contest (August 2026)"
     }
   ],
   "affiliation": [

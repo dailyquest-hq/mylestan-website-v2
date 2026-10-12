@@ -74,7 +74,7 @@ export default function BioPage() {
           <li>Founder — Myles Tan Ministries</li>
           <li>Rotary Club of Manila — Member (inducted April 2026); STAR Rotarian of the Quarter, Q1 Rotary Year 2026–2027 (October 2026)</li>
           <li>RCManila Foundation, Inc. (RCMFI) — Lifetime Member (September 2026)</li>
-          <li>Filipino World Travelers (FWT) — 100th Member (October 2026); Member (September 2026); Affiliate (May 2026); Top 12 Winner, 2026 FWT Travel Photo Contest (August 2026); explored all 7 continents and more than 69 countries</li>
+          <li>Filipino World Travelers (FWT) — 100th Member (October 2026); Member (September 2026); Affiliate (April 2026); Top 12 Winner, 2026 FWT Travel Photo Contest (August 2026); explored all 7 continents and more than 69 countries</li>
           <li>JCI Manila Member since 2012; Commissioner for Training; AVANTE Training Chair; Project Chairman, Grand Slam Mission for Clark 2026</li>
           <li>1st Place — JCIP Area Conference Public Speaking (2019)</li>
           <li>1st Runner-Up — JCIP National Convention Public Speaking (2019)</li>

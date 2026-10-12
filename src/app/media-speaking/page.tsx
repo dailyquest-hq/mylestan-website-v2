@@ -353,7 +353,7 @@ export default function MediaSpeakingPage() {
                   url="https://www.facebook.com/share/p/1VRYJS5f4Z/"
                />
                <EventRow
-                  date="MAY 2026"
+                  date="APR 2026"
                   title="Named Filipino World Travelers Affiliate"
                   location="Philippines"
                   role="Affiliate"
