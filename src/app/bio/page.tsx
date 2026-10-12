@@ -9,7 +9,7 @@ const breadcrumbStructuredData = breadcrumbSchema([
 export const metadata: Metadata = {
   title: 'Myles Tan — Full Biography & Profile | Myles Yeo Tan',
   description:
-    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member, Filipino World Travelers Member and 2026 FWT Travel Photo Contest Top 12 Winner (7 continents, 69+ countries), Christian entrepreneur, and public speaker. Chief Operating Officer of Ilyon Industrial Corporation and former Chief Operating Officer of ZFT Trading Republic.',
+    'Myles Yeo Tan (Myles Tan) is a Singapore-based cryptocurrency trader, Registered Financial Planner (RFP), Certified Technical Analyst (CTA), Lean Six Sigma Certified operator, Rotary Club of Manila member (STAR Rotarian of the Quarter, October 2026), Filipino World Travelers Member (100th member) and 2026 FWT Travel Photo Contest Top 12 Winner (7 continents, 69+ countries), Christian entrepreneur, and public speaker. Chief Operating Officer of Ilyon Industrial Corporation and former Chief Operating Officer of ZFT Trading Republic.',
   alternates: { canonical: 'https://mylesyeotan.com/bio' },
   openGraph: {
     title: 'Myles Tan — Full Biography',

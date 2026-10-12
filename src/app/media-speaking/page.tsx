@@ -18,6 +18,7 @@ import imgAlphaIntel from "@/assets/media-speaking/alpha-intel-us-stocks-advisor
 import imgCcfDavaoAngpao from "@/assets/media-speaking/ccf-davao-more-than-an-angpao-july-2026.jpg";
 import imgKnowYourMoney from "@/assets/media-speaking/know-yourself-know-your-money-august-2026.jpg";
 import imgFwtPhotoContest from "@/assets/media-speaking/fwt-travel-photo-contest-august-2026.jpg";
+import imgStarRotarian from "@/assets/about/star-rotarian-of-the-quarter-certificate-october-2026.jpg";
 
 export default function MediaSpeakingPage() {
   return (
@@ -71,28 +72,28 @@ export default function MediaSpeakingPage() {
                </div>
                <div className="flex items-center gap-3 pt-6 border-t border-white/10">
                   <Globe size={20} className="text-[#ed5128]" />
-                  <span className="font-poppins text-sm uppercase tracking-wider text-white/80">FWT Travel Photo Contest 2026 · Top 12 Winner</span>
+                  <span className="font-poppins text-sm uppercase tracking-wider text-white/80">FWT 100th Member · October 2026</span>
                </div>
             </div>
             <div className="w-full lg:w-1/2 flex flex-col gap-6 justify-center">
                <SectionLabel color="black">latest recognition</SectionLabel>
                <h2 className="font-darker font-semibold text-4xl md:text-[48px] leading-[0.95] text-black">
-                  Named Top 12 Winner in the 2026 FWT Travel Photo Contest
+                  Became the 100th Member of Filipino World Travelers
                </h2>
                <p className="font-poppins text-[#575756] text-base md:text-lg leading-relaxed">
-                  Myles Tan has been named one of the Top 12 Winners of the 2026 Filipino World Travelers (FWT) Travel Photo Contest, recognized for a photograph taken in Antarctica. The winning image captures a quiet moment: a lone figure in bright orange, seated on weathered rock, looking out over ice floes and snow-capped peaks — a traveler at the edge of the world.
+                  Myles Tan has been named the 100th member of Filipino World Travelers (FWT). Based in Manila and travelling solely on a Philippine passport, he has visited 70 countries, reached all seven continents in 2017, and circumnavigated the world in 2026.
                </p>
                <p className="font-poppins text-[#575756] text-base md:text-lg leading-relaxed">
-                  The recognition adds to a travel record spanning more than 69 countries across all 7 continents, and follows his May 2026 recognition as an FWT Affiliate — a distinction reserved for Filipinos who have demonstrated a serious commitment to global exploration. The award reflects more than a single photograph: it marks a body of work built one continent, one country, and one story at a time.
+                  The milestone follows his September 2026 elevation from Affiliate to Member and his Top 12 finish in the 2026 FWT Travel Photo Contest. He has stayed active throughout — attending the FWT Manila meet-up in May and the virtual meet-up in August, and preparing to join the FWT delegation at the JCI World Congress in Clark this November. An investor in Lakbay Museum, he has also voiced strong support for the upcoming launch of the FWT Museum.
                </p>
                <Link
-                  href="https://filipinoworldtravelers.com/activities/2026-fwt-travel-photo-contest/2026-winners"
+                  href="https://www.facebook.com/share/p/1GvZia72hb/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 self-start"
                >
                   <Button className="bg-[#ed5128] hover:bg-[#d9401b] text-white rounded-none uppercase h-12 px-8 inline-flex items-center gap-2">
-                     View the 2026 Winners <ArrowUpRight size={16} />
+                     View the FWT Announcement <ArrowUpRight size={16} />
                   </Button>
                </Link>
             </div>
@@ -124,6 +125,14 @@ export default function MediaSpeakingPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <VideoCard
+                  image={imgStarRotarian}
+                  title="Named STAR Rotarian of the Quarter — Rotary Club of Manila"
+                  type="AWARD"
+                  duration="OCT 2026"
+                  url="/blogs/star-rotarian-of-the-quarter-rotary-club-of-manila-2026"
+                  description="Received the STAR Rotarian of the Quarter award for the first quarter of Rotary Year 2026–2027 — recognizing his contributions to The Rotary Foundation as a Major Donor and his work inspiring the club's Rotaract clubs on youth development and financial literacy."
+               />
                <VideoCard
                   image={imgFwtPhotoContest}
                   title="Named Top 12 Winner — 2026 FWT Travel Photo Contest"
